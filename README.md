@@ -1,2 +1,5 @@
-# Programación de 1º de DAM
-Programación de 1º de DAM
+# Programación 1º de DAM
+
+## Sinopsis
+
+Repositorio dedicado al módulo de Programación de 1º de DAM.
