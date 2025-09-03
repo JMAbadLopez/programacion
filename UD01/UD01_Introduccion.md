@@ -231,7 +231,7 @@ Una constante es como una variable pero que el valor <u>no cambia durante la eje
 
 Las constantes pueden aparecer en forma de literales o bien con nombre (constantes simbólicas):
 
-<img src="/Users/jose/Library/CloudStorage/GoogleDrive-jose.abad83@gmail.com/Mi unidad/02_Educacion/00_CURSOS/2025_2026/1_DAM_PROGR/programacion/UD01/img/ud01_ejemplo02.png" alt="Constants i els seus valors" style="zoom:50%;" />
+<img src="./img/ud01_ejemplo02.png" alt="Constants i els seus valors" style="zoom:50%;" />
 
 Es necesario resaltar que:
 
