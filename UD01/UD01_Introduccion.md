@@ -1,5 +1,3 @@
-
-
 <img src="../logos/camp.png" alt="logo camp" style="zoom:10%; float:right" />
 
 | Fecha      | Versión | Descripción                                |
@@ -32,20 +30,26 @@
 
 - Llamamos procesador toda entidad capaz de ejecutar un algoritmo. En última instancia será la CPU del ordenador, móvil o TV.
 - Un programa constará de:
-  - Instrucciones: una instrucción es una combinación de palabras, datos y símbolos que, obedeciendo la sintaxis propia del lenguaje, son utilizados por el ordenador para llevar a cabo una acción determinada.
-  - Datos: llamamos dato toda información que utiliza el ordenador.
+  - **Instrucciones:** una instrucción es una combinación de palabras, datos y símbolos que, obedeciendo la sintaxis propia del lenguaje, son utilizados por el ordenador para llevar a cabo una acción determinada.
+  - **Datos:** llamamos dato toda información que utiliza el ordenador.
 
-![Fluxe de dades d'un programa](./img/T1_01.png){width=300}
+
+
+<img src="./img/T1_01.png" alt="Fluxe de dades d'un programa" style="zoom:70%; float:left" />
+
+
 
 Las características deben cumplir:
 
-![Característiques del programes](./img/T1_02.png){width=300}
+
+
+<img src="./img/T1_02.png" alt="Característiques del programes" style="zoom:75%; float:left" />
 
   -  Las tecnologías de programación presente hoy en día son las siguientes:
 
-     1. Programación estructurada: Usar únicamente secuencias, instrucciones condicionales e instrucciones repetitivas en la confección de sus programas.
-     2. Programación modular: El programa se diseña por partes (módulos).
-     3. Programación orientada a objetos: Paradigma de programación que usa "objetos" (estructuras con atributos y métodos) y sus interacciones para diseñar programas. Se verá en la tercera evaluación.
+     1. **Programación estructurada:** Usar únicamente secuencias, instrucciones condicionales e instrucciones repetitivas en la confección de sus programas.
+     2. **Programación modular:** El programa se diseña por partes (módulos).
+     3. **Programación orientada a objetos:** Paradigma de programación que usa "objetos" (estructuras con atributos y métodos) y sus interacciones para diseñar programas. Se verá en la tercera evaluación.
      4. Otros:
 
         - Programación concurrente: Útil cuando tenemos que realizar varias acciones a la vez. Se ve a segundo curso.
@@ -55,7 +59,7 @@ Las características deben cumplir:
 
 El ciclo de vida del software (proceso de creación y explotación de un programa) es como se describe:
 
-![Cicle de vida d'un programa](./img/T1_03.png){width=400}
+<img src="./img/T1_03.png" alt="Cicle de vida d'un programa" style="zoom:70%;" />
 
 
 
@@ -103,20 +107,21 @@ Un entorno de programación interpretado traduce el código fuente a código má
 
 El lenguaje Java para poder ejecutarse se hace en dos fases:
 
-- Una compilación del código fuente, donde el código generado no es código máquina, sino un lenguaje especial llamado bytecodes, que sólo puede interpretarse por una JVM (Máquina Virtual de Java)
-- La JVM coge los bytecodes y los interpreta, ejecutando ya el programa sobre la máquina real
+- Una compilación del código fuente, donde el código generado no es código máquina, sino un lenguaje especial llamado **bytecodes**, que sólo puede interpretarse por una JVM (Máquina Virtual de Java)
+- La JVM coge los **bytecodes** y los interpreta, ejecutando ya el programa sobre la máquina real
+  
 
-![Compilació i posterior interpretació a `Java`](./img/T1_07.png){width=400}
+<img src="./img/T1_07.png" alt="Compilació i posterior interpretació a `Java`" style="zoom:67%;" />
 
 Esto permite la total portabilidad de los programas Java y su ejecución en cualesquiera plataforma.
 
-![Procés de compilació](./img/T1_08.png){width=400}
+<img src="./img/T1_08.png" alt="Procés de compilació" style="zoom:80%;" />
 
 ## 1.7 Corrección de programas
 
-Para corregir un programa se debe testear o probar. Un juego de pruebas es un conjunto de situaciones que permite probar el buen funcionamiento del programa. Este conjunto debe abarcar todas las posibilidades reales.
+Para corregir un programa se debe testear o probar. Un **juego de pruebas** es un conjunto de situaciones que permite probar el buen funcionamiento del programa. Este conjunto debe abarcar todas las posibilidades reales.
 
-Un depurador (debugger) es un programa que permite:
+Un **depurador** (debugger) es un programa que permite:
 
 - ejecutar un programa instrucción por instrucción y ver qué pasa después de la ejecución de cada una
 - obtener el valor de los datos antes y después de ejecutar una instrucción
@@ -125,8 +130,8 @@ Un depurador (debugger) es un programa que permite:
 
 A la hora de programar tendremos que diferenciar entre errores:
 
-- sintáctica: errores que se producen durante la creación del programa, porque no cumplimos en las normas del lenguaje
-- De ejecución: errores que no podemos detectar durante el desarrollo, y se producen sólo cuando se ejecuta.
+- **Sintáctica:** errores que se producen durante la creación del programa, porque no cumplimos en las normas del lenguaje
+- **De ejecución:** errores que no podemos detectar durante el desarrollo, y se producen sólo cuando se ejecuta.
 
 ## 1.8 ¿Qué lenguaje elegir?
 
@@ -180,16 +185,16 @@ El dibujo anterior representa la variable edad que guarda el valor 17.
 
 Cada variable se caracteriza por tener:
 
-- un nombre (edad) y un tipo (entero) que deben ser especificados cuando se define la variable en un programa, con una instrucción declarativa.
-- un valor (17) que se le asignará en alguna instrucción de asignación (o bien en la misma instrucción declarativa) y que podrá ser cambiado por otro valor las veces que haga falta.
+- Un *nombre* (edad) y un *tipo* (entero) que deben ser especificados cuando se define la variable en un programa, con una instrucción declarativa.
+- Un *valor* (17) que se le asignará en alguna instrucción de asignación (o bien en la misma instrucción declarativa) y que podrá ser cambiado por otro valor las veces que haga falta.
 
 Las variables se almacenan en la memoria RAM, de forma que:
 
-- El nombre (edad) representa la dirección de la RAM donde está el valor
-- El tipo (entero) especifica la cantidad de bytes necesarios para guardar un valor (4).
-- El valor es el contenido (17).
+- El **nombre** (edad) representa la dirección de la RAM donde está el valor
+- El **tipo** (entero) especifica la cantidad de bytes necesarios para guardar un valor (4).
+- El **valor** es el contenido (17).
 
-![Guardat a la memòria RAM](./img/T1_10.png){width=200}
+<img src="./img/T1_10.png" alt="Guardat a la memòria RAM" style="zoom:50%;" />
 
 Hay que tener en cuenta que las variables ocupan memoria, y que se puede saber en qué lugar está cada variable por su dirección de memoria.
 
@@ -211,7 +216,9 @@ escribe (edad);
 
 ### 2.2.2 Precisión de las variables
 
-A la hora de declarar variables hay que tener en cuenta que datos se van a almacenar en ellas, sobre todo en datos numéricos. Por ejemplo en 1 byte pueden guardarse valores entero 0 y 255 ($ 2 ^ 8 = 256 $ valores posibles). Con 1 byte es más que suficiente para guardar un dato como por ejemplo la edad de una persona. Pero 1 byte no nos serviría para guardar el año de nacimiento, y para la fecha de nacimiento ya ni comentamos.
+A la hora de declarar variables hay que tener en cuenta que datos se van a almacenar en ellas, sobre todo en datos numéricos. 
+
+Por ejemplo en 1 byte pueden guardarse valores entero 0 y 255 ($ 2 ^ 8 = 256 $ valores posibles). Con 1 byte es más que suficiente para guardar un dato como por ejemplo la edad de una persona. Pero 1 byte no nos serviría para guardar el año de nacimiento, y para la fecha de nacimiento ya ni comentamos.
 
 Otro problema es que con ese byte, ¿como representamos números negativos? La solución que tienen los lenguajes de programación, es de los 256, partir la mitad negativos y la mitad positivos, quedándose [-127..0..128]. A los números reales, también pasa lo mismo, ¿cuán grande es el número que vamos a representar?
 
@@ -220,11 +227,11 @@ La solución que dan los lenguajes de programación es permitir reservar varios 
 
 ### 2.2.3 Constantes
 
-Una constante es como una variable pero que el valor no cambia durante la ejecución del programa.
+Una constante es como una variable pero que el valor <u>no cambia durante la ejecución</u> del programa.
 
 Las constantes pueden aparecer en forma de literales o bien con nombre (constantes simbólicas):
 
-![Constants i els seus valors](./img/T1_11.png){width=400}
+<img src="/Users/jose/Library/CloudStorage/GoogleDrive-jose.abad83@gmail.com/Mi unidad/02_Educacion/00_CURSOS/2025_2026/1_DAM_PROGR/programacion/UD01/img/ud01_ejemplo02.png" alt="Constants i els seus valors" style="zoom:50%;" />
 
 Es necesario resaltar que:
 
@@ -248,7 +255,7 @@ Como ya hemos comentado, una variable debe tener un tipo, y una primera clasific
 
 Después, cuando estudiamos ya los lenguajes, veremos que para cada tipo podemos añadir modificadores para la precisión.
 
-![Els tipus bàsics](./img/T1_12.png){width=200}
+<img src="./img/T1_12.png" alt="Els tipus bàsics" style="zoom:67%;" />
 
 
 ### 2.4.1 Datos simples y compuestos
@@ -263,11 +270,11 @@ Consideración: Los textos, dependiendo del lenguaje de programación pueden con
 
 Ejemplo de complejidad y de información compuesta:  captura con la herramienta imtool de MATLAB, donde podemos observar un plano de `nxm` píxeles o puntos de luz. Cada píxel está formado por una terna (tripleta), con unos valores RGB (colores primarios).
 
-![Descomposició d'una imatge en canals](./img/T1_13.png){width=400}
+<img src="./img/T1_13.png" alt="Descomposició d'una imatge en canals" style="zoom:67%;" />
 
-![Ampliació de la imatge](./img/T1_14.png){width=400}
+<img src="./img/T1_14.png" alt="Ampliació de la imatge" style="zoom:67%;" />
 
-![Decomposició dels píxels en colors](./img/T1_15.png){width=400}
+<img src="./img/T1_15.png" alt="Decomposició dels píxels en colors" style="zoom:67%;" />
 
 Fijar con el detalle bajo de todo Pixel info:
 
@@ -294,7 +301,7 @@ Las constantes y variables no aparecen aisladas, sino formando parte de expresio
 Los operandos pueden ser de diferentes tipos:
 
 - Constantes: `PI`
-- Variables: `edat`
+- Variables: `edad`
 - Funciones: `raíz (100)`, `longitud (nombre)`
 - Literales: `100`,` "IES Camp de Morvedre" `
 
@@ -327,9 +334,9 @@ Son las operaciones matemáticos. Las variables o constantes que intervienen deb
 
 |Operador|Significado|
 |-|-|
-|`^` ò `**`|Potencia|
+|`^` ó `**`|Potencia|
 |`*` |Producto|
-|`/` ò `//`| División |
+|`/`ó `//`| División |
 |`%`| Residuo |
 |`+`|Suma|
 |`-`|Resta|
@@ -515,58 +522,69 @@ La aplicación más pequeña posible es la que simplemente imprime un mensaje en
 Tradicionalmente, el mensaje suele ser "Hola Mundo!". Esto es justamente lo que hace el siguiente
 fragmento de código:
 
+> [!IMPORTANT]
+>
+> **Revisa el siguiente código de ejemplo**
+
 ```Java
 public class Main {
 
 	public static void main(String[] args) {		
-		System.out.println("Hola Mundo");
+		System.out.println("¡Hola Mundo!");
 	}
 }
 ```
 
-Hay que ver en detalle la aplicación anterior, línea a línea. Esas líneas de código contienen los
-componentes mínimos para imprimir Hola Mundo! en la pantalla. Es un ejemplo muy simple, que
-no instancia objetos de ninguna otra clase; sin embargo, accede a otra clase incluida en el JDK.
+Hay que ver en detalle la aplicación anterior, línea a línea. 
 
-**public class Main**
+Esas líneas de código contienen los componentes mínimos para imprimir ***¡Hola Mundo!*** en la pantalla. Es un ejemplo muy simple, que no instancia objetos de ninguna otra clase; sin embargo, accede a otra clase incluida en el JDK.
 
-Esta línea <u>declara la clase</u> **Main**. El nombre de la clase especificado en el fichero fuente se
-utiliza para crear un fichero <u>nombredeclase.class</u> en el directorio en el que se compila la aplicación.
+`public class Main`
+
+Esta línea declara la clase **Main**. El nombre de la clase especificado en el fichero fuente se
+utiliza para crear un fichero *Nombre.class* en el directorio en el que se compila la aplicación.
+
 En este caso, el compilador creará un fichero llamado **Main.class**.
 
-**public static void main( String args[] )**
+`public static void main( String args[] )`
 
-Esta línea <u>especifica un método</u> que el intérprete Java busca para ejecutar en primer lugar. Igual
-que en otros lenguajes, Java utiliza una <u>palabra clave **main**</u> para especificar <u>la primera función a</u>
-<u>ejecutar</u>. En este ejemplo tan simple no se pasan argumentos.
+Esta línea **especifica un método** que el intérprete Java busca para ejecutar en primer lugar. 
 
-- **public** significa que el método main() puede ser llamado por cualquiera, incluyendo el
+Java utiliza una palabra clave **main** para especificar la ***primera función a ejecutar***. 
+
+En este ejemplo tan simple no se pasan argumentos.
+
+- **public** significa que el método *main* puede ser llamado por cualquiera, incluyendo el
   intérprete Java.
-- **static** es una palabra clave que le dice al compilador que main se refiere a la propia clase
-  HolaMundo y no a ninguna instancia de la clase. De esta forma, si alguien intenta hacer otra
-  instancia de la clase, el método main() no se instanciaría.
+- **static** es una palabra clave que le dice al compilador que *main* se refiere a la propia clase
+  *Main* y no a ninguna instancia de la clase. 
 - **void** indica que main() no devuelve nada. Esto es importante ya que Java realiza una estricta
   comprobación de tipos, incluyendo los tipos que se ha declarado que devuelven los
   métodos.
 - **args[]** es la declaración de un array de Strings. Estos son los argumentos escritos tras el
   nombre de la clase en la línea de comandos: java Main arg1 arg2 …
 
-**System.out.println( "Hola Mundo!" );**
+`System.out.println( "Hola Mundo!" );`
 
 Esta es la funcionalidad de la aplicación. Esta línea muestra el uso de un nombre de clase y método. Se usa el **método println()** de la **clase out** que está en el **paquete System**.
-El método println() toma una cadena como argumento y la escribe en el stream de salida estándar; en este caso, la ventana donde se lanza la aplicación. La clase PrintStream tiene un método instanciable llamado println(), que lo que hace es presentar en la salida estándar del Sistema el argumento que se le pase. En este caso, se utiliza la variable o instancia de out para acceder al método.
+
+El método **println()** toma una cadena como argumento y la escribe en el stream de salida estándar; en este caso, la ventana donde se lanza la aplicación. 
+
+La clase **PrintStream** tiene un método instanciable llamado **println()**, que lo que hace es presentar en la salida estándar del Sistema el argumento que se le pase. 
+
+En este caso, se utiliza la variable o instancia de out para acceder al método.
+
 El resultado sería el siguiente:
 
-![](./img/image-20210907130614131.png)
+<img src="./img/ud01_ejemplo01.png" style="zoom:50%;" />
 
-| ⚠Todas las instrucciones (creación de variables, llamadas a métodos, asignaciones) se deben finalizar con un punto y coma. |
-| ------------------------------------------------------------ |
+> [!CAUTION]
+>
+> **Todas las instrucciones (creación de variables, llamadas a métodos, asignaciones) se deben finalizar con un punto y coma.**
 
-------
+En el caso que no tengamos el IDE todavía instalado, podemos hacer usar el siguiente compilador online: 
 
-En el caso que no tengamos el IDE todavía instalado, podemos hacer usar el siguiente compilador online: https://replit.com/
-
-------
+https://replit.com/
 
 
 
@@ -587,7 +605,7 @@ En Java hay tres tipos de comentarios:
 
 Los dos primeros tipos de comentarios son los que todo programador conoce y se utilizan del mismo modo.
 
-Los **comentarios de documentación**, colocados inmediatamente antes de una declaración (de variable o función), **indican que ese comentario ha de ser colocado en la documentación que se** **genera automáticamente cuando se utiliza la  herramienta de Java**, **<u>javadoc</u>**, no disponible en otros lenguajes de programación. Este tipo de comentario lo veremos más adelante.
+Los **comentarios de documentación**, colocados inmediatamente antes de una declaración (de variable o función), **indican que ese comentario ha de ser colocado en la documentación que se** **genera automáticamente cuando se utiliza la  herramienta de Java** (***Javadoc*** ) no disponible en otros lenguajes de programación. Este tipo de comentario lo veremos más adelante.
 
 ### 4.2.2 Identificadores
 
@@ -645,28 +663,25 @@ Tipos de datos simples soportados por Java:
 - Para números reales: **float, double**
 - Para valores lógicos: **boolean**.
 
-|    Tipo     | Descripción                                          | Memoria<br/>ocupada | Rango de valores permitidos                    |
-| :---------: | :--------------------------------------------------- | :------------------ | :--------------------------------------------- |
-|  **byte**   | Número entero de 1 byte                              | 1 byte              | -128 … 127                                     |
-|  **short**  | Número entero corto                                  | 2 bytes             | -32768 … 32767                                 |
-|   **int**   | Número entero                                        | 4 bytes             | -2147483648 … 2147483647                       |
-|  **long**   | Número entero largo                                  | 8 bytes             | -9223372036854775808 …<br/>9223372036854775807 |
-|  **float**  | Número real en coma flotante de<br/>precisión simple | 32 bits             | ±3,4*10-38 … ±3,4*1038                         |
-| **double**  | Número real en coma flotante de<br/>precisión doble  | 64 bits             | ±1,7*10-308 … ±1,7*10308                       |
-|  **char**   | Un solo carácter                                     | 2 bytes             |                                                |
-| **boolean** | Valor lógico                                         | 1 bit               | true o false                                   |
+|    Tipo     | Descripción                                      | Memoria ocupada | Rango de valores permitidos               |
+| :---------: | :----------------------------------------------- | :-------------- | :---------------------------------------- |
+|  **byte**   | Número entero de 1 byte                          | 1 byte          | -128 … 127                                |
+|  **short**  | Número entero corto                              | 2 bytes         | -32768 … 32767                            |
+|   **int**   | Número entero                                    | 4 bytes         | -2147483648 … 2147483647                  |
+|  **long**   | Número entero largo                              | 8 bytes         | -9223372036854775808 …9223372036854775807 |
+|  **float**  | Número real en coma flotante de precisión simple | 32 bits         | ±3,4*10-38 … ±3,4*1038                    |
+| **double**  | Número real en coma flotante de precisión doble  | 64 bits         | ±1,7*10-308 … ±1,7*10308                  |
+|  **char**   | Un solo carácter                                 | 2 bytes         |                                           |
+| **boolean** | Valor lógico                                     | 1 bit           | true o false                              |
 
-------
+> [!CAUTION]
+>
+> **Java no realiza una comprobación de los rangos.**
 
-------
 
-⚠ **Java no realiza una comprobación de los rangos.**
+Por ejemplo, si a una variable de tipo short con el valor *32.767* se le suma *1*, sorprendentemente el resultado será *-32.768* (no produce un error de tipo desbordamiento como en otros lenguajes de programación, sino que se comporta de forma cíclica).
 
-------
-
-Por ejemplo: si a una variable de tipo short con el valor 32.767 se le suma 1, sorprendentemente el resultado será -32.768 (no produce un error de tipo desbordamiento como en otros lenguajes de programación, sino que se comporta de forma cíclica).
-
-Existe un <u>tipo de dato compuesto</u> llamado **String** que conviene conocer ya que permite representar texto. Más adelante veremos cómo se utiliza.
+Existe un tipo de dato compuesto llamado **String** que conviene conocer ya que permite representar texto. Más adelante veremos cómo se utiliza.
 
 ## 4.4 Declaración de variables
 
@@ -731,21 +746,21 @@ float g = 15.8F; // tambien de tipo float
 
 Como se verá más adelante cada tipo de dato primitivo tiene una clase correspondiente (`Boolean, Character, Byte, Short, Integer, Long, Float y Double`), llamadas *wrappers*, que definen también constantes y métodos útiles.
 
-En resumen la declaración de variables sigue el siguiente patrón:
-
-🎓**`tipo identificador [ = valor][,identificador [= valor] ...];`**
+> [!NOTE]
+>
+> En resumen la declaración de variables sigue el siguiente patrón:
+>
+> **`tipo identificador [ = valor][,identificador [= valor] ...];`**
 
 Es decir, es **obligatorio indicar el tipo y el identificador** (además de terminar en punto y coma como todas las instrucciones). Opcionalmente (indicado entre corchetes) se puede inicializar y/o se pueden declarar más variables.
 
-------
-
-⚠ Si una variable no ha sido inicializada, Java le asigna un valor por defecto.
-
-------
+> [!CAUTION]
+>
+> **Si una variable no ha sido inicializada, Java le asigna un valor por defecto.**
 
 Este valor es:
 
-- Para las variables de tipo **numérico**, el valor por defecto es cero ( 0 ),.
+- Para las variables de tipo **numérico**, el valor por defecto es cero ( 0 ).
 - Las variables de tipo **char**, el valor ''**\u0000**''.
 - Las variables de tipo **boolean**, el valor **false**.
 - Para las variables de tipo referencial (**objetos**), el valor **null**.
@@ -754,7 +769,9 @@ Es una buena práctica **inicializar siempre todas las variables**.
 
 
 
-**<u>Palabras clave</u>**
+**Palabras clave**
+
+Palabras que no podemos utilizar salvo en las instrucciones del lenguaje.
 
 | abstract    | continue    | **for**        | **new**       | **switch**       |
 | ----------- | ----------- | -------------- | ------------- | ---------------- |
@@ -770,7 +787,7 @@ Es una buena práctica **inicializar siempre todas las variables**.
 
 **Palabras reservadas**
 
-Además, el lenguaje se reserva unas cuantas palabras más, pero que hasta ahora no tienen un cometido específico. Son:
+Además, el lenguaje se reserva unas cuantas palabras más, pero que hasta ahora no tienen un cometido específico. 
 
 | cast         | uture     | generic  | inner   |
 | ------------ | --------- | -------- | ------- |
@@ -778,7 +795,9 @@ Además, el lenguaje se reserva unas cuantas palabras más, pero que hasta ahora
 
 ### 4.4.1 Ámbito de una variable
 
-🎓 El **ámbito** de una variable es la porción del programa donde dicha variable puede utilizarse.
+> [!NOTE]
+>
+> El **ámbito** de una variable es la porción del programa donde dicha variable puede utilizarse.
 
 El ámbito de una variable depende del lugar del programa donde es declarada, pudiendo pertenecer a cinco categorías distintas.
 
@@ -792,17 +811,18 @@ El ámbito de una variable depende del lugar del programa donde es declarada, pu
 
 ### 4.4.2 Variables locales
 
-🎓 Una **variable local** se declara dentro del cuerpo de un método de una clase y es visible únicamente dentro de dicho método.
+> [!NOTE]
+>
+> Una **variable local** se declara dentro del cuerpo de un método de una clase y es visible únicamente dentro de dicho método.
 
 Se puede declarar en cualquier lugar del cuerpo, incluso después de instrucciones ejecutables, aunque es una buena costumbre declararlas justo al principio.
 
 También pueden declararse variables dentro de un bloque con llaves {...}. En ese caso, sólo serán “visibles” dentro de dicho bloque.
 
-Por <u>ejemplo</u> (No es necesario entender lo que hace el programa) :
+Por ejemplo (no es necesario entender lo que hace el programa) :
 
 ```Java
     public static void main(String[] args) {
-        // TODO code application logic here
         int i;
         for (i=0;i<10;i++)
             System.out.println("El valor de i es: "+i);
@@ -810,7 +830,7 @@ Por <u>ejemplo</u> (No es necesario entender lo que hace el programa) :
 }
 ```
 
-En este ejemplo existe una variable local: **int i**; únicamente puede utilizarse dentro del bloque **main** donde fué creada.
+En este ejemplo existe una variable local: **int i**; únicamente puede utilizarse dentro del bloque **main** donde fue creada.
 
 ### 4.4.3 Constantes (final)
 
@@ -822,16 +842,18 @@ Por ejemplo, creamos variable constante tipo int llamada x con valor 18:
 
 Por ejemplo, creamos variable constante tipo float llamada pi con valor 3.14:
 
-​	**final float pi = 3.14;**
+​	**final float pi = 3.14f;**
 
 Si posteriormente intentamos modificar sus valores se producirá un error y Java nos avisará de que no es posible.
 
 ​	**x = 20; // no permitido, produce error**
 ​	**pi = 7; // no permitido, produce error**
 
-------
 
-⚠  Por lo tanto una variable precedida de la palabra **final** se convierte en una **constante**. O lo que es lo mismo, para definir una constante en Java deberemos preceder su declaración de la palabra reservada **final**.
+
+> [!WARNING]
+>
+> Por lo tanto una variable precedida de la palabra **final** se convierte en una **constante**. O lo que es lo mismo, para definir una constante en Java deberemos preceder su declaración de la palabra reservada **final**.
 
 
 
@@ -854,7 +876,7 @@ Los operadores son una parte indispensable de la programación ya que nos permit
 | Operador | Formato            | Descripción                                         |
 | -------- | ------------------ | --------------------------------------------------- |
 | **+**    | op1 + op2          | Suma aritmética de dos operandos.                   |
-| **-**    | op1 - op2<br/>-op1 | Resta aritmética de dos operandos. Cambio de signo. |
+| **-**    | op1 - op2 <br>-op1 | Resta aritmética de dos operandos. Cambio de signo. |
 | *****    | op1 * op2          | Multiplicación de dos operandos                     |
 | **/**    | op1 / op2          | División entera de dos operandos                    |
 | **%**    | op1 % op2          | Resto de la división entera ( o módulo)             |
@@ -891,7 +913,7 @@ Los operadores incrementales suelen utilizarse a menudo en los bucles (estructur
 
 Los operadores relacionales actúan sobre valores enteros, reales y caracteres (char); y devuelven un valor del tipo boolean (true o false).
 
-**<u>Ejemplo</u>**:
+**Ejemplo**:
 
 ```Java
 public static void main(String[] args) {
@@ -911,9 +933,9 @@ public static void main(String[] args) {
     }
 ```
 
-**<u>Resultado de ejecución</u>**:
+**Resultado de ejecución**:
 
-![image-20210907174844618](./img/image-20210907174844618.png)
+<img src="./img/u13.png" alt="Ejemplo 3" style="zoom: 55%; float:left" />
 
 ### 4.5.3 Lógicos
 
@@ -947,9 +969,9 @@ Estos operadores actúan sobre operadores o expresiones lógicas, es decir, aque
     }
 ```
 
-**<u>Resultado de ejecución</u>**:
+**Resultado de ejecución**:
 
-![image-20210907180405002](./img/image-20210907180405002.png)
+<img src="./img/image-20210907180405002.png" alt="image-20210907180405002"  />
 
 ### 4.5.4 Asignación
 
@@ -994,31 +1016,33 @@ Indica el orden en el que se evalúan los operadores en una expresión. No es ne
 
 Algunos de estos operadores los veremos en unidades posteriores, ahora mismo no es necesario que sepas qué hacen.
 
+
+
 1. Operadores postfijos: [ ] . (paréntesis)
 2. Operadores unarios: ++expr, --expr, -expr, ~ !
 3. Creación o conversión de tipo: new (tipo)expr
-4. **Multiplicación y división: *, /, %**
-5. **Suma y resta: +, -**
+4. Multiplicación y división: *, /, %
+5. Suma y resta: +, -
 6. Desplazamiento de bits: <<, >>, >>>
-7. **Relacionales: <, >, <=, >=**
-8. **Igualdad y desigualdad: ==, !=**
+7. Relacionales: <, >, <=, >=
+8. Igualdad y desigualdad: ==, !=
 9. AND a nivel de bits: &
-10. **AND lógico: &&**
+10. AND lógico: &&
 11. XOR a nivel de bits: ^
 12. OR a nivel de bits: |
-13. **OR lógico: ||**
+13. OR lógico: ||
 14. Operador condicional: ? :
-15. **Asignación: =, +=, -=, *=, /=, %=, ^=, &=, |=, >>=, <<=**
+15. Asignación: =, +=, -=, *=, /=, %=, ^=, &=, |=, >>=, <<=
 
 
-
-------
 
 ## 4.6 Conversión de tipos
 
 ### 4.6.1 Casting
 
-La conversión entre tipos primitivos se realiza mediante el casting. Java proporciona dos tipos de casting: implícito y explícito. El implícito se realiza automáticamente, mientras que el explícito la tenemos que escribir nosotros.
+La conversión entre tipos primitivos se realiza mediante el **casting**. 
+
+Java proporciona dos tipos de casting: implícito y explícito. El implícito se realiza automáticamente, mientras que el explícito la tenemos que escribir nosotros.
 
 #### Casting implícito
 
@@ -1026,9 +1050,9 @@ El compilador realiza automáticamente el casting implícito cuando el tipo al q
 
 Es decir, Java hará el casting implícito automáticamente cuando convertimos:
 
-- de char a int o de char a float
+- de *char* a *int* o de *char* a *float*
 
-- de int a float
+- de *int* a *float*
 
 ![casting](./img/casting.png)
 
@@ -1052,15 +1076,19 @@ char baz = 97f;   // error, casting implícito de float a char no permitido
 int qux = 97f;    // error, casting implícito de float a int no permitido
 ```
 
-------
 
-⚠ **El casting con los tipos boolean y String no se puede realizar**.
 
-------
+> [!WARNING]
+>
+> El casting con los tipos **boolean** y **String** no se puede realizar.
+
+
 
 #### Casting explicito
 
-Hemos visto que el casting implícito no se puede realizar cuando queremos convertir a un tipo más estrecho (por ejemplo, convertir de **float a int**, ya que se pierden los decimales). Pero a veces necesitamos hacerlo, sabiendo que vamos a perder precisión. En este caso tenemos que explicitar el casting.
+Hemos visto que el casting implícito no se puede realizar cuando queremos convertir a un tipo más estrecho (por ejemplo, convertir de *float* a *int*, ya que se pierden los decimales). 
+
+Pero a veces necesitamos hacerlo, sabiendo que vamos a perder precisión. En este caso tenemos que explicitar el casting.
 
 Para realizar un casting explícito, se debe escribir **el tipo al que se quiere convertir** entre paréntesis, justo antes del **valor que se quiere convertir**.
 
@@ -1099,13 +1127,15 @@ float foo = 5 / 2;          // foo es 2.0f
 float bar = (float) 5 / 2;  // bar es 2.5f
 ```
 
+
+
 ### 4.6.2 Conversión textual
 
 Además de las conversiones con casting, Java incorpora una serie de métodos para hacer otras conversiones.
 
 #### Concatenación
 
-Se puede convertir cualquier valor en un String sólo concatenando con un String vacío "".
+Se puede convertir cualquier valor en un *String* sólo concatenando con un *String* vacío "".
 
 ```Java
 String foo = "" + 'a';    // foo es "a"
@@ -1131,27 +1161,27 @@ String quux = String.valueOf(true);  // quux es "true"
 
 #### charAt()
 
-Lógicamente, no podemos convertir un String en un char, ya que el String puede tener varios caracteres. Pero podemos usar el método Char () para obtener un caracter que esté en una determinada posición.
+Lógicamente, no podemos convertir un String en un char, ya que el String puede tener varios caracteres. Pero podemos usar el método *charAt()* para obtener un caracter que esté en una determinada posición.
 
 ```jAVA
 char foo = "java8".charAt(0);  // foo es 'j'
 char baz = "java8".charAt(4);  // baz es '8'
 ```
 
-Hay que tener en cuenta que las posiciones empiezan por 0.
+Hay que tener en cuenta que las posiciones empiezan por **0**.
 
 
 
 #### Character.getNumericValue()
 
-En el punto anterior hemos visto que si hacemos el casting implícito para convertir un char en un int, obtenemos el valor Unicode del carácter.
+En el punto anterior hemos visto que si hacemos el casting implícito para convertir un *char* en un *int*, obtenemos el valor Unicode del carácter.
 
 Si queremos obtener el valor que representa el **caracter** se puede hacer con el método **Character.getNumericValue ()**.
 
 ```jAVA
 char foo = '9';
 
-int bar = foo; // bar se 57, con el casting obtenemos el valor unicode
+int bar = foo; // bar es 57, con el casting obtenemos el valor unicode
 
 int baz = Character.getNumericValue(foo); // baz se 9, obtenemos el valor representado por el caracter
 ```
@@ -1183,7 +1213,7 @@ Se echan de menos operadores matemáticos más potentes en Java. Por ello se ha 
 
 Esta clase posee muchos métodos muy interesantes para realizar cálculos matemáticos complejos como cálculo de potencias, raíces cuadradas, valores absolutos, seno, coseno, etc.
 
-Por <u>ejemplo</u>:
+Por ejemplo:
 
 ```Java
 double x = Math.pow(3,3);	 // Potencia 3 ^ 3
@@ -1200,11 +1230,13 @@ double E -> El número e (2, 7182818245...)
 ```
 
 Algunos ejemplos de otros métodos:
-![image-20210907184818918](/img/image-20210907184818918.png)
+<img src="./img/image-20210907184818918.png" alt="image-20210907184818918" style="zoom: 50%;" />
 
 ## 4. 8 Literales
 
-A la hora de tratar con valores de los tipos de datos simples (y Strings) se utiliza lo que se denomina “literales”. Los literales son elementos que sirven para representar un valor en el código fuente del programa.
+A la hora de tratar con valores de los tipos de datos simples, y Strings, se utiliza lo que se denomina "literales". 
+
+Los literales son elementos que sirven para representar un valor en el código fuente del programa.
 
 En Java existen literales para los siguientes tipos de datos:
 
@@ -1226,43 +1258,47 @@ Son únicamente dos, las palabras reservadas true y false.
 
 ### 4.8.2 Literales enteros
 
-Los literales de tipo entero: byte, short, int y long pueden expresarse en decimal (base 10), octal (base 8) o hexadecimal (base 16). Además, puede añadirse al final del mismo la letra L para indicar que el entero es considerado como long (64bits).
+Los literales de tipo **entero**: *byte, short, int y long* pueden expresarse en decimal (base 10), octal (base 8) o hexadecimal (base 16). 
+
+Además, puede añadirse al final del mismo la letra **L** para indicar que el entero es considerado como **long** (64bits).
 
 En Java, el compilador identifica un entero decimal (base 10) al encontrar un número cuyo primer dígito es cualquier símbolo decimal excepto el cero (del 1 al 9). A continuación pueden aparecer dígitos del 0 al 9.
 
-La letra L al final de un literal de tipo entero puede aplicarse a cualquier sistema de numeración e indica que el número decimal sea tratado como un entero largo (de 64 bits). Esta letra L puede ser mayúscula o minúscula, aunque es aconsejable utilizar la mayúscula ya que de lo contrario puede confundirse con el dígito uno (1) en los listados.
+La letra **L** al final de un literal de tipo **entero** puede aplicarse a cualquier sistema de numeración e indica que el número decimal sea tratado como un entero largo (de 64 bits). Esta letra **L** puede ser mayúscula o minúscula, aunque es aconsejable utilizar la mayúscula ya que de lo contrario puede confundirse con el dígito uno (1) en los listados.
 
-<u>Ejemplo</u>:
-						long max1 = 9223372036854775807L; 	//valor máximo para un entero largo
+Ejemplo:
+
+`long max1 = 9223372036854775807L; 	//valor máximo para un entero largo`
 
 
 
 ### 4.8.3 Literales reales
 
-Los literales de tipo real sirven para indicar valores float o double. A diferencia de los literales de tipo entero, **no pueden expresarse en octal o hexadecimal**.
+Los literales de tipo real sirven para indicar valores **float** o **double**. A diferencia de los literales de tipo entero, **no pueden expresarse en octal o hexadecimal**.
 
-Existen dos formatos de representación: mediante su parte entera, el punto decimal ( . ) y la parte fraccionaria; o mediante notación exponencial o científica:
+Existen dos formatos de representación: mediante su parte entera, el punto decimal ( . ) y la parte fraccionaria; o mediante notación **exponencial** o **científica**:
 
 Ejemplos equivalentes:
-			3.1415
-			0.31415e1
-			.31415e1
-			0.031415E+2
-			.031415e2
-			314.15e-2
-			31415E-4
 
-Al igual que los literales que representan enteros, se puede poner una letra como sufijo. Esta letra puede ser una F o una D (mayúscula o minúscula indistintamente).
+3.1415
+0.31415e1
+.31415e1
+0.031415E+2
+.031415e2
+314.15e-2
+31415E-4
 
-​	F --> Trata el literal como de tipo float.
+Al igual que los literales que representan enteros, se puede poner una letra como sufijo. Esta letra puede ser una **F** o una **D** (mayúscula o minúscula indistintamente).
 
-​	D --> Trata el literal como de tipo double.
+**F:** Trata el literal como de tipo float.
 
-<u>Ejemplo</u>:
+**D:** Trata el literal como de tipo double.
 
-​	3.1415F
+Ejemplo:
 
-​	.031415d
+3.1415F
+
+.031415d
 
 
 
@@ -1271,78 +1307,82 @@ Al igual que los literales que representan enteros, se puede poner una letra com
 Los literales de tipo carácter se representan siempre entre comillas simples. Entre las comillas simples puede aparecer:
 
 Un **símbolo** (letra) siempre que el carácter esté asociado a un código Unicode.
-		<u>Ejemplos</u>: ‘a’ , ‘B’ , ‘{‘ , ‘ñ’ , ‘á’ .
+Ejemplos: 'a' , 'B' , '{' , 'ñ' , 'á' .
 
-Una “**secuencia de escape**”. Las secuencias de escape son combinaciones del símbolo contrabarra \ seguido de una letra, y sirven para representar caracteres que no tienen una equivalencia en forma de símbolo.
+Las "**secuencias de escape**" son combinaciones del símbolo contrabarra **\** seguido de una letra. Sirven para representar caracteres que no tienen una equivalencia en forma de símbolo.
 
 Las posibles secuencias de escape son:
 
-​	**\n** -----> Nueva Linea.
+​	 **\n**: Nueva Linea.
 
-​	**\t** -----> Tabulador.
+​	**\t** : Tabulador.
 
-​	**\r** -----> Retroceso de Carro.
+​	**\r**: Retroceso de Carro.
 
-​	**\f** -----> Comienzo de Pagina.
+​	**\f**: Comienzo de Pagina.
 
-​	**\b** -----> Borrado a la Izquierda.
+​	**\b**: Borrado a la Izquierda.
 
-​	\\\\----> El carácter barra inversa ( \ ).
+​	\\\\: El carácter barra inversa ( \ ).
 
-​	**\\'** -----> El carácter prima simple ( ' ).
+​	**\\'** : El carácter prima simple ( ' ).
 
-​	**\\"** -----> El carácter prima doble o bi-prima ( " ).
+​	**\\"** : El carácter prima doble o bi-prima ( " ).
 
-Por <u>ejemplo</u>:
+Por ejemplo:
 
-​	Para imprimir una diagonal inversa se utiliza: \\\
+* Para imprimir una diagonal inversa se utiliza: \\\
 
-​	Para imprimir comillas dobles en un String se utiliza: \\"
+* Para imprimir comillas dobles en un String se utiliza: \\"
 
 
 
 ### 4.8.5 Literales cadenas
 
-Los **Strings o cadenas de caracteres no forman parte de los tipos de datos elementales en Java**, sino que **son instanciados a partir de la clase java.lang.String**, pero aceptan su inicialización a partir de literales de este tipo, por lo que se tratan en este punto.
+Los **Strings** o **cadenas de caracteres** no forman parte de los tipos de datos elementales en Java. Son instanciados a partir de la clase ***java.lang.String*** pero aceptan su inicialización a partir de literales de este tipo, por lo que se tratan en este punto.
 
-------
 
-⚠ Un literal de tipo string va encerrado entre comillas dobles ( “ ) y debe estar incluido completamente en una sola línea del programa fuente (no puede dividirse en varias líneas).
 
-------
+> [!WARNING]
+>
+> Un literal de tipo string va encerrado entre **comillas dobles ( " )** y debe estar incluido completamente en una sola línea del programa fuente (no puede dividirse en varias líneas).
 
-Entre las comillas dobles puede incluirse cualquier carácter del código Unicode (o su código precedido del carácter \ )  además de las secuencias de escape vistas anteriormente en los literales
+
+
+Entre las comillas dobles puede incluirse cualquier carácter del código **Unicode** (o su código precedido del carácter \ )  además de las secuencias de escape vistas anteriormente en los literales
 de tipo carácter.
 
-Así, por ejemplo, para incluir un cambio de línea dentro de un literal de tipo string deberá hacerse mediante la secuencia de escape \n :
+Así, por ejemplo, para incluir un cambio de línea dentro de un literal de tipo **String** deberá hacerse mediante la secuencia de escape **\n** :
 
-<u>Ejemplo</u>:
+Ejemplo:
 
-​	System.out.println(”Primera línea\nSegunda línea del string\n”);
+```java
+System.out.println("Primera línea\nSegunda línea del string\n");
+System.out.println("Hola");
+```
 
-​	System.out.println(”Hola”);
+La visualización del string anterior mediante **println()** produciría la siguiente salida por pantalla:
 
-La visualización del string anterior mediante println() produciría la siguiente salida por pantalla:
+```java
+Primera línea
 
-​	Primera línea
+Segunda línea del string
 
-​	Segunda línea del string
+Hola
 
-​	Hola
+```
 
+La forma de incluir los caracteres: comillas dobles ( " ) y contrabarra ( \ ) es mediante las secuencias de escape \\\" y \\\ respectivamente (o mediante su código Unicode precedido de \ ).
 
-
-La forma de incluir los caracteres: comillas dobles ( “ ) y contrabarra ( \ ) es mediante las secuencias de escape \” y \\\ respectivamente (o mediante su código Unicode precedido de \ ).
-
-------
-
-📣 Si el string es demasiado largo y debe dividirse en varias líneas en el fichero fuente, puede utilizarse el operador de concatenación de strings (+) de la siguiente forma:
-
-”Este String es demasiado largo para estar en una línea del ” +
-
- ”fichero fuente y se ha dividido en dos.”
-
-------
+> [!TIP]
+>
+> Si el string es demasiado largo y debe dividirse en varias líneas en el fichero fuente, puede utilizarse el operador de concatenación de strings (+) de la siguiente forma:
+>
+> ```java
+> "Este String es demasiado largo para estar en una línea del " 
+> 
+> + "fichero fuente y se ha dividido en dos."
+> ```
 
 
 
@@ -1352,8 +1392,8 @@ La forma de incluir los caracteres: comillas dobles ( “ ) y contrabarra ( \ ) 
 
 Ya hemos visto el uso de System.out para mostrar información por pantalla:
 
-- **print(“...”)** imprime texto por pantalla
-- **println(“...”)** imprime texto por pantalla e introduce un salto de línea.
+- **print("...")** imprime texto por pantalla
+- **println("...")** imprime texto por pantalla e introduce un salto de línea.
 
 La utilización de System.err sería totalmente análoga para enviar los mensajes producidos por errores en la ejecución (es el canal que usa también el compilador para notificar los errores encontrados).
 
@@ -1369,16 +1409,19 @@ Por ejemplo, para presentar el mensaje de saludo habitual por pantalla, y despu�
 
 y la salida sería la siguiente:
 
-![image-20210907194930581](./img/image-20210907194930581.png)
+```java
+HOLA mundo
+Mensaje de error
+```
 
 También pueden imprimirse variables de cualquier tipo, así como combinaciones de texto y variables concatenadas con el operador +
 
 ```Java
     public static void main(String[] args) {
         
-        String nombre = "Pepito";
-        int edad = 45;
-      
+       	String nombre = "Álex";
+        int edad = 25;
+
         System.out.println(nombre);
         System.out.println(edad);
         System.out.println(nombre +" tiene "+edad+" años");
@@ -1387,7 +1430,7 @@ También pueden imprimirse variables de cualquier tipo, así como combinaciones 
 
 Y la salida sería la siguiente:
 
-![image-20210907195340470](./img/image-20210907195340470.png)
+<img src="./img/ud14.png" alt="image-20210907195340470" style="zoom:50%; float:left;" />
 
 
 
@@ -1395,62 +1438,57 @@ Y la salida sería la siguiente:
 
 La entrada estándar (leer información del teclado, escrita por el usuario) es un poco más compleja. Hay varias formas de hacerlo pero la más sencilla es utilizar la **clase Scanner**.
 
-Siempre que queramos leer información del teclado primero tendremos que declarar un objeto Scanner que lea de la entrada estándar **System.in** así:
+Siempre que queramos leer información del teclado primero tendremos que declarar un objeto **Scanner** que lea de la entrada estándar **System.in** así:
 
-**Scanner sc= new Scanner(System.in);**
+```java
+Scanner sc= new Scanner(System.in);
+```
 
-🧷 **NOTA**: En este ejemplo **hemos creado un objeto Scanner llamado sc** pero <u>podríamos ponerle cualquier nombre</u>.
+> [!NOTE]
+>
+> En este ejemplo hemos creado un objeto **Scanner** llamado **sc** pero podríamos ponerle cualquier nombre.
 
+Ahora podremos utilizar **sc** tantas veces como queramos para leer información del teclado.
 
-
-Ahora podremos utilizar reader tantas veces como queramos para leer información del teclado.
 Por ejemplo:
 
+```java
 String texto = sc.nextLine();
+```
 
 El método **sc.nextLine()** recogerá el texto que el usuario escriba por teclado (hasta presionar la tecla Intro) y lo guardará en **texto** (de tipo String).
 
 Existen mucho otros métodos según el tipo de dato que se quiera leer:
 
-- **nextByte()**: obtiene un número entero tipo byte.
-- **nextShort()**: obtiene un número entero tipo short.
-- **nextInt()**: obtiene un número entero tipo int.
-- **nextLong()**: obtiene un número entero tipo long.
-- **nextFloat():** obtiene un número real float.
-- **nextDouble()**: obtiene un número real double.
+- **nextByte()**: obtiene un número *entero* tipo *byte*.
+- **nextShort()**: obtiene un número *entero* tipo *short*.
+- **nextInt()**: obtiene un número *entero* tipo *int*.
+- **nextLong()**: obtiene un número *entero* tipo *long*.
+- **nextFloat():** obtiene un número real *float*.
+- **nextDouble()**: obtiene un número real *double*.
 - **next()**: obtiene el siguiente token (texto hasta un espacio).
 
-------
+> [!WARNING]
+>
+> No existen métodos de la clase Scanner para obtener directamente *booleanos* ni para obtener un solo *carácter*.
 
-⚠ No existen métodos de la clase Scanner para obtener directamente booleanos ni para obtener un solo carácter.
+> [!CAUTION]
+>
+> Para poder utilizar la clase **Scanner** es necesario importarla desde el paquete **java.util** de Java. Es decir, arriba del todo (antes del public class… ) hay que escribir la siguiente sentencia:
+>
+> ```java
+> import java.util.Scanner;
+> ```
 
-------
-
-------
-
-📣 **IMPORTANTE**: Para poder utilizar la clase Scanner **es necesario** importarla desde el paquete **java.util** de Java. Es decir, arriba del todo (antes del public class… ) hay que escribir la siguiente sentencia:
-
-**import java.util.Scanner;**
-
-------
-
-<u>Ejemplo en el que leemos una cadena de texto y la mostramos por pantalla</u>:
+Ejemplo en el que leemos una cadena de texto y la mostramos por pantalla:
 
 ```Java
-package javaapplication1;
 import java.util.Scanner;
-/**
- *
- * @author Usuario
- */
-public class JavaApplication1 {
 
-    /**
-     * @param args the command line arguments
-     */
+public class Main {
     public static void main(String[] args) {
-        // TODO code application logic here
-         String nombre;
+      
+        String nombre;
         
         Scanner sc = new Scanner(System.in);
         
@@ -1458,7 +1496,7 @@ public class JavaApplication1 {
         
         nombre = sc.nextLine();
         
-        System.out.println("Hola " + nombre);
+        System.out.println("¡Hola " + nombre + "!");
     }
     
 }
@@ -1466,22 +1504,23 @@ public class JavaApplication1 {
 
 Salida:
 
-![image-20210907204726235](./img/image-20210907204726235.png)
+<img src="./img/u15.png" alt="image-20210907204726235" style="zoom:50%; float:left;" />
 
-Ejemplo en el que leemos un valor tipo double. El programa pide al usuario que introduzca el radio de un círculo, luego calcula su área y circunferencia, por último lo muestra por pantalla.
+
+
+Ejemplo en el que leemos un valor tipo double. 
+
+El programa pide al usuario que introduzca el radio de un círculo, luego calcula su área y circunferencia, por último lo muestra por pantalla.
 
 ```Java
 import java.util.Scanner;
-/**
- *
- * @author Usuario
- */
-public class JavaApplication1 {
+
+public class Main {
 
     public static void main(String[] args) {
         
         
-        double radio, area, circumferencia;
+        double radio, area, circunferencia;
         
         Scanner sc = new Scanner(System.in);
         
@@ -1497,7 +1536,7 @@ public class JavaApplication1 {
               
         System.out.println("El area es " + area);
         
-        System.out.println("La circumferencia es " + circumferencia);
+        System.out.println("La circumferencia es " + circunferencia);
     }
     
 }
@@ -1505,7 +1544,5 @@ public class JavaApplication1 {
 
 Salida:
 
-
-
-![image-20210907205409638](./img/image-20210907205409638.png)
+<img src="./img/u16.png" alt="image-20210907205409638" style="zoom:50%; float:left;" />
 

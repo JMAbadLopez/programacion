@@ -1,18 +1,3 @@
----
-**title**: Instalación de Java y Netbeans.
-titlepage: true
-author: [Lorenzo Díaz de Haro, José Manuel Romero Martínez]
-date: Curso 2025-2026
-lang: es
-toc-own-page: true
-header-left: IES Camp de Morvedre
-titlepage-color: "D7BBEA"
-titlepage-text-color: "262F7E"
-toc-own-page: true
-...
-
-![](./img/logo europeo.jpg)
-
 | Fecha      | Versión | Descripción         |
 | ---------- | ------- | ------------------- |
 | 10/09/2021 | 1.0.0   | Versión inicial     |
