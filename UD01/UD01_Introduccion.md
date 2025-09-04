@@ -1,4 +1,8 @@
-<img src="../logos/camp.png" alt="logo camp" style="zoom:10%; float:right" />
+<img src="../logos/camp.png" alt="logo camp" style="zoom:5%; float:right" />
+
+<img src="../logos/europa.jpg" alt="logo camp" style="zoom:8%; float:right" />
+
+
 
 | Fecha      | Versión | Descripción                                |
 | ---------- | ------- | ------------------------------------------ |
@@ -6,6 +10,7 @@
 | 17/09/2021 | 1.0.1   | Corrección en la declaración de variables. |
 | 20/09/2021 | 1.0.2   | Corrección del índice.                     |
 | 01/09/2025 | 1.0.3   | Revisión del tema.                         |
+| 05/09/2025 | 1.0.4   | Adaptación del tema.                       |
 
 
 
@@ -79,7 +84,7 @@ El programa fuente o código fuente es el resultado de la codificación de un al
 
 Un entorno de programación interpretado traduce el código fuente a código máquina y lo ejecuta, instrucción por instrucción.
 
-## 1.5 Interprete vs Compilador
+## 1.5 Intérprete vs Compilador
 
 **Intérprete:**
 
@@ -1545,4 +1550,6 @@ public class Main {
 Salida:
 
 <img src="./img/u16.png" alt="image-20210907205409638" style="zoom:50%; float:left;" />
+
+
 
