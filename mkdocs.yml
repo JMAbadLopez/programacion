@@ -12,7 +12,7 @@ repo_name: jmabadlopez/programacion
 theme:
   name: material
   language: es
-  logo: ../assets/images/camp.png
+  logo: ./assets/images/camp.png
   icon: fontawesome/brands/mastodon
   hljs_languages:
     - python
