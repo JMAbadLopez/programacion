@@ -7,7 +7,7 @@ date: Curso 2025-2026
 | Fecha      | Versión | Descripción         |
 | ---------- | ------- | ------------------- |
 | 10/09/2021 | 1.0.0   | Versión inicial     |
-| 01/09/2025 | 1.0.1   | Versión actualizada |
+| 08/09/2025 | 1.0.1   | Versión actualizada |
 
 ## Guía de instalación IntelliJ
 
