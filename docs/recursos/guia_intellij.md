@@ -1,7 +1,6 @@
 ---
 title: Instalación de Java y Netbeans.
 author: [Lorenzo Díaz de Haro, José Manuel Romero Martínez]
-date: Curso 2025-2026
 ---
 
 | Fecha      | Versión | Descripción         |
