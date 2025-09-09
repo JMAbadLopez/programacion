@@ -3,18 +3,16 @@ site_name: Programación DAM
 nav:
   - Inicio: index.md
   - Unidades:
-    - UD1 - Introducción a la programación: unidades/ud01.md
-  - Ejercicios:
-    - UD1
-  - Ejemplos:
-    - UD1 
+    - UD1 - Introducción a la programación. Lenguaje Java.: unidades/ud01.md
+  - Recursos:
+    - Guía de instalación IntelliJ: recursos/guia_intellij.md
 repo_url: https://github.com/jmabadlopez/programacion
 repo_name: jmabadlopez/programacion
 
 theme:
   name: material
   language: es
-  logo: assets/camp.png
+  logo: ../assets/images/camp.png
   icon: fontawesome/brands/mastodon
   hljs_languages:
     - python
@@ -31,13 +29,16 @@ theme:
       toggle:
         icon: material/brightness-7 
         name: Modo oscuro
+      primary: teal
+      accent: teal 
 
     # Palette toggle for dark mode
     - scheme: slate
       toggle:
         icon: material/brightness-4
         name: Modo claro
-
+      primary: teal
+      accent: teal
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true
