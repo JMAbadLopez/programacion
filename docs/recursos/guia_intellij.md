@@ -18,7 +18,7 @@ Para poder trabajar con **Java** necesitamos tener instalado el **JDK** en nuest
 
 Nos mostrará qué versión tenemos instalada:
 
-<img src="../../assets/images/version_java_24.png" style="zoom: 70%; " />
+<img src="../../assets/images/ud01/version_java_24.png" style="zoom: 70%; " />
 
 En caso de no tenerlo, lo más recomendable es descargar la última versión **LTS** desde la web de **Oracle**:
 
@@ -26,7 +26,7 @@ En caso de no tenerlo, lo más recomendable es descargar la última versión **L
 
 > **Para poder descargar el jdk deberéis registraros previamente.**
 
-<img src="../../assets/images/descarga_java.png" style="zoom: 70%; " />
+<img src="../../assets/images/ud01/descarga_java.png" style="zoom: 70%; " />
 
 ### 2. Intellij IDEA Community Edition de JetBrains
 
@@ -38,16 +38,16 @@ En concreto de la versión **Comunity**. Nos va a permitirá desarrollar todos l
 
 Su página oficial de descarga está en [Jetbrains. IntelliJ.](https://www.jetbrains.com/idea/)
 
-<img src="../../assets/images/descarga_IDE.png" style="zoom: 70%; " />
+<img src="../../assets/images/ud01/descarga_IDE.png" style="zoom: 70%; " />
 
 Cuando abrimos por primera vez la aplicación, nos aparece esto:
 
-<img src="../../assets/images/primer_proyecto.png" style="zoom: 70%; " />
+<img src="../../assets/images/ud01/primer_proyecto.png" style="zoom: 70%; " />
 
 Trabajaremos con **Proyectos** de **Java**. Si creamos uno proyecto, por defecto, podremos ver:
 
-<img src="../../assets/images/primer_proyecto_creado.png" style="zoom: 70%; " />
+<img src="../../assets/images/ud01/primer_proyecto_creado.png" style="zoom: 70%; " />
 
 La **salida estándar** la podremos ver en la propia terminal del IDE. El resultado de ejecutar el código de ejemplo es:
 
-<img src="../../assets/images/ejecucion_primer_proyecto.png" style="zoom: 70%; " />
+<img src="../../assets/images/ud01/ejecucion_primer_proyecto.png" style="zoom: 70%; " />

@@ -4,6 +4,10 @@ nav:
   - Inicio: index.md
   - Unidades:
     - UD1 - Introducción a la programación. Lenguaje Java.: unidades/ud01.md
+  - Ejercicios:
+    - UD 1: 
+      - Ejercicios de introducción: ejercicios/ud01/introduccion.md
+      - Ejercicios de el lenguaje Java: ejercicios/ud01/lenguaje_java.md
   - Recursos:
     - Guía de instalación IntelliJ: recursos/guia_intellij.md
 repo_url: https://github.com/jmabadlopez/programacion
@@ -40,6 +44,7 @@ theme:
       primary: teal
       accent: teal
 markdown_extensions:
+  - sane_lists
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.superfences
