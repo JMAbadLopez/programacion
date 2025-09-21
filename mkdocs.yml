@@ -6,9 +6,11 @@ nav:
     - UD1 - Introducción a la programación. Lenguaje Java.: unidades/ud01.md
     - UD2 - Programación estructurada. Estructuras de control y repetición: unidades/ud02.md
   - Ejercicios:
-    - UD 1: 
+    - UD1: 
       - Ejercicios de introducción: ejercicios/ud01/introduccion.md
       - Ejercicios del lenguaje Java: ejercicios/ud01/lenguaje_java.md
+    - UD2:
+      - Ejercicios de programación estructurada: ejercicios/ud02/ejercicios_ud02_revisada.md
   - Recursos:
     - Guía de instalación IntelliJ: recursos/guia_intellij.md
 repo_url: https://github.com/jmabadlopez/programacion
