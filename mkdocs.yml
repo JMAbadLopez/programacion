@@ -36,16 +36,16 @@ theme:
       toggle:
         icon: material/brightness-7 
         name: Modo oscuro
-      primary: teal
-      accent: teal 
+      primary: deep orange
+      accent: deep orange 
 
     # Palette toggle for dark mode
     - scheme: slate
       toggle:
         icon: material/brightness-4
         name: Modo claro
-      primary: teal
-      accent: teal
+      primary: deep orange
+      accent: deep orange
 markdown_extensions:
   - sane_lists
   - pymdownx.highlight:
