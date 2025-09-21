@@ -1,2 +1,15 @@
-.DS_Store
-*.DS_Store
+# IntelliJ IDEA specific files
+idea/
+*.iml
+
+# Compiled source #
+*.class
+
+# Logs and databases #
+*.log
+*.sql
+*.sqlite
+
+# OS generated files #
+DS_Store
+Thumbs.db
