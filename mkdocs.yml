@@ -10,7 +10,7 @@ nav:
       - Ejercicios de introducción: ejercicios/ud01/introduccion.md
       - Ejercicios del lenguaje Java: ejercicios/ud01/lenguaje_java.md
     - UD2:
-      - Ejercicios de programación estructurada: ejercicios/ud02/ejercicios_ud02_revisada.md
+      - Ejercicios de programación estructurada: ejercicios/ud02/ejercicios_ud02.md
   - Recursos:
     - Guía de instalación IntelliJ: recursos/guia_intellij.md
 repo_url: https://github.com/jmabadlopez/programacion
