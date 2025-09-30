@@ -1776,16 +1776,9 @@
 <h2 id="6-elementos-auxiliares-nuestras-herramientas-especializadas">6 Elementos Auxiliares: Nuestras Herramientas Especializadas</h2>
 <p>Dentro de los bucles, es común usar variables con roles muy específicos. Darles un "apodo" nos ayuda a entender su función al instante.</p>
 <ul>
-<li>
-<p><strong>Contadores:</strong> Cuentan sucesos, normalmente incrementando de uno en uno. Ejemplos <code>i, j, contador, cont</code>.</p>
-<blockquote>
-<p><strong>Analogía:</strong> El portero de una discoteca que pulsa un contador cada vez que entra una persona.
--   <strong>Acumuladores (o Sumadores):</strong> Acumulan un total sumando cantidades variables. Ejemplos <code>suma, total, acumulado</code> </p>
-<p><strong>Analogía:</strong> El carrito de la compra donde vas añadiendo productos con precios diferentes.
--   <strong>Interruptores (o Banderas/Flags):</strong> Variables <code>boolean</code> que actúan como un interruptor de luz (<code>true</code>/<code>false</code>). Se usan para "recordar" si un evento ha ocurrido. Ejemplos <code>end, fin, haTerminado, salir</code> </p>
-<p><strong>Analogía:</strong> Una bandera que se levanta para señalar que se ha encontrado lo que se buscaba.</p>
-</blockquote>
-</li>
+<li><strong>Contadores:</strong> Cuentan sucesos, normalmente incrementando de uno en uno. Ejemplos <code>i, j, contador, cont</code> <strong>Analogía:</strong> El portero de una discoteca que pulsa un contador cada vez que entra una persona.</li>
+<li><strong>Acumuladores (o Sumadores):</strong> Acumulan un total sumando cantidades variables. Ejemplos <code>suma, total, acumulado</code>. <strong>Analogía:</strong> El carrito de la compra donde vas añadiendo productos con precios diferentes.</li>
+<li><strong>Interruptores (o Banderas/Flags):</strong> Variables <code>boolean</code> que actúan como un interruptor de luz (<code>true</code>/<code>false</code>). Se usan para "recordar" si un evento ha ocurrido. Ejemplos <code>end, fin, haTerminado, salir</code>.<strong>Analogía:</strong> Una bandera que se levanta para señalar que se ha encontrado lo que se buscaba.</li>
 </ul>
 <h2 id="7-vectores-y-matrices-almacenando-datos-en-coleccion">7 Vectores y Matrices: Almacenando Datos en Colección</h2>
 <p>Hasta ahora, cada variable guardaba un solo dato. Pero, ¿y si necesitamos guardar las notas de 30 alumnos? ¿O los precios de 100 productos? Para eso usamos los arrays (vectores y matrices).</p>
@@ -2101,8 +2094,7 @@ Para recorrer una matriz, necesitamos dos bucles <code>for</code> anidados: uno 
 <h2 id="8-strings-la-navaja-suiza-para-manejar-texto">8 Strings: La navaja suiza para manejar texto</h2>
 <p>Un <code>String</code> en Java es un objeto que nos ofrece un montón de métodos útiles para manipular cadenas de texto.</p>
 <blockquote>
-<p>[!IMPORTANT]
-<strong>La regla de oro: <code>equals()</code> para comparar, NO <code>==</code></strong></p>
+<p><strong>La regla de oro: <code>equals()</code> para comparar, NO <code>==</code></strong></p>
 <p><code>variable1 == variable2</code> compara si dos variables apuntan al <em>mismo objeto en memoria</em>.
 <code>variable1.equals(variable2)</code> compara si los <em>contenidos</em> (el texto) de los dos Strings son iguales.</p>
 <p><strong>¡Usar <code>==</code> para comparar el contenido de los Strings es uno de los errores más comunes y difíciles de detectar!</strong></p>

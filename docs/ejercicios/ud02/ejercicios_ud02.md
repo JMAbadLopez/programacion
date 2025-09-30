@@ -40,7 +40,7 @@
 
 7.  **(df, j) ¿Par o Impar?:** Crea un programa que pida un número entero y determine si es par o impar, mostrando un mensaje claro al usuario.
 
-8.  **(p, j) Filtrando Pares:** Escribe un programa que pida dos números enteros. Después, debe mostrar en pantalla todos los números pares que se encuentren en el rango entre esos dos números.
+8.  **(p, j) Filtrando Pares:** Escribe un programa que pida dos números enteros. Después, debe mostrar en pantalla todos los números pares que se encuentren en el rango entre esos dos números. **(NOTA: este ejercicio necesita estructuras repetitivas).** 
 
 9.  **(p, j) Producto de Positivos:** Diseña un programa que lea 5 números por teclado y calcule el producto de todos aquellos que sean positivos. Si un número no es positivo, simplemente se ignora.
 
@@ -104,7 +104,7 @@
 
 ---
 
-### Bloque 3: Estructuras Repetitivas
+### Bloque 3: Estructuras Repetitivas y Vectores
 
 26. **(df, j) La Tabla de Multiplicar:** Pide un número y muestra su tabla de multiplicar completa (del 0 al 10).
 
@@ -114,7 +114,7 @@
 
 29. **(p, j) Filtrando Positivos:** Pide al usuario una serie de números (positivos o negativos). El programa terminará cuando se introduzca un 0 y mostrará en pantalla solo los números positivos que se leyeron.
 
-30. **(p, j) Filtro Numérico Avanzado:** Lee 30 números por teclado y al final, muestra una lista con:
+30. **(p, j) Filtro Numérico Avanzado:** Lee 10 números por teclado y al final, muestra una lista con:
     * Los números positivos menores que 5.
     * Los números negativos mayores que -5.
 
