@@ -145,6 +145,46 @@
     
     
     
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
     
       <div class="md-header__source">
         <a href="https://github.com/jmabadlopez/programacion" title="Ir al repositorio" class="md-source" data-md-component="source">
@@ -571,9 +611,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#bloque-3-estructuras-repetitivas" class="md-nav__link">
+  <a href="#bloque-3-estructuras-repetitivas-y-vectores" class="md-nav__link">
     <span class="md-ellipsis">
-      Bloque 3: Estructuras Repetitivas
+      Bloque 3: Estructuras Repetitivas y Vectores
     </span>
   </a>
   
@@ -747,9 +787,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#bloque-3-estructuras-repetitivas" class="md-nav__link">
+  <a href="#bloque-3-estructuras-repetitivas-y-vectores" class="md-nav__link">
     <span class="md-ellipsis">
-      Bloque 3: Estructuras Repetitivas
+      Bloque 3: Estructuras Repetitivas y Vectores
     </span>
   </a>
   
@@ -881,7 +921,7 @@
 <p><strong>(df, j) ¿Par o Impar?:</strong> Crea un programa que pida un número entero y determine si es par o impar, mostrando un mensaje claro al usuario.</p>
 </li>
 <li>
-<p><strong>(p, j) Filtrando Pares:</strong> Escribe un programa que pida dos números enteros. Después, debe mostrar en pantalla todos los números pares que se encuentren en el rango entre esos dos números.</p>
+<p><strong>(p, j) Filtrando Pares:</strong> Escribe un programa que pida dos números enteros. Después, debe mostrar en pantalla todos los números pares que se encuentren en el rango entre esos dos números. <strong>(NOTA: este ejercicio necesita estructuras repetitivas).</strong> </p>
 </li>
 <li>
 <p><strong>(p, j) Producto de Positivos:</strong> Diseña un programa que lea 5 números por teclado y calcule el producto de todos aquellos que sean positivos. Si un número no es positivo, simplemente se ignora.</p>
@@ -973,7 +1013,7 @@
 </li>
 </ol>
 <hr />
-<h3 id="bloque-3-estructuras-repetitivas">Bloque 3: Estructuras Repetitivas</h3>
+<h3 id="bloque-3-estructuras-repetitivas-y-vectores">Bloque 3: Estructuras Repetitivas y Vectores</h3>
 <ol start="26">
 <li>
 <p><strong>(df, j) La Tabla de Multiplicar:</strong> Pide un número y muestra su tabla de multiplicar completa (del 0 al 10).</p>
@@ -988,7 +1028,7 @@
 <p><strong>(p, j) Filtrando Positivos:</strong> Pide al usuario una serie de números (positivos o negativos). El programa terminará cuando se introduzca un 0 y mostrará en pantalla solo los números positivos que se leyeron.</p>
 </li>
 <li>
-<p><strong>(p, j) Filtro Numérico Avanzado:</strong> Lee 30 números por teclado y al final, muestra una lista con:</p>
+<p><strong>(p, j) Filtro Numérico Avanzado:</strong> Lee 10 números por teclado y al final, muestra una lista con:</p>
 <ul>
 <li>Los números positivos menores que 5.</li>
 <li>Los números negativos mayores que -5.</li>
