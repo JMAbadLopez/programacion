@@ -12,7 +12,10 @@ nav:
     - UD2:
       - Ejercicios de programación estructurada: ejercicios/ud02/ejercicios_ud02.md
   - Recursos:
-    - Guía de instalación IntelliJ: recursos/guia_intellij.md
+    - Guías:
+      - Instalación IntelliJ: recursos/guia_intellij.md
+    - Infografías:
+      - Bucles: recursos/bucles.html
 repo_url: https://github.com/jmabadlopez/programacion
 repo_name: jmabadlopez/programacion
 
