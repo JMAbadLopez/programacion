@@ -170,9 +170,64 @@ System.out.println(<span class="string">"¡Correcto!: "</span> + numero);</code>
                     </div>
                 </div>
             </div>
+            
+            <!-- Diapositiva 5: Elementos Auxiliares -->
+            <div id="slide-5" class="slide p-8 md:p-12">
+                 <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Herramientas Especializadas dentro de Bucles</h2>
+                 <div class="grid md:grid-cols-3 gap-6">
+                     
+                     <div class="border-2 pale-red-border rounded-lg p-6 shadow-lg">
+                         <h3 class="text-2xl font-bold mb-3 text-center pale-red-text">Contador</h3>
+                         <p class="text-gray-700 mb-4 text-center">"El portero de discoteca". Cuenta eventos, normalmente de 1 en 1.</p>
+                         <div class="code-block text-sm">
+<pre><code><span class="comment">// Contar números pares</span>
+<span class="type">int</span> contadorPares = <span class="number">0</span>;
+<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i <= <span class="number">10</span>; i++) {
+  <span class="keyword">if</span> (i % <span class="number">2</span> == <span class="number">0</span>) {
+    contadorPares++;
+  }
+}
+<span class="comment">// contadorPares será 5</span></code></pre>
+                         </div>
+                     </div>
+                     
+                     <div class="border-2 pale-red-border rounded-lg p-6 shadow-lg">
+                         <h3 class="text-2xl font-bold mb-3 text-center pale-red-text">Acumulador</h3>
+                         <p class="text-gray-700 mb-4 text-center">"El carrito de la compra". Suma valores variables para obtener un total.</p>
+                         <div class="code-block text-sm">
+<pre><code><span class="comment">// Sumar precios de la compra</span>
+<span class="type">double</span>[] precios = {<span class="number">1.5</span>, <span class="number">3.0</span>, <span class="number">2.25</span>};
+<span class="type">double</span> total = <span class="number">0.0</span>;
+<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i < precios.length; i++) {
+  total = total + precios[i];
+}
+<span class="comment">// total será 6.75</span></code></pre>
+                         </div>
+                     </div>
 
-            <!-- Diapositiva 5: Resumen -->
-            <div id="slide-5" class="slide p-8 md:p-16">
+                     <div class="border-2 pale-red-border rounded-lg p-6 shadow-lg">
+                         <h3 class="text-2xl font-bold mb-3 text-center pale-red-text">Interruptor</h3>
+                         <p class="text-gray-700 mb-4 text-center">"El interruptor de la luz". Recuerda si un evento ha ocurrido (`true`/`false`).</p>
+                         <div class="code-block text-sm">
+<pre><code><span class="comment">// Terminar un bucle a petición</span>
+<span class="type">boolean</span> salir = <span class="keyword">false</span>;
+<span class="type">int</span> contador = <span class="number">0</span>;
+<span class="keyword">while</span> (!salir) {
+  contador++;
+  System.out.println(<span class="string">"Vuelta nº "</span> + contador);
+  <span class="keyword">if</span> (contador >= <span class="number">3</span>) {
+    salir = <span class="keyword">true</span>; <span class="comment">// Se pulsa el interruptor</span>
+  }
+}
+<span class="comment">// El bucle termina</span></code></pre>
+                         </div>
+                     </div>
+
+                 </div>
+            </div>
+
+            <!-- Diapositiva 6: Resumen -->
+            <div id="slide-6" class="slide p-8 md:p-16">
                  <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Resumen: ¿Cuándo usar cada bucle?</h2>
                  <div class="grid md:grid-cols-3 gap-6">
                      
