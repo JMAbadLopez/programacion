@@ -21,5 +21,7 @@ public class Ejercicio3_4 {
 
         System.out.println("Los alumnos se repartirán en " + tamanyo/numAlumnos + " equipos de " + numAlumnos+
                 ". Hay un desajuste de " + residuo + " alumnos");
+        
+        teclado.close();
     }
 }

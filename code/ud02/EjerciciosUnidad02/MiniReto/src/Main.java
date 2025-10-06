@@ -26,5 +26,6 @@ public class Main {
 
         } while (numeroUsuario != numeroSecreto);
 
+        sc.close();
     }
 }

@@ -20,5 +20,7 @@ public class Ejercicio3_3 {
         imc = kg/Math.pow(m,2);
 
         System.out.println("Tu IMC es : " + imc);
+
+        teclado.close();
     }
 }

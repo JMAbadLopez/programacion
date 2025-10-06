@@ -32,5 +32,8 @@ public class NivelIntermedio {
         if(contadorIntentosUsuario >= NUM_INTENTOS){
             System.out.println("Lo siento, no has adivinado el número");
         }
+
+        sc.close();
     }
+
 }

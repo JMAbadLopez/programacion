@@ -93,5 +93,6 @@ public class NivelAvanzado {
         } while (opcion != 3);
 
         System.out.println("Final del programa");
+        sc.close();
     }
 }

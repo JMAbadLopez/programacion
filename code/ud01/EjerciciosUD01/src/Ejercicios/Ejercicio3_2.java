@@ -1,6 +1,5 @@
 package Ejercicios;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ejercicio3_2 {
@@ -20,6 +19,8 @@ public class Ejercicio3_2 {
         teclado.nextLine();
 
         System.out.println("El área del cuadrado es: " + (base*altura) + "cm2");
+
+        teclado.close();
 
     }
 }

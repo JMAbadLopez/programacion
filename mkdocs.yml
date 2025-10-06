@@ -11,6 +11,7 @@ nav:
       - Ejercicios del lenguaje Java: ejercicios/ud01/lenguaje_java.md
     - UD2:
       - Ejercicios de programación estructurada: ejercicios/ud02/ejercicios_ud02.md
+      - Ejercicios de condicionales y bucles: ejercicios/ud02/ejercicios_ud02_bucles.md
   - Recursos:
     - Guías:
       - Instalación IntelliJ: recursos/guia_intellij.md

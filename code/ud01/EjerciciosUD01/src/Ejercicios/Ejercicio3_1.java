@@ -20,5 +20,7 @@ public class Ejercicio3_1 {
 
         precioFinal = precio * (1+impuestos/100);
         System.out.println("El coste total es: " + precioFinal + "€");
+
+        teclado.close();
     }
 }
