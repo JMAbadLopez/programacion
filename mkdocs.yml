@@ -38,7 +38,7 @@ theme:
     - navigation.top
     - optimize
     - content.code.copy
-    # - navigation.footer
+    - navigation.footer
     - navigation.tabs
   palette:
     # Palette toggle for light mode
@@ -62,8 +62,8 @@ markdown_extensions:
       anchor_linenums: true
   - pymdownx.superfences
 
-plugins:
-  - tags
+# plugins:
+#   - tags
 #   - to-pdf:
 #       author: José Manuel Abad López
 #       copyright: 🄯 Creative Commons CC BY-SA 4.0 2025
