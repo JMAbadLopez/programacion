@@ -1,11 +1,12 @@
 site_name: Programación DAM
+site_url: https://jmabadlopez.github.io/programacion/site/
 
 nav:
   - Inicio: index.md
   - Unidades:
     - UD1 - Introducción a la programación. Lenguaje Java.: unidades/ud01.md
     - UD2 - Programación estructurada. Estructuras de control y repetición: unidades/ud02.md
-    # - UD3 - Funciones y procedimientos: unidades/ud03.md
+    - UD3 - Funciones y procedimientos: unidades/ud03.md
   - Ejercicios:
     - UD1: 
       - Ejercicios de introducción: ejercicios/ud01/introduccion.md
@@ -25,7 +26,10 @@ theme:
   name: material
   language: es
   logo: ./assets/images/camp.png
-  icon: fontawesome/brands/mastodon
+  favicon: ./assets/images/camp.png
+  icon:
+    previous: fontawesome/solid/angle-left
+    next: fontawesome/solid/angle-right
   hljs_languages:
     - python
     - java
@@ -34,7 +38,8 @@ theme:
     - navigation.top
     - optimize
     - content.code.copy
-    - navigation.footer
+    # - navigation.footer
+    - navigation.tabs
   palette:
     # Palette toggle for light mode
     - scheme: default
@@ -57,7 +62,8 @@ markdown_extensions:
       anchor_linenums: true
   - pymdownx.superfences
 
-# plugins:
+plugins:
+  - tags
 #   - to-pdf:
 #       author: José Manuel Abad López
 #       copyright: 🄯 Creative Commons CC BY-SA 4.0 2025

@@ -8,7 +8,7 @@ public class EjemploForAnidado {
             for (int j = 0; j < 4; j++) {
                 System.out.print("Fila (i) : " + i + " Columna (j) :" + j  + " |\t");
             }
-            System.out.println("");
+            System.out.println();
         }
     }
 }
