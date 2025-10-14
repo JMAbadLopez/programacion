@@ -1,5 +1,7 @@
 # Programación DAM
 
+![Portada Programación](./assets/images/portada.png)
+
 ## Descripción
 
 Material del módulo de **Programación de 1º de DAM del IES CAMP DE MORVEDRE**.
@@ -17,5 +19,6 @@ Material del módulo de **Programación de 1º de DAM del IES CAMP DE MORVEDRE**
 Material original de **Lorenzo Díaz de Haro** y **José Manuel Romero Martínez**. Adaptado y revisado por **José Manuel Abad López**.
 
 ## Repositorio y contacto
+
 <https://jmabadlopez.github.io>
 <jmabadlopez@edu.gva.es>
