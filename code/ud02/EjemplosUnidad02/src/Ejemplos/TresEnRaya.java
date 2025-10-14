@@ -1,5 +1,7 @@
 package ejemplos;
 
+import java.util.concurrent.TimeUnit;
+
 public class TresEnRaya {
     public static void main(String[] args) {
         char[][] tablero = new char[3][3];
@@ -18,6 +20,11 @@ public class TresEnRaya {
                 System.out.print(tablero[fila][col] + " | ");
             }
             System.out.println(); // Salto de línea para la siguiente fila
+            try {
+                TimeUnit.SECONDS.sleep(1);
+            } catch (InterruptedException ie) {
+                Thread.currentThread().interrupt();
+            }
         }
 
         // 3. Simular movimientos
@@ -32,6 +39,11 @@ public class TresEnRaya {
                 System.out.print(tablero[fila][col] + " | ");
             }
             System.out.println(); // Salto de línea para la siguiente fila
+            try {
+                TimeUnit.SECONDS.sleep(1);
+            } catch (InterruptedException ie) {
+                Thread.currentThread().interrupt();
+            }
         }
     }
 }
