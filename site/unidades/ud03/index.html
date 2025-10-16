@@ -11,6 +11,10 @@
         <link rel="canonical" href="https://jmabadlopez.github.io/programacion/site/unidades/ud03/">
       
       
+        <link rel="prev" href="../ud02/">
+      
+      
+        <link rel="next" href="../../ejercicios/ud01/introduccion/">
       
       
       <link rel="icon" href="../../assets/images/camp.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Unidad 3. Funciones y Procedimientos. - Programación DAM</title>
+        <title>UD3 - Funciones y procedimientos - Programación DAM</title>
       
     
     
@@ -103,7 +107,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Unidad 3. Funciones y Procedimientos.
+              UD3 - Funciones y procedimientos
             
           </span>
         </div>
@@ -231,10 +235,12 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
+      <li class="md-tabs__item md-tabs__item--active">
         <a href="../ud01/" class="md-tabs__link">
           
   
@@ -377,24 +383,29 @@
       
   
   
+    
   
   
+  
     
     
     
     
-      
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
             
   
   
@@ -407,7 +418,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Unidades
@@ -455,6 +466,206 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    UD3 - Funciones y procedimientos
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    UD3 - Funciones y procedimientos
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#1-por-que-necesitamos-funciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. ¿Por qué necesitamos Funciones?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#2-anatomia-de-una-funcion-la-etiqueta-de-la-herramienta" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Anatomía de una Función: La Etiqueta de la Herramienta
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#3-funciones-vs-procedimientos-devuelves-algo-o-solo-actuas" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. Funciones vs. Procedimientos: ¿Devuelves algo o solo actúas?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="3. Funciones vs. Procedimientos: ¿Devuelves algo o solo actúas?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#31-funciones-las-que-devuelven-un-resultado" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.1. Funciones (Las que devuelven un resultado)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#32-procedimientos-los-que-solo-realizan-una-accion" class="md-nav__link">
+    <span class="md-ellipsis">
+      3.2. Procedimientos (Los que solo realizan una acción)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-ambito-de-las-variables-la-regla-de-la-habitacion-de-hotel" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Ámbito de las Variables: La Regla de la Habitación de Hotel
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#5-paso-de-parametros-fotocopias-vs-direcciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      5. Paso de Parámetros: Fotocopias vs. Direcciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Paso de Parámetros: Fotocopias vs. Direcciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#51-paso-por-valor-te-paso-una-fotocopia-tipos-primitivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.1. Paso por Valor: "Te paso una fotocopia" (Tipos Primitivos)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#52-paso-por-referencia-te-paso-la-direccion-arrays-y-objetos" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.2. Paso por Referencia: "Te paso la dirección" (Arrays y Objetos)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#6-buenas-practicas-al-crear-funciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. Buenas Prácticas al Crear Funciones
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-ejemplo-practico-mini-gestor-de-calificaciones" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. Ejemplo Práctico: Mini-Gestor de Calificaciones
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="7. Ejemplo Práctico: Mini-Gestor de Calificaciones">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#enunciado-del-problema" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enunciado del Problema
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#codigo-de-la-solucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Código de la Solución
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -680,6 +891,29 @@
   
   <span class="md-ellipsis">
     Ejercicios de condicionales y bucles
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ejercicios/ud02/entregable_ud02/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Actividades entregables
     
   </span>
   
@@ -1459,6 +1693,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Pie" >
+        
+          
+          <a href="../ud02/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: UD2 - Programación estructurada. Estructuras de control y repetición">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Anterior
+              </span>
+              <div class="md-ellipsis">
+                UD2 - Programación estructurada. Estructuras de control y repetición
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../ejercicios/ud01/introduccion/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Ejercicios de introducción">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Siguiente
+              </span>
+              <div class="md-ellipsis">
+                Ejercicios de introducción
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M247.1 233.4c12.5 12.5 12.5 32.8 0 45.3l-160 160c-12.5 12.5-32.8 12.5-45.3 0s-12.5-32.8 0-45.3L179.2 256 41.9 118.6c-12.5-12.5-12.5-32.8 0-45.3s32.8-12.5 45.3 0l160 160z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">

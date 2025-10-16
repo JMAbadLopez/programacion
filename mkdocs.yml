@@ -6,7 +6,7 @@ nav:
   - Unidades:
     - UD1 - Introducción a la programación. Lenguaje Java.: unidades/ud01.md
     - UD2 - Programación estructurada. Estructuras de control y repetición: unidades/ud02.md
-    # - UD3 - Funciones y procedimientos: unidades/ud03.md
+    - UD3 - Funciones y procedimientos: unidades/ud03.md
   - Ejercicios:
     - UD1: 
       - Ejercicios de introducción: ejercicios/ud01/introduccion.md
@@ -14,6 +14,7 @@ nav:
     - UD2:
       - Ejercicios de programación estructurada: ejercicios/ud02/ejercicios_ud02.md
       - Ejercicios de condicionales y bucles: ejercicios/ud02/ejercicios_ud02_bucles.md
+      - Actividades entregables: ejercicios/ud02/entregable_ud02.md
   - Recursos:
     - Guías:
       - Instalación IntelliJ: recursos/guia_intellij.md
