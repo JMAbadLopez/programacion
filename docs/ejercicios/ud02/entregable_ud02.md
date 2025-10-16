@@ -48,7 +48,7 @@ El precio final de venta es 0.55 €/kg
 - Genera un fichero **Java** con el nombre `ud2_actividad1_[tu_nombre].java`. Por ejemplo, en mi caso, `ud2_actividad1_jose_abad.java`.
 
 ---
-
+<!-- 
 ## Actividad 2: Gestor de Calificaciones de Clase
 
 Un profesor necesita una herramienta digital para gestionar las notas de su clase. Tu tarea es crear un programa que funcione como un completo gestor de calificaciones.
@@ -71,9 +71,9 @@ El programa debe seguir estos pasos:
 
 - Genera un fichero **Java** con el nombre `ud2_actividad2_[tu_nombre].java`. Por ejemplo, en mi caso, `ud2_actividad2_jose_abad.java`.
 
----
+--- -->
 
-## Actividad 3: Análisis de Facturación
+## Actividad 2: Análisis de Facturación
 
 Una empresa que vende desinfectantes necesita un programa para analizar rápidamente sus ventas. En cada factura figura el **código del artículo**, la **cantidad vendida en litros** y el **precio por litro**.
 
@@ -83,7 +83,7 @@ El programa debe procesar la información de **5 facturas** (que se pedirán por
 2. **Litros del Artículo 1:** La cantidad total de litros vendidos específicamente para el artículo con código 1.
 3. **Facturas Superiores a 200€:** El número de facturas cuyo importe total superó los 200 €.
 
-**#Pista:** Necesitarás un bucle que se repita 5 veces. Dentro del bucle, pide los datos de cada factura y actualiza tus variables acumuladoras y contadoras.
+**#Pista:** Necesitarás un bucle que se repita 5 veces. Dentro del bucle, pide los datos de cada factura y actualiza tus variables acumuladoras y contadoras. Piensa ¿cuántos arrays necesitas para almacenar la información?
 
 ### Ejemplo de Entrada y Salida
 
@@ -101,13 +101,13 @@ Factura 5 - Código: 3, Litros: 20, Precio/L: 5.8
 * Número de facturas de más de 200 €: 1
 ```
 
-### Entrega Actividad 3
+### Entrega Actividad 2
 
-- Genera un fichero **Java** con el nombre `ud2_actividad3_[tu_nombre].java`. Por ejemplo, en mi caso, `ud2_actividad3_jose_abad.java`.
+- Genera un fichero **Java** con el nombre `ud2_actividad2_[tu_nombre].java`. Por ejemplo, en mi caso, `ud2_actividad2_jose_abad.java`.
 
 ---
 
-## Actividad 4: Simulador de Cajero Automático
+## Actividad 3: Simulador de Cajero Automático
 
 ¡Vamos a programar el software de un cajero automático! El cajero debe permitir a los usuarios consultar su saldo, ingresar y retirar dinero.
 
@@ -148,15 +148,13 @@ Operación realizada con éxito.
 Saldo actual: 105.0 €
 ```
 
-### Entrega Actividad 4
+### Entrega Actividad 3
 
-- Genera un fichero **Java** con el nombre `ud2_actividad4_[tu_nombre].java`. Por ejemplo, en mi caso, `ud2_actividad4_jose_abad.java`.
+- Genera un fichero **Java** con el nombre `ud2_actividad3_[tu_nombre].java`. Por ejemplo, en mi caso, `ud2_actividad3_jose_abad.java`.
 
 ---
 
-## Actividad 5: Gestor de Butacas de Cine
-
-### El Reto
+## Actividad 4: Gestor de Butacas de Cine
 
 ¡Has sido contratado para programar el sistema de venta de entradas de un pequeño cine! La sala de cine se representará como una **matriz de caracteres**, donde cada posición es una butaca.
 
@@ -213,6 +211,6 @@ Butacas Libres: 24
 Total Recaudado: 5.0 €
 ```
 
-### Entrega Actividad 5
+### Entrega Actividad 4
 
-- Genera un fichero **Java** con el nombre `ud2_actividad5_[tu_nombre].java`. Por ejemplo, en mi caso, `ud2_actividad5_jose_abad.java`.
+- Genera un fichero **Java** con el nombre `ud2_actividad4_[tu_nombre].java`. Por ejemplo, en mi caso, `ud2_actividad4_jose_abad.java`.
