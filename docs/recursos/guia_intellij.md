@@ -1,5 +1,5 @@
 ---
-title: Instalación de Java y Netbeans.
+title: Instalación de IntelliJ y JDK.
 author: [Lorenzo Díaz de Haro, José Manuel Romero Martínez]
 ---
 
@@ -30,9 +30,9 @@ En caso de no tenerlo, lo más recomendable es descargar la última versión **L
 
 ### 2. Intellij IDEA Community Edition de JetBrains
 
-Como IDE (Entorno de Desarrollo Integrado) podemos hacer uso de la herramienta **Intellij IDEA Community Edition** de **JetBrains**. 
+Como IDE (Entorno de Desarrollo Integrado) podemos hacer uso de la herramienta **Intellij IDEA Community Edition** de **JetBrains**.
 
-En concreto de la versión **Comunity**. Nos va a permitirá desarrollar todos los contenidos del curso. 
+En concreto de la versión **Comunity**. Nos va a permitirá desarrollar todos los contenidos del curso.
 
 > Está limitada pero no nos importa para el uso que vamos a hacer.
 
