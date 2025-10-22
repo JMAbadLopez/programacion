@@ -87,14 +87,16 @@ El programa debe procesar la información de **5 facturas** (que se pedirán por
 
 ### Ejemplo de Entrada y Salida
 
-```text
+```java
+// El usuario introducirá estos datos
 --- EJEMPLO DE ENTRADA ---
-Factura 1 - Código: 1, Litros: 30, Precio/L: 4.5
-Factura 2 - Código: 2, Litros: 20, Precio/L: 5.0
-Factura 3 - Código: 1, Litros: 50, Precio/L: 4.5
-Factura 4 - Código: 3, Litros: 10, Precio/L: 5.8
-Factura 5 - Código: 3, Litros: 20, Precio/L: 5.8
+- Código: 1, Litros: 30, Precio/L: 4.5
+- Código: 2, Litros: 20, Precio/L: 5.0
+- Código: 1, Litros: 50, Precio/L: 4.5
+- Código: 3, Litros: 10, Precio/L: 5.8
+- Código: 3, Litros: 20, Precio/L: 5.8
 
+// El programa mostrará el Resumen de Ventas
 --- RESUMEN DE VENTAS ---
 * Facturación total: 634.00 €
 * Cantidad de litros vendidos del artículo #1: 80
@@ -137,6 +139,11 @@ Elige una opción: 2
 Cantidad a ingresar: 385
 Saldo actual: 385.0 €
 
+---- MENÚ CAJERO AUTOMÁTICO ----
+1. Consultar saldo
+2. Ingresar dinero
+3. Retirar dinero
+4. Salir
 Elige una opción: 3
 Cantidad a retirar: 280
 Desglose de billetes entregados:
@@ -189,11 +196,22 @@ Elige una opción: 1
 3 L L L L L 
 4 L L L L L 
 
+---- CINE DAM ----
+1. Mostrar butacas
+2. Comprar entrada
+3. Ver estadísticas
+4. Salir
 Elige una opción: 2
+
 Introduce la fila (0-4): 2
 Introduce la columna (0-4): 3
 Compra realizada con éxito.
 
+---- CINE DAM ----
+1. Mostrar butacas
+2. Comprar entrada
+3. Ver estadísticas
+4. Salir
 Elige una opción: 1
 
   Asientos:

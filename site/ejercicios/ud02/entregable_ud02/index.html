@@ -1387,17 +1387,19 @@ El programa debe seguir estos pasos:
 </ol>
 <p><strong>#Pista:</strong> Necesitarás un bucle que se repita 5 veces. Dentro del bucle, pide los datos de cada factura y actualiza tus variables acumuladoras y contadoras. Piensa ¿cuántos arrays necesitas para almacenar la información?</p>
 <h3 id="ejemplo-de-entrada-y-salida">Ejemplo de Entrada y Salida</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>--- EJEMPLO DE ENTRADA ---
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>Factura 1 - Código: 1, Litros: 30, Precio/L: 4.5
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>Factura 2 - Código: 2, Litros: 20, Precio/L: 5.0
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>Factura 3 - Código: 1, Litros: 50, Precio/L: 4.5
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>Factura 4 - Código: 3, Litros: 10, Precio/L: 5.8
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>Factura 5 - Código: 3, Litros: 20, Precio/L: 5.8
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>--- RESUMEN DE VENTAS ---
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>* Facturación total: 634.00 €
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>* Cantidad de litros vendidos del artículo #1: 80
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>* Número de facturas de más de 200 €: 1
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1">// El usuario introducirá estos datos</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="o">---</span><span class="w"> </span><span class="n">EJEMPLO</span><span class="w"> </span><span class="n">DE</span><span class="w"> </span><span class="n">ENTRADA</span><span class="w"> </span><span class="o">---</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="o">-</span><span class="w"> </span><span class="n">Código</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">Litros</span><span class="p">:</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="n">Precio</span><span class="o">/</span><span class="n">L</span><span class="p">:</span><span class="w"> </span><span class="mf">4.5</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="o">-</span><span class="w"> </span><span class="n">Código</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">Litros</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="n">Precio</span><span class="o">/</span><span class="n">L</span><span class="p">:</span><span class="w"> </span><span class="mf">5.0</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="o">-</span><span class="w"> </span><span class="n">Código</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">Litros</span><span class="p">:</span><span class="w"> </span><span class="mi">50</span><span class="p">,</span><span class="w"> </span><span class="n">Precio</span><span class="o">/</span><span class="n">L</span><span class="p">:</span><span class="w"> </span><span class="mf">4.5</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="o">-</span><span class="w"> </span><span class="n">Código</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">Litros</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">Precio</span><span class="o">/</span><span class="n">L</span><span class="p">:</span><span class="w"> </span><span class="mf">5.8</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="o">-</span><span class="w"> </span><span class="n">Código</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">Litros</span><span class="p">:</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="n">Precio</span><span class="o">/</span><span class="n">L</span><span class="p">:</span><span class="w"> </span><span class="mf">5.8</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="c1">// El programa mostrará el Resumen de Ventas</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="o">---</span><span class="w"> </span><span class="n">RESUMEN</span><span class="w"> </span><span class="n">DE</span><span class="w"> </span><span class="n">VENTAS</span><span class="w"> </span><span class="o">---</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="o">*</span><span class="w"> </span><span class="n">Facturación</span><span class="w"> </span><span class="n">total</span><span class="p">:</span><span class="w"> </span><span class="mf">634.00</span><span class="w"> </span><span class="err">€</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="o">*</span><span class="w"> </span><span class="n">Cantidad</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">litros</span><span class="w"> </span><span class="n">vendidos</span><span class="w"> </span><span class="n">del</span><span class="w"> </span><span class="n">artículo</span><span class="w"> </span><span class="err">#</span><span class="mi">1</span><span class="p">:</span><span class="w"> </span><span class="mi">80</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="o">*</span><span class="w"> </span><span class="n">Número</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">facturas</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">más</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="mi">200</span><span class="w"> </span><span class="err">€</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
 </code></pre></div>
 <h3 id="entrega-actividad-2">Entrega Actividad 2</h3>
 <ul>
@@ -1434,15 +1436,20 @@ El programa debe seguir estos pasos:
 <a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>Cantidad a ingresar: 385
 <a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>Saldo actual: 385.0 €
 <a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>Elige una opción: 3
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>Cantidad a retirar: 280
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>Desglose de billetes entregados:
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>- 1 billete de 200€
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>- 1 billete de 50€
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>- 1 billete de 20€
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>- 1 billete de 10€
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>Operación realizada con éxito.
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>Saldo actual: 105.0 €
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>---- MENÚ CAJERO AUTOMÁTICO ----
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>1. Consultar saldo
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>2. Ingresar dinero
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>3. Retirar dinero
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>4. Salir
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>Elige una opción: 3
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>Cantidad a retirar: 280
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>Desglose de billetes entregados:
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>- 1 billete de 200€
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>- 1 billete de 50€
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>- 1 billete de 20€
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>- 1 billete de 10€
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>Operación realizada con éxito.
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>Saldo actual: 105.0 €
 </code></pre></div>
 <h3 id="entrega-actividad-3">Entrega Actividad 3</h3>
 <ul>
@@ -1484,26 +1491,37 @@ El programa debe seguir estos pasos:
 <a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>3 L L L L L 
 <a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>4 L L L L L 
 <a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>
-<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>Elige una opción: 2
-<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>Introduce la fila (0-4): 2
-<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>Introduce la columna (0-4): 3
-<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>Compra realizada con éxito.
-<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>
-<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>Elige una opción: 1
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>---- CINE DAM ----
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>1. Mostrar butacas
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>2. Comprar entrada
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>3. Ver estadísticas
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>4. Salir
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>Elige una opción: 2
 <a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>
-<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>  Asientos:
-<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>  0 1 2 3 4
-<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>0 L L L L L 
-<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>1 L L L L L 
-<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>2 L L L O L 
-<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>3 L L L L L 
-<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>4 L L L L L 
-<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>
-<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>Elige una opción: 3
-<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>--- ESTADÍSTICAS ---
-<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>Butacas Ocupadas: 1
-<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>Butacas Libres: 24
-<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>Total Recaudado: 5.0 €
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>Introduce la fila (0-4): 2
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>Introduce la columna (0-4): 3
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>Compra realizada con éxito.
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>---- CINE DAM ----
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>1. Mostrar butacas
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>2. Comprar entrada
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>3. Ver estadísticas
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>4. Salir
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>Elige una opción: 1
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>  Asientos:
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>  0 1 2 3 4
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>0 L L L L L 
+<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>1 L L L L L 
+<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>2 L L L O L 
+<a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>3 L L L L L 
+<a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>4 L L L L L 
+<a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>
+<a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>Elige una opción: 3
+<a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>--- ESTADÍSTICAS ---
+<a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>Butacas Ocupadas: 1
+<a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>Butacas Libres: 24
+<a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a>Total Recaudado: 5.0 €
 </code></pre></div>
 <h3 id="entrega-actividad-4">Entrega Actividad 4</h3>
 <ul>
