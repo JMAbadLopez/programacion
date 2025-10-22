@@ -4,6 +4,7 @@ public class EjemploMailString {
 
     public static void main(String[] args) {
         String email = "   ejemplo@DOMINIO.com   ";
+        int posArroba = 0;
 
         // 1. Limpiamos espacios y lo pasamos a minúsculas para unificar
         String emailLimpio = email.trim().toLowerCase();
@@ -14,7 +15,7 @@ public class EjemploMailString {
             System.out.println("El formato del email parece correcto.");
 
             // 3. Extraemos el nombre de usuario y el dominio
-            int posArroba = emailLimpio.indexOf("@");
+            posArroba = emailLimpio.indexOf("@");
             String usuario = emailLimpio.substring(0, posArroba);
             String dominio = emailLimpio.substring(posArroba + 1, emailLimpio.length());
 
