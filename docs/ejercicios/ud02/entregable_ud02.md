@@ -4,9 +4,9 @@
 
 Este conjunto de actividades está diseñado para afianzar los siguientes RAs del módulo de **Programación**:
 
-_ **RA2, RA3, RA5 y RA6**
-    - **Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.** (Aplicado en el uso de `if-else`, `switch`, `for`, `while` y `do-while` para controlar el flujo de los programas).
-    - **Desarrolla programas aplicando la programación estructurada e introduciendo el tratamiento de datos.** (Aplicado en el uso de arrays y matrices para almacenar y gestionar colecciones de datos como notas, precios o butacas).
+- **RA2, RA3, RA5 y RA6**
+  - **Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.** (Aplicado en el uso de `if-else`, `switch`, `for`, `while` y `do-while` para controlar el flujo de los programas).
+  - **Desarrolla programas aplicando la programación estructurada e introduciendo el tratamiento de datos.** (Aplicado en el uso de arrays y matrices para almacenar y gestionar colecciones de datos como notas, precios o butacas).
 
 **Objetivo General:** Aplicar los conocimientos sobre variables, condicionales, bucles y arrays (vectores y matrices) para resolver problemas prácticos y estructurados.
 
