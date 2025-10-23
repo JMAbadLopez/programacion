@@ -2,8 +2,9 @@
 
 Este boletín de ejercicios está diseñado para trabajar y evaluar los siguientes **Resultados de Aprendizaje (RAs)** del módulo de **Programación**:
 
-- **RA2: Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.**
-- **RA3: Desarrolla programas aplicando la programación estructurada e introduciendo el tratamiento de datos.**
+_ **RA2, RA3, RA5 y RA6**
+    - **Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.**
+    - **Desarrolla programas aplicando la programación estructurada e introduciendo el tratamiento de datos.**
 
 ## 1. El Control de Acceso a la Discoteca
 

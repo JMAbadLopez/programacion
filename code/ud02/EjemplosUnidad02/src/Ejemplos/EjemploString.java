@@ -7,6 +7,7 @@ public class EjemploString {
      */
     public static void main(String[] args) {
 
+        String textoIgualdad = "igual";
         String texto1 = "¡Hola String!";
         String texto2 = "Este texto combina Mayúsculas y minúsculas";
         String texto3 = "prefijo";
@@ -15,6 +16,12 @@ public class EjemploString {
         String mail = "jose@edu.com";
         int posicion = 0;
         boolean encontrado = false;
+
+        if(textoIgualdad.equals("distinto")) {
+            System.out.println("Son iguales");
+        } else {
+            System.out.println("Son diferentes");
+        }
 
         // Recorrer un String con length() y charAt()
         for(int i = 0; i < texto1.length(); i++) {
@@ -34,12 +41,12 @@ public class EjemploString {
         if(posicion != -1 ) {
             System.out.println("Encontrado en la posición " + posicion);
         } else {
-            System.out.println("No encontrado");
+            System.out.println("No encontrado ");
         }
 
         // Buscar si existe
-        encontrado = texto3.contains("fijo");
-        // encontrado = texto3.contains("casa");
+        // encontrado = texto3.contains("fijo");
+        encontrado = texto3.contains("casa");
         if(encontrado) {
             System.out.println("El subtexto se encuentra en el texto");
         } else {
@@ -58,5 +65,7 @@ public class EjemploString {
         for( String ingrediente : ingredientes) {
             System.out.println(ingrediente);
         }
+
+
     }
 }
