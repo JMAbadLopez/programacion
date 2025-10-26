@@ -263,13 +263,12 @@ Los `String` son secuencias de caracteres y, aunque en Java son objetos, a menud
 **Algoritmo:**
 
 1. **Limpiar y Normalizar:**
-   - Convierte el `String` original a minúsculas (`toLowerCase()`).
-   - Recorre el `String` en minúsculas carácter a carácter (`charAt()` y `length()`).
-   - Construye un nuevo `String` auxiliar (`limpio`) añadiendo solo los caracteres que NO sean espacios en blanco.
-2. **Invertir Manualmente:**
-   - Recorre el `String` `limpio` desde el final hasta el principio (`length() - 1` hasta `0`).
-   - Construye otro `String` auxiliar (`invertido`) añadiendo los caracteres en orden inverso.
-3. **Comparar:** Compara el `String` `limpio` con el `String` `invertido` usando `.equals()`. Si son idénticos, es un palíndromo.
+    - Convierte el `String` original a minúsculas (`toLowerCase()`).
+    - Recorre el `String` en minúsculas carácter a carácter (`charAt()` y `length()`).
+    - Construye un nuevo `String` auxiliar (`limpio`) añadiendo solo los caracteres que NO sean espacios en blanco.
+2. **Compararación de caracteres:**
+    - Recorre el `String` `limpio` desde el inicio hasta la mitad (`limpio.length()/2`).
+    - Compara cada posición con su *homólogo* inverso `limpio.length() - 1 - i`. Se detiene si los caracteres son diferentes.
 
 **Ejemplo en Java:**
 
@@ -313,7 +312,7 @@ public class ComprobarPalindromo {
             }
         }
 
-        // 2. Comprobamos el primer char con el último (solo hasta la mitad)
+        // 2. Comparamos los caracteres (recorremos solo hasta la mitad)
         for (int i = 0; i < limpio.length()/2 && esPalindromo; i++) {
             if (limpio.charAt(i) != limpio.charAt(limpio.length() - 1 - i)) {
                 esPalindromo = false;

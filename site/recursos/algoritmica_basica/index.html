@@ -1561,14 +1561,17 @@
 <p><strong>El Problema:</strong> Un palíndromo es una palabra o frase que se lee igual hacia adelante que hacia atrás (ignorando espacios y mayúsculas/minúsculas). Ejemplos: "Ana", "oso", "Se van sus naves". ¿Cómo comprobar si un <code>String</code> es un palíndromo usando solo métodos básicos?</p>
 <p><strong>Algoritmo:</strong></p>
 <ol>
-<li><strong>Limpiar y Normalizar:</strong>
-   - Convierte el <code>String</code> original a minúsculas (<code>toLowerCase()</code>).
-   - Recorre el <code>String</code> en minúsculas carácter a carácter (<code>charAt()</code> y <code>length()</code>).
-   - Construye un nuevo <code>String</code> auxiliar (<code>limpio</code>) añadiendo solo los caracteres que NO sean espacios en blanco.</li>
-<li><strong>Invertir Manualmente:</strong>
-   - Recorre el <code>String</code> <code>limpio</code> desde el final hasta el principio (<code>length() - 1</code> hasta <code>0</code>).
-   - Construye otro <code>String</code> auxiliar (<code>invertido</code>) añadiendo los caracteres en orden inverso.</li>
-<li><strong>Comparar:</strong> Compara el <code>String</code> <code>limpio</code> con el <code>String</code> <code>invertido</code> usando <code>.equals()</code>. Si son idénticos, es un palíndromo.</li>
+<li><strong>Limpiar y Normalizar:</strong><ul>
+<li>Convierte el <code>String</code> original a minúsculas (<code>toLowerCase()</code>).</li>
+<li>Recorre el <code>String</code> en minúsculas carácter a carácter (<code>charAt()</code> y <code>length()</code>).</li>
+<li>Construye un nuevo <code>String</code> auxiliar (<code>limpio</code>) añadiendo solo los caracteres que NO sean espacios en blanco.</li>
+</ul>
+</li>
+<li><strong>Compararación de caracteres:</strong><ul>
+<li>Recorre el <code>String</code> <code>limpio</code> desde el inicio hasta la mitad (<code>limpio.length()/2</code>).</li>
+<li>Compara cada posición con su <em>homólogo</em> inverso <code>limpio.length() - 1 - i</code>. Se detiene si los caracteres son diferentes.</li>
+</ul>
+</li>
 </ol>
 <p><strong>Ejemplo en Java:</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ComprobarPalindromo</span><span class="w"> </span><span class="p">{</span>
@@ -1610,7 +1613,7 @@
 <a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a><span class="w">            </span><span class="p">}</span>
 <a id="__codelineno-8-38" name="__codelineno-8-38" href="#__codelineno-8-38"></a><span class="w">        </span><span class="p">}</span>
 <a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a>
-<a id="__codelineno-8-40" name="__codelineno-8-40" href="#__codelineno-8-40"></a><span class="w">        </span><span class="c1">// 2. Comprobamos el primer char con el último (solo hasta la mitad)</span>
+<a id="__codelineno-8-40" name="__codelineno-8-40" href="#__codelineno-8-40"></a><span class="w">        </span><span class="c1">// 2. Comparamos los caracteres (recorremos solo hasta la mitad)</span>
 <a id="__codelineno-8-41" name="__codelineno-8-41" href="#__codelineno-8-41"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">limpio</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="o">/</span><span class="mi">2</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">esPalindromo</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-8-42" name="__codelineno-8-42" href="#__codelineno-8-42"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">limpio</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">i</span><span class="p">)</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">limpio</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">limpio</span><span class="p">.</span><span class="na">length</span><span class="p">()</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">i</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-8-43" name="__codelineno-8-43" href="#__codelineno-8-43"></a><span class="w">                </span><span class="n">esPalindromo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
