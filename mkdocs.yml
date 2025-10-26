@@ -20,6 +20,8 @@ nav:
       - Instalación IntelliJ: recursos/guia_intellij.md
     - Infografías:
       - Bucles: recursos/bucles.html
+    - Algorítmica:
+      - Básica: recursos/algoritmica_basica.md
 repo_url: https://github.com/jmabadlopez/programacion
 repo_name: jmabadlopez/programacion
 
