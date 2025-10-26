@@ -69,11 +69,6 @@ public class BusquedaMaximo {
     public static void main(String[] args) {
         int[] numeros = {12, 5, 23, 8, 19, 3, 15};
 
-        if (numeros.length == 0) {
-            System.out.println("El array está vacío.");
-            return; // Salimos si no hay elementos
-        }
-
         int maximo = numeros[0]; // 1. Suponemos que el primero es el máximo
 
         // 2. Recorremos desde el segundo elemento
