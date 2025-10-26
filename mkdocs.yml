@@ -15,6 +15,8 @@ nav:
       - Ejercicios de programación estructurada: ejercicios/ud02/ejercicios_ud02.md
       - Ejercicios de condicionales y bucles: ejercicios/ud02/ejercicios_ud02_bucles.md
       - Actividades entregables: ejercicios/ud02/entregable_ud02.md
+    - UD3:
+      - Ejercicios de funciones y procedimientos: ejercicios/ud03/ejercicios_ud03_inicio.md
   - Recursos:
     - Guías:
       - Instalación IntelliJ: recursos/guia_intellij.md
