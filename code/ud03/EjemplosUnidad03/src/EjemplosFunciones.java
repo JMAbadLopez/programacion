@@ -1,6 +1,6 @@
 public class EjemplosFunciones {
 
-    public static int sumar( int a, int b) {
+    public static int sumar(int a, int b) {
         int resultado = a + b;
         return resultado;
     }
@@ -11,7 +11,7 @@ public class EjemplosFunciones {
     }
 
     public static double encontrarMaximo(double a, double b) {
-        if( a > b ) {
+        if (a > b) {
             return a;
         } else {
             return b;
@@ -36,17 +36,20 @@ public class EjemplosFunciones {
 
         int x = 2, y = 3;
         int suma, producto;
+        String nombre;
 
         double maximo = encontrarMaximo(15.5, 9.2);
 
-        suma = sumar(x,y);
-        producto = multiplicar(x,y);
+        suma = sumar(x, y);
+        producto = multiplicar(x, y);
 
         System.out.println("La suma es " + suma);
         System.out.println("La multiplicación es " + producto);
         System.out.println("El máximo es " + maximo);
-
+        
+        nombre = "Iván";
         saludar("Álex");
+        saludar(nombre);
 
     }
 }

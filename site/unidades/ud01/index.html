@@ -2678,13 +2678,18 @@
 <p>Antes de saltar directamente a escribir en un lenguaje de programación como Java, los programadores usamos una herramienta intermedia fundamental: el <strong>pseudocódigo</strong>.</p>
 <p>El pseudocódigo es una forma de describir un algoritmo utilizando una mezcla de lenguaje natural y algunas convenciones de los lenguajes de programación. Su gran ventaja es que nos permite centrarnos en la <strong>lógica</strong> del problema sin preocuparnos por la <strong>sintaxis</strong> estricta (puntos y comas, llaves, etc.).</p>
 <p><strong>Ejemplo: Algoritmo para sumar dos números en pseudocódigo</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>INICIO
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  LEER numero1
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  LEER numero2
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  resultado = numero1 + numero2
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>  ESCRIBIR &quot;El resultado es: &quot;, resultado
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>FIN
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>INICIO
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>  LEER numero1
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>  LEER numero2
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>  resultado = numero1 + numero2
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>  ESCRIBIR &quot;El resultado es: &quot;, resultado
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>FIN
+</code></pre></div></td></tr></table></div>
 <p>Dominar el pseudocódigo es clave para aprender a "pensar como un programador".</p>
 <h3 id="13-programa-vs-procesador">1.3 Programa vs procesador</h3>
 <ul>
@@ -2697,12 +2702,16 @@
 <p><img src="../../assets/images/ud01/T1_01.png" alt="Fluxe de dades d'un programa" style="zoom:70%; " /></p>
 <h4 id="131-como-es-un-programa-un-primer-vistazo">1.3.1 ¿Cómo es un programa? Un primer vistazo</h4>
 <p>Aunque todavía no conozcamos los detalles, es bueno tener una primera imagen de cómo es un programa real. Este es el programa más famoso para empezar a programar, el "Hola Mundo", escrito en Java:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HolaMundo</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">      </span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;¡Hola Mundo!&quot;</span><span class="p">);</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
+<span class="normal"><a href="#__codelineno-1-2">2</a></span>
+<span class="normal"><a href="#__codelineno-1-3">3</a></span>
+<span class="normal"><a href="#__codelineno-1-4">4</a></span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HolaMundo</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">      </span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;¡Hola Mundo!&quot;</span><span class="p">);</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p>Este pequeño bloque de código es un programa completo que le ordena al ordenador escribir el mensaje "¡Hola Mundo!" en la pantalla. ¡Así de simple y potente es la programación!</p>
 <h4 id="132-paradigmas-de-programacion">1.3.2 Paradigmas de Programación</h4>
 <p>Los programas deben ser <strong>fiables, legibles, eficientes y modulares</strong>. Para conseguirlo, a lo largo de la historia han surgido diferentes formas o "estilos" de programar, conocidos como paradigmas:</p>
@@ -2799,20 +2808,32 @@
 <li>El <strong>valor</strong> es el contenido (17).</li>
 </ul>
 <p><img src="../../assets/images/ud01/T1_10.png" alt="Guardat a la memòria RAM" style="zoom:50%;" /></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="c1">// instrucción declarativa</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span><span class="w">   </span><span class="c1">// Definimos una variable, de nombre edad y de tipo entero</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="c1">// instrucciones de asignación</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">17</span><span class="p">;</span><span class="w"> </span><span class="c1">// Damos valor 17 a la variable edad</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="n">lee</span><span class="w"> </span><span class="p">(</span><span class="n">edad</span><span class="p">);</span><span class="w"> </span><span class="c1">// Asignamos por teclado un valor a edad. Por ej. 19</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// Volvemos a cambiar el valor. Ahora valdrá 22</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">23.5</span><span class="p">;</span><span class="w"> </span><span class="c1">// Error. ¿Por qué?</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="c1">// utilización de la variable</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="n">escribe</span><span class="w"> </span><span class="p">(</span><span class="n">edad</span><span class="p">);</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="c1">// instrucción declarativa</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span><span class="w">   </span><span class="c1">// Definimos una variable, de nombre edad y de tipo entero</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="c1">// instrucciones de asignación</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">17</span><span class="p">;</span><span class="w"> </span><span class="c1">// Damos valor 17 a la variable edad</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="n">lee</span><span class="w"> </span><span class="p">(</span><span class="n">edad</span><span class="p">);</span><span class="w"> </span><span class="c1">// Asignamos por teclado un valor a edad. Por ej. 19</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// Volvemos a cambiar el valor. Ahora valdrá 22</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">23.5</span><span class="p">;</span><span class="w"> </span><span class="c1">// Error. ¿Por qué?</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="c1">// utilización de la variable</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="n">escribe</span><span class="w"> </span><span class="p">(</span><span class="n">edad</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="222-precision-de-las-variables">2.2.2 Precisión de las variables</h4>
 <p>El tipo de dato determina cuánta memoria (cuántos bytes) ocupa una variable. Por ejemplo, con 1 byte podemos almacenar 28=256 valores diferentes.</p>
 <ul>
@@ -3121,10 +3142,12 @@
 </table>
 <p><strong>Leyes de De Morgan</strong></p>
 <p>Son tres leyes básicas que cumplen las expresiones relacionales y que nos pueden servir para expresar de diferentes formas lo que queremos:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>1a) NOT (NOT A)     =   A
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2a) NOT (A AND B)   =   (NOT A) OR (NOT B)
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>3a) NOT (A OR B)    =   (NOT A) AND (NOT B)
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>1a) NOT (NOT A)     =   A
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>2a) NOT (A AND B)   =   (NOT A) OR (NOT B)
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>3a) NOT (A OR B)    =   (NOT A) AND (NOT B)
+</code></pre></div></td></tr></table></div>
 <p><strong>Negación de los operadores relacionales</strong></p>
 <p>Los operadores relacionales pueden negarse también para obtener expresiones más sencillas o de acuerdo a nuestras necesidades. </p>
 <p>La siguiente tabla muestra dichas negaciones:</p>
@@ -3230,28 +3253,45 @@
 <h4 id="332-funciones-definidas-por-el-usuario">3.3.2 Funciones definidas por el usuario</h4>
 <p>Los lenguajes de programación también nos permiten definir nuestras funciones para poderlas utilizar en diferentes partes del programa.</p>
 <p>En <code>Java</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">float</span><span class="w">  </span><span class="nf">area_triangulo</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">altura</span><span class="p">){</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">area</span><span class="p">;</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="n">area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">altura</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">area</span><span class="p">;</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">}</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="p">{</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;El área del triángulo de base 2 y altura 4 es:&quot;</span><span class="p">);</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">  </span><span class="n">area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">area_triangulo</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">  </span><span class="n">escribe</span><span class="p">(</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="p">);</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">  </span><span class="n">escribe</span><span class="p">(</span><span class="s">&quot;El área del triángulo de base 3 y altura 6 es:&quot;</span><span class="p">);</span>
-<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">  </span><span class="n">area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">area_triangulo</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">);</span>
-<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">  </span><span class="n">escribe</span><span class="p">(</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="p">);</span>
-<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a><span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span>
+<span class="normal"><a href="#__codelineno-4-12">12</a></span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span>
+<span class="normal"><a href="#__codelineno-4-14">14</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kt">float</span><span class="w">  </span><span class="nf">area_triangulo</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">altura</span><span class="p">){</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">  </span><span class="kt">float</span><span class="w"> </span><span class="n">area</span><span class="p">;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">  </span><span class="n">area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">base</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">altura</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="n">area</span><span class="p">;</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="p">}</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="p">{</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;El área del triángulo de base 2 y altura 4 es:&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">  </span><span class="n">area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">area_triangulo</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">4</span><span class="p">);</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">  </span><span class="n">escribe</span><span class="p">(</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="p">);</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="w">  </span><span class="n">escribe</span><span class="p">(</span><span class="s">&quot;El área del triángulo de base 3 y altura 6 es:&quot;</span><span class="p">);</span>
+<a id="__codelineno-4-12" name="__codelineno-4-12"></a><span class="w">  </span><span class="n">area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">area_triangulo</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">6</span><span class="p">);</span>
+<a id="__codelineno-4-13" name="__codelineno-4-13"></a><span class="w">  </span><span class="n">escribe</span><span class="p">(</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="p">);</span>
+<a id="__codelineno-4-14" name="__codelineno-4-14"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p>En <code>Python</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">area</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">altura</span><span class="p">):</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>  <span class="n">area</span> <span class="o">=</span> <span class="n">base</span> <span class="o">*</span> <span class="n">altura</span> <span class="o">/</span> <span class="mi">2</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>  <span class="k">return</span> <span class="n">area</span><span class="p">;</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El area es: &quot;</span><span class="p">,</span><span class="n">area</span><span class="p">(</span><span class="mf">7.6</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="k">def</span><span class="w"> </span><span class="nf">area</span><span class="p">(</span><span class="n">base</span><span class="p">,</span> <span class="n">altura</span><span class="p">):</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>  <span class="n">area</span> <span class="o">=</span> <span class="n">base</span> <span class="o">*</span> <span class="n">altura</span> <span class="o">/</span> <span class="mi">2</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>  <span class="k">return</span> <span class="n">area</span><span class="p">;</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;El area es: &quot;</span><span class="p">,</span><span class="n">area</span><span class="p">(</span><span class="mf">7.6</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="4-el-lenguaje-java">4 El lenguaje Java</h2>
 <p><strong>Java</strong> es un lenguaje de programación de propósito general, concurrente y orientado a objetos. Su filosofía es <strong>WORA (Write Once, Run Anywhere)</strong>, lo que significa que el código puede escribirse una sola vez y ser ejecutado en cualquier tipo de dispositivo.</p>
 <p>Características principales de Java:</p>
@@ -3270,13 +3310,18 @@
 <blockquote>
 <p><strong>Revisa y prueba</strong> el siguiente código de ejemplo</p>
 </blockquote>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">      </span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;¡Hola Mundo!&quot;</span><span class="p">);</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span>
+<span class="normal"><a href="#__codelineno-6-3">3</a></span>
+<span class="normal"><a href="#__codelineno-6-4">4</a></span>
+<span class="normal"><a href="#__codelineno-6-5">5</a></span>
+<span class="normal"><a href="#__codelineno-6-6">6</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">  </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">      </span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;¡Hola Mundo!&quot;</span><span class="p">);</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p>Vamos a analizar con más detalle el programa <em>"¡Hola Mundo!"</em>:</p>
 <ul>
 <li><code>public class Main</code>: Declara una clase llamada <code>Main</code>. En Java, todo el código debe estar dentro de una clase. El nombre del fichero fuente debe coincidir, <code>Main.java</code>.</li>
@@ -3295,18 +3340,28 @@
 <h3 id="42-elementos-basicos">4.2 Elementos básicos</h3>
 <h4 id="421-comentarios">4.2.1 Comentarios</h4>
 <p>Son notas que dejamos en el código para explicarlo. El compilador las ignora.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1">// Comentario de una sola línea</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="cm">/*</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="cm">Comentario de</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="cm">varias líneas.</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="cm">*/</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="cm">/**</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="cm"> * Este es un comentario de documentación (Javadoc).</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="cm"> * Sirve para generar documentación automática.</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="cm"> */</span><span class="w"> </span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-7-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-7-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-7-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-7-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-7-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-7-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-7-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-7-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-7-10">10</a></span>
+<span class="normal"><a href="#__codelineno-7-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="c1">// Comentario de una sola línea</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="cm">/*</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="cm">Comentario de</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="cm">varias líneas.</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="cm">*/</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="cm">/**</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="cm"> * Este es un comentario de documentación (Javadoc).</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10"></a><span class="cm"> * Sirve para generar documentación automática.</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11"></a><span class="cm"> */</span><span class="w"> </span>
+</code></pre></div></td></tr></table></div>
 <h4 id="422-identificadores">4.2.2 Identificadores</h4>
 <p>Los <strong>identificadores</strong> nombran <strong>variables, funciones, clases y objetos</strong>. Cualquier cosa que el programador necesite identificar o usar.</p>
 <p><u>Reglas y convenios</u>:</p>
@@ -3331,12 +3386,16 @@
 <li>letraDni</li>
 </ul>
 <p>Y su uso sería:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">contador</span><span class="p">;</span><span class="w"> </span><span class="c1">// crea variable de tipo int llamada contador</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="kt">float</span><span class="w"> </span><span class="n">sueldoNeto</span><span class="p">;</span><span class="w"> </span><span class="c1">// crea variable de tipo float llamada sueldoNeto</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="kt">char</span><span class="w"> </span><span class="n">letraDni</span><span class="p">;</span><span class="w"> </span><span class="c1">// crea variable de tipo char llamada letraDni</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">contador</span><span class="p">;</span><span class="w"> </span><span class="c1">// crea variable de tipo int llamada contador</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="kt">float</span><span class="w"> </span><span class="n">sueldoNeto</span><span class="p">;</span><span class="w"> </span><span class="c1">// crea variable de tipo float llamada sueldoNeto</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="kt">char</span><span class="w"> </span><span class="n">letraDni</span><span class="p">;</span><span class="w"> </span><span class="c1">// crea variable de tipo char llamada letraDni</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="43-tipos-de-datos">4.3 Tipos de datos</h3>
 <p>En Java existen dos tipos principales de datos:</p>
 <ul>
@@ -3422,30 +3481,46 @@
 <h3 id="44-declaracion-de-variables">4.4 Declaración de variables</h3>
 <p>La sintaxis para declarar una variable es:</p>
 <p><strong><code>tipo identificador [ = valor][,identificador [= valor] ...];</code></strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1">// Declarar una variable</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
-<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="c1">// Declarar e inicializar en la misma línea</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a>
-<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="c1">// Declarar varias variables del mismo tipo</span>
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="kt">float</span><span class="w"> </span><span class="n">precio1</span><span class="p">,</span><span class="w"> </span><span class="n">precio2</span><span class="p">,</span><span class="w"> </span><span class="n">precio3</span><span class="p">;</span>
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a>
-<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="c1">// Declararlas e inicializarlas</span>
-<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="kt">float</span><span class="w"> </span><span class="n">precio1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">7.0f</span><span class="p">,</span><span class="w"> </span><span class="n">precio2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">7.25f</span><span class="p">,</span><span class="w"> </span><span class="n">precio3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5f</span><span class="p">;</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-9-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-9-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-9-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-9-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-9-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-9-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-9-10">10</a></span>
+<span class="normal"><a href="#__codelineno-9-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1"></a><span class="c1">// Declarar una variable</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="p">;</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4"></a><span class="c1">// Declarar e inicializar en la misma línea</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a>
+<a id="__codelineno-9-7" name="__codelineno-9-7"></a><span class="c1">// Declarar varias variables del mismo tipo</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="kt">float</span><span class="w"> </span><span class="n">precio1</span><span class="p">,</span><span class="w"> </span><span class="n">precio2</span><span class="p">,</span><span class="w"> </span><span class="n">precio3</span><span class="p">;</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="c1">// Declararlas e inicializarlas</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="kt">float</span><span class="w"> </span><span class="n">precio1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">7.0f</span><span class="p">,</span><span class="w"> </span><span class="n">precio2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">7.25f</span><span class="p">,</span><span class="w"> </span><span class="n">precio3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.5f</span><span class="p">;</span>
+</code></pre></div></td></tr></table></div>
 <blockquote>
 <p>Los literales numéricos con decimales en Java son de tipo <code>double</code> por defecto. Para asignar un valor a una variable <code>float</code>, debemos añadir una <code>f</code> al final del número (<code>7.0f</code>). Si no lo hacemos, el compilador dará un error de "posible pérdida de precisión".</p>
 </blockquote>
 <p>Otros ejemplos a la hora de definir valores:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">15.2</span><span class="p">;</span><span class="w"> </span><span class="c1">// de tipo double</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">15.2D</span><span class="p">;</span><span class="w"> </span><span class="c1">// el mismo valor</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="kt">double</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.52e1</span><span class="p">;</span><span class="w"> </span><span class="c1">// el mismo valor</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.152E2</span><span class="p">;</span><span class="w"> </span><span class="c1">// el mismo valor</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="kt">double</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">.8e10</span><span class="p">;</span><span class="w"> </span><span class="c1">// de tipo double</span>
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="kt">float</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">15.8f</span><span class="p">;</span><span class="w"> </span><span class="c1">// de tipo float</span>
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="kt">float</span><span class="w"> </span><span class="n">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">15.8F</span><span class="p">;</span><span class="w"> </span><span class="c1">// tambien de tipo float</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1">1</a></span>
+<span class="normal"><a href="#__codelineno-10-2">2</a></span>
+<span class="normal"><a href="#__codelineno-10-3">3</a></span>
+<span class="normal"><a href="#__codelineno-10-4">4</a></span>
+<span class="normal"><a href="#__codelineno-10-5">5</a></span>
+<span class="normal"><a href="#__codelineno-10-6">6</a></span>
+<span class="normal"><a href="#__codelineno-10-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">15.2</span><span class="p">;</span><span class="w"> </span><span class="c1">// de tipo double</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="kt">double</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">15.2D</span><span class="p">;</span><span class="w"> </span><span class="c1">// el mismo valor</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="kt">double</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1.52e1</span><span class="p">;</span><span class="w"> </span><span class="c1">// el mismo valor</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="kt">double</span><span class="w"> </span><span class="n">d</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.152E2</span><span class="p">;</span><span class="w"> </span><span class="c1">// el mismo valor</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="kt">double</span><span class="w"> </span><span class="n">e</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">.8e10</span><span class="p">;</span><span class="w"> </span><span class="c1">// de tipo double</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6"></a><span class="kt">float</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">15.8f</span><span class="p">;</span><span class="w"> </span><span class="c1">// de tipo float</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="kt">float</span><span class="w"> </span><span class="n">g</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">15.8F</span><span class="p">;</span><span class="w"> </span><span class="c1">// tambien de tipo float</span>
+</code></pre></div></td></tr></table></div>
 <p>Como se verá más adelante cada tipo de dato primitivo tiene una clase correspondiente (<code>Boolean, Character, Byte, Short, Integer, Long, Float y Double</code>), llamadas <em>wrappers</em>, que definen también constantes y métodos útiles.</p>
 <p>Es <strong>obligatorio indicar el tipo y el identificador</strong>. </p>
 <blockquote>
@@ -3572,20 +3647,27 @@
 <p>Es una buena costumbre declararlas justo al principio.</p>
 <p>También pueden declararse variables dentro de un bloque con llaves <em>{ }</em>. En ese caso, sólo serán <em>visibles</em> dentro de dicho bloque.</p>
 <p>Un ejemplo (no es necesario entenderlo) :</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
-<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
-<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El valor de i es: &quot;</span><span class="o">+</span><span class="n">i</span><span class="p">);</span>
-<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1">1</a></span>
+<span class="normal"><a href="#__codelineno-11-2">2</a></span>
+<span class="normal"><a href="#__codelineno-11-3">3</a></span>
+<span class="normal"><a href="#__codelineno-11-4">4</a></span>
+<span class="normal"><a href="#__codelineno-11-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="n">i</span><span class="o">&lt;</span><span class="mi">10</span><span class="p">;</span><span class="n">i</span><span class="o">++</span><span class="p">)</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El valor de i es: &quot;</span><span class="o">+</span><span class="n">i</span><span class="p">);</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p>En este ejemplo existe una variable local: <em><strong>int i</strong>;</em> únicamente puede utilizarse dentro del bloque <em><strong>main</strong></em> donde fue creada.</p>
 <h4 id="443-constantes-final">4.4.3 Constantes (final)</h4>
 <p>Para declarar una constante, usamos la palabra reservada <code>final</code>. Su valor no podrá ser modificado.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MAYORIA_EDAD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="kd">final</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.1416f</span><span class="p">;</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>
-<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a><span class="c1">// MAYORIA_EDAD = 21; // Esto daría un error de compilación.</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1">1</a></span>
+<span class="normal"><a href="#__codelineno-12-2">2</a></span>
+<span class="normal"><a href="#__codelineno-12-3">3</a></span>
+<span class="normal"><a href="#__codelineno-12-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kd">final</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">MAYORIA_EDAD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">18</span><span class="p">;</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="kd">final</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.1416f</span><span class="p">;</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3"></a>
+<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="c1">// MAYORIA_EDAD = 21; // Esto daría un error de compilación.</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="45-operadores">4.5 Operadores</h3>
 <p>Los operadores son una parte indispensable de la programación ya que nos permiten realizar cálculos matemáticos y lógicos, entre otras cosas. </p>
 <p>Los operadores pueden ser:</p>
@@ -3709,22 +3791,36 @@
 </table>
 <p>Los operadores relacionales actúan sobre valores enteros, reales y caracteres. Devuelven un valor del tipo boolean (<em>true, false</em>).</p>
 <p><strong>Ejemplo</strong>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">op1</span><span class="p">,</span><span class="w"> </span><span class="n">op2</span><span class="p">;</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">        </span><span class="kt">char</span><span class="w"> </span><span class="n">op3</span><span class="p">,</span><span class="w"> </span><span class="n">op4</span><span class="p">;</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">        </span><span class="n">op1</span><span class="o">=</span><span class="mf">1.34</span><span class="p">;</span>
-<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">        </span><span class="n">op2</span><span class="o">=</span><span class="mf">1.35</span><span class="p">;</span>
-<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">        </span><span class="n">op3</span><span class="o">=</span><span class="sc">&#39;a&#39;</span><span class="p">;</span>
-<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">        </span><span class="n">op4</span><span class="o">=</span><span class="sc">&#39;b&#39;</span><span class="p">;</span>
-<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>
-<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;op1=&quot;</span><span class="o">+</span><span class="w"> </span><span class="n">op1</span><span class="w"> </span><span class="o">+</span><span class="s">&quot; ope2=&quot;</span><span class="o">+</span><span class="w"> </span><span class="n">op2</span><span class="p">);</span>
-<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;op1&gt;op2=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">op1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">op2</span><span class="p">));</span>
-<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;op1&lt;op2=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">op1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">op2</span><span class="p">));</span>
-<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;op1==op2=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">op1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">op2</span><span class="p">));</span>
-<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;op1!=op2=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">op1</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">op2</span><span class="p">));</span>
-<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&#39;a&#39;&gt;&#39;b&#39;=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">op3</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">op4</span><span class="p">));</span><span class="w">    </span>
-<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="w">    </span><span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-13-10">10</a></span>
+<span class="normal"><a href="#__codelineno-13-11">11</a></span>
+<span class="normal"><a href="#__codelineno-13-12">12</a></span>
+<span class="normal"><a href="#__codelineno-13-13">13</a></span>
+<span class="normal"><a href="#__codelineno-13-14">14</a></span>
+<span class="normal"><a href="#__codelineno-13-15">15</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">op1</span><span class="p">,</span><span class="w"> </span><span class="n">op2</span><span class="p">;</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="w">        </span><span class="kt">char</span><span class="w"> </span><span class="n">op3</span><span class="p">,</span><span class="w"> </span><span class="n">op4</span><span class="p">;</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4"></a><span class="w">        </span><span class="n">op1</span><span class="o">=</span><span class="mf">1.34</span><span class="p">;</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="w">        </span><span class="n">op2</span><span class="o">=</span><span class="mf">1.35</span><span class="p">;</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">        </span><span class="n">op3</span><span class="o">=</span><span class="sc">&#39;a&#39;</span><span class="p">;</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7"></a><span class="w">        </span><span class="n">op4</span><span class="o">=</span><span class="sc">&#39;b&#39;</span><span class="p">;</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8"></a>
+<a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;op1=&quot;</span><span class="o">+</span><span class="w"> </span><span class="n">op1</span><span class="w"> </span><span class="o">+</span><span class="s">&quot; ope2=&quot;</span><span class="o">+</span><span class="w"> </span><span class="n">op2</span><span class="p">);</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;op1&gt;op2=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">op1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">op2</span><span class="p">));</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;op1&lt;op2=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">op1</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">op2</span><span class="p">));</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;op1==op2=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">op1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">op2</span><span class="p">));</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;op1!=op2=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">op1</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">op2</span><span class="p">));</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;&#39;a&#39;&gt;&#39;b&#39;=&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">op3</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">op4</span><span class="p">));</span><span class="w">    </span>
+<a id="__codelineno-13-15" name="__codelineno-13-15"></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p><strong>Resultado de ejecución</strong>:</p>
 <p><img src="../../assets/images/ud01/u13.png" alt="Ejemplo 3" style="zoom: 55%; " /></p>
 <h4 id="453-logicos">4.5.3 Lógicos</h4>
@@ -3755,26 +3851,44 @@
 </tbody>
 </table>
 <p>Estos operadores actúan sobre operadores o expresiones lógicas, es decir, aquellos que se evalúan a cierto o falso (<em>true, false</em>).</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">       </span><span class="kt">boolean</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">;</span>
-<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>
-<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">       </span><span class="n">a</span><span class="o">=</span><span class="kc">true</span><span class="p">;</span>
-<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">       </span><span class="n">b</span><span class="o">=</span><span class="kc">true</span><span class="p">;</span>
-<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">       </span><span class="n">c</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
-<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">       </span><span class="n">d</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
-<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>
-<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w">       </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;true Y true =&quot;</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">));</span>
-<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">       </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;true Y false =&quot;</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">c</span><span class="p">));</span>
-<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="w">       </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;false Y false =&quot;</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">d</span><span class="p">));</span>
-<a id="__codelineno-14-12" name="__codelineno-14-12" href="#__codelineno-14-12"></a><span class="w">       </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;true O true =&quot;</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">b</span><span class="p">));</span>
-<a id="__codelineno-14-13" name="__codelineno-14-13" href="#__codelineno-14-13"></a><span class="w">       </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;true O false =&quot;</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">c</span><span class="p">));</span>
-<a id="__codelineno-14-14" name="__codelineno-14-14" href="#__codelineno-14-14"></a><span class="w">       </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;false O false =&quot;</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">d</span><span class="p">));</span>
-<a id="__codelineno-14-15" name="__codelineno-14-15" href="#__codelineno-14-15"></a><span class="w">       </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;No true =&quot;</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="o">!</span><span class="n">a</span><span class="p">);</span>
-<a id="__codelineno-14-16" name="__codelineno-14-16" href="#__codelineno-14-16"></a><span class="w">       </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;No false =&quot;</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="o">!</span><span class="n">c</span><span class="p">);</span>
-<a id="__codelineno-14-17" name="__codelineno-14-17" href="#__codelineno-14-17"></a><span class="w">       </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;(3 &gt; 4) Y true = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">((</span><span class="mi">3</span><span class="o">&gt;</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">));</span>
-<a id="__codelineno-14-18" name="__codelineno-14-18" href="#__codelineno-14-18"></a>
-<a id="__codelineno-14-19" name="__codelineno-14-19" href="#__codelineno-14-19"></a><span class="w">    </span><span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-14-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-14-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-14-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-14-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-14-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-14-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-14-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-14-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-14-10">10</a></span>
+<span class="normal"><a href="#__codelineno-14-11">11</a></span>
+<span class="normal"><a href="#__codelineno-14-12">12</a></span>
+<span class="normal"><a href="#__codelineno-14-13">13</a></span>
+<span class="normal"><a href="#__codelineno-14-14">14</a></span>
+<span class="normal"><a href="#__codelineno-14-15">15</a></span>
+<span class="normal"><a href="#__codelineno-14-16">16</a></span>
+<span class="normal"><a href="#__codelineno-14-17">17</a></span>
+<span class="normal"><a href="#__codelineno-14-18">18</a></span>
+<span class="normal"><a href="#__codelineno-14-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="w">       </span><span class="kt">boolean</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="w"> </span><span class="n">c</span><span class="p">,</span><span class="w"> </span><span class="n">d</span><span class="p">;</span>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="w">       </span><span class="n">a</span><span class="o">=</span><span class="kc">true</span><span class="p">;</span>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="w">       </span><span class="n">b</span><span class="o">=</span><span class="kc">true</span><span class="p">;</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="w">       </span><span class="n">c</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="w">       </span><span class="n">d</span><span class="o">=</span><span class="kc">false</span><span class="p">;</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="w">       </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;true Y true =&quot;</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">b</span><span class="p">));</span>
+<a id="__codelineno-14-10" name="__codelineno-14-10"></a><span class="w">       </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;true Y false =&quot;</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">c</span><span class="p">));</span>
+<a id="__codelineno-14-11" name="__codelineno-14-11"></a><span class="w">       </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;false Y false =&quot;</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">d</span><span class="p">));</span>
+<a id="__codelineno-14-12" name="__codelineno-14-12"></a><span class="w">       </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;true O true =&quot;</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">b</span><span class="p">));</span>
+<a id="__codelineno-14-13" name="__codelineno-14-13"></a><span class="w">       </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;true O false =&quot;</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="p">(</span><span class="n">a</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">c</span><span class="p">));</span>
+<a id="__codelineno-14-14" name="__codelineno-14-14"></a><span class="w">       </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;false O false =&quot;</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="p">(</span><span class="n">c</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">d</span><span class="p">));</span>
+<a id="__codelineno-14-15" name="__codelineno-14-15"></a><span class="w">       </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;No true =&quot;</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="o">!</span><span class="n">a</span><span class="p">);</span>
+<a id="__codelineno-14-16" name="__codelineno-14-16"></a><span class="w">       </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;No false =&quot;</span><span class="w"> </span><span class="o">+</span><span class="w">  </span><span class="o">!</span><span class="n">c</span><span class="p">);</span>
+<a id="__codelineno-14-17" name="__codelineno-14-17"></a><span class="w">       </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;(3 &gt; 4) Y true = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">((</span><span class="mi">3</span><span class="o">&gt;</span><span class="mi">4</span><span class="p">)</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">a</span><span class="p">));</span>
+<a id="__codelineno-14-18" name="__codelineno-14-18"></a>
+<a id="__codelineno-14-19" name="__codelineno-14-19"></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p><strong>Resultado de ejecución</strong>:</p>
 <p><img src="../../assets/images/ud01/image-20210907180405002.png" alt="image-20210907180405002"  /></p>
 <h4 id="454-asignacion">4.5.4 Asignación</h4>
@@ -3874,10 +3988,12 @@
 </table>
 <h4 id="455-expresiones">4.5.5 Expresiones</h4>
 <p>Una <strong>expresión</strong> es la <strong>combinación de varios operadores y operandos</strong>. Por ejemplo, tenemos las siguientes expresiones:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="mi">7</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="mi">10</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span>
-<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a><span class="p">(</span><span class="mi">7</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
+<span class="normal"><a href="#__codelineno-15-2">2</a></span>
+<span class="normal"><a href="#__codelineno-15-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="mi">7</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">2</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="mi">10</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="w"> </span><span class="o">%</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span>
+<a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="p">(</span><span class="mi">7</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="n">n</span>
+</code></pre></div></td></tr></table></div>
 <p>El lenguaje <strong>Java evalúa las expresiones aplicando los operadores uno a uno siguiendo un orden específico</strong>.</p>
 <h4 id="456-precedencia-de-operadores">4.5.6 Precedencia de operadores</h4>
 <p>Indica el orden en que se evalúan. Aquí un resumen de los más comunes (de mayor a menor prioridad):</p>
@@ -3915,19 +4031,27 @@
 </ul>
 <p><img src="../../assets/images/ud01/casting.png" alt="Guardat a la memòria RAM" style="zoom:50%;" /></p>
 <p>Por ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="kt">float</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="p">;</span><span class="w">   </span><span class="c1">// convertimos el char &#39;a&#39; a float. El valor de foo sera 97.0f</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>
-<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="p">;</span><span class="w">     </span><span class="c1">// convertimos el char &#39;a&#39; a int. EL valor de bar sera 97</span>
-<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>
-<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="kt">float</span><span class="w"> </span><span class="n">baz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">97</span><span class="p">;</span><span class="w">    </span><span class="c1">// convertimos el int 97 a float. El valor de baz sera 97.0f</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span>
+<span class="normal"><a href="#__codelineno-16-2">2</a></span>
+<span class="normal"><a href="#__codelineno-16-3">3</a></span>
+<span class="normal"><a href="#__codelineno-16-4">4</a></span>
+<span class="normal"><a href="#__codelineno-16-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="kt">float</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="p">;</span><span class="w">   </span><span class="c1">// convertimos el char &#39;a&#39; a float. El valor de foo sera 97.0f</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2"></a>
+<a id="__codelineno-16-3" name="__codelineno-16-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="p">;</span><span class="w">     </span><span class="c1">// convertimos el char &#39;a&#39; a int. EL valor de bar sera 97</span>
+<a id="__codelineno-16-4" name="__codelineno-16-4"></a>
+<a id="__codelineno-16-5" name="__codelineno-16-5"></a><span class="kt">float</span><span class="w"> </span><span class="n">baz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">97</span><span class="p">;</span><span class="w">    </span><span class="c1">// convertimos el int 97 a float. El valor de baz sera 97.0f</span>
+</code></pre></div></td></tr></table></div>
 <p>Si tratamos de hacer un casting implícito al revés, el compilador nos dará un error:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="kt">char</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">65633</span><span class="p">;</span><span class="w">   </span><span class="c1">// error, casting implícito de int a char no permitido</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>
-<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a><span class="kt">char</span><span class="w"> </span><span class="n">baz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">97</span><span class="n">f</span><span class="p">;</span><span class="w">   </span><span class="c1">// error, casting implícito de float a char no permitido</span>
-<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>
-<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a><span class="kt">int</span><span class="w"> </span><span class="n">qux</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">97</span><span class="n">f</span><span class="p">;</span><span class="w">    </span><span class="c1">// error, casting implícito de float a int no permitido</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-17-1">1</a></span>
+<span class="normal"><a href="#__codelineno-17-2">2</a></span>
+<span class="normal"><a href="#__codelineno-17-3">3</a></span>
+<span class="normal"><a href="#__codelineno-17-4">4</a></span>
+<span class="normal"><a href="#__codelineno-17-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1"></a><span class="kt">char</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">65633</span><span class="p">;</span><span class="w">   </span><span class="c1">// error, casting implícito de int a char no permitido</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2"></a>
+<a id="__codelineno-17-3" name="__codelineno-17-3"></a><span class="kt">char</span><span class="w"> </span><span class="n">baz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">97</span><span class="n">f</span><span class="p">;</span><span class="w">   </span><span class="c1">// error, casting implícito de float a char no permitido</span>
+<a id="__codelineno-17-4" name="__codelineno-17-4"></a>
+<a id="__codelineno-17-5" name="__codelineno-17-5"></a><span class="kt">int</span><span class="w"> </span><span class="n">qux</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">97</span><span class="n">f</span><span class="p">;</span><span class="w">    </span><span class="c1">// error, casting implícito de float a int no permitido</span>
+</code></pre></div></td></tr></table></div>
 <blockquote>
 <p>El casting con los tipos <strong>boolean</strong> y <strong>String</strong> no se puede realizar.
 </p>
@@ -3938,85 +4062,123 @@
 <p>Para realizar un casting explícito, se debe escribir <strong>el tipo al que se quiere convertir</strong> entre paréntesis, justo antes del <strong>valor que se quiere convertir</strong>.</p>
 <p><strong>(tipo) valor</strong></p>
 <p>Los siguientes ejemplos ilustran el uso del casting explícito:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="c1">// de int a char</span>
-<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="kt">char</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="mi">65633</span><span class="p">;</span><span class="w">   </span><span class="c1">// bar es 97 (el valor máximo de char es 65535)</span>
-<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>
-<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="c1">// de float a char</span>
-<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="kt">char</span><span class="w"> </span><span class="n">baz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="mf">97.53f</span><span class="p">;</span><span class="w">  </span><span class="c1">// baz es 97, se pierden los decimales</span>
-<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a>
-<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="c1">// de float a int</span>
-<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="kt">int</span><span class="w"> </span><span class="n">quux</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="mf">14.67565f</span><span class="p">;</span><span class="w">  </span><span class="c1">// quux es 14, se pierden los decimales</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="c1">// de int a char</span>
-<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">fooa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">65633</span><span class="p">;</span>
-<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="kt">char</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="n">fooa</span><span class="p">;</span><span class="w">   </span><span class="c1">// bar es 97, el valor máximo de char es 65535</span>
-<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a>
-<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="c1">// de float a char</span>
-<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="kt">float</span><span class="w"> </span><span class="n">foob</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">97.53f</span><span class="p">;</span>
-<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="kt">char</span><span class="w"> </span><span class="n">baz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="n">foob</span><span class="p">;</span><span class="w">  </span><span class="c1">// baz es 97, se pierden los decimales</span>
-<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a>
-<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="c1">// de float a int</span>
-<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="kt">float</span><span class="w"> </span><span class="n">fooc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">14.67565f</span><span class="p">;</span>
-<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="kt">int</span><span class="w"> </span><span class="n">quux</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">fooc</span><span class="p">;</span><span class="w">  </span><span class="c1">// quux es 14, se pierden los decimales</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="kt">float</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">          </span><span class="c1">// foo es 2.0f</span>
-<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>
-<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="kt">float</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">  </span><span class="c1">// bar es 2.5f</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-18-1">1</a></span>
+<span class="normal"><a href="#__codelineno-18-2">2</a></span>
+<span class="normal"><a href="#__codelineno-18-3">3</a></span>
+<span class="normal"><a href="#__codelineno-18-4">4</a></span>
+<span class="normal"><a href="#__codelineno-18-5">5</a></span>
+<span class="normal"><a href="#__codelineno-18-6">6</a></span>
+<span class="normal"><a href="#__codelineno-18-7">7</a></span>
+<span class="normal"><a href="#__codelineno-18-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1"></a><span class="c1">// de int a char</span>
+<a id="__codelineno-18-2" name="__codelineno-18-2"></a><span class="kt">char</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="mi">65633</span><span class="p">;</span><span class="w">   </span><span class="c1">// bar es 97 (el valor máximo de char es 65535)</span>
+<a id="__codelineno-18-3" name="__codelineno-18-3"></a>
+<a id="__codelineno-18-4" name="__codelineno-18-4"></a><span class="c1">// de float a char</span>
+<a id="__codelineno-18-5" name="__codelineno-18-5"></a><span class="kt">char</span><span class="w"> </span><span class="n">baz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="mf">97.53f</span><span class="p">;</span><span class="w">  </span><span class="c1">// baz es 97, se pierden los decimales</span>
+<a id="__codelineno-18-6" name="__codelineno-18-6"></a>
+<a id="__codelineno-18-7" name="__codelineno-18-7"></a><span class="c1">// de float a int</span>
+<a id="__codelineno-18-8" name="__codelineno-18-8"></a><span class="kt">int</span><span class="w"> </span><span class="n">quux</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="mf">14.67565f</span><span class="p">;</span><span class="w">  </span><span class="c1">// quux es 14, se pierden los decimales</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-19-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-19-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-19-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-19-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-19-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-19-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-19-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-19-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-19-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-19-10">10</a></span>
+<span class="normal"><a href="#__codelineno-19-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1"></a><span class="c1">// de int a char</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">fooa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">65633</span><span class="p">;</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3"></a><span class="kt">char</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="n">fooa</span><span class="p">;</span><span class="w">   </span><span class="c1">// bar es 97, el valor máximo de char es 65535</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4"></a>
+<a id="__codelineno-19-5" name="__codelineno-19-5"></a><span class="c1">// de float a char</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6"></a><span class="kt">float</span><span class="w"> </span><span class="n">foob</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">97.53f</span><span class="p">;</span>
+<a id="__codelineno-19-7" name="__codelineno-19-7"></a><span class="kt">char</span><span class="w"> </span><span class="n">baz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">char</span><span class="p">)</span><span class="w"> </span><span class="n">foob</span><span class="p">;</span><span class="w">  </span><span class="c1">// baz es 97, se pierden los decimales</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8"></a>
+<a id="__codelineno-19-9" name="__codelineno-19-9"></a><span class="c1">// de float a int</span>
+<a id="__codelineno-19-10" name="__codelineno-19-10"></a><span class="kt">float</span><span class="w"> </span><span class="n">fooc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">14.67565f</span><span class="p">;</span>
+<a id="__codelineno-19-11" name="__codelineno-19-11"></a><span class="kt">int</span><span class="w"> </span><span class="n">quux</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="p">)</span><span class="w"> </span><span class="n">fooc</span><span class="p">;</span><span class="w">  </span><span class="c1">// quux es 14, se pierden los decimales</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-20-1">1</a></span>
+<span class="normal"><a href="#__codelineno-20-2">2</a></span>
+<span class="normal"><a href="#__codelineno-20-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1"></a><span class="kt">float</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">          </span><span class="c1">// foo es 2.0f</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2"></a>
+<a id="__codelineno-20-3" name="__codelineno-20-3"></a><span class="kt">float</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">float</span><span class="p">)</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w">  </span><span class="c1">// bar es 2.5f</span>
+</code></pre></div></td></tr></table></div>
 <h4 id="462-conversion-textual">4.6.2 Conversión textual</h4>
 <p>Además de las conversiones con casting, Java incorpora una serie de métodos para hacer otras conversiones.</p>
 <h5 id="concatenacion">Concatenación</h5>
 <p>Se puede convertir cualquier valor en un <em>String</em> sólo concatenando con un <em>String</em> vacío "".</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="n">String</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="p">;</span><span class="w">    </span><span class="c1">// foo es &quot;a&quot;</span>
-<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="n">String</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">865</span><span class="p">;</span><span class="w">    </span><span class="c1">// bar es &quot;865&quot;</span>
-<a id="__codelineno-21-3" name="__codelineno-21-3" href="#__codelineno-21-3"></a><span class="n">String</span><span class="w"> </span><span class="n">baz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">23.78f</span><span class="p">;</span><span class="w"> </span><span class="c1">// baz es &quot;23.78&quot;</span>
-<a id="__codelineno-21-4" name="__codelineno-21-4" href="#__codelineno-21-4"></a><span class="n">String</span><span class="w"> </span><span class="n">quux</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w">  </span><span class="c1">// quux es &quot;true&quot;</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
+<span class="normal"><a href="#__codelineno-21-2">2</a></span>
+<span class="normal"><a href="#__codelineno-21-3">3</a></span>
+<span class="normal"><a href="#__codelineno-21-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="n">String</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="p">;</span><span class="w">    </span><span class="c1">// foo es &quot;a&quot;</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="n">String</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">865</span><span class="p">;</span><span class="w">    </span><span class="c1">// bar es &quot;865&quot;</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="n">String</span><span class="w"> </span><span class="n">baz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mf">23.78f</span><span class="p">;</span><span class="w"> </span><span class="c1">// baz es &quot;23.78&quot;</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="n">String</span><span class="w"> </span><span class="n">quux</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w">  </span><span class="c1">// quux es &quot;true&quot;</span>
+</code></pre></div></td></tr></table></div>
 <h5 id="stringvalueof">String.valueOf()</h5>
 <p>De forma equivalente a la concatenación, se puede utilizar el método <strong>String.valueOf ()</strong> para convertir a <strong>String</strong>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="n">String</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="sc">&#39;a&#39;</span><span class="p">);</span><span class="w">    </span><span class="c1">// foo es &quot;a&quot;</span>
-<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="n">String</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="mi">865</span><span class="p">);</span><span class="w">    </span><span class="c1">// bar es &quot;865&quot;</span>
-<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="n">String</span><span class="w"> </span><span class="n">baz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="mf">23.78f</span><span class="p">);</span><span class="w"> </span><span class="c1">// baz es &quot;23.78&quot;</span>
-<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="n">String</span><span class="w"> </span><span class="n">quux</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span><span class="w">  </span><span class="c1">// quux es &quot;true&quot;</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1">1</a></span>
+<span class="normal"><a href="#__codelineno-22-2">2</a></span>
+<span class="normal"><a href="#__codelineno-22-3">3</a></span>
+<span class="normal"><a href="#__codelineno-22-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="n">String</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="sc">&#39;a&#39;</span><span class="p">);</span><span class="w">    </span><span class="c1">// foo es &quot;a&quot;</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="n">String</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="mi">865</span><span class="p">);</span><span class="w">    </span><span class="c1">// bar es &quot;865&quot;</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="n">String</span><span class="w"> </span><span class="n">baz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="mf">23.78f</span><span class="p">);</span><span class="w"> </span><span class="c1">// baz es &quot;23.78&quot;</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="n">String</span><span class="w"> </span><span class="n">quux</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">String</span><span class="p">.</span><span class="na">valueOf</span><span class="p">(</span><span class="kc">true</span><span class="p">);</span><span class="w">  </span><span class="c1">// quux es &quot;true&quot;</span>
+</code></pre></div></td></tr></table></div>
 <h5 id="charat">charAt()</h5>
 <p>Lógicamente, no podemos convertir un String en un char, ya que el String puede tener varios caracteres. Pero podemos usar el método <em>charAt()</em> para obtener un caracter que esté en una determinada posición.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="kt">char</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;java8&quot;</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">  </span><span class="c1">// foo es &#39;j&#39;</span>
-<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="kt">char</span><span class="w"> </span><span class="n">baz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;java8&quot;</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span><span class="w">  </span><span class="c1">// baz es &#39;8&#39;</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
+<span class="normal"><a href="#__codelineno-23-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="kt">char</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;java8&quot;</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span><span class="w">  </span><span class="c1">// foo es &#39;j&#39;</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="kt">char</span><span class="w"> </span><span class="n">baz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;java8&quot;</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="mi">4</span><span class="p">);</span><span class="w">  </span><span class="c1">// baz es &#39;8&#39;</span>
+</code></pre></div></td></tr></table></div>
 <p>Hay que tener en cuenta que las posiciones empiezan por <strong>0</strong>.</p>
 <h5 id="charactergetnumericvalue">Character.getNumericValue()</h5>
 <p>En el punto anterior hemos visto que si hacemos el casting implícito para convertir un <em>char</em> en un <em>int</em>, obtenemos el valor Unicode del carácter.</p>
 <p>Si queremos obtener el valor que representa el <strong>caracter</strong> se puede hacer con el método <strong>Character.getNumericValue ()</strong>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="kt">char</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;9&#39;</span><span class="p">;</span>
-<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>
-<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">foo</span><span class="p">;</span><span class="w"> </span><span class="c1">// bar es 57, con el casting obtenemos el valor unicode</span>
-<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>
-<a id="__codelineno-24-5" name="__codelineno-24-5" href="#__codelineno-24-5"></a><span class="kt">int</span><span class="w"> </span><span class="n">baz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">getNumericValue</span><span class="p">(</span><span class="n">foo</span><span class="p">);</span><span class="w"> </span><span class="c1">// baz se 9, obtenemos el valor representado por el caracter</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
+<span class="normal"><a href="#__codelineno-24-2">2</a></span>
+<span class="normal"><a href="#__codelineno-24-3">3</a></span>
+<span class="normal"><a href="#__codelineno-24-4">4</a></span>
+<span class="normal"><a href="#__codelineno-24-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="kt">char</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;9&#39;</span><span class="p">;</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a>
+<a id="__codelineno-24-3" name="__codelineno-24-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">foo</span><span class="p">;</span><span class="w"> </span><span class="c1">// bar es 57, con el casting obtenemos el valor unicode</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4"></a>
+<a id="__codelineno-24-5" name="__codelineno-24-5"></a><span class="kt">int</span><span class="w"> </span><span class="n">baz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Character</span><span class="p">.</span><span class="na">getNumericValue</span><span class="p">(</span><span class="n">foo</span><span class="p">);</span><span class="w"> </span><span class="c1">// baz se 9, obtenemos el valor representado por el caracter</span>
+</code></pre></div></td></tr></table></div>
 <h5 id="parseint-y-parsefloat">parseInt() y parseFloat()</h5>
 <p>Para obtener el valor numérico representado por un <strong>String</strong> podemos utilizar <strong>parseInt ()</strong> o <strong>parseFloat ()</strong>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="n">String</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;213&quot;</span><span class="p">;</span>
-<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>
-<a id="__codelineno-25-3" name="__codelineno-25-3" href="#__codelineno-25-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">foo</span><span class="p">);</span><span class="w">  </span><span class="c1">// bar es 213</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="n">String</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;23.78&quot;</span><span class="p">;</span>
-<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a>
-<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="kt">float</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Float</span><span class="p">.</span><span class="na">parseFloat</span><span class="p">(</span><span class="n">foo</span><span class="p">);</span><span class="w">  </span><span class="c1">// bar es 23.78f</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1">1</a></span>
+<span class="normal"><a href="#__codelineno-25-2">2</a></span>
+<span class="normal"><a href="#__codelineno-25-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="n">String</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;213&quot;</span><span class="p">;</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a>
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="kt">int</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">parseInt</span><span class="p">(</span><span class="n">foo</span><span class="p">);</span><span class="w">  </span><span class="c1">// bar es 213</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
+<span class="normal"><a href="#__codelineno-26-2">2</a></span>
+<span class="normal"><a href="#__codelineno-26-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="n">String</span><span class="w"> </span><span class="n">foo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;23.78&quot;</span><span class="p">;</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2"></a>
+<a id="__codelineno-26-3" name="__codelineno-26-3"></a><span class="kt">float</span><span class="w"> </span><span class="n">bar</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Float</span><span class="p">.</span><span class="na">parseFloat</span><span class="p">(</span><span class="n">foo</span><span class="p">);</span><span class="w">  </span><span class="c1">// bar es 23.78f</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="47-la-clase-math">4.7 La clase Math</h3>
 <p>Se echan de menos operadores matemáticos más potentes en Java. Por ello se ha incluido una clase especial llamada <strong>Math</strong> dentro del paquete java.lang.</p>
 <p>Esta clase posee muchos métodos muy interesantes para realizar cálculos matemáticos complejos como cálculo de potencias, raíces cuadradas, valores absolutos, seno, coseno, etc.</p>
 <p>Por ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span><span class="w">    </span><span class="c1">// Potencia 3 ^ 3</span>
-<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>
-<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="mi">9</span><span class="p">);</span><span class="w">    </span><span class="c1">// Raíz cuadrada de 9</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1">1</a></span>
+<span class="normal"><a href="#__codelineno-27-2">2</a></span>
+<span class="normal"><a href="#__codelineno-27-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="mi">3</span><span class="p">);</span><span class="w">    </span><span class="c1">// Potencia 3 ^ 3</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2"></a>
+<a id="__codelineno-27-3" name="__codelineno-27-3"></a><span class="kt">double</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">sqrt</span><span class="p">(</span><span class="mi">9</span><span class="p">);</span><span class="w">    </span><span class="c1">// Raíz cuadrada de 9</span>
+</code></pre></div></td></tr></table></div>
 <p>También posee constantes como:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">PI</span><span class="p">;</span><span class="w"> </span><span class="c1">// El número Π (3,14159265…)</span>
-<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>
-<a id="__codelineno-28-3" name="__codelineno-28-3" href="#__codelineno-28-3"></a><span class="kt">double</span><span class="w"> </span><span class="n">E</span><span class="p">;</span><span class="w"> </span><span class="c1">// El número e (2, 7182818245...)</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1">1</a></span>
+<span class="normal"><a href="#__codelineno-28-2">2</a></span>
+<span class="normal"><a href="#__codelineno-28-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="kt">double</span><span class="w"> </span><span class="n">PI</span><span class="p">;</span><span class="w"> </span><span class="c1">// El número Π (3,14159265…)</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2"></a>
+<a id="__codelineno-28-3" name="__codelineno-28-3"></a><span class="kt">double</span><span class="w"> </span><span class="n">E</span><span class="p">;</span><span class="w"> </span><span class="c1">// El número e (2, 7182818245...)</span>
+</code></pre></div></td></tr></table></div>
 <p>Algunos ejemplos de otros métodos:</p>
 <p><img src="../../assets/images/ud01/image-20210907184818918.png" alt="image-20210907184818918" style="zoom: 50%;" /></p>
 <h3 id="4-8-literales">4. 8 Literales</h3>
@@ -4086,16 +4248,21 @@ Ejemplos: 'a' , 'B' , '{' , 'ñ' , 'á' .</p>
 de tipo carácter.</p>
 <p>Así, por ejemplo, para incluir un cambio de línea dentro de un literal de tipo <strong>String</strong> deberá hacerse mediante la secuencia de escape <strong>\n</strong> :</p>
 <p>Ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Primera línea\nSegunda línea del string\n&quot;</span><span class="p">);</span>
-<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hola&quot;</span><span class="p">);</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-29-1">1</a></span>
+<span class="normal"><a href="#__codelineno-29-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Primera línea\nSegunda línea del string\n&quot;</span><span class="p">);</span>
+<a id="__codelineno-29-2" name="__codelineno-29-2"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Hola&quot;</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
 <p>La visualización del string anterior mediante <strong>println()</strong> produciría la siguiente salida por pantalla:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="n">Primera</span><span class="w"> </span><span class="n">línea</span>
-<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a>
-<a id="__codelineno-30-3" name="__codelineno-30-3" href="#__codelineno-30-3"></a><span class="n">Segunda</span><span class="w"> </span><span class="n">línea</span><span class="w"> </span><span class="n">del</span><span class="w"> </span><span class="n">string</span>
-<a id="__codelineno-30-4" name="__codelineno-30-4" href="#__codelineno-30-4"></a>
-<a id="__codelineno-30-5" name="__codelineno-30-5" href="#__codelineno-30-5"></a><span class="n">Hola</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-30-1">1</a></span>
+<span class="normal"><a href="#__codelineno-30-2">2</a></span>
+<span class="normal"><a href="#__codelineno-30-3">3</a></span>
+<span class="normal"><a href="#__codelineno-30-4">4</a></span>
+<span class="normal"><a href="#__codelineno-30-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1"></a><span class="n">Primera</span><span class="w"> </span><span class="n">línea</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2"></a>
+<a id="__codelineno-30-3" name="__codelineno-30-3"></a><span class="n">Segunda</span><span class="w"> </span><span class="n">línea</span><span class="w"> </span><span class="n">del</span><span class="w"> </span><span class="n">string</span>
+<a id="__codelineno-30-4" name="__codelineno-30-4"></a>
+<a id="__codelineno-30-5" name="__codelineno-30-5"></a><span class="n">Hola</span>
+</code></pre></div></td></tr></table></div>
 <p>La forma de incluir los caracteres: comillas dobles ( " ) y contrabarra ( \ ) es mediante las secuencias de escape \\" y \\ respectivamente (o mediante su código Unicode precedido de \ ).</p>
 <blockquote>
 <p>Si el string es demasiado largo y debe dividirse en varias líneas en el fichero fuente, puede utilizarse el operador de concatenación de strings (+) de la siguiente forma:</p>
@@ -4115,27 +4282,40 @@ de tipo carácter.</p>
 </ul>
 <p>La utilización de <code>System.err</code> sería totalmente análoga para enviar los mensajes producidos por errores en la ejecución.</p>
 <p>Por ejemplo, para presentar el mensaje de saludo habitual por pantalla:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;HOLA &quot;</span><span class="p">);</span>
-<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;mundo&quot;</span><span class="p">);</span>
-<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Mensaje de error&quot;</span><span class="p">);</span>
-<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a><span class="w">    </span><span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-31-1">1</a></span>
+<span class="normal"><a href="#__codelineno-31-2">2</a></span>
+<span class="normal"><a href="#__codelineno-31-3">3</a></span>
+<span class="normal"><a href="#__codelineno-31-4">4</a></span>
+<span class="normal"><a href="#__codelineno-31-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;HOLA &quot;</span><span class="p">);</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;mundo&quot;</span><span class="p">);</span>
+<a id="__codelineno-31-4" name="__codelineno-31-4"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Mensaje de error&quot;</span><span class="p">);</span>
+<a id="__codelineno-31-5" name="__codelineno-31-5"></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p>La salida sería la siguiente:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="n">HOLA</span><span class="w"> </span><span class="n">mundo</span>
-<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="n">Mensaje</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">error</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-32-1">1</a></span>
+<span class="normal"><a href="#__codelineno-32-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1"></a><span class="n">HOLA</span><span class="w"> </span><span class="n">mundo</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2"></a><span class="n">Mensaje</span><span class="w"> </span><span class="n">de</span><span class="w"> </span><span class="n">error</span>
+</code></pre></div></td></tr></table></div>
 <p>Podemos concatenar texto y variables con el operador <code>+</code>:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>
-<a id="__codelineno-33-3" name="__codelineno-33-3" href="#__codelineno-33-3"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Álex&quot;</span><span class="p">;</span>
-<a id="__codelineno-33-4" name="__codelineno-33-4" href="#__codelineno-33-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
-<a id="__codelineno-33-5" name="__codelineno-33-5" href="#__codelineno-33-5"></a>
-<a id="__codelineno-33-6" name="__codelineno-33-6" href="#__codelineno-33-6"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">);</span>
-<a id="__codelineno-33-7" name="__codelineno-33-7" href="#__codelineno-33-7"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">edad</span><span class="p">);</span>
-<a id="__codelineno-33-8" name="__codelineno-33-8" href="#__codelineno-33-8"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="w"> </span><span class="o">+</span><span class="s">&quot; tiene &quot;</span><span class="o">+</span><span class="n">edad</span><span class="o">+</span><span class="s">&quot; años&quot;</span><span class="p">);</span>
-<a id="__codelineno-33-9" name="__codelineno-33-9" href="#__codelineno-33-9"></a><span class="w">    </span><span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-33-1">1</a></span>
+<span class="normal"><a href="#__codelineno-33-2">2</a></span>
+<span class="normal"><a href="#__codelineno-33-3">3</a></span>
+<span class="normal"><a href="#__codelineno-33-4">4</a></span>
+<span class="normal"><a href="#__codelineno-33-5">5</a></span>
+<span class="normal"><a href="#__codelineno-33-6">6</a></span>
+<span class="normal"><a href="#__codelineno-33-7">7</a></span>
+<span class="normal"><a href="#__codelineno-33-8">8</a></span>
+<span class="normal"><a href="#__codelineno-33-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-33-2" name="__codelineno-33-2"></a>
+<a id="__codelineno-33-3" name="__codelineno-33-3"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Álex&quot;</span><span class="p">;</span>
+<a id="__codelineno-33-4" name="__codelineno-33-4"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">edad</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">25</span><span class="p">;</span>
+<a id="__codelineno-33-5" name="__codelineno-33-5"></a>
+<a id="__codelineno-33-6" name="__codelineno-33-6"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="p">);</span>
+<a id="__codelineno-33-7" name="__codelineno-33-7"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">edad</span><span class="p">);</span>
+<a id="__codelineno-33-8" name="__codelineno-33-8"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">nombre</span><span class="w"> </span><span class="o">+</span><span class="s">&quot; tiene &quot;</span><span class="o">+</span><span class="n">edad</span><span class="o">+</span><span class="s">&quot; años&quot;</span><span class="p">);</span>
+<a id="__codelineno-33-9" name="__codelineno-33-9"></a><span class="w">    </span><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p>Y la salida sería la siguiente:</p>
 <p><img src="../../assets/images/ud01/ud14.png" alt="image-20210907195340470" style="zoom:50%; ;" /></p>
 <h4 id="492-entrada-estandar-lectura-del-teclado">4.9.2 Entrada estándar (lectura del teclado)</h4>
@@ -4150,16 +4330,16 @@ de tipo carácter.</p>
    - <code>sc.nextDouble()</code>: Lee un número real. Devuelve un <code>double</code>.
    - Y muchos más: <code>nextByte()</code>, <code>nextFloat()</code>, etc.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-34-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1"></a><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
 <blockquote>
 <p>En este ejemplo hemos creado un objeto <strong>Scanner</strong> llamado <strong>sc</strong> pero podríamos ponerle cualquier nombre.
 </p>
 </blockquote>
 <p>Ahora podremos utilizar <strong>sc</strong> tantas veces como queramos para leer información del teclado.</p>
 <p>Por ejemplo:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="n">String</span><span class="w"> </span><span class="n">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-35-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1"></a><span class="n">String</span><span class="w"> </span><span class="n">texto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
 <p>El método <strong>sc.nextLine()</strong> recogerá el texto que el usuario escriba por teclado (hasta presionar la tecla Intro) y lo guardará en <strong>texto</strong> (de tipo String).</p>
 <p>Existen mucho otros métodos según el tipo de dato que se quiera leer:</p>
 <ul>
@@ -4178,55 +4358,97 @@ de tipo carácter.</p>
 import java.util.Scanner;</code></p>
 </blockquote>
 <p><strong>Ejemplo completo:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
-<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>
-<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>
-<a id="__codelineno-36-6" name="__codelineno-36-6" href="#__codelineno-36-6"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
-<a id="__codelineno-36-7" name="__codelineno-36-7" href="#__codelineno-36-7"></a>
-<a id="__codelineno-36-8" name="__codelineno-36-8" href="#__codelineno-36-8"></a><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-<a id="__codelineno-36-9" name="__codelineno-36-9" href="#__codelineno-36-9"></a>
-<a id="__codelineno-36-10" name="__codelineno-36-10" href="#__codelineno-36-10"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Introduce tu nombre: &quot;</span><span class="p">);</span>
-<a id="__codelineno-36-11" name="__codelineno-36-11" href="#__codelineno-36-11"></a>
-<a id="__codelineno-36-12" name="__codelineno-36-12" href="#__codelineno-36-12"></a><span class="w">        </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
-<a id="__codelineno-36-13" name="__codelineno-36-13" href="#__codelineno-36-13"></a>
-<a id="__codelineno-36-14" name="__codelineno-36-14" href="#__codelineno-36-14"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;¡Hola &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;!&quot;</span><span class="p">);</span>
-<a id="__codelineno-36-15" name="__codelineno-36-15" href="#__codelineno-36-15"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-36-16" name="__codelineno-36-16" href="#__codelineno-36-16"></a>
-<a id="__codelineno-36-17" name="__codelineno-36-17" href="#__codelineno-36-17"></a><span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-36-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-36-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-36-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-36-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-36-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-36-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-36-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-36-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-36-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-36-10">10</a></span>
+<span class="normal"><a href="#__codelineno-36-11">11</a></span>
+<span class="normal"><a href="#__codelineno-36-12">12</a></span>
+<span class="normal"><a href="#__codelineno-36-13">13</a></span>
+<span class="normal"><a href="#__codelineno-36-14">14</a></span>
+<span class="normal"><a href="#__codelineno-36-15">15</a></span>
+<span class="normal"><a href="#__codelineno-36-16">16</a></span>
+<span class="normal"><a href="#__codelineno-36-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2"></a>
+<a id="__codelineno-36-3" name="__codelineno-36-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-36-4" name="__codelineno-36-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-36-5" name="__codelineno-36-5"></a>
+<a id="__codelineno-36-6" name="__codelineno-36-6"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<a id="__codelineno-36-7" name="__codelineno-36-7"></a>
+<a id="__codelineno-36-8" name="__codelineno-36-8"></a><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<a id="__codelineno-36-9" name="__codelineno-36-9"></a>
+<a id="__codelineno-36-10" name="__codelineno-36-10"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Introduce tu nombre: &quot;</span><span class="p">);</span>
+<a id="__codelineno-36-11" name="__codelineno-36-11"></a>
+<a id="__codelineno-36-12" name="__codelineno-36-12"></a><span class="w">        </span><span class="n">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
+<a id="__codelineno-36-13" name="__codelineno-36-13"></a>
+<a id="__codelineno-36-14" name="__codelineno-36-14"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;¡Hola &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;!&quot;</span><span class="p">);</span>
+<a id="__codelineno-36-15" name="__codelineno-36-15"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-36-16" name="__codelineno-36-16"></a>
+<a id="__codelineno-36-17" name="__codelineno-36-17"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p>Salida:</p>
 <p><img src="../../assets/images/ud01/u15.png" alt="image-20210907204726235" style="zoom:50%; ;" /></p>
 <p>Ejemplo en el que leemos un valor tipo double. El programa pide al usuario que introduzca el radio de un círculo, luego calcula su área y circunferencia, por último lo muestra por pantalla.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
-<a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>
-<a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a>
-<a id="__codelineno-37-5" name="__codelineno-37-5" href="#__codelineno-37-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-37-6" name="__codelineno-37-6" href="#__codelineno-37-6"></a>
-<a id="__codelineno-37-7" name="__codelineno-37-7" href="#__codelineno-37-7"></a>
-<a id="__codelineno-37-8" name="__codelineno-37-8" href="#__codelineno-37-8"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">radio</span><span class="p">,</span><span class="w"> </span><span class="n">area</span><span class="p">,</span><span class="w"> </span><span class="n">circunferencia</span><span class="p">;</span>
-<a id="__codelineno-37-9" name="__codelineno-37-9" href="#__codelineno-37-9"></a>
-<a id="__codelineno-37-10" name="__codelineno-37-10" href="#__codelineno-37-10"></a><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-<a id="__codelineno-37-11" name="__codelineno-37-11" href="#__codelineno-37-11"></a>
-<a id="__codelineno-37-12" name="__codelineno-37-12" href="#__codelineno-37-12"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Introduce el radio: &quot;</span><span class="p">);</span>
-<a id="__codelineno-37-13" name="__codelineno-37-13" href="#__codelineno-37-13"></a>
-<a id="__codelineno-37-14" name="__codelineno-37-14" href="#__codelineno-37-14"></a><span class="w">        </span><span class="n">radio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
-<a id="__codelineno-37-15" name="__codelineno-37-15" href="#__codelineno-37-15"></a>
-<a id="__codelineno-37-16" name="__codelineno-37-16" href="#__codelineno-37-16"></a><span class="w">        </span><span class="c1">// Se hace uso de la libreria Math para hacer uso de PI y la potencia (pow)</span>
-<a id="__codelineno-37-17" name="__codelineno-37-17" href="#__codelineno-37-17"></a>
-<a id="__codelineno-37-18" name="__codelineno-37-18" href="#__codelineno-37-18"></a><span class="w">        </span><span class="n">area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">PI</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="n">radio</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
-<a id="__codelineno-37-19" name="__codelineno-37-19" href="#__codelineno-37-19"></a>
-<a id="__codelineno-37-20" name="__codelineno-37-20" href="#__codelineno-37-20"></a><span class="w">        </span><span class="n">circumferencia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">PI</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">radio</span><span class="p">;</span>
-<a id="__codelineno-37-21" name="__codelineno-37-21" href="#__codelineno-37-21"></a>
-<a id="__codelineno-37-22" name="__codelineno-37-22" href="#__codelineno-37-22"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El area es &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">area</span><span class="p">);</span>
-<a id="__codelineno-37-23" name="__codelineno-37-23" href="#__codelineno-37-23"></a>
-<a id="__codelineno-37-24" name="__codelineno-37-24" href="#__codelineno-37-24"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La circumferencia es &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">circunferencia</span><span class="p">);</span>
-<a id="__codelineno-37-25" name="__codelineno-37-25" href="#__codelineno-37-25"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-37-26" name="__codelineno-37-26" href="#__codelineno-37-26"></a>
-<a id="__codelineno-37-27" name="__codelineno-37-27" href="#__codelineno-37-27"></a><span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-37-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-37-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-37-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-37-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-37-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-37-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-37-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-37-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-37-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-37-10">10</a></span>
+<span class="normal"><a href="#__codelineno-37-11">11</a></span>
+<span class="normal"><a href="#__codelineno-37-12">12</a></span>
+<span class="normal"><a href="#__codelineno-37-13">13</a></span>
+<span class="normal"><a href="#__codelineno-37-14">14</a></span>
+<span class="normal"><a href="#__codelineno-37-15">15</a></span>
+<span class="normal"><a href="#__codelineno-37-16">16</a></span>
+<span class="normal"><a href="#__codelineno-37-17">17</a></span>
+<span class="normal"><a href="#__codelineno-37-18">18</a></span>
+<span class="normal"><a href="#__codelineno-37-19">19</a></span>
+<span class="normal"><a href="#__codelineno-37-20">20</a></span>
+<span class="normal"><a href="#__codelineno-37-21">21</a></span>
+<span class="normal"><a href="#__codelineno-37-22">22</a></span>
+<span class="normal"><a href="#__codelineno-37-23">23</a></span>
+<span class="normal"><a href="#__codelineno-37-24">24</a></span>
+<span class="normal"><a href="#__codelineno-37-25">25</a></span>
+<span class="normal"><a href="#__codelineno-37-26">26</a></span>
+<span class="normal"><a href="#__codelineno-37-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+<a id="__codelineno-37-2" name="__codelineno-37-2"></a>
+<a id="__codelineno-37-3" name="__codelineno-37-3"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-37-4" name="__codelineno-37-4"></a>
+<a id="__codelineno-37-5" name="__codelineno-37-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-37-6" name="__codelineno-37-6"></a>
+<a id="__codelineno-37-7" name="__codelineno-37-7"></a>
+<a id="__codelineno-37-8" name="__codelineno-37-8"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">radio</span><span class="p">,</span><span class="w"> </span><span class="n">area</span><span class="p">,</span><span class="w"> </span><span class="n">circunferencia</span><span class="p">;</span>
+<a id="__codelineno-37-9" name="__codelineno-37-9"></a>
+<a id="__codelineno-37-10" name="__codelineno-37-10"></a><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<a id="__codelineno-37-11" name="__codelineno-37-11"></a>
+<a id="__codelineno-37-12" name="__codelineno-37-12"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Introduce el radio: &quot;</span><span class="p">);</span>
+<a id="__codelineno-37-13" name="__codelineno-37-13"></a>
+<a id="__codelineno-37-14" name="__codelineno-37-14"></a><span class="w">        </span><span class="n">radio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+<a id="__codelineno-37-15" name="__codelineno-37-15"></a>
+<a id="__codelineno-37-16" name="__codelineno-37-16"></a><span class="w">        </span><span class="c1">// Se hace uso de la libreria Math para hacer uso de PI y la potencia (pow)</span>
+<a id="__codelineno-37-17" name="__codelineno-37-17"></a>
+<a id="__codelineno-37-18" name="__codelineno-37-18"></a><span class="w">        </span><span class="n">area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">PI</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="n">radio</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-37-19" name="__codelineno-37-19"></a>
+<a id="__codelineno-37-20" name="__codelineno-37-20"></a><span class="w">        </span><span class="n">circumferencia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">PI</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">radio</span><span class="p">;</span>
+<a id="__codelineno-37-21" name="__codelineno-37-21"></a>
+<a id="__codelineno-37-22" name="__codelineno-37-22"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;El area es &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">area</span><span class="p">);</span>
+<a id="__codelineno-37-23" name="__codelineno-37-23"></a>
+<a id="__codelineno-37-24" name="__codelineno-37-24"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;La circumferencia es &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">circunferencia</span><span class="p">);</span>
+<a id="__codelineno-37-25" name="__codelineno-37-25"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-37-26" name="__codelineno-37-26"></a>
+<a id="__codelineno-37-27" name="__codelineno-37-27"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p>Y su salida:</p>
 <p><img src="../../assets/images/ud01/u16.png" alt="image-20210907205409638" style="zoom:50%; ;" /></p>
 <blockquote>
@@ -4234,10 +4456,12 @@ import java.util.Scanner;</code></p>
 <p>Cuando lees un número con <code>nextInt()</code>, <code>nextDouble()</code>, etc., el <code>Scanner</code> consume los dígitos del número, pero deja el "Enter" (el salto de línea <code>\n</code>) en el buffer de entrada.</p>
 <p>Si la siguiente instrucción es un <code>nextLine()</code>, este leerá ese "Enter" vacío y parecerá que se ha saltado la lectura.</p>
 <p><strong>Solución:</strong> Después de leer un número y antes de leer una línea de texto, consume el salto de línea sobrante con un <code>sc.nextLine();</code> extra.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>System.out.print(&quot;Introduce tu edad: &quot;);
-<a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>int edad = sc.nextInt(); // Lee sólo dígitos enteros
-<a id="__codelineno-38-3" name="__codelineno-38-3" href="#__codelineno-38-3"></a>sc.nextLine(); // Limpia el &#39;\n&#39; que quedó en el buffer
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-38-1">1</a></span>
+<span class="normal"><a href="#__codelineno-38-2">2</a></span>
+<span class="normal"><a href="#__codelineno-38-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1"></a>System.out.print(&quot;Introduce tu edad: &quot;);
+<a id="__codelineno-38-2" name="__codelineno-38-2"></a>int edad = sc.nextInt(); // Lee sólo dígitos enteros
+<a id="__codelineno-38-3" name="__codelineno-38-3"></a>sc.nextLine(); // Limpia el &#39;\n&#39; que quedó en el buffer
+</code></pre></div></td></tr></table></div>
 </blockquote>
 
 

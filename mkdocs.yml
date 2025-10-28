@@ -65,15 +65,9 @@ markdown_extensions:
   - sane_lists
   - pymdownx.highlight:
       anchor_linenums: true
-  - pymdownx.superfences
-
-# plugins:
-#   - tags
-#   - to-pdf:
-#       author: José Manuel Abad López
-#       copyright: 🄯 Creative Commons CC BY-SA 4.0 2025
-#       cover_title: Programación
-#       cover_subtitle: 1º DAM
-#       toc_title: "Contenidos"
-#       toc_level: 3
-#       output_path: ../public/libro.pdf
+      linenums: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+  - admonition

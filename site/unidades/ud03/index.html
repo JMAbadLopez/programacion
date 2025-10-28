@@ -1530,61 +1530,100 @@
 </tbody>
 </table>
 <p><strong>Ejemplo de código completo:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="cm">/**</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="cm"> * Esta es la implementación completa de la función descrita en la tabla.</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="cm"> * Recibe dos enteros y devuelve su suma.</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="cm"> */</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">sumar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">resultado</span><span class="p">;</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
+<span class="normal"><a href="#__codelineno-0-2">2</a></span>
+<span class="normal"><a href="#__codelineno-0-3">3</a></span>
+<span class="normal"><a href="#__codelineno-0-4">4</a></span>
+<span class="normal"><a href="#__codelineno-0-5">5</a></span>
+<span class="normal"><a href="#__codelineno-0-6">6</a></span>
+<span class="normal"><a href="#__codelineno-0-7">7</a></span>
+<span class="normal"><a href="#__codelineno-0-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="cm">/**</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="cm"> * Esta es la implementación completa de la función descrita en la tabla.</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="cm"> * Recibe dos enteros y devuelve su suma.</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="cm"> */</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">sumar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">resultado</span><span class="p">;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <hr />
 <h2 id="3-funciones-vs-procedimientos-devuelves-algo-o-solo-actuas">3. Funciones vs. Procedimientos: ¿Devuelves algo o solo actúas?</h2>
 <p>En nuestra caja de herramientas, tenemos dos tipos de especialistas:</p>
 <h3 id="31-funciones-las-que-devuelven-un-resultado">3.1. Funciones (Las que devuelven un resultado)</h3>
 <p>Una <strong>función</strong> es una herramienta que, después de hacer su trabajo, te <strong>devuelve un resultado</strong>. Utiliza la palabra clave <code>return</code> para entregar ese resultado.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cm">/**</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="cm"> * Esta función es como una calculadora: le das dos números</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="cm"> * y te devuelve su producto.</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="cm"> */</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">multiplicar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">resultado</span><span class="p">;</span><span class="w"> </span><span class="c1">// Devuelve el valor calculado</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>
-<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="c1">// Cómo se usa:</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="kt">int</span><span class="w"> </span><span class="n">producto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">multiplicar</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// La variable &#39;producto&#39; ahora vale 35</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-1-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-1-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-1-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-1-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-1-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-1-10">10</a></span>
+<span class="normal"><a href="#__codelineno-1-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="cm">/**</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="cm"> * Esta función es como una calculadora: le das dos números</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="cm"> * y te devuelve su producto.</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="cm"> */</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">multiplicar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">resultado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="p">;</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">resultado</span><span class="p">;</span><span class="w"> </span><span class="c1">// Devuelve el valor calculado</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="p">}</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="c1">// Cómo se usa:</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="kt">int</span><span class="w"> </span><span class="n">producto</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">multiplicar</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span><span class="w"> </span><span class="c1">// La variable &#39;producto&#39; ahora vale 35</span>
+</code></pre></div></td></tr></table></div>
 <p>Aquí tienes otro ejemplo clásico de una función:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cm">/**</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="cm"> * Esta función compara dos números y devuelve el mayor de los dos.</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="cm"> */</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">encontrarMaximo</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">valor1</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">valor2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">valor1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">valor2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">valor1</span><span class="p">;</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">valor2</span><span class="p">;</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="p">}</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="c1">// Cómo se usa:</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="kt">double</span><span class="w"> </span><span class="n">maximo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">encontrarMaximo</span><span class="p">(</span><span class="mf">15.5</span><span class="p">,</span><span class="w"> </span><span class="mf">9.2</span><span class="p">);</span><span class="w"> </span><span class="c1">// La variable &#39;maximo&#39; ahora vale 15.5</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-2-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-2-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-2-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-2-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-2-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-2-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-2-10">10</a></span>
+<span class="normal"><a href="#__codelineno-2-11">11</a></span>
+<span class="normal"><a href="#__codelineno-2-12">12</a></span>
+<span class="normal"><a href="#__codelineno-2-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="cm">/**</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="cm"> * Esta función compara dos números y devuelve el mayor de los dos.</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="cm"> */</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">encontrarMaximo</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">valor1</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">valor2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">valor1</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">valor2</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">valor1</span><span class="p">;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">valor2</span><span class="p">;</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="p">}</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="c1">// Cómo se usa:</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="kt">double</span><span class="w"> </span><span class="n">maximo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">encontrarMaximo</span><span class="p">(</span><span class="mf">15.5</span><span class="p">,</span><span class="w"> </span><span class="mf">9.2</span><span class="p">);</span><span class="w"> </span><span class="c1">// La variable &#39;maximo&#39; ahora vale 15.5</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="32-procedimientos-los-que-solo-realizan-una-accion">3.2. Procedimientos (Los que solo realizan una acción)</h3>
 <p>Un <strong>procedimiento</strong> es una herramienta que realiza una tarea, pero <strong>no devuelve ningún resultado</strong>. En Java, los identificamos porque su "Tipo de Retorno" es <code>void</code> (vacío).</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="cm">/**</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="cm"> * Este procedimiento es como un altavoz: le das un mensaje</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="cm"> * y simplemente lo muestra. No te devuelve nada.</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="cm"> */</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">saludar</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;¡Hola, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;!&quot;</span><span class="p">);</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="c1">// No hay &#39;return&#39; de un valor</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="p">}</span>
-<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="c1">// Cómo se usa:</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="n">saludar</span><span class="p">(</span><span class="s">&quot;Álex&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Muestra &quot;¡Hola, Álex!&quot; en pantalla. No se puede asignar a una variable.</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="cm">/**</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="cm"> * Este procedimiento es como un altavoz: le das un mensaje</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="cm"> * y simplemente lo muestra. No te devuelve nada.</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="cm"> */</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">saludar</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;¡Hola, &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;!&quot;</span><span class="p">);</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="w">    </span><span class="c1">// No hay &#39;return&#39; de un valor</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="p">}</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="c1">// Cómo se usa:</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="n">saludar</span><span class="p">(</span><span class="s">&quot;Álex&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Muestra &quot;¡Hola, Álex!&quot; en pantalla. No se puede asignar a una variable.</span>
+</code></pre></div></td></tr></table></div>
 <table>
 <thead>
 <tr>
@@ -1623,18 +1662,28 @@
 <p><strong>"Cada función es su propia habitación de hotel"</strong></p>
 </blockquote>
 <p>Cuando entras en la habitación de hotel (llamas a una función), puedes usar todo lo que hay dentro: la cama, la mesa, la tele (las variables locales y los parámetros). Pero cuando sales de la habitación y cierras la puerta (la función termina), ya no puedes acceder a nada de lo que había dentro. Esas variables "desaparecen" para el resto del programa.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">variableMain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// Una variable en el &quot;pasillo&quot; del hotel (main)</span>
-<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="n">miFuncion</span><span class="p">();</span>
-<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="c1">// System.out.println(variableDeFuncion); // ¡ERROR! No puedes ver dentro de la habitación desde el pasillo.</span>
-<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="p">}</span>
-<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>
-<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">miFuncion</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Entras a la &quot;habitación&quot;</span>
-<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">variableDeFuncion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w"> </span><span class="c1">// Una variable dentro de la habitación</span>
-<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">variableDeFuncion</span><span class="p">);</span><span class="w"> </span><span class="c1">// Correcto, puedes usarla aquí dentro.</span>
-<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">    </span><span class="c1">// System.out.println(variableMain); // ¡ERROR! Desde dentro de la habitación no ves lo que hay en el pasillo.</span>
-<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-4-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-4-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-4-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-4-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-4-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-4-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-4-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-4-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-4-10">10</a></span>
+<span class="normal"><a href="#__codelineno-4-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">variableMain</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="c1">// Una variable en el &quot;pasillo&quot; del hotel (main)</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="n">miFuncion</span><span class="p">();</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="c1">// System.out.println(variableDeFuncion); // ¡ERROR! No puedes ver dentro de la habitación desde el pasillo.</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="p">}</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">miFuncion</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Entras a la &quot;habitación&quot;</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">variableDeFuncion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">20</span><span class="p">;</span><span class="w"> </span><span class="c1">// Una variable dentro de la habitación</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">variableDeFuncion</span><span class="p">);</span><span class="w"> </span><span class="c1">// Correcto, puedes usarla aquí dentro.</span>
+<a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">    </span><span class="c1">// System.out.println(variableMain); // ¡ERROR! Desde dentro de la habitación no ves lo que hay en el pasillo.</span>
+<a id="__codelineno-4-11" name="__codelineno-4-11"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <p>Esta <strong>encapsulación</strong> es fundamental, ya que garantiza que las funciones sean independientes y no interfieran unas con otras por accidente.</p>
 <hr />
 <h2 id="5-paso-de-parametros-fotocopias-vs-direcciones">5. Paso de Parámetros: Fotocopias vs. Direcciones</h2>
@@ -1642,45 +1691,77 @@
 <h3 id="51-paso-por-valor-te-paso-una-fotocopia-tipos-primitivos">5.1. Paso por Valor: "Te paso una fotocopia" (Tipos Primitivos)</h3>
 <p>Cuando pasas un tipo primitivo (<code>int</code>, <code>double</code>, <code>char</code>, <code>boolean</code>...), Java no le da tu variable original a la función. En su lugar, le da una <strong>copia exacta</strong>, una fotocopia.</p>
 <p>La función puede hacer lo que quiera con esa fotocopia (cambiarle el valor, usarla en cálculos...), pero <strong>tu variable original permanecerá intacta</strong>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">miNumero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Antes de llamar a la función, miNumero vale: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">miNumero</span><span class="p">);</span><span class="w"> </span><span class="c1">// Vale 10</span>
-<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
-<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="n">intentarModificar</span><span class="p">(</span><span class="n">miNumero</span><span class="p">);</span><span class="w"> </span><span class="c1">// Le pasamos una FOTOCOPIA de miNumero</span>
-<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
-<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Después de llamar a la función, miNumero vale: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">miNumero</span><span class="p">);</span><span class="w"> </span><span class="c1">// Sigue valiendo 10</span>
-<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="p">}</span>
-<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
-<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">intentarModificar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">numeroCopia</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Recibe la fotocopia</span>
-<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">    </span><span class="n">numeroCopia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numeroCopia</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// Modificamos la COPIA a 20</span>
-<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dentro de la función, la copia vale: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">numeroCopia</span><span class="p">);</span><span class="w"> </span><span class="c1">// Vale 20</span>
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-5-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-5-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-5-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-5-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-5-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-5-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-5-10">10</a></span>
+<span class="normal"><a href="#__codelineno-5-11">11</a></span>
+<span class="normal"><a href="#__codelineno-5-12">12</a></span>
+<span class="normal"><a href="#__codelineno-5-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">miNumero</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Antes de llamar a la función, miNumero vale: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">miNumero</span><span class="p">);</span><span class="w"> </span><span class="c1">// Vale 10</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a><span class="w">    </span><span class="n">intentarModificar</span><span class="p">(</span><span class="n">miNumero</span><span class="p">);</span><span class="w"> </span><span class="c1">// Le pasamos una FOTOCOPIA de miNumero</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Después de llamar a la función, miNumero vale: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">miNumero</span><span class="p">);</span><span class="w"> </span><span class="c1">// Sigue valiendo 10</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8"></a><span class="p">}</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9"></a>
+<a id="__codelineno-5-10" name="__codelineno-5-10"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">intentarModificar</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">numeroCopia</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Recibe la fotocopia</span>
+<a id="__codelineno-5-11" name="__codelineno-5-11"></a><span class="w">    </span><span class="n">numeroCopia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numeroCopia</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="p">;</span><span class="w"> </span><span class="c1">// Modificamos la COPIA a 20</span>
+<a id="__codelineno-5-12" name="__codelineno-5-12"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Dentro de la función, la copia vale: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">numeroCopia</span><span class="p">);</span><span class="w"> </span><span class="c1">// Vale 20</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h3 id="52-paso-por-referencia-te-paso-la-direccion-arrays-y-objetos">5.2. Paso por Referencia: "Te paso la dirección" (Arrays y Objetos)</h3>
 <p>Cuando pasas un array o un objeto, Java cambia de estrategia. En lugar de copiar toda la estructura (lo cual sería muy ineficiente), le pasa a la función la <strong>dirección de memoria</strong> donde se encuentra el objeto original.</p>
 <p>La función recibe la dirección, va a la "casa" original y trabaja directamente sobre ella. Por lo tanto, <strong>cualquier cambio que la función haga en el array u objeto, afectará al original</strong>.</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">    </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">misNotas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">};</span>
-<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Notas originales: &quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// [7, 5, 8]</span>
-<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">misNotas</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">misNotas</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
-<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="n">subirNotas</span><span class="p">(</span><span class="n">misNotas</span><span class="p">);</span><span class="w"> </span><span class="c1">// Le pasamos la DIRECCIÓN de misNotas</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Notas finales: &quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// ¡Han cambiado! [8, 6, 9]</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">misNotas</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">misNotas</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
-<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="p">}</span>
-<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>
-<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">subirNotas</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">notas</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Recibe la dirección del array</span>
-<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Recibido. Subiendo un punto a cada nota...&quot;</span><span class="p">);</span>
-<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">notas</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a><span class="w">        </span><span class="n">notas</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">notas</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// Modificamos el array ORIGINAL</span>
-<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a><span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span>
+<span class="normal"><a href="#__codelineno-6-16">16</a></span>
+<span class="normal"><a href="#__codelineno-6-17">17</a></span>
+<span class="normal"><a href="#__codelineno-6-18">18</a></span>
+<span class="normal"><a href="#__codelineno-6-19">19</a></span>
+<span class="normal"><a href="#__codelineno-6-20">20</a></span>
+<span class="normal"><a href="#__codelineno-6-21">21</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="w">    </span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">misNotas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">};</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Notas originales: &quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// [7, 5, 8]</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">misNotas</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">misNotas</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a><span class="w">    </span><span class="n">subirNotas</span><span class="p">(</span><span class="n">misNotas</span><span class="p">);</span><span class="w"> </span><span class="c1">// Le pasamos la DIRECCIÓN de misNotas</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Notas finales: &quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// ¡Han cambiado! [8, 6, 9]</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">misNotas</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">misNotas</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a><span class="p">}</span>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">subirNotas</span><span class="p">(</span><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">notas</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="c1">// Recibe la dirección del array</span>
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Recibido. Subiendo un punto a cada nota...&quot;</span><span class="p">);</span>
+<a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">notas</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19"></a><span class="w">        </span><span class="n">notas</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">notas</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="c1">// Modificamos el array ORIGINAL</span>
+<a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <hr />
 <h2 id="6-buenas-practicas-al-crear-funciones">6. Buenas Prácticas al Crear Funciones</h2>
 <p>Para ser un buen programador, no basta con que las funciones funcionen. ¡También deben ser elegantes!</p>
@@ -1690,16 +1771,24 @@
 <li><strong>Pocos Parámetros:</strong> Intenta que tus funciones no necesiten demasiados "materiales". Si una función requiere más de 3 o 4 parámetros, puede ser una señal de que está haciendo demasiadas cosas.</li>
 <li><strong>Comentarios <code>Javadoc</code>:</strong> Documenta tus funciones. Explica brevemente qué hacen, qué significa cada parámetro y qué devuelven. Esto es de gran ayuda para ti y para otros programadores.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="cm">/**</span>
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="cm"> * Calcula el área de un círculo a partir de su radio.</span>
-<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="cm"> *</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="cm"> * @param radio El radio del círculo (debe ser un valor positivo).</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="cm"> * @return El área calculada del círculo.</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="cm"> */</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">calcularAreaCirculo</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">radio</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">PI</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="n">radio</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-7-1">1</a></span>
+<span class="normal"><a href="#__codelineno-7-2">2</a></span>
+<span class="normal"><a href="#__codelineno-7-3">3</a></span>
+<span class="normal"><a href="#__codelineno-7-4">4</a></span>
+<span class="normal"><a href="#__codelineno-7-5">5</a></span>
+<span class="normal"><a href="#__codelineno-7-6">6</a></span>
+<span class="normal"><a href="#__codelineno-7-7">7</a></span>
+<span class="normal"><a href="#__codelineno-7-8">8</a></span>
+<span class="normal"><a href="#__codelineno-7-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1"></a><span class="cm">/**</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2"></a><span class="cm"> * Calcula el área de un círculo a partir de su radio.</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3"></a><span class="cm"> *</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4"></a><span class="cm"> * @param radio El radio del círculo (debe ser un valor positivo).</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5"></a><span class="cm"> * @return El área calculada del círculo.</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6"></a><span class="cm"> */</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">calcularAreaCirculo</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">radio</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">PI</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">pow</span><span class="p">(</span><span class="n">radio</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="7-ejemplo-practico-mini-gestor-de-calificaciones">7. Ejemplo Práctico: Mini-Gestor de Calificaciones</h2>
 <p>Vamos a unir todo lo que hemos aprendido en un programa completo. Crearemos un pequeño gestor de notas que nos permitirá introducir las calificaciones de un alumno, calcular la media, encontrar la nota más alta y mostrar un informe final.</p>
 <p>Este ejemplo te permitirá ver en acción:</p>
@@ -1719,108 +1808,208 @@
 <li>Mostrar un informe completo con todas las notas, la media y la nota más alta.</li>
 </ol>
 <h3 id="codigo-de-la-solucion">Código de la Solución</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Arrays</span><span class="p">;</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">GestorCalificaciones</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">    </span><span class="c1">// ############### FUNCIÓN PRINCIPAL (main) ###############</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">    </span><span class="c1">// Actúa como el director de orquesta. No hace los cálculos,</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span><span class="c1">// solo llama a las herramientas (funciones) adecuadas en orden.</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">        </span><span class="n">mostrarBienvenida</span><span class="p">();</span><span class="w"> </span><span class="c1">// Llamada a un procedimiento</span>
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a>
-<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">teclado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
-<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">        </span><span class="kt">double</span><span class="o">[]</span><span class="w"> </span><span class="n">notas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">double</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
-<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a>
-<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">        </span><span class="c1">// Llamamos a una herramienta para rellenar el array.</span>
-<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="w">        </span><span class="c1">// Le pasamos la &quot;dirección&quot; del array (paso por referencia).</span>
-<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">        </span><span class="n">rellenarNotas</span><span class="p">(</span><span class="n">teclado</span><span class="p">,</span><span class="w"> </span><span class="n">notas</span><span class="p">);</span>
-<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a>
-<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="w">        </span><span class="c1">// Llamamos a herramientas que calculan y nos devuelven un resultado.</span>
-<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">media</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calcularMedia</span><span class="p">(</span><span class="n">notas</span><span class="p">);</span>
-<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">notaMaxima</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">encontrarMaxima</span><span class="p">(</span><span class="n">notas</span><span class="p">);</span>
-<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a>
-<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="w">        </span><span class="c1">// Finalmente, llamamos a un procedimiento para mostrarlo todo.</span>
-<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="w">        </span><span class="n">mostrarInforme</span><span class="p">(</span><span class="n">notas</span><span class="p">,</span><span class="w"> </span><span class="n">media</span><span class="p">,</span><span class="w"> </span><span class="n">notaMaxima</span><span class="p">);</span>
-<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a>
-<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="c1">// Fin del main</span>
-<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a>
-<a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a>
-<a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a><span class="w">    </span><span class="c1">// ############### HERRAMIENTAS (Funciones y Procedimientos) ###############</span>
-<a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a>
-<a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a><span class="w">    </span><span class="cm">/**</span>
-<a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a><span class="cm">     * PROCEDIMIENTO: Muestra un mensaje de bienvenida.</span>
-<a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a><span class="cm">     * No necesita datos (parámetros) y no devuelve nada (void).</span>
-<a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a><span class="cm">     */</span>
-<a id="__codelineno-8-36" name="__codelineno-8-36" href="#__codelineno-8-36"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostrarBienvenida</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-37" name="__codelineno-8-37" href="#__codelineno-8-37"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;--- Bienvenido al Gestor de Calificaciones ---&quot;</span><span class="p">);</span>
-<a id="__codelineno-8-38" name="__codelineno-8-38" href="#__codelineno-8-38"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;A continuación, deberás introducir 5 notas.&quot;</span><span class="p">);</span>
-<a id="__codelineno-8-39" name="__codelineno-8-39" href="#__codelineno-8-39"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;----------------------------------------------&quot;</span><span class="p">);</span>
-<a id="__codelineno-8-40" name="__codelineno-8-40" href="#__codelineno-8-40"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-8-41" name="__codelineno-8-41" href="#__codelineno-8-41"></a>
-<a id="__codelineno-8-42" name="__codelineno-8-42" href="#__codelineno-8-42"></a><span class="w">    </span><span class="cm">/**</span>
-<a id="__codelineno-8-43" name="__codelineno-8-43" href="#__codelineno-8-43"></a><span class="cm">     * PROCEDIMIENTO: Pide al usuario las notas y rellena el array.</span>
-<a id="__codelineno-8-44" name="__codelineno-8-44" href="#__codelineno-8-44"></a><span class="cm">     * Recibe el Scanner y el array de notas.</span>
-<a id="__codelineno-8-45" name="__codelineno-8-45" href="#__codelineno-8-45"></a><span class="cm">     * Como el array se pasa por REFERENCIA, los cambios hechos aquí</span>
-<a id="__codelineno-8-46" name="__codelineno-8-46" href="#__codelineno-8-46"></a><span class="cm">     * afectarán al array original del main.</span>
-<a id="__codelineno-8-47" name="__codelineno-8-47" href="#__codelineno-8-47"></a><span class="cm">     */</span>
-<a id="__codelineno-8-48" name="__codelineno-8-48" href="#__codelineno-8-48"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">rellenarNotas</span><span class="p">(</span><span class="n">Scanner</span><span class="w"> </span><span class="n">teclado</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">[]</span><span class="w"> </span><span class="n">arrayNotas</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-49" name="__codelineno-8-49" href="#__codelineno-8-49"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">arrayNotas</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-50" name="__codelineno-8-50" href="#__codelineno-8-50"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Introduce la nota &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;: &quot;</span><span class="p">);</span>
-<a id="__codelineno-8-51" name="__codelineno-8-51" href="#__codelineno-8-51"></a><span class="w">            </span><span class="n">arrayNotas</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">teclado</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
-<a id="__codelineno-8-52" name="__codelineno-8-52" href="#__codelineno-8-52"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-8-53" name="__codelineno-8-53" href="#__codelineno-8-53"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-8-54" name="__codelineno-8-54" href="#__codelineno-8-54"></a>
-<a id="__codelineno-8-55" name="__codelineno-8-55" href="#__codelineno-8-55"></a><span class="w">    </span><span class="cm">/**</span>
-<a id="__codelineno-8-56" name="__codelineno-8-56" href="#__codelineno-8-56"></a><span class="cm">     * FUNCIÓN: Calcula la media de las notas de un array.</span>
-<a id="__codelineno-8-57" name="__codelineno-8-57" href="#__codelineno-8-57"></a><span class="cm">     * Recibe un array de notas y DEVUELVE un double (la media).</span>
-<a id="__codelineno-8-58" name="__codelineno-8-58" href="#__codelineno-8-58"></a><span class="cm">     */</span>
-<a id="__codelineno-8-59" name="__codelineno-8-59" href="#__codelineno-8-59"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">calcularMedia</span><span class="p">(</span><span class="kt">double</span><span class="o">[]</span><span class="w"> </span><span class="n">arrayNotas</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-60" name="__codelineno-8-60" href="#__codelineno-8-60"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">sumaTotal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-8-61" name="__codelineno-8-61" href="#__codelineno-8-61"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">arrayNotas</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-62" name="__codelineno-8-62" href="#__codelineno-8-62"></a><span class="w">            </span><span class="n">sumaTotal</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">arrayNotas</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">// Acumulador</span>
-<a id="__codelineno-8-63" name="__codelineno-8-63" href="#__codelineno-8-63"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-8-64" name="__codelineno-8-64" href="#__codelineno-8-64"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">sumaTotal</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">arrayNotas</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
-<a id="__codelineno-8-65" name="__codelineno-8-65" href="#__codelineno-8-65"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-8-66" name="__codelineno-8-66" href="#__codelineno-8-66"></a>
-<a id="__codelineno-8-67" name="__codelineno-8-67" href="#__codelineno-8-67"></a><span class="w">    </span><span class="cm">/**</span>
-<a id="__codelineno-8-68" name="__codelineno-8-68" href="#__codelineno-8-68"></a><span class="cm">     * FUNCIÓN: Encuentra la nota más alta en un array.</span>
-<a id="__codelineno-8-69" name="__codelineno-8-69" href="#__codelineno-8-69"></a><span class="cm">     * Recibe un array de notas y DEVUELVE un double (la nota máxima).</span>
-<a id="__codelineno-8-70" name="__codelineno-8-70" href="#__codelineno-8-70"></a><span class="cm">     */</span>
-<a id="__codelineno-8-71" name="__codelineno-8-71" href="#__codelineno-8-71"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">encontrarMaxima</span><span class="p">(</span><span class="kt">double</span><span class="o">[]</span><span class="w"> </span><span class="n">arrayNotas</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-72" name="__codelineno-8-72" href="#__codelineno-8-72"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arrayNotas</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">// Suponemos que la primera es la más alta</span>
-<a id="__codelineno-8-73" name="__codelineno-8-73" href="#__codelineno-8-73"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">arrayNotas</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-74" name="__codelineno-8-74" href="#__codelineno-8-74"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">arrayNotas</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">max</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-75" name="__codelineno-8-75" href="#__codelineno-8-75"></a><span class="w">                </span><span class="n">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arrayNotas</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">// Encontramos una nueva máxima</span>
-<a id="__codelineno-8-76" name="__codelineno-8-76" href="#__codelineno-8-76"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-8-77" name="__codelineno-8-77" href="#__codelineno-8-77"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-8-78" name="__codelineno-8-78" href="#__codelineno-8-78"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">max</span><span class="p">;</span>
-<a id="__codelineno-8-79" name="__codelineno-8-79" href="#__codelineno-8-79"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-8-80" name="__codelineno-8-80" href="#__codelineno-8-80"></a>
-<a id="__codelineno-8-81" name="__codelineno-8-81" href="#__codelineno-8-81"></a><span class="w">    </span><span class="cm">/**</span>
-<a id="__codelineno-8-82" name="__codelineno-8-82" href="#__codelineno-8-82"></a><span class="cm">     * PROCEDIMIENTO: Muestra el informe final de calificaciones.</span>
-<a id="__codelineno-8-83" name="__codelineno-8-83" href="#__codelineno-8-83"></a><span class="cm">     * Recibe el array de notas, la media y la máxima.</span>
-<a id="__codelineno-8-84" name="__codelineno-8-84" href="#__codelineno-8-84"></a><span class="cm">     * Los parámetros &#39;media&#39; y &#39;maxima&#39; se pasan por VALOR (fotocopias).</span>
-<a id="__codelineno-8-85" name="__codelineno-8-85" href="#__codelineno-8-85"></a><span class="cm">     */</span>
-<a id="__codelineno-8-86" name="__codelineno-8-86" href="#__codelineno-8-86"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostrarInforme</span><span class="p">(</span><span class="kt">double</span><span class="o">[]</span><span class="w"> </span><span class="n">arrayNotas</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">media</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">maxima</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-87" name="__codelineno-8-87" href="#__codelineno-8-87"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\n--- INFORME DE CALIFICACIONES ---&quot;</span><span class="p">);</span>
-<a id="__codelineno-8-88" name="__codelineno-8-88" href="#__codelineno-8-88"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Notas introducidas: &quot;</span><span class="w"> </span><span class="p">);</span>
-<a id="__codelineno-8-89" name="__codelineno-8-89" href="#__codelineno-8-89"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;[&quot;</span><span class="p">);</span>
-<a id="__codelineno-8-90" name="__codelineno-8-90" href="#__codelineno-8-90"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">arrayNotas</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-91" name="__codelineno-8-91" href="#__codelineno-8-91"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">arrayNotas</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
-<a id="__codelineno-8-92" name="__codelineno-8-92" href="#__codelineno-8-92"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">arrayNotas</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-93" name="__codelineno-8-93" href="#__codelineno-8-93"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;, &quot;</span><span class="p">);</span>
-<a id="__codelineno-8-94" name="__codelineno-8-94" href="#__codelineno-8-94"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-8-95" name="__codelineno-8-95" href="#__codelineno-8-95"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-8-96" name="__codelineno-8-96" href="#__codelineno-8-96"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;]&quot;</span><span class="p">);</span>
-<a id="__codelineno-8-97" name="__codelineno-8-97" href="#__codelineno-8-97"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Nota Media: %.2f\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">media</span><span class="p">);</span>
-<a id="__codelineno-8-98" name="__codelineno-8-98" href="#__codelineno-8-98"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Nota más Alta: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">maxima</span><span class="p">);</span>
-<a id="__codelineno-8-99" name="__codelineno-8-99" href="#__codelineno-8-99"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;---------------------------------&quot;</span><span class="p">);</span>
-<a id="__codelineno-8-100" name="__codelineno-8-100" href="#__codelineno-8-100"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-8-101" name="__codelineno-8-101" href="#__codelineno-8-101"></a><span class="p">}</span>
-</code></pre></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1">  1</a></span>
+<span class="normal"><a href="#__codelineno-8-2">  2</a></span>
+<span class="normal"><a href="#__codelineno-8-3">  3</a></span>
+<span class="normal"><a href="#__codelineno-8-4">  4</a></span>
+<span class="normal"><a href="#__codelineno-8-5">  5</a></span>
+<span class="normal"><a href="#__codelineno-8-6">  6</a></span>
+<span class="normal"><a href="#__codelineno-8-7">  7</a></span>
+<span class="normal"><a href="#__codelineno-8-8">  8</a></span>
+<span class="normal"><a href="#__codelineno-8-9">  9</a></span>
+<span class="normal"><a href="#__codelineno-8-10"> 10</a></span>
+<span class="normal"><a href="#__codelineno-8-11"> 11</a></span>
+<span class="normal"><a href="#__codelineno-8-12"> 12</a></span>
+<span class="normal"><a href="#__codelineno-8-13"> 13</a></span>
+<span class="normal"><a href="#__codelineno-8-14"> 14</a></span>
+<span class="normal"><a href="#__codelineno-8-15"> 15</a></span>
+<span class="normal"><a href="#__codelineno-8-16"> 16</a></span>
+<span class="normal"><a href="#__codelineno-8-17"> 17</a></span>
+<span class="normal"><a href="#__codelineno-8-18"> 18</a></span>
+<span class="normal"><a href="#__codelineno-8-19"> 19</a></span>
+<span class="normal"><a href="#__codelineno-8-20"> 20</a></span>
+<span class="normal"><a href="#__codelineno-8-21"> 21</a></span>
+<span class="normal"><a href="#__codelineno-8-22"> 22</a></span>
+<span class="normal"><a href="#__codelineno-8-23"> 23</a></span>
+<span class="normal"><a href="#__codelineno-8-24"> 24</a></span>
+<span class="normal"><a href="#__codelineno-8-25"> 25</a></span>
+<span class="normal"><a href="#__codelineno-8-26"> 26</a></span>
+<span class="normal"><a href="#__codelineno-8-27"> 27</a></span>
+<span class="normal"><a href="#__codelineno-8-28"> 28</a></span>
+<span class="normal"><a href="#__codelineno-8-29"> 29</a></span>
+<span class="normal"><a href="#__codelineno-8-30"> 30</a></span>
+<span class="normal"><a href="#__codelineno-8-31"> 31</a></span>
+<span class="normal"><a href="#__codelineno-8-32"> 32</a></span>
+<span class="normal"><a href="#__codelineno-8-33"> 33</a></span>
+<span class="normal"><a href="#__codelineno-8-34"> 34</a></span>
+<span class="normal"><a href="#__codelineno-8-35"> 35</a></span>
+<span class="normal"><a href="#__codelineno-8-36"> 36</a></span>
+<span class="normal"><a href="#__codelineno-8-37"> 37</a></span>
+<span class="normal"><a href="#__codelineno-8-38"> 38</a></span>
+<span class="normal"><a href="#__codelineno-8-39"> 39</a></span>
+<span class="normal"><a href="#__codelineno-8-40"> 40</a></span>
+<span class="normal"><a href="#__codelineno-8-41"> 41</a></span>
+<span class="normal"><a href="#__codelineno-8-42"> 42</a></span>
+<span class="normal"><a href="#__codelineno-8-43"> 43</a></span>
+<span class="normal"><a href="#__codelineno-8-44"> 44</a></span>
+<span class="normal"><a href="#__codelineno-8-45"> 45</a></span>
+<span class="normal"><a href="#__codelineno-8-46"> 46</a></span>
+<span class="normal"><a href="#__codelineno-8-47"> 47</a></span>
+<span class="normal"><a href="#__codelineno-8-48"> 48</a></span>
+<span class="normal"><a href="#__codelineno-8-49"> 49</a></span>
+<span class="normal"><a href="#__codelineno-8-50"> 50</a></span>
+<span class="normal"><a href="#__codelineno-8-51"> 51</a></span>
+<span class="normal"><a href="#__codelineno-8-52"> 52</a></span>
+<span class="normal"><a href="#__codelineno-8-53"> 53</a></span>
+<span class="normal"><a href="#__codelineno-8-54"> 54</a></span>
+<span class="normal"><a href="#__codelineno-8-55"> 55</a></span>
+<span class="normal"><a href="#__codelineno-8-56"> 56</a></span>
+<span class="normal"><a href="#__codelineno-8-57"> 57</a></span>
+<span class="normal"><a href="#__codelineno-8-58"> 58</a></span>
+<span class="normal"><a href="#__codelineno-8-59"> 59</a></span>
+<span class="normal"><a href="#__codelineno-8-60"> 60</a></span>
+<span class="normal"><a href="#__codelineno-8-61"> 61</a></span>
+<span class="normal"><a href="#__codelineno-8-62"> 62</a></span>
+<span class="normal"><a href="#__codelineno-8-63"> 63</a></span>
+<span class="normal"><a href="#__codelineno-8-64"> 64</a></span>
+<span class="normal"><a href="#__codelineno-8-65"> 65</a></span>
+<span class="normal"><a href="#__codelineno-8-66"> 66</a></span>
+<span class="normal"><a href="#__codelineno-8-67"> 67</a></span>
+<span class="normal"><a href="#__codelineno-8-68"> 68</a></span>
+<span class="normal"><a href="#__codelineno-8-69"> 69</a></span>
+<span class="normal"><a href="#__codelineno-8-70"> 70</a></span>
+<span class="normal"><a href="#__codelineno-8-71"> 71</a></span>
+<span class="normal"><a href="#__codelineno-8-72"> 72</a></span>
+<span class="normal"><a href="#__codelineno-8-73"> 73</a></span>
+<span class="normal"><a href="#__codelineno-8-74"> 74</a></span>
+<span class="normal"><a href="#__codelineno-8-75"> 75</a></span>
+<span class="normal"><a href="#__codelineno-8-76"> 76</a></span>
+<span class="normal"><a href="#__codelineno-8-77"> 77</a></span>
+<span class="normal"><a href="#__codelineno-8-78"> 78</a></span>
+<span class="normal"><a href="#__codelineno-8-79"> 79</a></span>
+<span class="normal"><a href="#__codelineno-8-80"> 80</a></span>
+<span class="normal"><a href="#__codelineno-8-81"> 81</a></span>
+<span class="normal"><a href="#__codelineno-8-82"> 82</a></span>
+<span class="normal"><a href="#__codelineno-8-83"> 83</a></span>
+<span class="normal"><a href="#__codelineno-8-84"> 84</a></span>
+<span class="normal"><a href="#__codelineno-8-85"> 85</a></span>
+<span class="normal"><a href="#__codelineno-8-86"> 86</a></span>
+<span class="normal"><a href="#__codelineno-8-87"> 87</a></span>
+<span class="normal"><a href="#__codelineno-8-88"> 88</a></span>
+<span class="normal"><a href="#__codelineno-8-89"> 89</a></span>
+<span class="normal"><a href="#__codelineno-8-90"> 90</a></span>
+<span class="normal"><a href="#__codelineno-8-91"> 91</a></span>
+<span class="normal"><a href="#__codelineno-8-92"> 92</a></span>
+<span class="normal"><a href="#__codelineno-8-93"> 93</a></span>
+<span class="normal"><a href="#__codelineno-8-94"> 94</a></span>
+<span class="normal"><a href="#__codelineno-8-95"> 95</a></span>
+<span class="normal"><a href="#__codelineno-8-96"> 96</a></span>
+<span class="normal"><a href="#__codelineno-8-97"> 97</a></span>
+<span class="normal"><a href="#__codelineno-8-98"> 98</a></span>
+<span class="normal"><a href="#__codelineno-8-99"> 99</a></span>
+<span class="normal"><a href="#__codelineno-8-100">100</a></span>
+<span class="normal"><a href="#__codelineno-8-101">101</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Arrays</span><span class="p">;</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a>
+<a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">GestorCalificaciones</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5"></a>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">    </span><span class="c1">// ############### FUNCIÓN PRINCIPAL (main) ###############</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7"></a><span class="w">    </span><span class="c1">// Actúa como el director de orquesta. No hace los cálculos,</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">    </span><span class="c1">// solo llama a las herramientas (funciones) adecuadas en orden.</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a>
+<a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">        </span><span class="n">mostrarBienvenida</span><span class="p">();</span><span class="w"> </span><span class="c1">// Llamada a un procedimiento</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12"></a>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">teclado</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="w">        </span><span class="kt">double</span><span class="o">[]</span><span class="w"> </span><span class="n">notas</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">double</span><span class="o">[</span><span class="mi">5</span><span class="o">]</span><span class="p">;</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="w">        </span><span class="c1">// Llamamos a una herramienta para rellenar el array.</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="w">        </span><span class="c1">// Le pasamos la &quot;dirección&quot; del array (paso por referencia).</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="w">        </span><span class="n">rellenarNotas</span><span class="p">(</span><span class="n">teclado</span><span class="p">,</span><span class="w"> </span><span class="n">notas</span><span class="p">);</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a>
+<a id="__codelineno-8-20" name="__codelineno-8-20"></a><span class="w">        </span><span class="c1">// Llamamos a herramientas que calculan y nos devuelven un resultado.</span>
+<a id="__codelineno-8-21" name="__codelineno-8-21"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">media</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">calcularMedia</span><span class="p">(</span><span class="n">notas</span><span class="p">);</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">notaMaxima</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">encontrarMaxima</span><span class="p">(</span><span class="n">notas</span><span class="p">);</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23"></a>
+<a id="__codelineno-8-24" name="__codelineno-8-24"></a><span class="w">        </span><span class="c1">// Finalmente, llamamos a un procedimiento para mostrarlo todo.</span>
+<a id="__codelineno-8-25" name="__codelineno-8-25"></a><span class="w">        </span><span class="n">mostrarInforme</span><span class="p">(</span><span class="n">notas</span><span class="p">,</span><span class="w"> </span><span class="n">media</span><span class="p">,</span><span class="w"> </span><span class="n">notaMaxima</span><span class="p">);</span>
+<a id="__codelineno-8-26" name="__codelineno-8-26"></a>
+<a id="__codelineno-8-27" name="__codelineno-8-27"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="c1">// Fin del main</span>
+<a id="__codelineno-8-28" name="__codelineno-8-28"></a>
+<a id="__codelineno-8-29" name="__codelineno-8-29"></a>
+<a id="__codelineno-8-30" name="__codelineno-8-30"></a><span class="w">    </span><span class="c1">// ############### HERRAMIENTAS (Funciones y Procedimientos) ###############</span>
+<a id="__codelineno-8-31" name="__codelineno-8-31"></a>
+<a id="__codelineno-8-32" name="__codelineno-8-32"></a><span class="w">    </span><span class="cm">/**</span>
+<a id="__codelineno-8-33" name="__codelineno-8-33"></a><span class="cm">     * PROCEDIMIENTO: Muestra un mensaje de bienvenida.</span>
+<a id="__codelineno-8-34" name="__codelineno-8-34"></a><span class="cm">     * No necesita datos (parámetros) y no devuelve nada (void).</span>
+<a id="__codelineno-8-35" name="__codelineno-8-35"></a><span class="cm">     */</span>
+<a id="__codelineno-8-36" name="__codelineno-8-36"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostrarBienvenida</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-37" name="__codelineno-8-37"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;--- Bienvenido al Gestor de Calificaciones ---&quot;</span><span class="p">);</span>
+<a id="__codelineno-8-38" name="__codelineno-8-38"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;A continuación, deberás introducir 5 notas.&quot;</span><span class="p">);</span>
+<a id="__codelineno-8-39" name="__codelineno-8-39"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;----------------------------------------------&quot;</span><span class="p">);</span>
+<a id="__codelineno-8-40" name="__codelineno-8-40"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-41" name="__codelineno-8-41"></a>
+<a id="__codelineno-8-42" name="__codelineno-8-42"></a><span class="w">    </span><span class="cm">/**</span>
+<a id="__codelineno-8-43" name="__codelineno-8-43"></a><span class="cm">     * PROCEDIMIENTO: Pide al usuario las notas y rellena el array.</span>
+<a id="__codelineno-8-44" name="__codelineno-8-44"></a><span class="cm">     * Recibe el Scanner y el array de notas.</span>
+<a id="__codelineno-8-45" name="__codelineno-8-45"></a><span class="cm">     * Como el array se pasa por REFERENCIA, los cambios hechos aquí</span>
+<a id="__codelineno-8-46" name="__codelineno-8-46"></a><span class="cm">     * afectarán al array original del main.</span>
+<a id="__codelineno-8-47" name="__codelineno-8-47"></a><span class="cm">     */</span>
+<a id="__codelineno-8-48" name="__codelineno-8-48"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">rellenarNotas</span><span class="p">(</span><span class="n">Scanner</span><span class="w"> </span><span class="n">teclado</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="o">[]</span><span class="w"> </span><span class="n">arrayNotas</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-49" name="__codelineno-8-49"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">arrayNotas</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-50" name="__codelineno-8-50"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;Introduce la nota &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;: &quot;</span><span class="p">);</span>
+<a id="__codelineno-8-51" name="__codelineno-8-51"></a><span class="w">            </span><span class="n">arrayNotas</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">teclado</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
+<a id="__codelineno-8-52" name="__codelineno-8-52"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-8-53" name="__codelineno-8-53"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-54" name="__codelineno-8-54"></a>
+<a id="__codelineno-8-55" name="__codelineno-8-55"></a><span class="w">    </span><span class="cm">/**</span>
+<a id="__codelineno-8-56" name="__codelineno-8-56"></a><span class="cm">     * FUNCIÓN: Calcula la media de las notas de un array.</span>
+<a id="__codelineno-8-57" name="__codelineno-8-57"></a><span class="cm">     * Recibe un array de notas y DEVUELVE un double (la media).</span>
+<a id="__codelineno-8-58" name="__codelineno-8-58"></a><span class="cm">     */</span>
+<a id="__codelineno-8-59" name="__codelineno-8-59"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">calcularMedia</span><span class="p">(</span><span class="kt">double</span><span class="o">[]</span><span class="w"> </span><span class="n">arrayNotas</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-60" name="__codelineno-8-60"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">sumaTotal</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-8-61" name="__codelineno-8-61"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">arrayNotas</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-62" name="__codelineno-8-62"></a><span class="w">            </span><span class="n">sumaTotal</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">arrayNotas</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">// Acumulador</span>
+<a id="__codelineno-8-63" name="__codelineno-8-63"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-8-64" name="__codelineno-8-64"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">sumaTotal</span><span class="w"> </span><span class="o">/</span><span class="w"> </span><span class="n">arrayNotas</span><span class="p">.</span><span class="na">length</span><span class="p">;</span>
+<a id="__codelineno-8-65" name="__codelineno-8-65"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-66" name="__codelineno-8-66"></a>
+<a id="__codelineno-8-67" name="__codelineno-8-67"></a><span class="w">    </span><span class="cm">/**</span>
+<a id="__codelineno-8-68" name="__codelineno-8-68"></a><span class="cm">     * FUNCIÓN: Encuentra la nota más alta en un array.</span>
+<a id="__codelineno-8-69" name="__codelineno-8-69"></a><span class="cm">     * Recibe un array de notas y DEVUELVE un double (la nota máxima).</span>
+<a id="__codelineno-8-70" name="__codelineno-8-70"></a><span class="cm">     */</span>
+<a id="__codelineno-8-71" name="__codelineno-8-71"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="nf">encontrarMaxima</span><span class="p">(</span><span class="kt">double</span><span class="o">[]</span><span class="w"> </span><span class="n">arrayNotas</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-72" name="__codelineno-8-72"></a><span class="w">        </span><span class="kt">double</span><span class="w"> </span><span class="n">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arrayNotas</span><span class="o">[</span><span class="mi">0</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">// Suponemos que la primera es la más alta</span>
+<a id="__codelineno-8-73" name="__codelineno-8-73"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">arrayNotas</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-74" name="__codelineno-8-74"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">arrayNotas</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="n">max</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-75" name="__codelineno-8-75"></a><span class="w">                </span><span class="n">max</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">arrayNotas</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">;</span><span class="w"> </span><span class="c1">// Encontramos una nueva máxima</span>
+<a id="__codelineno-8-76" name="__codelineno-8-76"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-8-77" name="__codelineno-8-77"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-8-78" name="__codelineno-8-78"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">max</span><span class="p">;</span>
+<a id="__codelineno-8-79" name="__codelineno-8-79"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-80" name="__codelineno-8-80"></a>
+<a id="__codelineno-8-81" name="__codelineno-8-81"></a><span class="w">    </span><span class="cm">/**</span>
+<a id="__codelineno-8-82" name="__codelineno-8-82"></a><span class="cm">     * PROCEDIMIENTO: Muestra el informe final de calificaciones.</span>
+<a id="__codelineno-8-83" name="__codelineno-8-83"></a><span class="cm">     * Recibe el array de notas, la media y la máxima.</span>
+<a id="__codelineno-8-84" name="__codelineno-8-84"></a><span class="cm">     * Los parámetros &#39;media&#39; y &#39;maxima&#39; se pasan por VALOR (fotocopias).</span>
+<a id="__codelineno-8-85" name="__codelineno-8-85"></a><span class="cm">     */</span>
+<a id="__codelineno-8-86" name="__codelineno-8-86"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostrarInforme</span><span class="p">(</span><span class="kt">double</span><span class="o">[]</span><span class="w"> </span><span class="n">arrayNotas</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">media</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">maxima</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-87" name="__codelineno-8-87"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\n--- INFORME DE CALIFICACIONES ---&quot;</span><span class="p">);</span>
+<a id="__codelineno-8-88" name="__codelineno-8-88"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Notas introducidas: &quot;</span><span class="w"> </span><span class="p">);</span>
+<a id="__codelineno-8-89" name="__codelineno-8-89"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;[&quot;</span><span class="p">);</span>
+<a id="__codelineno-8-90" name="__codelineno-8-90"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="n">arrayNotas</span><span class="p">.</span><span class="na">length</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-91" name="__codelineno-8-91"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="n">arrayNotas</span><span class="o">[</span><span class="n">i</span><span class="o">]</span><span class="p">);</span>
+<a id="__codelineno-8-92" name="__codelineno-8-92"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">arrayNotas</span><span class="p">.</span><span class="na">length</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-93" name="__codelineno-8-93"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&quot;, &quot;</span><span class="p">);</span>
+<a id="__codelineno-8-94" name="__codelineno-8-94"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-8-95" name="__codelineno-8-95"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-8-96" name="__codelineno-8-96"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;]&quot;</span><span class="p">);</span>
+<a id="__codelineno-8-97" name="__codelineno-8-97"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="s">&quot;Nota Media: %.2f\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">media</span><span class="p">);</span>
+<a id="__codelineno-8-98" name="__codelineno-8-98"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Nota más Alta: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">maxima</span><span class="p">);</span>
+<a id="__codelineno-8-99" name="__codelineno-8-99"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;---------------------------------&quot;</span><span class="p">);</span>
+<a id="__codelineno-8-100" name="__codelineno-8-100"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-101" name="__codelineno-8-101"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
 
 
 
