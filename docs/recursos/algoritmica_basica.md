@@ -17,7 +17,7 @@
 2. Asigna el valor de `b` a `a`. (Ahora `a` tiene el valor original de `b`).
 3. Asigna el valor guardado en `aux` (el valor original de `a`) a `b`.
 
-``` mermaid
+```mermaid
 graph TD
   A[INICIO] --> B;
   B[aux = a] --> C;

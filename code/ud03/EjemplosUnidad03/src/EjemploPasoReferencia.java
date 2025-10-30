@@ -16,6 +16,11 @@ public class EjemploPasoReferencia {
         }// ¡Han cambiado! [8, 6, 9]
     }
 
+    /**
+     * Función que sube un punto la nota
+     *
+     * @param notas
+     */
     public static void subirNotas(int[] notas) { // Recibe la dirección del array
         System.out.println("Recibido. Subiendo un punto a cada nota...");
         for (int i = 0; i < notas.length; i++) {
