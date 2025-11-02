@@ -5,25 +5,15 @@
 
 ## 1. Intercambio de Variables (El "Swap")
 
-
 **El Problema:** ¿Cómo intercambiar el valor de dos variables? Si tienes `a = 5` y `b = 10`, ¿cómo consigues que `a` valga 10 y `b` valga 5?
 
 **La Solución Clásica:** Necesitas una "caja" auxiliar temporal para no perder uno de los valores durante el intercambio.
-
 
 **Algoritmo:**
 
 1. Guarda el valor de `a` en una variable temporal `aux`.
 2. Asigna el valor de `b` a `a`. (Ahora `a` tiene el valor original de `b`).
 3. Asigna el valor guardado en `aux` (el valor original de `a`) a `b`.
-
-```mermaid
-graph TD
-  A[INICIO] --> B;
-  B[aux = a] --> C;
-  C[a = b] --> D;
-  D[b = aux] --> E[FIN];
-```
 
 **Ejemplo en Java:**
 
