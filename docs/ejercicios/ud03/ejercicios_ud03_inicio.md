@@ -127,3 +127,5 @@
    Modifica el programa añadiendo otra opción llamada “Todas” en la que se pida el radio una sola vez y se muestren los tres cálculos posibles (circunferencia, área y volumen).
 
    Modifica el programa anterior de modo que el proceso se repita una y otra vez (mostrar menú -> realizar el cálculo -> volver a mostrar menú). Añade una opción más llamada “Salir” que terminará el programa si es elegida.
+
+6. Realiza los ejercicios [**56** y **58** de la **unidad 2**](../ud02/ejercicios_ud02.md) , usando *funciones y procedimientos*.
