@@ -73,7 +73,20 @@
 
 6. Escribe una función que muestre por pantalla un triángulo como el del ejemplo. Deberá recibir dos parámetros: el carácter que se desea imprimir y el número de líneas del triángulo.
 
-   ![piramide](../../assets/images/ud03/piramide.JPG)
+   ``` text
+   Introduce el número de líneas: 
+   8
+   Introduce el caracter: 
+   Z
+          Z
+         ZZZ
+        ZZZZZ
+       ZZZZZZZ
+      ZZZZZZZZZ
+     ZZZZZZZZZZZ
+    ZZZZZZZZZZZZZ
+   ZZZZZZZZZZZZZZZ
+   ```
 
 7. Escribe un programa que cree un array de tamaño 100 con los primeros 100 números naturales. Luego muestra la suma total y la media. **Implementa una función que calcule la suma de un array y otra que calcule la media de un array.**
 
