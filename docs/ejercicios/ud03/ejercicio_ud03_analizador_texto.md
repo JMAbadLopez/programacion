@@ -2,7 +2,7 @@
 
 **Objetivo:** Diseñar y construir un programa complejo aplicando los principios de la programación modular (Unidad 3), haciendo un uso intensivo de funciones y procedimientos, y aplicando las técnicas de manipulación de `String` (Unidad 2).
 
-**Resultados de Aprendizaje (RAs) Trabajados: RA2 y RA3**
+**Resultados de Aprendizaje (RAs) Trabajados: RA2 y RA3.**
 
 * **Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.**
 
