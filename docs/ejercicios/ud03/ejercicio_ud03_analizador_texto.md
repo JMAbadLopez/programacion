@@ -1,12 +1,12 @@
-# Actividad Integradora (UD2 y UD3): Analizador de Texto Modular
+# Actividad Entregable: Analizador de Texto
 
 **Objetivo:** Diseñar y construir un programa complejo aplicando los principios de la programación modular (Unidad 3), haciendo un uso intensivo de funciones y procedimientos, y aplicando las técnicas de manipulación de `String` (Unidad 2).
 
-**Resultados de Aprendizaje (RAs) Trabajados:**
+**Resultados de Aprendizaje (RAs) Trabajados: RA2 y RA3**
 
-* **RA2: Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.**
+* **Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.**
 
-* **RA3: Desarrolla programas aplicando la programación estructurada e introduciendo el tratamiento de datos.**
+* **Desarrolla programas aplicando la programación estructurada e introduciendo el tratamiento de datos.**
 
 ## Enunciado
 
@@ -18,7 +18,7 @@ El desafío es **delegar cada cálculo individual a una función especializada**
 
 Tu programa `AnalizadorTexto.java` debe contener las siguientes funciones. Presta atención a lo que debe hacer cada una y a lo que debe devolver
 
-#### 1. `main` 
+#### 1. La función principal `main`
 
 * Debe ser **simple**.
 
@@ -56,7 +56,7 @@ Aquí es donde ocurre la funcionalidad principal. Deberás crear:
 
 * **Tipo:** Procedimiento.
 
-* **Tarea:** Es la función "jefe" que coordina el análisis. No calcula nada directamente, sino que **llama a todas las funciones auxiliares** (las siguientes) y usa sus resultados para imprimir un informe final.
+* **Tarea:** Es la función que coordina el análisis. No calcula nada directamente, sino que **llama a todas las funciones auxiliares** (las siguientes) y usa sus resultados para imprimir un informe final.
 
 * **Concepto clave:** Composición de funciones (una función que llama a otras).
 
