@@ -68,7 +68,20 @@ public class GestorFerreteria {
      * los datos al usuario.
      */
     public static void gestionarAlmacen(Scanner teclado, String[] nombres, int[] cantidades, double[] precios) {
-        System.out.println("Función 'gestionarAlmacen' no implementada.");
+        for(int i = 0; i < cantidades.length; i++) {
+            System.out.println("DATOS DEL PRODUCTO ["+ (i+1) + "]");
+
+            System.out.println("Nombre del producto :");
+            nombres[i] = teclado.nextLine();
+
+            System.out.println("Cantidad del producto:");
+            cantidades[i] = teclado.nextInt();
+            teclado.nextLine();
+
+            System.out.println("Precio del producto:");
+            precios[i] = teclado.nextDouble();
+            teclado.nextLine();
+        }
     }
 
     /**
@@ -76,7 +89,10 @@ public class GestorFerreteria {
      * de forma formateada.
      */
     public static void mostrarAlmacen(String[] nombres, int[] cantidades, double[] precios) {
-        System.out.println("Función 'mostrarAlmacen' no implementada.");
+        System.out.println("ALMACEN DE PRODUCTOS");
+        for(int i = 0; i < nombres.length; i++) {
+            System.out.println("-" + nombres[i] + " " + cantidades[i] + " " + precios[i] + "€");
+        }
     }
 
     /**
@@ -85,7 +101,39 @@ public class GestorFerreteria {
      * Debe actualizar el stock en 'cantidades' y sumar la venta a 'totalVentas'.
      */
     public static void venderProducto(Scanner teclado, String[] nombres, int[] cantidades, double[] precios) {
-        System.out.println("Función 'venderProducto' no implementada.");
+
+        int posicionProducto;
+        String nombreBuscado;
+        int cantidad;
+        double precioFinal = 0.0, descuento = 0.0;
+
+        System.out.println("Producto a buscar: ");
+        nombreBuscado = teclado.nextLine();
+
+        posicionProducto = buscarProducto(nombreBuscado, nombres);
+        if(posicionProducto == -1) {
+            System.out.println("No existe el producto.");
+        } else {
+
+            System.out.println("¿Cuántas unidades quieres?");
+            cantidad = teclado.nextInt();
+            teclado.nextLine();
+
+            if(cantidades[posicionProducto] >= cantidad) {
+                System.out.println("¿Qué descuento se aplica?");
+                descuento = teclado.nextDouble();
+                teclado.nextLine();
+
+                precioFinal = calcularPrecioVenta(precios[posicionProducto], cantidad, descuento);
+
+                cantidades[posicionProducto] -= cantidad;
+                totalVentas += precioFinal;
+
+                System.out.printf("Venta realizada. Precio final: " + String.format("%.2f", precioFinal) + " €");
+            } else {
+                System.out.println("No queda stock del producto.");
+            }
+        }
     }
 
     /**
@@ -95,8 +143,12 @@ public class GestorFerreteria {
      * @return El índice (int) de la pieza si se encuentra, o -1 si no.
      */
     public static int buscarProducto(String nombreBuscado, String[] nombres) {
-        System.out.println("Función 'buscarProducto' no implementada.");
-        return -1; // Valor por defecto
+        for(int i = 0; i < nombres.length; i++) {
+            if(nombreBuscado.equals(nombres[i])) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     /**
@@ -107,8 +159,7 @@ public class GestorFerreteria {
      * @return El precio final (double) de la venta.
      */
     public static double calcularPrecioVenta(double precioUnitario, int cantidad, double descuentoPorcentaje) {
-        System.out.println("Función 'calcularPrecioVenta' no implementada.");
-        return 0.0; // Valor por defecto
+        return (precioUnitario * cantidad) - ((precioUnitario * cantidad) * descuentoPorcentaje / 100);
     }
 
 
@@ -118,6 +169,46 @@ public class GestorFerreteria {
      * el de menor stock, el precio medio y el total de ventas.
      */
     public static void mostrarInformeComercial(String[] nombres, int[] cantidades, double[] precios, double totalVentas) {
-        System.out.println("Función 'mostrarInformeComercial' no implementada.");
+        int maxPrecio, maxCantidades;
+        double precioMedio = 0.0;
+
+        maxPrecio = buscarMayorPrecio(precios);
+        maxCantidades = buscarMayorCantidad(cantidades);
+        precioMedio = calculaMedia(precios);
+
+        System.out.println("INFORME COMERCIAL");
+        System.out.println("-----------------");
+        System.out.println("- Producto de mayor precio : " + nombres[maxPrecio] + " - Precio: " + String.format("%.2f", precios[maxPrecio]) + " €");
+        System.out.println("- Producto con mayor cantidad : " + nombres[maxCantidades] + " - Cantidad: " + cantidades[maxCantidades] + " uds.");
+        System.out.println("- Precio medio : " + String.format("%.2f", precioMedio) + " €");
+        System.out.println("- TOTAL VENTAS: " + String.format("%.2f", totalVentas) + " €");
+    }
+
+    public static int buscarMayorPrecio(double[] precios) {
+        int mayor = 0;
+        for(int i = 0; i < precios.length; i++) {
+            if(precios[i] > precios[mayor]) {
+                mayor = i;
+            }
+        }
+        return mayor;
+    }
+
+    public static int buscarMayorCantidad(int[] cantidades) {
+        int mayor = 0;
+        for(int i = 0; i < cantidades.length; i++) {
+            if(cantidades[i] > cantidades[mayor]) {
+                mayor = i;
+            }
+        }
+        return mayor;
+    }
+
+    public static double calculaMedia(double[] precios) {
+        double media = 0.0;
+        for(int i = 0; i < precios.length; i++) {
+            media += precios[i];
+        }
+        return media/precios.length;
     }
 }
