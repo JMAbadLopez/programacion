@@ -1,6 +1,10 @@
-# Programación DAM
+---
+hide:
+  - navigation
+  - toc
+---
 
-![Portada Programación](./assets/images/portada.png)
+# Programación DAM
 
 ## Descripción
 

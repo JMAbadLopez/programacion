@@ -2,7 +2,6 @@ site_name: Programación DAM
 site_url: https://jmabadlopez.github.io/programacion/site/
 
 nav:
-  - Inicio: index.md
   - Unidades:
     - UD1 - Introducción a la programación. Lenguaje Java.: unidades/ud01.md
     - UD2 - Programación estructurada. Estructuras de control y repetición: unidades/ud02.md
@@ -27,6 +26,8 @@ nav:
       - Bucles: recursos/bucles.html
     - Algorítmica:
       - Básica: recursos/algoritmica_basica.md
+  - Presentación: index.md
+
 repo_url: https://github.com/jmabadlopez/programacion
 repo_name: jmabadlopez/programacion
 
@@ -38,16 +39,24 @@ theme:
   icon:
     previous: fontawesome/solid/angle-left
     next: fontawesome/solid/angle-right
+  font: 
+    code: Roboto Mono
   hljs_languages:
     - python
     - java
     - c
   features:
-    - navigation.top
     - optimize
     - content.code.copy
+    - search.suggest
+    - search.highlight
+    - navigation.top
     - navigation.footer
+    - navigation.sections
     - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.path
+
   palette:
     # Palette toggle for light mode
     - scheme: default
@@ -74,7 +83,10 @@ markdown_extensions:
         - name: mermaid
           class: mermaid
   - admonition
-
+extra:
+  social:
+    - icon: fontawesome/brands/github 
+      link: https://github.com/jmabadlopez/programacion
 # plugins:
 #   - to-pdf:
 #       author: José Manuel Abad López
