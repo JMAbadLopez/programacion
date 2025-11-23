@@ -1942,31 +1942,43 @@
 </table>
 <h2 id="1-introduccion-limitaciones-del-almacenamiento-estatico">1. Introducción: Limitaciones del Almacenamiento Estático</h2>
 <h3 id="11-estructuras-estaticas-arrays">1.1. Estructuras Estáticas (Arrays)</h3>
-<p>En el desarrollo de software profesional, la gestión de datos rara vez es predecible. Hasta ahora, hemos utilizado <strong>Arrays</strong> (arreglos), que son estructuras de almacenamiento <strong>estático</strong>. Esto implica que su tamaño se define en tiempo de compilación o inicialización y no puede modificarse durante la ejecución.</p>
+<p>En el desarrollo de software profesional, la gestión de datos rara vez es predecible. Hasta ahora, hemos utilizado <strong>Arrays</strong>, que son estructuras de almacenamiento <strong>estático</strong>. Esto implica que su tamaño se define en tiempo de compilación o inicialización y no puede modificarse durante la ejecución.</p>
 <ul>
-<li><strong>Ventajas:</strong></li>
-<li><strong>Rendimiento extremo:</strong> Acceso directo a memoria y muy ligeros.</li>
 <li>
-<p><strong>Simplicidad:</strong> Ideales cuando sabemos <em>exactamente</em> cuántos datos vamos a manejar (ej: días de la semana, meses del año).</p>
+<p><strong>Ventajas:</strong></p>
+<ul>
+<li><strong>Rendimiento extremo:</strong> Acceso directo a memoria y muy ligeros.</li>
+<li><strong>Simplicidad:</strong> Ideales cuando sabemos <em>exactamente</em> cuántos datos vamos a manejar (ej: días de la semana, meses del año).</li>
+</ul>
 </li>
 <li>
 <p><strong>El problema del Array:</strong></p>
-</li>
+<ul>
 <li><strong>Rigidez:</strong> Si declaramos <code>int[] datos = new int[10];</code>, estamos limitados a 10 elementos. No se pueden redimensionar. Si te quedas corto, el programa falla (<code>ArrayIndexOutOfBoundsException</code>).</li>
 <li><strong>Ineficiencia:</strong> Si solo usamos 2 posiciones, desperdiciamos memoria reservada para las otras 8.</li>
 <li><strong>Complejidad de gestión:</strong> Insertar un elemento en medio requiere mover manualmente todos los elementos posteriores.</li>
+</ul>
+</li>
 </ul>
 <p>En programación, la forma en que almacenamos y organizamos los datos determina la eficiencia y la flexibilidad de nuestras aplicaciones.</p>
 <h3 id="12-estructuras-dinamicas-colecciones">1.2. Estructuras Dinámicas (Colecciones)</h3>
 <p>Para resolver estos problemas, Java proporciona el <strong>Java Collection Framework (JCF)</strong>. Este conjunto de clases e interfaces permite gestionar grupos de objetos de forma <strong>dinámica</strong>, adaptando el uso de memoria a las necesidades del programa en tiempo de ejecución.</p>
 <ul>
-<li><strong>Ventajas:</strong></li>
+<li>
+<p><strong>Ventajas:</strong></p>
+<ul>
 <li><strong>Flexibilidad total:</strong> Crecen y decrecen según la necesidad.</li>
 <li><strong>Potencia:</strong> Incluyen algoritmos ya programados para buscar, ordenar, barajar, invertir, etc.</li>
 <li><strong>Abstracción:</strong> Nos olvidamos de la gestión de memoria de bajo nivel.</li>
-<li><strong>Desventajas:</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Desventajas:</strong></p>
+<ul>
 <li><strong>Mayor consumo de memoria:</strong> Tienen una pequeña sobrecarga (overhead) por ser objetos complejos.</li>
 <li><strong>Tipado:</strong> Solo trabajan con Objetos (requieren Wrappers para tipos primitivos), lo que añade un pequeñísimo coste de procesamiento.</li>
+</ul>
+</li>
 </ul>
 <hr />
 <h2 id="2-java-collection-framework-jcf">2. Java Collection Framework (JCF)</h2>
