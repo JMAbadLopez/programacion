@@ -26,6 +26,7 @@ nav:
       - Bucles: recursos/bucles.html
     - Algorítmica:
       - Básica: recursos/algoritmica_basica.md
+      - Método de la burbuja (ordenación): recursos/burbuja.html
   - Presentación: index.md
 
 repo_url: https://github.com/jmabadlopez/programacion
