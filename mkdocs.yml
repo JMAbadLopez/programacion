@@ -24,6 +24,7 @@ nav:
       - Instalación IntelliJ: recursos/guia_intellij.md
     - Infografías:
       - Bucles: recursos/bucles.html
+      - Array List: recursos/arraylist.html
     - Algorítmica:
       - Básica: recursos/algoritmica_basica.md
       - Método de la burbuja (ordenación): recursos/burbuja.html

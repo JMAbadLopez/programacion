@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: ArrayList en Java</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Iconos para darle vida -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .slide { display: none; animation: fadeIn 0.5s; }
+        .active-slide { display: block; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        
+        .list-container {
+            display: flex; gap: 10px; justify-content: center; flex-wrap: wrap;
+            min-height: 80px; align-items: center;
+            padding: 20px; background-color: #f1f5f9; border-radius: 12px;
+            border: 2px dashed #cbd5e1;
+        }
+        .list-item {
+            background-color: #3b82f6; color: white;
+            padding: 10px 20px; border-radius: 8px;
+            font-weight: bold; position: relative;
+            transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .list-item .index-badge {
+            position: absolute; top: -10px; left: 50%; transform: translateX(-50%);
+            background-color: #1e293b; color: #cbd5e1;
+            font-size: 0.7rem; padding: 2px 6px; border-radius: 4px;
+        }
+        .code-block {
+            background-color: #1e293b; color: #e2e8f0;
+            padding: 1rem; border-radius: 0.5rem;
+            font-family: 'Courier New', monospace;
+            font-size: 0.85rem; /* Tamaño de fuente reducido */
+            line-height: 1.4;
+            border-left: 4px solid #3b82f6; overflow-x: auto;
+        }
+        .keyword { color: #c084fc; } 
+        .type { color: #fbbf24; }
+        .string { color: #4ade80; }
+        .method { color: #60a5fa; }
+        .comment { color: #94a3b8; font-style: italic; }
+    </style>
+</head>
+<body class="bg-slate-100 flex flex-col items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-6xl bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row min-h-[600px]">
+        
+        <!-- Barra Lateral de Navegación -->
+        <div class="w-full md:w-64 bg-slate-800 text-white p-6 flex flex-col justify-between">
+            <div>
+                <h2 class="text-2xl font-bold mb-8 text-blue-400"><i class="fa-solid fa-layer-group mr-2"></i>ArrayList</h2>
+                <nav class="space-y-2">
+                    <button onclick="goToSlide(0)" class="nav-btn w-full text-left p-3 rounded hover:bg-slate-700 transition flex items-center gap-2 bg-slate-700 text-blue-300 font-bold" id="btn-0">
+                        <i class="fa-solid fa-circle-plus"></i> Crear (Add)
+                    </button>
+                    <button onclick="goToSlide(1)" class="nav-btn w-full text-left p-3 rounded hover:bg-slate-700 transition flex items-center gap-2" id="btn-1">
+                        <i class="fa-solid fa-eye"></i> Leer (Get)
+                    </button>
+                    <button onclick="goToSlide(2)" class="nav-btn w-full text-left p-3 rounded hover:bg-slate-700 transition flex items-center gap-2" id="btn-2">
+                        <i class="fa-solid fa-pen-to-square"></i> Actualizar (Set)
+                    </button>
+                    <button onclick="goToSlide(3)" class="nav-btn w-full text-left p-3 rounded hover:bg-slate-700 transition flex items-center gap-2" id="btn-3">
+                        <i class="fa-solid fa-trash-can"></i> Borrar (Remove)
+                    </button>
+                    <button onclick="goToSlide(4)" class="nav-btn w-full text-left p-3 rounded hover:bg-slate-700 transition flex items-center gap-2" id="btn-4">
+                        <i class="fa-solid fa-info-circle"></i> Otros Métodos
+                    </button>
+                </nav>
+            </div>
+            <div class="text-xs text-slate-400 mt-8">
+                <p>Unidad 4: Estructuras Dinámicas</p>
+            </div>
+        </div>
+
+        <!-- Contenido Principal -->
+        <div class="flex-1 p-8 bg-white relative overflow-y-auto">
+            
+            <!-- Slide 0: CREATE (ADD) -->
+            <div id="slide-0" class="slide active-slide">
+                <h1 class="text-4xl font-bold text-slate-800 mb-2">Añadir Elementos <span class="text-blue-600">(Create)</span></h1>
+                <p class="text-lg text-slate-600 mb-6">El método <code>add()</code> permite insertar elementos al final o en una posición específica.</p>
+
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <!-- Código -->
+                    <div class="code-block">
+<pre><code><span class="comment">// 1. Crear la lista (de Strings)</span>
+<span class="keyword">ArrayList</span>&lt;<span class="type">String</span>&gt; lista = <span class="keyword">new</span> <span class="keyword">ArrayList</span>&lt;&gt;();
+
+<span class="comment">// 2. Añadir al final</span>
+lista.<span class="method">add</span>(<span class="string">"Java"</span>);
+lista.<span class="method">add</span>(<span class="string">"Python"</span>);
+
+<span class="comment">// 3. Insertar en medio (desplaza el resto)</span>
+lista.<span class="method">add</span>(<span class="type">1</span>, <span class="string">"C++"</span>); 
+<span class="comment">// Resultado: [Java, C++, Python]</span></code></pre>
+                    </div>
+
+                    <!-- Visualización -->
+                    <div class="flex flex-col justify-center">
+                        <div class="bg-blue-50 p-6 rounded-xl border border-blue-100">
+                            <h3 class="font-bold text-blue-800 mb-4 text-center">Simulación Visual</h3>
+                            <div id="demo-list-0" class="list-container mb-4">
+                                <!-- Se llena con JS -->
+                            </div>
+                            <div class="flex justify-center gap-2">
+                                <button onclick="simAdd()" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded shadow transition">
+                                    lista.add("Elemento")
+                                </button>
+                                <button onclick="resetSim(0)" class="bg-slate-400 hover:bg-slate-500 text-white px-4 py-2 rounded shadow transition">
+                                    <i class="fa-solid fa-rotate-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 1: READ (GET) -->
+            <div id="slide-1" class="slide">
+                <h1 class="text-4xl font-bold text-slate-800 mb-2">Leer Elementos <span class="text-green-600">(Read)</span></h1>
+                <p class="text-lg text-slate-600 mb-6">Usamos <code>get(indice)</code> para recuperar el valor de una posición. ¡Recuerda que empieza en 0!</p>
+
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="code-block">
+<pre><code><span class="comment">// Lista: ["Java", "C++", "Python"]</span>
+
+<span class="comment">// Obtener el primer elemento</span>
+<span class="type">String</span> primero = lista.<span class="method">get</span>(<span class="type">0</span>); 
+<span class="comment">// 'primero' vale "Java"</span>
+
+<span class="comment">// Obtener el último elemento</span>
+<span class="type">String</span> ultimo = lista.<span class="method">get</span>(lista.<span class="method">size</span>() - <span class="type">1</span>);
+<span class="comment">// 'ultimo' vale "Python"</span></code></pre>
+                    </div>
+
+                    <div class="flex flex-col justify-center">
+                        <div class="bg-green-50 p-6 rounded-xl border border-green-100">
+                            <h3 class="font-bold text-green-800 mb-4 text-center">Acceso por Índice</h3>
+                            <div id="demo-list-1" class="list-container mb-4">
+                                <div class="list-item">Java<span class="index-badge">0</span></div>
+                                <div class="list-item">C++<span class="index-badge">1</span></div>
+                                <div class="list-item">Python<span class="index-badge">2</span></div>
+                            </div>
+                            <div class="text-center">
+                                <input type="number" id="input-get" min="0" max="2" value="1" class="border p-2 rounded w-20 text-center" placeholder="Idx">
+                                <button onclick="simGet()" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded shadow transition ml-2">
+                                    lista.get(i)
+                                </button>
+                                <p id="result-get" class="mt-2 font-bold text-green-700 h-6"></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 2: UPDATE (SET) -->
+            <div id="slide-2" class="slide">
+                <h1 class="text-4xl font-bold text-slate-800 mb-2">Actualizar <span class="text-yellow-600">(Update)</span></h1>
+                <p class="text-lg text-slate-600 mb-6">El método <code>set(indice, nuevoValor)</code> sustituye el contenido de una celda.</p>
+
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="code-block">
+<pre><code><span class="comment">// Lista original: ["Java", "C++", "Python"]</span>
+
+<span class="comment">// Cambiar "C++" por "Kotlin" en índice 1</span>
+lista.<span class="method">set</span>(<span class="type">1</span>, <span class="string">"Kotlin"</span>);
+
+<span class="comment">// Resultado: ["Java", "Kotlin", "Python"]</span>
+<span class="comment">// ¡El tamaño de la lista NO cambia!</span></code></pre>
+                    </div>
+
+                    <div class="flex flex-col justify-center">
+                        <div class="bg-yellow-50 p-6 rounded-xl border border-yellow-100">
+                            <h3 class="font-bold text-yellow-800 mb-4 text-center">Modificar Valor</h3>
+                            <div id="demo-list-2" class="list-container mb-4">
+                                <div class="list-item" id="item-set-0">Java<span class="index-badge">0</span></div>
+                                <div class="list-item" id="item-set-1">C++<span class="index-badge">1</span></div>
+                                <div class="list-item" id="item-set-2">Python<span class="index-badge">2</span></div>
+                            </div>
+                            <div class="text-center">
+                                <button onclick="simSet()" class="bg-yellow-600 hover:bg-yellow-700 text-white px-4 py-2 rounded shadow transition">
+                                    lista.set(1, "Kotlin")
+                                </button>
+                                <button onclick="resetSim(2)" class="bg-slate-400 hover:bg-slate-500 text-white px-4 py-2 rounded shadow transition ml-2">
+                                    <i class="fa-solid fa-rotate-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: DELETE (REMOVE) -->
+            <div id="slide-3" class="slide">
+                <h1 class="text-4xl font-bold text-slate-800 mb-2">Borrar <span class="text-red-600">(Delete)</span></h1>
+                <p class="text-lg text-slate-600 mb-6">Usa <code>remove()</code> para eliminar por índice o por objeto. Los huecos se cierran automáticamente.</p>
+
+                <div class="grid lg:grid-cols-2 gap-8">
+                    <div class="code-block">
+<pre><code><span class="comment">// Lista: ["Java", "Kotlin", "Python", "JS"]</span>
+
+<span class="comment">// 1. Borrar por índice (borra "Kotlin")</span>
+lista.<span class="method">remove</span>(<span class="type">1</span>);
+<span class="comment">// Resultado: ["Java", "Python", "JS"]</span>
+
+<span class="comment">// 2. Borrar por objeto (borra "Java")</span>
+lista.<span class="method">remove</span>(<span class="string">"Java"</span>);
+<span class="comment">// Resultado: ["Python", "JS"]</span></code></pre>
+                    </div>
+
+                    <div class="flex flex-col justify-center">
+                        <div class="bg-red-50 p-6 rounded-xl border border-red-100">
+                            <h3 class="font-bold text-red-800 mb-4 text-center">Eliminar y Reajustar</h3>
+                            <div id="demo-list-3" class="list-container mb-4">
+                                <!-- Llenado por JS -->
+                            </div>
+                            <div class="text-center flex justify-center gap-2">
+                                <button onclick="simRemoveIndex()" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded shadow transition">
+                                    remove(1)
+                                </button>
+                                <button onclick="resetSim(3)" class="bg-slate-400 hover:bg-slate-500 text-white px-4 py-2 rounded shadow transition">
+                                    <i class="fa-solid fa-rotate-right"></i>
+                                </button>
+                            </div>
+                            <p class="text-center text-xs text-red-600 mt-2 font-semibold">¡Fíjate cómo se mueven los índices!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: UTILIDADES -->
+            <div id="slide-4" class="slide">
+                <h1 class="text-4xl font-bold text-slate-800 mb-2">Métodos Útiles</h1>
+                <p class="text-lg text-slate-600 mb-6">Otras herramientas esenciales para trabajar con listas.</p>
+
+                <div class="overflow-x-auto">
+                    <table class="w-full text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-200 text-slate-700">
+                                <th class="p-4 rounded-tl-lg">Método</th>
+                                <th class="p-4">Descripción</th>
+                                <th class="p-4 rounded-tr-lg">Ejemplo</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-slate-600">
+                            <tr class="border-b border-slate-100 hover:bg-slate-50">
+                                <td class="p-4 font-mono text-blue-600 font-bold">size()</td>
+                                <td class="p-4">Devuelve el número de elementos (int).</td>
+                                <td class="p-4 font-mono text-xs">int n = lista.size();</td>
+                            </tr>
+                            <tr class="border-b border-slate-100 hover:bg-slate-50">
+                                <td class="p-4 font-mono text-blue-600 font-bold">contains(Object o)</td>
+                                <td class="p-4">¿Está el elemento en la lista? (boolean).</td>
+                                <td class="p-4 font-mono text-xs">if (lista.contains("Java"))</td>
+                            </tr>
+                            <tr class="border-b border-slate-100 hover:bg-slate-50">
+                                <td class="p-4 font-mono text-blue-600 font-bold">indexOf(Object o)</td>
+                                <td class="p-4">Busca la posición. Retorna -1 si no está.</td>
+                                <td class="p-4 font-mono text-xs">int pos = lista.indexOf("C++");</td>
+                            </tr>
+                            <tr class="border-b border-slate-100 hover:bg-slate-50">
+                                <td class="p-4 font-mono text-blue-600 font-bold">isEmpty()</td>
+                                <td class="p-4">¿Está vacía la lista? (boolean).</td>
+                                <td class="p-4 font-mono text-xs">if (lista.isEmpty())</td>
+                            </tr>
+                            <tr class="hover:bg-slate-50">
+                                <td class="p-4 font-mono text-blue-600 font-bold">clear()</td>
+                                <td class="p-4">Elimina TODOS los elementos.</td>
+                                <td class="p-4 font-mono text-xs">lista.clear();</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        // Lógica de Navegación
+        function goToSlide(index) {
+            document.querySelectorAll('.slide').forEach(s => s.classList.remove('active-slide'));
+            document.getElementById(`slide-${index}`).classList.add('active-slide');
+            
+            // Actualizar botones
+            document.querySelectorAll('.nav-btn').forEach(b => {
+                b.classList.remove('bg-slate-700', 'text-blue-300', 'font-bold');
+            });
+            const btn = document.getElementById(`btn-${index}`);
+            btn.classList.add('bg-slate-700', 'text-blue-300', 'font-bold');
+
+            // Si entra en alguna slide con simulación, resetear si es necesario
+            if(index === 0) resetSim(0);
+            if(index === 3) resetSim(3);
+        }
+
+        // Lógica de Simulaciones
+        
+        // SIM 0: ADD
+        const list0Data = [];
+        function renderSim0() {
+            const c = document.getElementById('demo-list-0');
+            c.innerHTML = '';
+            if(list0Data.length === 0) c.innerHTML = '<span class="text-slate-400 italic">Lista vacía []</span>';
+            list0Data.forEach((item, i) => {
+                c.innerHTML += `<div class="list-item slide-in">${item}<span class="index-badge">${i}</span></div>`;
+            });
+        }
+        function simAdd() {
+            const langs = ["Java", "Python", "C++", "JS", "PHP"];
+            if(list0Data.length < 5) {
+                list0Data.push(langs[list0Data.length]);
+                renderSim0();
+            }
+        }
+
+        // SIM 1: GET
+        function simGet() {
+            const items = ["Java", "C++", "Python"];
+            const idx = document.getElementById('input-get').value;
+            const display = document.getElementById('result-get');
+            if (idx >= 0 && idx < items.length) {
+                display.textContent = `Resultado: "${items[idx]}"`;
+                // Highlight visual
+                document.querySelectorAll('#demo-list-1 .list-item').forEach(el => el.style.opacity = '0.5');
+                document.querySelectorAll('#demo-list-1 .list-item')[idx].style.opacity = '1';
+                document.querySelectorAll('#demo-list-1 .list-item')[idx].style.transform = 'scale(1.1)';
+                setTimeout(() => {
+                    document.querySelectorAll('#demo-list-1 .list-item').forEach(el => {
+                        el.style.opacity = '1';
+                        el.style.transform = 'scale(1)';
+                    });
+                }, 1000);
+            } else {
+                display.textContent = "Error: IndexOutOfBounds";
+                display.classList.add("text-red-500");
+                setTimeout(() => display.classList.remove("text-red-500"), 1000);
+            }
+        }
+
+        // SIM 2: SET
+        function simSet() {
+            const el = document.getElementById('item-set-1');
+            el.style.transform = 'rotateX(90deg)'; // Flip animation start
+            setTimeout(() => {
+                el.innerHTML = 'Kotlin<span class="index-badge">1</span>';
+                el.style.backgroundColor = '#eab308'; // Yellowish
+                el.style.transform = 'rotateX(0deg)';
+            }, 300);
+        }
+
+        // SIM 3: REMOVE
+        let list3Data = ["Java", "Kotlin", "Python", "JS"];
+        function renderSim3() {
+            const c = document.getElementById('demo-list-3');
+            c.innerHTML = '';
+            list3Data.forEach((item, i) => {
+                c.innerHTML += `<div class="list-item" id="rm-${i}">${item}<span class="index-badge">${i}</span></div>`;
+            });
+        }
+        function simRemoveIndex() {
+            if (list3Data.length > 1) { // Evitar vaciar todo para demo
+                const target = document.getElementById(`rm-1`);
+                if(target) {
+                    target.style.transform = 'scale(0)';
+                    setTimeout(() => {
+                        list3Data.splice(1, 1);
+                        renderSim3();
+                    }, 300);
+                }
+            }
+        }
+
+        // RESET GENERAL
+        function resetSim(id) {
+            if(id === 0) { list0Data.length = 0; renderSim0(); }
+            if(id === 2) { 
+                const el = document.getElementById('item-set-1');
+                el.innerHTML = 'C++<span class="index-badge">1</span>';
+                el.style.backgroundColor = '#3b82f6';
+            }
+            if(id === 3) { list3Data = ["Java", "Kotlin", "Python", "JS"]; renderSim3(); }
+        }
+
+        // Inicializar
+        renderSim0();
+        renderSim3();
+
+    </script>
+</body>
+</html>
