@@ -25,10 +25,10 @@ nav:
     - Infografías:
       - Bucles: recursos/bucles.html
       - Array List: recursos/arraylist.html
-      - Recursividad: recursos/recursividad.html
     - Algorítmica:
       - Básica: recursos/algoritmica_basica.md
       - Método de la burbuja (ordenación): recursos/burbuja.html
+      - Recursividad: recursos/recursividad.html
   - Presentación: index.md
 
 repo_url: https://github.com/jmabadlopez/programacion
