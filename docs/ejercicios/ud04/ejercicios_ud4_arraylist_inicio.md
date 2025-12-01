@@ -1,8 +1,8 @@
 # Ejercicios Unidad 4: Estructuras de Datos Dinámicas (ArrayList)
 
-**Objetivo:** Dominar el uso de la clase `ArrayList` en Java, comprendiendo sus métodos principales y cómo iterar sobre ella de forma eficiente.
+**Objetivo:** Dominar el uso de la clase `ArrayList` en Java, comprendiendo sus métodos principales y cómo iterar sobre ella de forma eficiente. Al final del documento, tienes una **tabla de referencia** con los métodos usados en estos ejercicios.
 
-**Nota Importante:** Para recorrer las listas, intenta utilizar **Iteradores (`Iterator`)** siempre que sea posible, especialmente cuando necesites modificar la lista mientras la recorres. También es buena práctica familiarizarse con el bucle `for-each` para lecturas simples.
+**Nota Importante:** Para eliminar elementos concretos de las listas mientras las recorremos, utilizamos **Iteradores (`Iterator`)**. También es buena práctica familiarizarse con el bucle `for-each` para lecturas simples.
 
 ## 1. Creación y Rellenado Básico
 
@@ -10,9 +10,7 @@
 
 ## 2. Iteración de Elementos
 
-**Enunciado:** Usando la lista de colores del ejercicio anterior, escribe un programa que recorra e imprima cada uno de los elementos utilizando un **Iterador** (`Iterator`).
-
-* *Reto extra:* Intenta hacerlo también con un bucle `for-each`.
+**Enunciado:** Usando la lista de colores del ejercicio anterior, escribe un programa que recorra e imprima cada uno de los elementos con un bucle `for-each`.
 
 ## 3. Inserción en Posición Específica
 
@@ -42,60 +40,94 @@
 
 * *Pista:* El método `contains(object)` devuelve un booleano muy útil aquí.
 
-## 8. Ordenación de Listas
+## 8. Búsqueda y Eliminación
+
+**Enunciado:** Escribe un programa que busque un elemento concreto (ej: "Blanco") usando **Iteratores** `Iterator`. Si lo encuentra, debe eliminarlo de forma segura.
+
+* *Pista:* Usa un bucle `while(it.hasNext())`
+
+## 9. Ordenación de Listas
 
 **Enunciado:** Escribe un programa que ordene alfabéticamente tu `ArrayList` de colores.
 
 * *Pista:* La clase de utilidad `Collections` tiene un método estático `sort()` que te facilitará la vida.
 
-## 9. Copia de Listas
+## 10. Copia de Listas
 
 **Enunciado:** Escribe un programa que copie todo el contenido de un `ArrayList` original en otro nuevo `ArrayList`. Verifica que ambos contienen los mismos datos al finalizar.
 
-## 10. Mezcla de Elementos (Shuffle)
+## 11. Mezcla de Elementos (Shuffle)
 
 **Enunciado:** Escribe un programa que "baraje" o mezcle aleatoriamente los elementos de tu `ArrayList`.
 
 * *Pista:* Investiga el método `Collections.shuffle()`.
 
-## 11. Inversión de la Lista
+## 12. Inversión de la Lista
 
 **Enunciado:** Escribe un programa que invierta el orden de los elementos en el `ArrayList`. El último pasará a ser el primero, y viceversa.
 
 * *Pista:* `Collections.reverse()` es la herramienta adecuada.
 
-## 12. Extracción de Sublistas
+## 13. Extracción de Sublistas
 
 **Enunciado:** Escribe un programa que extraiga una porción de tu lista original (por ejemplo, desde el índice 1 hasta el 3) y la guarde en una nueva lista.
 
 * *Pista:* El método `subList(fromIndex, toIndex)` crea una vista de la lista original.
 
-## 13. Comparación de Listas
+## 14. Comparación de Listas
 
 **Enunciado:** Dados dos `ArrayList` diferentes, escribe un programa que los compare y determine si son iguales (tienen los mismos elementos en el mismo orden) o no.
 
-## 14. Intercambio de Elementos (Swap)
+## 15. Intercambio de Elementos (Swap)
 
 **Enunciado:** Escribe un programa que intercambie de posición dos elementos dentro del mismo `ArrayList`. Por ejemplo, intercambia el elemento de la posición 0 con el de la posición 2.
 
 * *Pista:* `Collections.swap()` hace esto directamente.
 
-## 15. Unión de Listas
+## 16. Unión de Listas
 
 **Enunciado:** Tienes dos `ArrayList` distintos. Escribe un programa que una ambos en una sola lista, añadiendo todos los elementos del segundo al final del primero.
 
 * *Pista:* El método `addAll()` es ideal para esto.
 
-## 16. Clonación de Listas
+## 17. Clonación de Listas
 
 **Enunciado:** Escribe un programa que clone un `ArrayList` en otro nuevo. A diferencia de la copia simple, investiga cómo funciona el método `clone()` de `ArrayList`.
 
-## 17. Vaciado de la Lista
+## 18. Vaciado de la Lista
 
 **Enunciado:** Escribe un programa que elimine **todos** los elementos de un `ArrayList` de golpe, dejándolo vacío.
 
-## 18. Comprobación de Lista Vacía
+## 19. Comprobación de Lista Vacía
 
 **Enunciado:** Escribe un programa que compruebe si un `ArrayList` está vacío o contiene elementos, e imprima un mensaje acorde.
 
 * *Pista:* `isEmpty()` es más legible que comprobar si `size() == 0`.
+
+---
+
+### 📋 Referencia Rápida: Métodos de ArrayList y Collections
+
+Aquí tienes un resumen de los métodos que necesitarás para resolver estos ejercicios. Supongamos una lista llamada `lista`.
+
+| Clase | Método | Descripción | Ejemplo de Código |
+| :--- | :--- | :--- | :--- |
+| **ArrayList** | `add(E e)` | Añade al final. | `lista.add("Rojo");` |
+| **ArrayList** | `add(int i, E e)` | Inserta en la posición `i`. | `lista.add(0, "Azul");` |
+| **ArrayList** | `get(int i)` | Obtiene el elemento en la posición `i`. | `String c = lista.get(2);` |
+| **ArrayList** | `set(int i, E e)` | Sustituye el elemento en la posición `i`. | `lista.set(1, "Verde");` |
+| **ArrayList** | `remove(int i)` | Elimina el elemento en la posición `i`. | `lista.remove(0);` |
+| **ArrayList** | `contains(Obj o)`| Devuelve `true` si el elemento existe. | `boolean b = lista.contains("Rojo");` |
+| **ArrayList** | `size()` | Devuelve el número de elementos. | `int n = lista.size();` |
+| **ArrayList** | `isEmpty()` | Devuelve `true` si está vacía. | `if (lista.isEmpty()) ...` |
+| **ArrayList** | `clear()` | Elimina todos los elementos. | `lista.clear();` |
+| **ArrayList** | `subList(i, j)` | Crea una vista de la lista desde `i` hasta `j` (exclusivo). | `ArrayList<String> sub = lista.subList(1, 3);` |
+| **ArrayList** | `clone()` | Crea una copia superficial de la lista. | `Object copia = lista.clone();` |
+| **ArrayList** | `addAll(Coll c)` | Añade todos los elementos de otra colección. | `lista.addAll(otraLista);` |
+| **Collections** | `sort(ArrayList l)` | Ordena la lista (alfabético/numérico). | `Collections.sort(lista);` |
+| **Collections** | `shuffle(ArrayList l)`| Mezcla los elementos aleatoriamente. | `Collections.shuffle(lista);` |
+| **Collections** | `reverse(ArrayList l)`| Invierte el orden de los elementos. | `Collections.reverse(lista);` |
+| **Collections** | `swap(ArrayList l, i, j)`| Intercambia los elementos de las posiciones `i` y `j`. | `Collections.swap(lista, 0, 2);` |
+| **Collections** | `copy(dest, src)`| Copia elementos de `src` a `dest` (debe tener tamaño suficiente). | `Collections.copy(destino, origen);` |
+
+---
