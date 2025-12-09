@@ -121,13 +121,11 @@ Aquí tienes un resumen de los métodos que necesitarás para resolver estos eje
 | **ArrayList** | `size()` | Devuelve el número de elementos. | `int n = lista.size();` |
 | **ArrayList** | `isEmpty()` | Devuelve `true` si está vacía. | `if (lista.isEmpty()) ...` |
 | **ArrayList** | `clear()` | Elimina todos los elementos. | `lista.clear();` |
-| **ArrayList** | `subList(i, j)` | Crea una vista de la lista desde `i` hasta `j` (exclusivo). | `ArrayList<String> sub = lista.subList(1, 3);` |
+| **ArrayList** | `subList(i, j)` | Crea una vista de la lista desde `i` hasta `j` (exclusivo). | `List<String> sub = lista.subList(1, 3);` |
 | **ArrayList** | `clone()` | Crea una copia superficial de la lista. | `Object copia = lista.clone();` |
 | **ArrayList** | `addAll(Coll c)` | Añade todos los elementos de otra colección. | `lista.addAll(otraLista);` |
-| **Collections** | `sort(ArrayList l)` | Ordena la lista (alfabético/numérico). | `Collections.sort(lista);` |
-| **Collections** | `shuffle(ArrayList l)`| Mezcla los elementos aleatoriamente. | `Collections.shuffle(lista);` |
-| **Collections** | `reverse(ArrayList l)`| Invierte el orden de los elementos. | `Collections.reverse(lista);` |
-| **Collections** | `swap(ArrayList l, i, j)`| Intercambia los elementos de las posiciones `i` y `j`. | `Collections.swap(lista, 0, 2);` |
+| **Collections** | `sort(List l)` | Ordena la lista (alfabético/numérico). | `Collections.sort(lista);` |
+| **Collections** | `shuffle(List l)`| Mezcla los elementos aleatoriamente. | `Collections.shuffle(lista);` |
+| **Collections** | `reverse(List l)`| Invierte el orden de los elementos. | `Collections.reverse(lista);` |
+| **Collections** | `swap(List l, i, j)`| Intercambia los elementos de las posiciones `i` y `j`. | `Collections.swap(lista, 0, 2);` |
 | **Collections** | `copy(dest, src)`| Copia elementos de `src` a `dest` (debe tener tamaño suficiente). | `Collections.copy(destino, origen);` |
-
----
