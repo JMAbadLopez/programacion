@@ -22,6 +22,7 @@ nav:
     - UD4:
       - Ejercicios de listas: ejercicios/ud04/ejercicios_ud4_arraylist_inicio.md
       - Ejercicios avanzados de listas: ejercicios/ud04/ejercicios_ud4_listas_avanzado.md
+      - Ejercicios de conjuntos y mapas: ejercicios/ud04/ejercicios_ud4_set_map.md
   - Recursos:
     - Guías:
       - Instalación IntelliJ: recursos/guia_intellij.md
