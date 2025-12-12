@@ -29,7 +29,11 @@ public class FiestaPrivada {
         }
 
         // 3. Eliminar
-        invitados.remove("Clara");
+        if(invitados.remove("Clara")) {
+            System.out.println("Se ha eliminado a Clara de la lista");
+        } else {
+            System.out.println("Clara no estaba en la lista");
+        }
 
         // 4. Recorrer (Solo con for-each o iterador, no hay índice)
         System.out.println("\n--- Lista Final (" + invitados.size() + ") ---");
