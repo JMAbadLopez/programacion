@@ -37,7 +37,7 @@ graph LR
 
 ## Enunciado
 
-Desarrolla una aplicación modular de consola usando estructuras de datos dinámicas y modular. Cumpliará los siguientes puntos:
+Desarrolla una aplicación modular de consola usando estructuras de datos dinámicas. Cumpliará los siguientes puntos:
 
 1. **Menú de la aplicación:**
 
@@ -78,7 +78,7 @@ Desarrolla una aplicación modular de consola usando estructuras de datos dinám
         ```text
         --- RUTA DE SANTA ---
 
-        [Benifairó de les Valls]->[Faura]->[Gilet]->[Canet]->[Sagunto]
+        [Benifairó]->[Faura]->[Gilet]->[Canet]->[Sagunto]
         - Tiempo estimado: 24.250 ms 
         ```
 
