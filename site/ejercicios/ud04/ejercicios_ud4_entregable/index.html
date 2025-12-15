@@ -1586,8 +1586,8 @@
 <span class="normal"><a href="#__codelineno-0-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a>--- SANTA MAPS ---
 <a id="__codelineno-0-2" name="__codelineno-0-2"></a>
 <a id="__codelineno-0-3" name="__codelineno-0-3"></a>A) Añadir población
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a>B) Calcular ruta
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a>C) Visitar población
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>B) Visitar población
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a>C) Calcular ruta
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a>D) Resumen reparto
 <a id="__codelineno-0-7" name="__codelineno-0-7"></a>E) Salir
 <a id="__codelineno-0-8" name="__codelineno-0-8"></a>
@@ -1616,29 +1616,9 @@
 <ul>
 <li>Una población no puede repetirse pero los tiempos sí.</li>
 </ul>
-<div class="admonition info">
+<div class="admonition tip">
 <p class="admonition-title">Registro datos</p>
-<p>Usa un <code>HashMap</code> para llevar el registro de las poblaciones y sus tiempos</p>
-</div>
-</li>
-<li>
-<p><strong>Calcular ruta:</strong></p>
-<ul>
-<li>
-<p>Mostrará la ruta optimizada por pantalla y el tiempo total que cuesta recorrerla. Por ejemplo:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
-<span class="normal"><a href="#__codelineno-2-2">2</a></span>
-<span class="normal"><a href="#__codelineno-2-3">3</a></span>
-<span class="normal"><a href="#__codelineno-2-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>--- RUTA DE SANTA ---
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a>[Benifairó]-&gt;[Faura]-&gt;[Gilet]-&gt;[Canet]-&gt;[Sagunto]
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a>- Tiempo estimado: 24.250 ms 
-</code></pre></div></td></tr></table></div>
-</li>
-</ul>
-<div class="admonition info">
-<p class="admonition-title">Cálculo de ruta</p>
-<p>Usa <code>ArrayList</code> para crear la ruta y mostrar sus datos. Ten en cuenta que la lista se genera <strong>cada vez</strong> que calculas la ruta.</p>
+<p>Usa un <code>HashMap&lt;String, Integer&gt;</code> para llevar el registro de las poblaciones y sus tiempos. <strong>Clave:</strong> Nombre población. <strong>Valor:</strong> Tiempo.</p>
 </div>
 </li>
 <li>
@@ -1646,15 +1626,15 @@
 <ul>
 <li>
 <p>El programa solicitará el <em>nombre</em> de la población.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span>
-<span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>--- VISITAR POBLACIÓN ---
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a>- Indica la población visitada: Benifairó
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a>[MENSAJE] Población visitada con éxito
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
+<span class="normal"><a href="#__codelineno-2-2">2</a></span>
+<span class="normal"><a href="#__codelineno-2-3">3</a></span>
+<span class="normal"><a href="#__codelineno-2-4">4</a></span>
+<span class="normal"><a href="#__codelineno-2-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a>--- VISITAR POBLACIÓN ---
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a>- Indica la población visitada: Benifairó
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a>[MENSAJE] Población visitada con éxito
 </code></pre></div></td></tr></table></div>
 </li>
 <li>
@@ -1669,9 +1649,48 @@
 <p>Las poblaciones visitadas se irán acumulando y <strong>servirán para calcular de nuevo la ruta</strong>. Si la población está <em>visitada</em> no se usará para <strong>Calcular ruta</strong>.</p>
 </li>
 </ul>
-<div class="admonition info">
+<div class="admonition tip">
 <p class="admonition-title">Poblaciones visitadas</p>
 <p>Usa un <code>HashSet</code> para almacenar las poblaciones visitadas. Ten en cuenta que <strong>no queremos eliminar el registro de poblaciones y sus tiempos</strong>.</p>
+</div>
+</li>
+<li>
+<p><strong>Calcular ruta:</strong></p>
+<ul>
+<li>Esta es la parte central de la actividad. El programa debe generar una <strong>lista con las poblaciones pendientes</strong> (las que están en el registro pero <strong>NO</strong> están en visitadas).</li>
+<li>Esta lista debe mostrarse <strong>ordenada de menor a mayor tiempo</strong> (primero las rápidas).</li>
+<li>Mostrará la ruta optimizada y el tiempo estimado total.</li>
+</ul>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
+<span class="normal"><a href="#__codelineno-3-2">2</a></span>
+<span class="normal"><a href="#__codelineno-3-3">3</a></span>
+<span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>--- RUTA DE SANTA ---
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>[Benifairó]-&gt;[Faura]-&gt;[Gilet]-&gt;[Canet]-&gt;[Sagunto]
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>- Tiempo estimado: 24.250 ms 
+</code></pre></div></td></tr></table></div>
+<div class="admonition tip">
+<p class="admonition-title">Pista Técnica: ¿Cómo ordeno la lista según el mapa?</p>
+<p>Tienes los nombres en un <code>ArrayList</code> y los tiempos en un <code>HashMap</code>. Para ordenar la lista basándote en los tiempos, puedes usar <code>Collections.sort</code> con el siguiente código:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span>
+<span class="normal"><a href="#__codelineno-4-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="c1">// Suponiendo que &#39;ruta&#39; es tu ArrayList con los nombres de las ciudades</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="c1">// y &#39;mapaTiempos&#39; es tu HashMap con los datos.</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="n">Collections</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">ruta</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">ciudad1</span><span class="p">,</span><span class="w"> </span><span class="n">ciudad2</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">tiempo1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mapaTiempos</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">ciudad1</span><span class="p">);</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">tiempo2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mapaTiempos</span><span class="p">.</span><span class="na">get</span><span class="p">(</span><span class="n">ciudad2</span><span class="p">);</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">tiempo1</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">tiempo2</span><span class="p">;</span><span class="w"> </span><span class="c1">// Orden ascendente (menor a mayor)</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+<blockquote>
+<p>Esto le dice a Java: "Para saber qué ciudad va antes, busca sus tiempos en el mapa y comparalos (si el resultado es negativo en el return, significa que la primera es menor)".</p>
+</blockquote>
 </div>
 </li>
 <li>
@@ -1679,19 +1698,19 @@
 <ul>
 <li>Mostará las poblaciones donde se ha hecho el reparto y el <strong>tiempo empleado</strong> utilizado.</li>
 </ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span>
-<span class="normal"><a href="#__codelineno-4-3">3</a></span>
-<span class="normal"><a href="#__codelineno-4-4">4</a></span>
-<span class="normal"><a href="#__codelineno-4-5">5</a></span>
-<span class="normal"><a href="#__codelineno-4-6">6</a></span>
-<span class="normal"><a href="#__codelineno-4-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>--- RESUMEN REPARTO ---
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a>
-<a id="__codelineno-4-3" name="__codelineno-4-3"></a>- Poblaciones visitadas:
-<a id="__codelineno-4-4" name="__codelineno-4-4"></a>
-<a id="__codelineno-4-5" name="__codelineno-4-5"></a>(Benifairó)
-<a id="__codelineno-4-6" name="__codelineno-4-6"></a>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a>- Tiempo empleado: 500 ms
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span>
+<span class="normal"><a href="#__codelineno-5-4">4</a></span>
+<span class="normal"><a href="#__codelineno-5-5">5</a></span>
+<span class="normal"><a href="#__codelineno-5-6">6</a></span>
+<span class="normal"><a href="#__codelineno-5-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>--- RESUMEN REPARTO ---
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>- Poblaciones visitadas:
+<a id="__codelineno-5-4" name="__codelineno-5-4"></a>
+<a id="__codelineno-5-5" name="__codelineno-5-5"></a>(Benifairó)
+<a id="__codelineno-5-6" name="__codelineno-5-6"></a>
+<a id="__codelineno-5-7" name="__codelineno-5-7"></a>- Tiempo empleado: 500 ms
 </code></pre></div></td></tr></table></div>
 <div class="admonition danger">
 <p class="admonition-title">Cuidado con los cambios</p>
