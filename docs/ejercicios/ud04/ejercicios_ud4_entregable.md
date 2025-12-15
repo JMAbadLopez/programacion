@@ -55,7 +55,7 @@ Desarrolla una aplicación modular de consola usando estructuras de datos dinám
     - Escoge una opción [A-E]: 
     ```
 
-2. **Añadir población y sus *milisegundos*:**
+2. **Añadir población y sus *milisegundos* (`HashMap`):**
     * Solicitará el nombre de una población y el tiempo en *milisegundos*.
   
     ```text
@@ -72,11 +72,11 @@ Desarrolla una aplicación modular de consola usando estructuras de datos dinám
     !!! tip "Registro datos"
         Usa un `HashMap<String, Integer>` para llevar el registro de las poblaciones y sus tiempos. **Clave:** Nombre población. **Valor:** Tiempo.
 
-3. **Visitar población:**
+3. **Visitar población (`HashSet`):**
     * El programa solicitará el *nombre* de la población.
     * **Validación**: Debes comprobar si la población existe en tu registro (`HashMap`).
         * Si no existe: Muestra un error.
-        * Si existe: Añádela al HashSet de visitadas.
+        * Si existe: Añádela al `HashSet` de visitadas.
   
         ```text
         --- VISITAR POBLACIÓN ---
@@ -101,7 +101,7 @@ Desarrolla una aplicación modular de consola usando estructuras de datos dinám
     !!! tip "Poblaciones visitadas"
         Usa un `HashSet` para almacenar las poblaciones visitadas. Ten en cuenta que **no queremos eliminar el registro de poblaciones y sus tiempos**.
 
-4. **Calcular ruta:**
+4. **Calcular ruta (`ArrayList`):**
 
     * Esta es la parte central de la actividad. El programa debe generar una **lista con las poblaciones pendientes** (las que están en el registro pero **NO** están en visitadas).
     * Esta lista debe mostrarse **ordenada de menor a mayor tiempo** (primero las rápidas).
@@ -129,8 +129,11 @@ Desarrolla una aplicación modular de consola usando estructuras de datos dinám
         ```
         > Esto le dice a Java: "Para saber qué ciudad va antes, busca sus tiempos en el mapa y comparalos (si el resultado es negativo en el return, significa que la primera es menor)".
 
+    !!! danger "Cuidado con los cambios"
+        En cualquier momento, se puede **añadir una población nueva con su tiempo** o **vistar una población**. Debes considerarlo cuando realices el **cálculo de la ruta**.
+
 5. **Resumen reparto:**
-    * Mostará las poblaciones donde se ha hecho el reparto y el **tiempo empleado** utilizado.
+    * Mostará las poblaciones donde se ha hecho el reparto y el **tiempo empleado**.
   
     ```text
     --- RESUMEN REPARTO ---
@@ -141,6 +144,3 @@ Desarrolla una aplicación modular de consola usando estructuras de datos dinám
 
     - Tiempo empleado: 500 ms
     ```
-
-    !!! danger "Cuidado con los cambios"
-        En cualquier momento, se puede **añadir una población nueva con su tiempo** o **vistar una población**. Debes considerarlo cuando realices el **cálculo de la ruta**.

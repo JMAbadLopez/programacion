@@ -1597,7 +1597,7 @@
 </ul>
 <ol start="2">
 <li>
-<p><strong>Añadir población y sus <em>milisegundos</em>:</strong></p>
+<p><strong>Añadir población y sus <em>milisegundos</em> (<code>HashMap</code>):</strong></p>
 <ul>
 <li>Solicitará el nombre de una población y el tiempo en <em>milisegundos</em>.</li>
 </ul>
@@ -1622,14 +1622,14 @@
 </div>
 </li>
 <li>
-<p><strong>Visitar población:</strong></p>
+<p><strong>Visitar población (<code>HashSet</code>):</strong></p>
 <ul>
 <li>El programa solicitará el <em>nombre</em> de la población.</li>
 <li>
 <p><strong>Validación</strong>: Debes comprobar si la población existe en tu registro (<code>HashMap</code>).</p>
 <ul>
 <li>Si no existe: Muestra un error.</li>
-<li>Si existe: Añádela al HashSet de visitadas.</li>
+<li>Si existe: Añádela al <code>HashSet</code> de visitadas.</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
@@ -1660,7 +1660,7 @@
 </div>
 </li>
 <li>
-<p><strong>Calcular ruta:</strong></p>
+<p><strong>Calcular ruta (<code>ArrayList</code>):</strong></p>
 <ul>
 <li>Esta es la parte central de la actividad. El programa debe generar una <strong>lista con las poblaciones pendientes</strong> (las que están en el registro pero <strong>NO</strong> están en visitadas).</li>
 <li>Esta lista debe mostrarse <strong>ordenada de menor a mayor tiempo</strong> (primero las rápidas).</li>
@@ -1697,11 +1697,15 @@
 <p>Esto le dice a Java: "Para saber qué ciudad va antes, busca sus tiempos en el mapa y comparalos (si el resultado es negativo en el return, significa que la primera es menor)".</p>
 </blockquote>
 </div>
+<div class="admonition danger">
+<p class="admonition-title">Cuidado con los cambios</p>
+<p>En cualquier momento, se puede <strong>añadir una población nueva con su tiempo</strong> o <strong>vistar una población</strong>. Debes considerarlo cuando realices el <strong>cálculo de la ruta</strong>.</p>
+</div>
 </li>
 <li>
 <p><strong>Resumen reparto:</strong></p>
 <ul>
-<li>Mostará las poblaciones donde se ha hecho el reparto y el <strong>tiempo empleado</strong> utilizado.</li>
+<li>Mostará las poblaciones donde se ha hecho el reparto y el <strong>tiempo empleado</strong>.</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
 <span class="normal"><a href="#__codelineno-5-2">2</a></span>
@@ -1717,10 +1721,6 @@
 <a id="__codelineno-5-6" name="__codelineno-5-6"></a>
 <a id="__codelineno-5-7" name="__codelineno-5-7"></a>- Tiempo empleado: 500 ms
 </code></pre></div></td></tr></table></div>
-<div class="admonition danger">
-<p class="admonition-title">Cuidado con los cambios</p>
-<p>En cualquier momento, se puede <strong>añadir una población nueva con su tiempo</strong> o <strong>vistar una población</strong>. Debes considerarlo cuando realices el <strong>cálculo de la ruta</strong>.</p>
-</div>
 </li>
 </ol>
 
