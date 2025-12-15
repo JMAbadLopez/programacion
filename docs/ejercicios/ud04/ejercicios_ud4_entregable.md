@@ -74,6 +74,9 @@ Desarrolla una aplicación modular de consola usando estructuras de datos dinám
 
 3. **Visitar población:**
     * El programa solicitará el *nombre* de la población.
+    * **Validación**: Debes comprobar si la población existe en tu registro (`HashMap`).
+        * Si no existe: Muestra un error.
+        * Si existe: Añádela al HashSet de visitadas.
   
         ```text
         --- VISITAR POBLACIÓN ---
@@ -102,13 +105,13 @@ Desarrolla una aplicación modular de consola usando estructuras de datos dinám
 
     * Esta es la parte central de la actividad. El programa debe generar una **lista con las poblaciones pendientes** (las que están en el registro pero **NO** están en visitadas).
     * Esta lista debe mostrarse **ordenada de menor a mayor tiempo** (primero las rápidas).
-    * Mostrará la ruta optimizada y el tiempo estimado total.
+    * Mostrará la ruta optimizada y el tiempo estimado total (fíjate que no muestra la *visitada*).
 
     ```text
     --- RUTA DE SANTA ---
 
-    [Benifairó]->[Faura]->[Gilet]->[Canet]->[Sagunto]
-    - Tiempo estimado: 24.250 ms 
+    [Faura]->[Gilet]->[Canet]->[Sagunto]
+    - Tiempo estimado: 23.750 ms 
     ```
 
     !!! tip "Pista Técnica: ¿Cómo ordeno la lista según el mapa?"

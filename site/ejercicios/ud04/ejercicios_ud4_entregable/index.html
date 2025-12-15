@@ -1624,8 +1624,13 @@
 <li>
 <p><strong>Visitar población:</strong></p>
 <ul>
+<li>El programa solicitará el <em>nombre</em> de la población.</li>
 <li>
-<p>El programa solicitará el <em>nombre</em> de la población.</p>
+<p><strong>Validación</strong>: Debes comprobar si la población existe en tu registro (<code>HashMap</code>).</p>
+<ul>
+<li>Si no existe: Muestra un error.</li>
+<li>Si existe: Añádela al HashSet de visitadas.</li>
+</ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1">1</a></span>
 <span class="normal"><a href="#__codelineno-2-2">2</a></span>
 <span class="normal"><a href="#__codelineno-2-3">3</a></span>
@@ -1659,15 +1664,15 @@
 <ul>
 <li>Esta es la parte central de la actividad. El programa debe generar una <strong>lista con las poblaciones pendientes</strong> (las que están en el registro pero <strong>NO</strong> están en visitadas).</li>
 <li>Esta lista debe mostrarse <strong>ordenada de menor a mayor tiempo</strong> (primero las rápidas).</li>
-<li>Mostrará la ruta optimizada y el tiempo estimado total.</li>
+<li>Mostrará la ruta optimizada y el tiempo estimado total (fíjate que no muestra la <em>visitada</em>).</li>
 </ul>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
 <span class="normal"><a href="#__codelineno-3-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a>--- RUTA DE SANTA ---
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a>[Benifairó]-&gt;[Faura]-&gt;[Gilet]-&gt;[Canet]-&gt;[Sagunto]
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a>- Tiempo estimado: 24.250 ms 
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>[Faura]-&gt;[Gilet]-&gt;[Canet]-&gt;[Sagunto]
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a>- Tiempo estimado: 23.750 ms 
 </code></pre></div></td></tr></table></div>
 <div class="admonition tip">
 <p class="admonition-title">Pista Técnica: ¿Cómo ordeno la lista según el mapa?</p>
