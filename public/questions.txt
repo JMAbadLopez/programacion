@@ -1,0 +1,295 @@
+// =========================================================================
+// UNIDAD 1: Introducción a la programación y Java
+// =========================================================================
+
+::U01_Q01_Algoritmo:: ¿Cuál es la definición correcta de algoritmo según el temario? {
+~Un conjunto de programas enlazados para realizar una tarea compleja.
+=Un método de resolución de un problema en un número finito de pasos, similar a una receta.
+~La traducción de instrucciones a un lenguaje que la máquina pueda ejecutar.
+~Una entidad física capaz de ejecutar instrucciones, como la CPU.
+}
+
+::U01_Q02_CicloVida:: En el ciclo de vida del software (modelo en cascada), ¿en qué fase se detallan los "planos técnicos" y la estructura del programa antes de codificar? {
+~Análisis.
+=Diseño.
+~Pruebas (Testing).
+~Mantenimiento.
+}
+
+::U01_Q03_JavaHibrido:: ¿Por qué se dice que Java es un lenguaje 50% compilado y 50% interpretado? {
+~Porque el código fuente se traduce directamente a código máquina en la mitad de los casos.
+~Porque utiliza un intérprete para corregir errores de sintaxis antes de compilar.
+=Porque el código fuente se compila a Bytecodes (intermedio) y luego la JVM interpreta esos Bytecodes para el sistema específico.
+~Porque solo funciona en sistemas operativos híbridos.
+}
+
+::U01_Q04_TiposDatos:: ¿Cuál de los siguientes es un tipo de dato primitivo en Java que ocupa 8 bytes? {
+~int
+=long
+~boolean
+~char
+}
+
+::U01_Q05_ScannerBug:: Al usar la clase Scanner, ¿qué problema común ocurre al leer un número (`nextInt`) seguido de una cadena (`nextLine`)? {
+~El programa se bloquea indefinidamente.
+=El `nextLine` lee el salto de línea sobrante del buffer y parece saltarse la lectura.
+~El `nextInt` convierte el número automáticamente a String.
+~Se produce un error de compilación por incompatibilidad de tipos.
+}
+
+::U01_Q06_Casting:: Si intentamos asignar un valor `double` a una variable `int` (por ejemplo, `int x = 14.5;`), ¿qué tipo de conversión necesitamos? {
+~Casting implícito (automático).
+=Casting explícito (manual).
+~Conversión textual con `String.valueOf`.
+~No es posible realizar esa conversión en Java.
+}
+
+::U01_Q07_OperadoresLogicos:: ¿Qué resultado devuelve la expresión `! (true || false)`? {
+~true
+=false
+~null
+~Genera un error de ejecución.
+}
+
+::U01_Q08_VariablesLocales:: Según el ámbito de las variables, ¿qué caracteriza a una variable local? {
+~Es visible desde cualquier clase del proyecto.
+~Pertenece a la clase y se marca como `static`.
+=Se declara dentro de un método o bloque y solo es visible dentro de él; "muere" al salir.
+~Conserva su valor entre diferentes ejecuciones del programa.
+}
+
+::U01_Q09_Identificadores:: ¿Cuál de los siguientes identificadores de variable sigue correctamente el convenio CamelCase y las reglas de Java? {
+~1nombreUsuario
+~Nombre_Usuario
+=nombreUsuario
+~class
+}
+
+::U01_Q10_Constantes:: ¿Cómo se declara correctamente una constante en Java para el número PI? {
+~constant float PI = 3.1416;
+=final float PI = 3.1416f;
+~static float pi = 3.1416;
+~var PI = 3.1416;
+}
+
+// =========================================================================
+// UNIDAD 2: Programación Estructurada
+// =========================================================================
+
+::U02_Q11_TeoremaEstructura:: Según el Teorema de la Estructura (Böhm y Jacopini), ¿cuáles son las tres estructuras de control necesarias para cualquier programa? {
+~Entrada, Proceso y Salida.
+=Secuencial, Condicional y Repetitiva.
+~Variables, Constantes y Funciones.
+~Clases, Objetos y Métodos.
+}
+
+::U02_Q12_Switch:: ¿Para qué situación es ideal la estructura condicional `switch`? {
+~Para evaluar condiciones complejas con rangos numéricos (ej. edad > 18 y edad < 65).
+=Para comparar una única variable con una lista de valores concretos y discretos.
+~Para realizar bucles infinitos hasta que el usuario pulse una tecla.
+~Para evaluar expresiones booleanas compuestas con AND y OR.
+}
+
+::U02_Q13_BucleDoWhile:: ¿Cuál es la diferencia principal del bucle `do-while` respecto al `while`? {
+~El `do-while` nunca se ejecuta si la condición es falsa inicialmente.
+=El `do-while` garantiza que el bloque de código se ejecute al menos una vez, ya que la condición se comprueba al final.
+~El `do-while` se usa solo para recorrer arrays.
+~No hay diferencia, son intercambiables en todos los casos.
+}
+
+::U02_Q14_BucleFor:: ¿Cuándo es recomendable utilizar un bucle `for` en lugar de un `while`? {
+~Cuando la condición de parada es compleja o depende de un evento externo.
+=Cuando sabemos de antemano el número exacto de repeticiones que queremos realizar.
+~Cuando queremos que el código se ejecute al menos una vez.
+~Cuando necesitamos un bucle infinito.
+}
+
+::U02_Q15_VariablesAuxiliares:: ¿Qué es un "acumulador" en el contexto de los bucles? {
+~Una variable que cuenta sucesos sumando una cantidad fija (generalmente 1).
+=Una variable que suma cantidades variables en cada iteración (ej. precio total de la compra).
+~Una variable booleana que actúa como interruptor para salir del bucle.
+~Una constante que define el límite del bucle.
+}
+
+::U02_Q16_Arrays:: ¿Cuál es una característica fundamental de un vector (Array) en Java? {
+~Puede cambiar de tamaño dinámicamente durante la ejecución.
+~Puede almacenar datos de distintos tipos en las diferentes posiciones.
+=Almacena un conjunto de datos del mismo tipo en posiciones de memoria contiguas y tiene tamaño fijo.
+~Los índices empiezan siempre por el número 1.
+}
+
+::U02_Q17_Matrices:: ¿Cómo se declara correctamente una matriz (array bidimensional) de 8x8 enteros en Java? {
+~int[8,8] tablero = new int[];
+=int[][] tablero = new int[8][8];
+~int tablero = new int[8][8];
+~Matrix tablero = new Matrix(8,8);
+}
+
+::U02_Q18_StringsComparacion:: ¿Por qué NO debemos usar `==` para comparar el contenido de dos Strings? {
+~Porque da error de compilación.
+=Porque `==` compara si apuntan al mismo objeto en memoria, no si el texto es igual; para eso se usa `.equals()`.
+~Porque `==` solo sirve para números enteros.
+~Porque Java convierte automáticamente los Strings a mayúsculas al usar `==`.
+}
+
+::U02_Q19_MetodoSplit:: ¿Qué hace el método `split(delimitador)` de la clase String? {
+~Elimina los espacios en blanco al principio y al final.
+~Extrae una subcadena entre dos posiciones.
+=Divide la cadena en un array de Strings utilizando el delimitador especificado.
+~Devuelve la posición de la primera aparición de un texto.
+}
+
+::U02_Q20_AccesoArray:: Si tenemos `int[] notas = new int[5];`, ¿cómo accedemos al último elemento? {
+~notas[5]
+=notas[4]
+~notas.last()
+~notas[0]
+}
+
+// =========================================================================
+// UNIDAD 3: Funciones y Procedimientos
+// =========================================================================
+
+::U03_Q21_VentajasFunciones:: ¿Cuál de las siguientes es una ventaja principal de la programación modular con funciones? {
+~Permite escribir todo el código en el método main para mayor velocidad.
+=Divide problemas grandes en partes pequeñas (módulos) reutilizables y fáciles de mantener.
+~Elimina la necesidad de declarar variables.
+~Permite usar tipos de datos dinámicos sin restricciones.
+}
+
+::U03_Q22_FuncionVsProcedimiento:: En Java, ¿qué diferencia técnica distingue a un procedimiento de una función? {
+~El procedimiento devuelve un valor con `return`.
+=El procedimiento tiene tipo de retorno `void` y no devuelve ningún resultado.
+~La función no puede recibir parámetros.
+~El procedimiento solo puede ser `private`.
+}
+
+::U03_Q23_AmbitoVariables:: Según la "Regla de la Habitación de Hotel", ¿qué ocurre con las variables declaradas dentro de una función? {
+~Son visibles desde el método main y cualquier otra función.
+=Son locales: solo existen dentro de esa función y desaparecen al terminar su ejecución.
+~Se guardan en el disco duro para usarlas más tarde.
+~Se convierten automáticamente en variables globales.
+}
+
+::U03_Q24_PasoPorValor:: Cuando pasamos una variable de tipo primitivo (`int`, `double`) a una función, ¿qué recibe la función? {
+~La dirección de memoria de la variable original.
+=Una copia exacta del valor (fotocopia); la original no se modifica.
+~Una referencia al objeto contenedor.
+~Acceso directo para modificar la variable del main.
+}
+
+::U03_Q25_PasoPorReferencia:: ¿Qué sucede si modificamos el contenido de un array pasado como parámetro dentro de una función? {
+~Solo se modifica la copia local de la función.
+=El array original se ve afectado, ya que se pasa la dirección de memoria (referencia).
+~Java impide modificar arrays dentro de funciones.
+~El array se duplica automáticamente para evitar efectos secundarios.
+}
+
+::U03_Q26_ResponsabilidadUnica:: ¿Qué indica el Principio de Responsabilidad Única al crear funciones? {
+~Que una función debe tener al menos 100 líneas de código.
+=Que una función debe hacer una sola cosa y hacerla bien.
+~Que solo debe haber una función en todo el programa.
+~Que una función no debe llamar a otras funciones.
+}
+
+::U03_Q27_FirmaFuncion:: En la declaración `public static int sumar(int a, int b)`, ¿qué indica `int` antes del nombre `sumar`? {
+~El tipo de los parámetros que recibe.
+=El tipo de dato que la función devuelve al terminar.
+~Que la función es interna.
+~El número de veces que se puede llamar.
+}
+
+::U03_Q28_Javadoc:: ¿Para qué sirven los comentarios tipo Javadoc (`/** ... */`) antes de una función? {
+~Para que el compilador ejecute esa parte más rápido.
+=Para documentar qué hace la función, sus parámetros y qué devuelve.
+~Para comentar código que no queremos que se ejecute.
+~Para definir variables globales.
+}
+
+::U03_Q29_Composicion:: ¿Qué significa la "composición de funciones"? {
+~Escribir funciones una debajo de otra sin orden.
+=Construir operaciones complejas haciendo que unas funciones llamen a otras (delegación).
+~Mezclar código Java con código C++.
+~Declarar funciones dentro de bucles.
+}
+
+::U03_Q30_Return:: ¿Qué hace la instrucción `return` dentro de una función? {
+~Imprime un valor por pantalla.
+~Reinicia la función desde el principio.
+=Devuelve el resultado calculado a quien llamó a la función y termina su ejecución.
+~Declara el tipo de dato de la función.
+}
+
+// =========================================================================
+// UNIDAD 4: Estructuras de Datos Dinámicas
+// =========================================================================
+
+::U04_Q31_ArrayVsColeccion:: ¿Cuál es una limitación principal de los Arrays estáticos frente a las Colecciones del JCF? {
+~Los arrays son más lentos leyendo datos.
+=Tienen un tamaño fijo definido al crearse y no se pueden redimensionar.
+~Solo pueden almacenar objetos, no primitivos.
+~No permiten acceder a los elementos por índice.
+}
+
+::U04_Q32_JCF_Interfaces:: ¿Cuál de las siguientes es una interfaz raíz del Java Collection Framework? {
+~ArrayList
+=Collection
+~HashMap
+~Collections
+}
+
+::U04_Q33_Wrappers:: ¿Por qué necesitamos clases Wrapper como `Integer` o `Double` en las colecciones? {
+~Para poder usar decimales.
+=Porque las colecciones en Java solo pueden almacenar referencias a Objetos, no tipos primitivos.
+~Para que ocupen menos memoria.
+~Para ordenar la lista automáticamente.
+}
+
+::U04_Q34_Listas:: ¿Qué característica define a una estructura de tipo `List`? {
+~No permite elementos duplicados.
+~Almacena parejas de Clave-Valor.
+=Es una colección ordenada (secuencia) que permite duplicados y acceso por posición.
+~No garantiza ningún orden de almacenamiento.
+}
+
+::U04_Q35_ArrayListVsLinkedList:: ¿En qué situación es teóricamente más eficiente `LinkedList` que `ArrayList`? {
+~Para acceder a un elemento por su índice (`get`).
+=Para insertar o eliminar elementos en medio de la lista.
+~Para ordenar la lista.
+~Para almacenar tipos primitivos directamente.
+}
+
+::U04_Q36_Sets:: ¿Cuál es la característica principal de un `Set` (como `HashSet`)? {
+~Mantiene los elementos siempre ordenados alfabéticamente.
+=No permite elementos duplicados.
+~Permite acceder a los elementos mediante un índice numérico.
+~Es más lento que una lista para comprobar si existe un elemento.
+}
+
+::U04_Q37_Mapas_Concepto:: ¿Qué almacena una estructura de tipo `Map`? {
+~Elementos individuales ordenados.
+~Elementos únicos sin orden.
+=Pares de objetos: una Clave (única) y un Valor (puede repetirse).
+~Cadenas de caracteres exclusivamente.
+}
+
+::U04_Q38_Mapas_Claves:: En un `HashMap`, ¿qué ocurre si hacemos `put("clave1", "valor2")` cuando "clave1" ya existía? {
+~Se lanza un error de ejecución.
+~Se añade una segunda entrada con la misma clave.
+=Se sobrescribe el valor antiguo asociado a esa clave con el nuevo valor.
+~Se ignora la operación y se mantiene el valor antiguo.
+}
+
+::U04_Q39_Iterator:: ¿Por qué se recomienda usar un `Iterator` para borrar elementos mientras recorremos una lista? {
+~Porque es más rápido que un bucle for.
+=Para evitar errores como `ConcurrentModificationException` al modificar la estructura mientras se recorre.
+~Porque los bucles for no funcionan con ArrayList.
+~Para poder borrar elementos duplicados automáticamente.
+}
+
+::U04_Q40_CollectionsClass:: ¿Qué diferencia hay entre `Collection` (sin s) y `Collections` (con s)? {
+~Son lo mismo, solo cambia el nombre por versión de Java.
+~`Collections` es la interfaz y `Collection` la clase.
+=`Collection` es la interfaz raíz de las estructuras, y `Collections` es una clase de utilidad con algoritmos (sort, max, etc.).
+~`Collection` se usa para Listas y `Collections` para Mapas.
+}
