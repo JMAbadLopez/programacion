@@ -2949,6 +2949,7 @@
         + void setVida(int)
         + int getNivel()
         + void setNivel(int)
+        + boolean esGolpeCritico()$
     }</code></pre>
 <h3 id="46-ejemplo-de-uso-en-el-main">4.6. Ejemplo de Uso en el Main</h3>
 <p>Veamos cómo usamos esta clase segura. Fíjate que ya no podemos hacer <code>p.vida = -100</code>, el compilador no nos dejará.</p>
@@ -3439,7 +3440,22 @@
 <span class="normal"><a href="#__codelineno-15-63">63</a></span>
 <span class="normal"><a href="#__codelineno-15-64">64</a></span>
 <span class="normal"><a href="#__codelineno-15-65">65</a></span>
-<span class="normal"><a href="#__codelineno-15-66">66</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Personaje</span><span class="w"> </span><span class="p">{</span>
+<span class="normal"><a href="#__codelineno-15-66">66</a></span>
+<span class="normal"><a href="#__codelineno-15-67">67</a></span>
+<span class="normal"><a href="#__codelineno-15-68">68</a></span>
+<span class="normal"><a href="#__codelineno-15-69">69</a></span>
+<span class="normal"><a href="#__codelineno-15-70">70</a></span>
+<span class="normal"><a href="#__codelineno-15-71">71</a></span>
+<span class="normal"><a href="#__codelineno-15-72">72</a></span>
+<span class="normal"><a href="#__codelineno-15-73">73</a></span>
+<span class="normal"><a href="#__codelineno-15-74">74</a></span>
+<span class="normal"><a href="#__codelineno-15-75">75</a></span>
+<span class="normal"><a href="#__codelineno-15-76">76</a></span>
+<span class="normal"><a href="#__codelineno-15-77">77</a></span>
+<span class="normal"><a href="#__codelineno-15-78">78</a></span>
+<span class="normal"><a href="#__codelineno-15-79">79</a></span>
+<span class="normal"><a href="#__codelineno-15-80">80</a></span>
+<span class="normal"><a href="#__codelineno-15-81">81</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Personaje</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-15-2" name="__codelineno-15-2"></a>
 <a id="__codelineno-15-3" name="__codelineno-15-3"></a><span class="w">    </span><span class="c1">// --- 1. ATRIBUTOS ESTÁTICOS (De la Clase) ---</span>
 <a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="w">    </span><span class="c1">// Contador compartido por TODOS los objetos Personaje</span>
@@ -3477,34 +3493,49 @@
 <a id="__codelineno-15-36" name="__codelineno-15-36"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;¡Hola! Soy &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; (Nv. &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">nivel</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;)&quot;</span><span class="p">);</span>
 <a id="__codelineno-15-37" name="__codelineno-15-37"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-15-38" name="__codelineno-15-38"></a>
-<a id="__codelineno-15-39" name="__codelineno-15-39"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">recibirDano</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">puntos</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-15-40" name="__codelineno-15-40"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">vida</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">puntos</span><span class="p">;</span>
-<a id="__codelineno-15-41" name="__codelineno-15-41"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">vida</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">vida</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-15-42" name="__codelineno-15-42"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; recibe &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">puntos</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; daño. Vida: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">vida</span><span class="p">);</span>
-<a id="__codelineno-15-43" name="__codelineno-15-43"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-15-44" name="__codelineno-15-44"></a>
-<a id="__codelineno-15-45" name="__codelineno-15-45"></a><span class="w">    </span><span class="c1">// --- 5. MÉTODOS ESTÁTICOS ---</span>
-<a id="__codelineno-15-46" name="__codelineno-15-46"></a><span class="w">    </span><span class="c1">// Permite consultar el contador sin tener ningún personaje creado</span>
-<a id="__codelineno-15-47" name="__codelineno-15-47"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getTotalPersonajes</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-15-48" name="__codelineno-15-48"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Personaje</span><span class="p">.</span><span class="na">contadorPersonajes</span><span class="p">;</span>
-<a id="__codelineno-15-49" name="__codelineno-15-49"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-15-50" name="__codelineno-15-50"></a>
-<a id="__codelineno-15-51" name="__codelineno-15-51"></a><span class="w">    </span><span class="c1">// --- 6. GETTERS Y SETTERS ---</span>
-<a id="__codelineno-15-52" name="__codelineno-15-52"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getNombre</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-15-53" name="__codelineno-15-53"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setNombre</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-15-54" name="__codelineno-15-54"></a>
-<a id="__codelineno-15-55" name="__codelineno-15-55"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getVida</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">vida</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-15-56" name="__codelineno-15-56"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setVida</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">vida</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-15-57" name="__codelineno-15-57"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vida</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-15-58" name="__codelineno-15-58"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error: Vida negativa no permitida.&quot;</span><span class="p">);</span>
-<a id="__codelineno-15-59" name="__codelineno-15-59"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">vida</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-15-60" name="__codelineno-15-60"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-15-61" name="__codelineno-15-61"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">vida</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vida</span><span class="p">;</span>
-<a id="__codelineno-15-62" name="__codelineno-15-62"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-15-63" name="__codelineno-15-63"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-15-64" name="__codelineno-15-64"></a>
-<a id="__codelineno-15-65" name="__codelineno-15-65"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getNivel</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">nivel</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-15-66" name="__codelineno-15-66"></a><span class="p">}</span>
+<a id="__codelineno-15-39" name="__codelineno-15-39"></a><span class="w">     </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">recibirDano</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">puntos</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-40" name="__codelineno-15-40"></a>
+<a id="__codelineno-15-41" name="__codelineno-15-41"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">vida</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">puntos</span><span class="p">;</span>
+<a id="__codelineno-15-42" name="__codelineno-15-42"></a>
+<a id="__codelineno-15-43" name="__codelineno-15-43"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">esGolpeCritico</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-44" name="__codelineno-15-44"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">vida</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">vida</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-15-45" name="__codelineno-15-45"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;[GOLPE CRÍTICO] Recibe 10 ptos. extra de daño&quot;</span><span class="p">);</span>
+<a id="__codelineno-15-46" name="__codelineno-15-46"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-15-47" name="__codelineno-15-47"></a>
+<a id="__codelineno-15-48" name="__codelineno-15-48"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">vida</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-49" name="__codelineno-15-49"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">vida</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-15-50" name="__codelineno-15-50"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;[GAME OVER] &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; ha muerto.&quot;</span><span class="p">);</span>
+<a id="__codelineno-15-51" name="__codelineno-15-51"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-52" name="__codelineno-15-52"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;[DAÑO] &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; tiene &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">vida</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; ptos. de vida&quot;</span><span class="p">);</span>
+<a id="__codelineno-15-53" name="__codelineno-15-53"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-15-54" name="__codelineno-15-54"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-55" name="__codelineno-15-55"></a>
+<a id="__codelineno-15-56" name="__codelineno-15-56"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">esGolpeCritico</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-57" name="__codelineno-15-57"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Math</span><span class="p">.</span><span class="na">random</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">0.95</span><span class="p">;</span>
+<a id="__codelineno-15-58" name="__codelineno-15-58"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-59" name="__codelineno-15-59"></a>
+<a id="__codelineno-15-60" name="__codelineno-15-60"></a><span class="w">    </span><span class="c1">// --- 5. MÉTODOS ESTÁTICOS ---</span>
+<a id="__codelineno-15-61" name="__codelineno-15-61"></a><span class="w">    </span><span class="c1">// Permite consultar el contador sin tener ningún personaje creado</span>
+<a id="__codelineno-15-62" name="__codelineno-15-62"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getTotalPersonajes</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-63" name="__codelineno-15-63"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Personaje</span><span class="p">.</span><span class="na">contadorPersonajes</span><span class="p">;</span>
+<a id="__codelineno-15-64" name="__codelineno-15-64"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-65" name="__codelineno-15-65"></a>
+<a id="__codelineno-15-66" name="__codelineno-15-66"></a><span class="w">    </span><span class="c1">// --- 6. GETTERS Y SETTERS ---</span>
+<a id="__codelineno-15-67" name="__codelineno-15-67"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getNombre</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-15-68" name="__codelineno-15-68"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setNombre</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-15-69" name="__codelineno-15-69"></a>
+<a id="__codelineno-15-70" name="__codelineno-15-70"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getVida</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">vida</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-15-71" name="__codelineno-15-71"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setVida</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">vida</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-72" name="__codelineno-15-72"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">vida</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-73" name="__codelineno-15-73"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error: Vida negativa no permitida.&quot;</span><span class="p">);</span>
+<a id="__codelineno-15-74" name="__codelineno-15-74"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">vida</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-15-75" name="__codelineno-15-75"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-15-76" name="__codelineno-15-76"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">vida</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vida</span><span class="p">;</span>
+<a id="__codelineno-15-77" name="__codelineno-15-77"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-15-78" name="__codelineno-15-78"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-15-79" name="__codelineno-15-79"></a>
+<a id="__codelineno-15-80" name="__codelineno-15-80"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getNivel</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">nivel</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-15-81" name="__codelineno-15-81"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Los miembros estáticos suelen representarse subrayados. En este diagrama, el contador es estático.</p>
 <pre class="mermaid"><code>classDiagram
@@ -3524,6 +3555,7 @@
         + void setVida(int)
         + int getNivel()
         + void setNivel(int)
+        + boolean esGolpeCritico()$
         + static int getTotalPersonajes()$
     }</code></pre>
 <h3 id="62-ejemplo-de-uso-en-el-main">6.2. Ejemplo de Uso en el Main</h3>
