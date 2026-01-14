@@ -1217,6 +1217,51 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#6-el-restaurante-digital-clase-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. El Restaurante Digital (Clase Básica)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-la-cuenta-de-usuario-encapsulamiento-y-validacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. La Cuenta de Usuario (Encapsulamiento y Validación)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-el-equipo-de-futbol-constructores" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. El Equipo de Fútbol (Constructores)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-el-termostato-inteligente-logica-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. El Termostato Inteligente (Lógica de Negocio)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-la-fabrica-de-robots-estaticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. La Fábrica de Robots (Estáticos)
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1675,6 +1720,51 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#6-el-restaurante-digital-clase-basica" class="md-nav__link">
+    <span class="md-ellipsis">
+      6. El Restaurante Digital (Clase Básica)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#7-la-cuenta-de-usuario-encapsulamiento-y-validacion" class="md-nav__link">
+    <span class="md-ellipsis">
+      7. La Cuenta de Usuario (Encapsulamiento y Validación)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-el-equipo-de-futbol-constructores" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. El Equipo de Fútbol (Constructores)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#9-el-termostato-inteligente-logica-de-negocio" class="md-nav__link">
+    <span class="md-ellipsis">
+      9. El Termostato Inteligente (Lógica de Negocio)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#10-la-fabrica-de-robots-estaticos" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. La Fábrica de Robots (Estáticos)
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1772,6 +1862,57 @@
 <li>Imprime el número de bicicletas antes de crear ninguna (debería ser 0).</li>
 <li>Crea 3 objetos <code>Bicicleta</code> diferentes (ej: "Orbea", "Trek", "Specialized").</li>
 <li>Vuelve a imprimir el número total llamando al método estático de la clase <code>Bicicleta</code>. ¿Marca 3?</li>
+</ul>
+<h2 id="6-el-restaurante-digital-clase-basica">6. El Restaurante Digital (Clase Básica)</h2>
+<p><strong>Enunciado:</strong> Crea una clase llamada <code>Plato</code> para el menú de un restaurante.</p>
+<p>Debe tener atributos públicos: <code>nombre</code> (String), <code>precio</code> (double), <code>esVegano</code> (boolean) y <code>calorias</code> (int).
+Incluye un método <code>imprimirDetalle()</code> que muestre la información formateada (ej: <em>"Hamburguesa (No vegano) - 12.50€ - 800 kcal"</em>).</p>
+<p><strong>Ponlo a prueba en el main:</strong> Crea dos platos (uno vegano y otro no), asigna sus valores y muestra sus detalles por pantalla.</p>
+<h2 id="7-la-cuenta-de-usuario-encapsulamiento-y-validacion">7. La Cuenta de Usuario (Encapsulamiento y Validación)</h2>
+<p><strong>Enunciado:</strong> Crea una clase <code>Usuario</code> para una web.
+Atributos privados: <code>username</code> (String), <code>email</code> (String) y <code>password</code> (String).
+Debes implementar los métodos <strong>Getters y Setters</strong>.</p>
+<ul>
+<li><em>Lógica:</em> En el <code>setPassword</code>, la contraseña debe tener al menos 8 caracteres. Si es más corta, muestra un error y no la cambies.</li>
+</ul>
+<p><strong>Ponlo a prueba en el main:</strong> Crea un usuario. Intenta ponerle una contraseña de "1234" (debe fallar) y luego una válida. Imprime el username y el email para verificar.</p>
+<h2 id="8-el-equipo-de-futbol-constructores">8. El Equipo de Fútbol (Constructores)</h2>
+<p><strong>Enunciado:</strong> Crea una clase <code>Jugador</code> que represente a un futbolista.
+Atributos privados: <code>nombre</code> (String), <code>dorsal</code> (int) y <code>posicion</code> (String).
+Implementa dos constructores:</p>
+<ol>
+<li><strong>Constructor Completo:</strong> Recibe nombre, dorsal y posición.</li>
+<li><strong>Constructor "Sin Dorsal":</strong> Recibe solo nombre y posición. Por defecto, asigna el dorsal -1 (indicando que aún no tiene número).</li>
+</ol>
+<p><strong>Ponlo a prueba en el main:</strong> Ficha a dos jugadores usando ambos constructores. Muestra sus datos para ver cómo se ha asignado el dorsal por defecto.</p>
+<h2 id="9-el-termostato-inteligente-logica-de-negocio">9. El Termostato Inteligente (Lógica de Negocio)</h2>
+<p><strong>Enunciado:</strong> Crea una clase <code>Termostato</code>.
+Atributos privados: <code>temperaturaActual</code> (double) y <code>estaEncendido</code> (boolean).</p>
+<ul>
+<li><strong>Constructor:</strong> Inicializa el termostato apagado y a 20.0 grados.</li>
+<li>
+<p><strong>Métodos:</strong></p>
+<ul>
+<li><code>encender()</code> / <code>apagar()</code>: Cambian el estado.</li>
+<li><code>subirTemperatura(double grados)</code>: Solo funciona si está encendido. Suma grados.</li>
+<li><code>bajarTemperatura(double grados)</code>: Solo funciona si está encendido. Resta grados.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Ponlo a prueba en el main:</strong> Intenta subir la temperatura con el termostato apagado (no debería cambiar). Enciéndelo, sube 5 grados e imprime el estado actual.</p>
+<h2 id="10-la-fabrica-de-robots-estaticos">10. La Fábrica de Robots (Estáticos)</h2>
+<p><strong>Enunciado:</strong> Vamos a fabricar robots en serie. Crea una clase <code>Robot</code>.</p>
+<ol>
+<li><strong>Atributos de Instancia (Privados):</strong> <code>id</code> (int), <code>modelo</code> (String).</li>
+<li><strong>Atributo de Clase (Estático):</strong> <code>contadorRobots</code> (int).</li>
+<li><strong>Constructor:</strong> Recibe solo el <code>modelo</code>. El <code>id</code> se debe asignar automáticamente usando el <code>contadorRobots</code> (el primer robot será ID 1, el segundo ID 2...). Recuerda aumentar el contador.</li>
+<li><strong>Método:</strong> <code>mostrarInfo()</code> que diga "Robot modelo [X] con ID [Y]".</li>
+</ol>
+<p><strong>Ponlo a prueba en el main:</strong></p>
+<ul>
+<li>Crea 3 robots de modelos distintos.</li>
+<li>Llama a <code>mostrarInfo</code> de cada uno. ¿Tienen IDs consecutivos (1, 2, 3)?</li>
+<li>Imprime el total de robots fabricados consultando el atributo estático.</li>
 </ul>
 
 

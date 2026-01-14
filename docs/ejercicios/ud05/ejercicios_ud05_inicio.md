@@ -85,3 +85,62 @@ Tendrá atributos privados:
 * Imprime el número de bicicletas antes de crear ninguna (debería ser 0).
 * Crea 3 objetos `Bicicleta` diferentes (ej: "Orbea", "Trek", "Specialized").
 * Vuelve a imprimir el número total llamando al método estático de la clase `Bicicleta`. ¿Marca 3?
+
+## 6. El Restaurante Digital (Clase Básica)
+
+**Enunciado:** Crea una clase llamada `Plato` para el menú de un restaurante.
+
+Debe tener atributos públicos: `nombre` (String), `precio` (double), `esVegano` (boolean) y `calorias` (int).
+Incluye un método `imprimirDetalle()` que muestre la información formateada (ej: *"Hamburguesa (No vegano) - 12.50€ - 800 kcal"*).
+
+**Ponlo a prueba en el main:** Crea dos platos (uno vegano y otro no), asigna sus valores y muestra sus detalles por pantalla.
+
+## 7. La Cuenta de Usuario (Encapsulamiento y Validación)
+
+**Enunciado:** Crea una clase `Usuario` para una web.
+Atributos privados: `username` (String), `email` (String) y `password` (String).
+Debes implementar los métodos **Getters y Setters**.
+
+* *Lógica:* En el `setPassword`, la contraseña debe tener al menos 8 caracteres. Si es más corta, muestra un error y no la cambies.
+
+**Ponlo a prueba en el main:** Crea un usuario. Intenta ponerle una contraseña de "1234" (debe fallar) y luego una válida. Imprime el username y el email para verificar.
+
+## 8. El Equipo de Fútbol (Constructores)
+
+**Enunciado:** Crea una clase `Jugador` que represente a un futbolista.
+Atributos privados: `nombre` (String), `dorsal` (int) y `posicion` (String).
+Implementa dos constructores:
+
+1.  **Constructor Completo:** Recibe nombre, dorsal y posición.
+2.  **Constructor "Sin Dorsal":** Recibe solo nombre y posición. Por defecto, asigna el dorsal -1 (indicando que aún no tiene número).
+
+**Ponlo a prueba en el main:** Ficha a dos jugadores usando ambos constructores. Muestra sus datos para ver cómo se ha asignado el dorsal por defecto.
+
+## 9. El Termostato Inteligente (Lógica de Negocio)
+
+**Enunciado:** Crea una clase `Termostato`.
+Atributos privados: `temperaturaActual` (double) y `estaEncendido` (boolean).
+
+* **Constructor:** Inicializa el termostato apagado y a 20.0 grados.
+* **Métodos:**
+
+    * `encender()` / `apagar()`: Cambian el estado.
+    * `subirTemperatura(double grados)`: Solo funciona si está encendido. Suma grados.
+    * `bajarTemperatura(double grados)`: Solo funciona si está encendido. Resta grados.
+
+**Ponlo a prueba en el main:** Intenta subir la temperatura con el termostato apagado (no debería cambiar). Enciéndelo, sube 5 grados e imprime el estado actual.
+
+## 10. La Fábrica de Robots (Estáticos)
+
+**Enunciado:** Vamos a fabricar robots en serie. Crea una clase `Robot`.
+
+1.  **Atributos de Instancia (Privados):** `id` (int), `modelo` (String).
+2.  **Atributo de Clase (Estático):** `contadorRobots` (int).
+3.  **Constructor:** Recibe solo el `modelo`. El `id` se debe asignar automáticamente usando el `contadorRobots` (el primer robot será ID 1, el segundo ID 2...). Recuerda aumentar el contador.
+4.  **Método:** `mostrarInfo()` que diga "Robot modelo [X] con ID [Y]".
+
+**Ponlo a prueba en el main:**
+
+* Crea 3 robots de modelos distintos.
+* Llama a `mostrarInfo` de cada uno. ¿Tienen IDs consecutivos (1, 2, 3)?
+* Imprime el total de robots fabricados consultando el atributo estático.
