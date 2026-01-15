@@ -2,21 +2,16 @@ public class MainJuego {
 
     public static void main(String[] args) {
 
-        Personaje heroe, villano;
+        Personaje heroe, villano, villano2;
 
-        heroe = new Personaje();
-        villano = new Personaje();
+        heroe = new Personaje("Aragorn", 150, 1);
+        villano = new Personaje("Orco");
+        villano2 = new Personaje(villano);
 
-        heroe.setNombre("Aragorn");
-        heroe.setVida(100);
-        heroe.setNivel(1);
-
-        villano.setNombre("Orco");
-        villano.setVida(50);
-        villano.setNivel(1);
 
         heroe.saludar();
         villano.saludar();
+        villano2.saludar();
 
         villano.recibirDano(47);
         heroe.recibirDano(32);

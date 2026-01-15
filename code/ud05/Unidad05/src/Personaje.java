@@ -4,6 +4,25 @@ public class Personaje {
     private int vida;
     private int nivel;
 
+    public Personaje(String nombre, int vida, int nivel) {
+        this.nombre = nombre;
+        this.setVida(vida);
+        this.setNivel(nivel);
+    };
+
+    public Personaje(String nombre) {
+        this.nombre = nombre;
+        this.vida = 100;
+        this.nivel = 1;
+    }
+
+    public Personaje(Personaje p) {
+        this.nombre = p.nombre;
+        this.vida = p.vida;
+        this.nivel = p.nivel;
+    }
+
+
     public void saludar() {
         System.out.printf( "¡Hola soy %s! Mi nivel es %d y tengo %d puntos de vida.\n", this.nombre, this.nivel, this.vida );
     }
