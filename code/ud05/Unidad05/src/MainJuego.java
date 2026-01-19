@@ -24,5 +24,9 @@ public class MainJuego {
         heroe.saludar();
         villano.saludar();
 
+        System.out.println("Total personajes : " + Personaje.getTotalPersonajes());
+        Personaje p4;
+        p4 = new Personaje(villano);
+        System.out.println("Total personajes : " + Personaje.getTotalPersonajes());
     }
 }

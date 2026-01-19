@@ -4,22 +4,24 @@ public class Personaje {
     private int vida;
     private int nivel;
 
+    private static int contadorPersonajes;
+
+    final public static int VIDA_MAX = 500;
+
     public Personaje(String nombre, int vida, int nivel) {
         this.nombre = nombre;
         this.setVida(vida);
         this.setNivel(nivel);
+
+        this.contadorPersonajes++;
     };
 
     public Personaje(String nombre) {
-        this.nombre = nombre;
-        this.vida = 100;
-        this.nivel = 1;
+        this(nombre,100,1);
     }
 
     public Personaje(Personaje p) {
-        this.nombre = p.nombre;
-        this.vida = p.vida;
-        this.nivel = p.nivel;
+        this(p.nombre,p.vida,p.nivel);
     }
 
 
@@ -71,4 +73,5 @@ public class Personaje {
     }
     public int getVida() {return this.vida;}
 
+    public static int getTotalPersonajes() {return contadorPersonajes;}
 }

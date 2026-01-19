@@ -2967,7 +2967,7 @@
         + void setVida(int)
         + int getNivel()
         + void setNivel(int)
-        + boolean esGolpeCritico()$
+        - boolean esGolpeCritico()
     }</code></pre>
 <h3 id="46-ejemplo-de-uso-en-el-main">4.6. Ejemplo de Uso en el Main</h3>
 <p>Veamos cómo usamos esta clase segura. Fíjate que ya no podemos hacer <code>p.vida = -100</code>, el compilador no nos dejará.</p>
@@ -3379,7 +3379,7 @@
 <p>Podríamos encapsular el atributo <code>contadorPersonajes</code> para que solo pueda ser modificado por el constructor. Si además, necesitamos acceder a su valor, podemos crear un <strong>Getter</strong>.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-14-1">1</a></span>
 <span class="normal"><a href="#__codelineno-14-2">2</a></span>
-<span class="normal"><a href="#__codelineno-14-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getContadorPersonajes</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<span class="normal"><a href="#__codelineno-14-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getTotalPersonajes</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">contadorPersonajes</span><span class="p">;</span>
 <a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
@@ -3392,10 +3392,10 @@
 <a id="__codelineno-15-2" name="__codelineno-15-2"></a><span class="n">Personaje</span><span class="w"> </span><span class="n">p2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Personaje</span><span class="p">(</span><span class="s">&quot;B&quot;</span><span class="p">);</span>
 <a id="__codelineno-15-3" name="__codelineno-15-3"></a>
 <a id="__codelineno-15-4" name="__codelineno-15-4"></a><span class="c1">// Accedemos a través de la CLASE, no del objeto</span>
-<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Total creados: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Personaje</span><span class="p">.</span><span class="na">getContadorPersonajes</span><span class="p">());</span><span class="w"> </span><span class="c1">// Imprime 2</span>
+<a id="__codelineno-15-5" name="__codelineno-15-5"></a><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Total creados: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">Personaje</span><span class="p">.</span><span class="na">getTotalPersonajes</span><span class="p">());</span><span class="w"> </span><span class="c1">// Imprime 2</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="61-constantes-estaticas">6.1 Constantes estáticas</h3>
-<p>El la UD1 estudiamos el uso de constantes, que son aquellas que se identifican con la palabra <code>final'</code>.</p>
+<p>En la UD1 estudiamos el uso de constantes, que son aquellas que se identifican con la palabra <code>final</code>.</p>
 <p>Este concepto está muy relacionado con los atributos estáticos. Por ejemplo el método <code>Math.PI</code> tiene la siguiente forma, donde puedes observar el uso de la palabra <code>static</code>:</p>
 <p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-16-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159265358979323846</span><span class="p">;</span>
 </code></pre></div></td></tr></table></div>
@@ -3585,7 +3585,7 @@ Esto nos permite utilizar el valor de PI desde cualquier programa, sin necesidad
 <a id="__codelineno-19-60" name="__codelineno-19-60"></a><span class="w">    </span><span class="c1">// --- 5. MÉTODOS ESTÁTICOS ---</span>
 <a id="__codelineno-19-61" name="__codelineno-19-61"></a><span class="w">    </span><span class="c1">// Permite consultar el contador sin tener ningún personaje creado</span>
 <a id="__codelineno-19-62" name="__codelineno-19-62"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getTotalPersonajes</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-19-63" name="__codelineno-19-63"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Personaje</span><span class="p">.</span><span class="na">contadorPersonajes</span><span class="p">;</span>
+<a id="__codelineno-19-63" name="__codelineno-19-63"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">contadorPersonajes</span><span class="p">;</span>
 <a id="__codelineno-19-64" name="__codelineno-19-64"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-19-65" name="__codelineno-19-65"></a>
 <a id="__codelineno-19-66" name="__codelineno-19-66"></a><span class="w">    </span><span class="c1">// --- 6. GETTERS Y SETTERS ---</span>
@@ -3607,9 +3607,9 @@ Esto nos permite utilizar el valor de PI desde cualquier programa, sin necesidad
 <a id="__codelineno-19-82" name="__codelineno-19-82"></a>
 <a id="__codelineno-19-83" name="__codelineno-19-83"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getNivel</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">nivel</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
 <a id="__codelineno-19-84" name="__codelineno-19-84"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setNivel</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">nivel</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-19-85" name="__codelineno-19-85"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nivel</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-19-86" name="__codelineno-19-86"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error: Nivel negativo no permitido.&quot;</span><span class="p">);</span>
-<a id="__codelineno-19-87" name="__codelineno-19-87"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">nivel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-19-85" name="__codelineno-19-85"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">nivel</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-19-86" name="__codelineno-19-86"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error: Nivel inferior al mínimo (1).&quot;</span><span class="p">);</span>
+<a id="__codelineno-19-87" name="__codelineno-19-87"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">nivel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="p">;</span>
 <a id="__codelineno-19-88" name="__codelineno-19-88"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-19-89" name="__codelineno-19-89"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">nivel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nivel</span><span class="p">;</span>
 <a id="__codelineno-19-90" name="__codelineno-19-90"></a><span class="w">        </span><span class="p">}</span>
@@ -3635,7 +3635,7 @@ Esto nos permite utilizar el valor de PI desde cualquier programa, sin necesidad
         + void setVida(int)
         + int getNivel()
         + void setNivel(int)
-        + boolean esGolpeCritico()$
+        - boolean esGolpeCritico()
         + static int getTotalPersonajes()$
     }</code></pre>
 <h3 id="63-ejemplo-de-uso-en-el-main">6.3. Ejemplo de Uso en el Main</h3>
