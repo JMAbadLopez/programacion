@@ -6,10 +6,10 @@ public class Climograma {
 
         ArrayList<Integer> temperaturas = new ArrayList<>();
         String[][] idiomas = {
-                {"Enero","Febrero","Marzo"},
-                {"Enero","Febrero","Marzo"},
-                {"Enero","Febrero","Marzo"},
-        }:
+                { "Enero", "Febrero", "Marzo" },
+                { "Enero", "Febrero", "Marzo" },
+                { "Enero", "Febrero", "Marzo" },
+        };
 
         temperaturas.add(22);
         temperaturas.add(22);
@@ -25,7 +25,5 @@ public class Climograma {
         System.out.println("");
 
     }
-
-
 
 }
