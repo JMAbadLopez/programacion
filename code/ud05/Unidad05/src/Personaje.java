@@ -6,14 +6,14 @@ public class Personaje {
 
     private static int contadorPersonajes;
 
-    final public static int VIDA_MAX = 500;
+    public static final int VIDA_MAX = 500;
 
     public Personaje(String nombre, int vida, int nivel) {
         this.nombre = nombre;
         this.setVida(vida);
         this.setNivel(nivel);
 
-        this.contadorPersonajes++;
+        contadorPersonajes++;
     };
 
     public Personaje(String nombre) {
