@@ -4,9 +4,15 @@
 
 Material del módulo de **Programación de 1º de DAM del IES CAMP DE MORVEDRE**.
 
-| Fecha      | Versión | Descripción                                |
-| ---------- | ------- | ------------------------------------------ |
-| 09/09/2025 | 1.0.0   | Adaptación del material. Estructura web con **mkdocs**.|
+## Unidades
+
+| Unidad | Descripción | Autoría |
+| :--- | :--- | :--- |
+| 1 | Introducción a la programación | Lorenzo Díaz de Haro, José Manuel Romero Martínez |
+| 2 | Programación estructurada. Estructuras de control y repetición| Lorenzo Díaz de Haro, José Manuel Romero Martínez |
+| 3 | Funciones y procedimientos | Adaptación de José Manuel Abad López. Lorenzo Díaz de Haro, José Manuel Romero Martínez |
+| 4 | Estructuras de datos dinámicas| José Manuel Abad López basado en material de Lorenzo Díaz de Haro, José Manuel Romero Martínez |
+| 5 | Programación orientada a objetos. POO | José Manuel Abad López basado en materual de Lorenzo Díaz de Haro, José Manuel Romero Martínez |
 
 ## Enlaces de interés
 
@@ -14,7 +20,18 @@ Material del módulo de **Programación de 1º de DAM del IES CAMP DE MORVEDRE**
 
 ## Autoría y revisión
 
-Material original de **Lorenzo Díaz de Haro** y **José Manuel Romero Martínez**. Adaptado y revisado por **José Manuel Abad López**.
+### Unidades
+
+| Unidad | Descripción | Autoría |
+| :--- | :--- | :--- |
+| 1 | Introducción a la programación | Lorenzo Díaz de Haro, José Manuel Romero Martínez |
+| 2 | Programación estructurada. Estructuras de control y repetición| Lorenzo Díaz de Haro, José Manuel Romero Martínez |
+| 3 | Funciones y procedimientos | Adaptación de José Manuel Abad López. Lorenzo Díaz de Haro, José Manuel Romero Martínez |
+| 4 | Estructuras de datos dinámicas| José Manuel Abad López basado en material de Lorenzo Díaz de Haro, José Manuel Romero Martínez |
+| 5 | Programación orientada a objetos. POO | José Manuel Abad López basado en materual de Lorenzo Díaz de Haro, José Manuel Romero Martínez |
+
+
+Basado principalmente en el material original de **Lorenzo Díaz de Haro** y **José Manuel Romero Martínez**. Adaptado y revisado por **José Manuel Abad López**.
 
 ## Repositorio y contacto
 <https://jmabadlopez.github.io>
