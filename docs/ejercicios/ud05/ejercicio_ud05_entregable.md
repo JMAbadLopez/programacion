@@ -48,7 +48,7 @@ Esta clase representará cada una de las salas del cine.
 
 ### 2. Clase `Main` (Programa Principal)
 
-Usa un `ArrayList<Sala>` para gestionar las diferentes salas del cine. El programa debe permitir:
+Usa un `ArrayList<Sala>` para gestionar las diferentes salas del cine. Genera las funciones y procedimientos necesarios para que el programa pueda:
 
 1.  **Configuración inicial:** Crea varias salas con diferentes películas y añádelas a tu lista.
 2.  **Menú de opciones:**

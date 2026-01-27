@@ -5,9 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="05c552fc-d393-4d41-8c04-fbba194adb88" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/alucine/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/alucine/Sala.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alucine/Sala.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/alucine/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/alucine/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../docs/ejercicios/ud05/ejercicio_ud05_entregable.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../../docs/ejercicios/ud05/ejercicio_ud05_entregable.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -112,7 +112,7 @@
       <updated>1769366291836</updated>
       <workItem from="1769366296549" duration="4273000" />
       <workItem from="1769423208665" duration="340000" />
-      <workItem from="1769451306765" duration="5553000" />
+      <workItem from="1769451306765" duration="7198000" />
     </task>
     <servers />
   </component>

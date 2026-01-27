@@ -1,9 +1,12 @@
 package alucine;
 
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
 
+        ArrayList<Sala> cine = new ArrayList<Sala>();
         Sala sala = new Sala(1, "Gladiator II", "18:00");
 
         sala.mostrarSala();
