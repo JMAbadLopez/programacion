@@ -1762,7 +1762,7 @@
 <li>Se ha implementado la lógica de negocio en métodos específicos.</li>
 </ul>
 <h2 id="contexto">Contexto</h2>
-<p>El <strong>Cine "Alucine Max"</strong> necesita un sistema para gestionar sus salas y la venta de entradas. <strong>Tú eres el programador backend</strong> encargado de diseñar la estructura de datos y la lógica para hacer esto posible. Cada sala proyecta una película diferente y tiene su propia capacidad.</p>
+<p>El <strong>Cine "Alucine Max"</strong> necesita un sistema para gestionar sus salas y la venta de entradas. <strong>Tú eres el programador backend</strong> encargado de diseñar la estructura de datos y la lógica para hacer esto posible. Cada sala proyecta una película diferente y una capacidad fija.</p>
 <h2 id="enunciado">Enunciado</h2>
 <p>Desarrolla una aplicación modular en Java con las siguientes características:</p>
 <h3 id="1-clase-sala">1. Clase <code>Sala</code></h3>
@@ -1796,8 +1796,8 @@
 <ul>
 <li><code>void mostrarSala()</code>: Muestra por consola el estado de los asientos (matriz).</li>
 <li><code>boolean asientoDisponible(int fila, int columna)</code>: Devuelve <code>true</code> si el asiento está libre (<code>'.'</code>) y dentro de rango.</li>
-<li><code>void venderEntrada(int fila, int columna)</code>: Marca el asiento como ocupado (ej: <code>'X'</code>) y suma el precio a la recaudación.</li>
-<li><code>double getRecaudacionSala()</code>: Devuelve el dinero recaudado.</li>
+<li><code>void venderEntrada(int fila, int columna)</code>: Marca el asiento como ocupado (ej: <code>'X'</code>) y suma el precio a la recaudación (total y de la sala).</li>
+<li><code>double getRecaudacionSala()</code>: Devuelve el dinero recaudado de la sala.</li>
 <li><code>int getAsientosDisponibles()</code>: Devuelve el número total de asientos vacíos en la sala.</li>
 <li><code>String toString()</code>: Devuelve una cadena con la información de la sala: número, película, hora y número de asientos disponibles.</li>
 <li><code>static double getRecaudacionTotal()</code>: Método estático que devuelve la <strong>recaudación total</strong> de todas las salas.</li>

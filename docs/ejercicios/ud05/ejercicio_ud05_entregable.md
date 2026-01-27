@@ -11,7 +11,7 @@
 
 ## Contexto
 
-El **Cine "Alucine Max"** necesita un sistema para gestionar sus salas y la venta de entradas. **Tú eres el programador backend** encargado de diseñar la estructura de datos y la lógica para hacer esto posible. Cada sala proyecta una película diferente y tiene su propia capacidad.
+El **Cine "Alucine Max"** necesita un sistema para gestionar sus salas y la venta de entradas. **Tú eres el programador backend** encargado de diseñar la estructura de datos y la lógica para hacer esto posible. Cada sala proyecta una película diferente y una capacidad fija.
 
 ## Enunciado
 
@@ -39,8 +39,8 @@ Esta clase representará cada una de las salas del cine.
 *   **Métodos:**
     *   `void mostrarSala()`: Muestra por consola el estado de los asientos (matriz).
     *   `boolean asientoDisponible(int fila, int columna)`: Devuelve `true` si el asiento está libre (`'.'`) y dentro de rango.
-    *   `void venderEntrada(int fila, int columna)`: Marca el asiento como ocupado (ej: `'X'`) y suma el precio a la recaudación.
-    *   `double getRecaudacionSala()`: Devuelve el dinero recaudado.
+    *   `void venderEntrada(int fila, int columna)`: Marca el asiento como ocupado (ej: `'X'`) y suma el precio a la recaudación (total y de la sala).
+    *   `double getRecaudacionSala()`: Devuelve el dinero recaudado de la sala.
     *   `int getAsientosDisponibles()`: Devuelve el número total de asientos vacíos en la sala.
     *   `String toString()`: Devuelve una cadena con la información de la sala: número, película, hora y número de asientos disponibles.
     *   `static double getRecaudacionTotal()`: Método estático que devuelve la **recaudación total** de todas las salas.
