@@ -1,4 +1,4 @@
-# Actividad Entregable UD5: Gestión de Cine
+# Actividad Entregable UD5: Gestión de Cine 🎬
 
 **Objetivo:** Diseñar y construir un programa orientado a objetos aplicando encapsulamiento, constructores, y estructuras de datos dinámicas como `ArrayList`.
 
@@ -11,7 +11,7 @@
 
 ## Contexto
 
-El **Cine "Alucine Max"** necesita un sistema para gestionar sus salas y la venta de entradas. Cada sala proyecta una película diferente y tiene su propia capacidad.
+El **Cine "Alucine Max"** necesita un sistema para gestionar sus salas y la venta de entradas. **Tú eres el programador backend** encargado de diseñar la estructura de datos y la lógica para hacer esto posible. Cada sala proyecta una película diferente y tiene su propia capacidad.
 
 ## Enunciado
 
@@ -26,19 +26,20 @@ Esta clase representará cada una de las salas del cine.
     *   `numSala`: Número identificativo de la sala (`int`).
     *   `pelicula`: Título de la película (`String`).
     *   `horaProyeccion`: Hora de la sesión (`String`, ej: "18:00").
-    *   `recaudacionTotal`: Dinero acumulado por ventas (`double`).
+    *   `recaudacionSala`: Dinero acumulado por ventas (`double`).
+    *   `recaudacionTotal`: (Estático y Público) Acumula la recaudación total de todos los cines (`double`).
     *   **Constante:** El precio de la entrada es fijo: **5.99 €**.
 
-*   **Constructores:**
-    1.  **Constructor completo**: Recibe todos los parámetros necesarios para inicializar la sala (dimensiones, número, película, hora).
-    2.  **Constructor simplificado**: Recibe `pelicula` y `horaProyeccion`. Crea por defecto una sala de **6 filas x 10 columnas**.
-    *   *Nota:* Ambos constructores deben inicializar la matriz de asientos con el carácter `'.'` (libre).
+*   **Constructor:**
+    *   **Constructor**: Recibe `numSala`, `pelicula` y `horaProyeccion`. Crea por defecto una sala de **6 filas x 10 columnas**.
+    !!! tip "Nota"
+        El constructor debe inicializar la matriz de asientos con el carácter `'.'` (libre).
 
 *   **Métodos:**
     *   `void mostrarSala()`: Muestra por consola el estado de los asientos (matriz).
     *   `boolean asientoDisponible(int fila, int columna)`: Devuelve `true` si el asiento está libre (`'.'`) y dentro de rango.
     *   `void venderEntrada(int fila, int columna)`: Marca el asiento como ocupado (ej: `'X'`) y suma el precio a la recaudación.
-    *   `double getRecaudacionTotal()`: Devuelve el dinero recaudado.
+    *   `double getRecaudacionSala()`: Devuelve el dinero recaudado.
     *   `int getAsientosDisponibles()`: Devuelve el número total de asientos vacíos en la sala.
     *   `String toString()`: Devuelve una cadena con la información de la sala: número, película, hora y número de asientos disponibles.
     *   **Getters y Setters:** Debes implementar los métodos *get* y *set* para los atributos que lo requieran.
@@ -49,12 +50,47 @@ Usa un `ArrayList<Sala>` para gestionar las diferentes salas del cine. El progra
 
 1.  **Configuración inicial:** Crea varias salas con diferentes películas y añádelas a tu lista.
 2.  **Menú de opciones:**
-    *   A) Crear sala (Añadir una nueva sala al cine).
-    *   B) Ver cartelera (Listar salas con su información básica).
-    *   C) Ver sala (Mostrar butacas de una sala específica).
-    *   D) Vender entrada (Pedir sala, fila y columna, validando disponibilidad).
-    *   E) Recaudación total del cine (Suma de todas las salas).
-    *   F) Salir.
+    *   **A) Crear sala** (Añadir una nueva sala al cine).
+        ```text
+        > Seleccione opción: A
+        Ingrese número de sala: 4
+        Ingrese título película: Gladiator II
+        Ingrese hora: 22:00
+        [INFO] Sala 4 creada con éxito.
+        ```
+    *   **B) Ver cartelera** (Listar salas con su información básica).
+        ```text
+        > Seleccione opción: B
+        --- CARTELERA ---
+        [Sala 1] Openheimer (17:00) - Asientos Libres: 60
+        [Sala 2] Barbie (20:00) - Asientos Libres: 15
+        -----------------
+        ```
+    *   **C) Ver sala** (Mostrar butacas de una sala específica).
+        ```text
+        > Seleccione opción: C
+        Ingrese número de sala: 1
+        --- ESTADO SALA 1 ---
+          0 1 2 3 4 5 6 7 8 9
+        0 . . . . . . . . . .
+        1 . . X X . . . . . .
+        2 . . . . . . . . . .
+        ...
+        ```
+    *   **D) Vender entrada** (Pedir sala, fila y columna, validando disponibilidad).
+        ```text
+        > Seleccione opción: D
+        Ingrese número de sala: 1
+        Ingrese fila: 1
+        Ingrese columna: 3
+        [OK] Entrada vendida (Precio: 5.99€).
+        ```
+    *   **E) Recaudación total del cine** (Recaudación de todas las salas).
+        ```text
+        > Seleccione opción: E
+        Recaudación total del cine: 450.25€
+        ```
+    *   **F) Salir.**
 
 ---
 ### Pistas de Implementación
@@ -64,12 +100,3 @@ Usa un `ArrayList<Sala>` para gestionar las diferentes salas del cine. El progra
 
 !!! tip "Venta de Entradas"
     Recuerda comprobar `asientoDisponible()` antes de vender. Si el asiento está libre, cámbialo a ocupado (ej. `X`) y suma `5.99` a la recaudación de esa sala.
-
-!!! example "Ejemplo de Salida - Mostrar Sala"
-    ```text
-      0 1 2 3 4 5 6 7 8 9
-    0 . . . . . . . . . .
-    1 . . . X X . . . . .
-    2 . . . . . . . . . .
-    ...
-    ```
