@@ -11,7 +11,7 @@
 
 ## Contexto
 
-El **Cine "Alucine Max"** necesita un sistema para gestionar sus salas y la venta de entradas. **Tú eres el programador backend** encargado de diseñar la estructura de datos y la lógica para hacer esto posible. Cada sala proyecta una película diferente y una capacidad fija.
+El **Cine "Alucine Max"** necesita un sistema para gestionar sus salas y la venta de entradas. **Tú eres el programador backend** encargado de diseñar la estructura de datos y la lógica para hacer esto posible. Cada sala proyecta una película diferente y tiene una capacidad fija.
 
 ## Enunciado
 
