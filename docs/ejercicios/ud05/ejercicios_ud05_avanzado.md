@@ -163,7 +163,7 @@ Listado actual:
     1. **Registrar Empleado:** Validar que el ID no se repita.
     2. **Buscar por Puesto:** Filtrar y mostrar todos los empleados de un área.
     3. **Aumentar Salario:** Por ID y porcentaje.
-    4. **Estadísticas:** Mostrar el empleado con mayor salario y el total de la nómina.
+    4. **Estadísticas:** Mostrar el empleado con mayor salario y el total de las nóminas.
     5. **Ordenar:** Permitir ordenar la lista por salario de forma ascendente.
 
 **Ejemplo de Salida por Consola:**
