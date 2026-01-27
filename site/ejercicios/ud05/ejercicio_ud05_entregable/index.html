@@ -1754,7 +1754,7 @@
 
 <h1 id="actividad-entregable-ud5-gestion-de-cine">Actividad Entregable UD5: Gestión de Cine 🎬</h1>
 <p><strong>Objetivo:</strong> Diseñar y construir un programa orientado a objetos aplicando encapsulamiento, constructores, y estructuras de datos dinámicas como <code>ArrayList</code>.</p>
-<p><strong>Resultados de Aprendizaje (RAs) Trabajados: RA4, RA6.</strong></p>
+<p><strong>Resultados de Aprendizaje (RAs) Trabajados: RA2, RA4, RA6.</strong></p>
 <ul>
 <li>Se han diseñado clases con sus atributos y métodos.</li>
 <li>Se han utilizado constructores para inicializar objetos.</li>
@@ -1776,15 +1776,16 @@
 <li><code>pelicula</code>: Título de la película (<code>String</code>).</li>
 <li><code>horaProyeccion</code>: Hora de la sesión (<code>String</code>, ej: "18:00").</li>
 <li><code>recaudacionSala</code>: Dinero acumulado por ventas (<code>double</code>).</li>
-<li><code>recaudacionTotal</code>: (Estático y Público) Acumula la recaudación total de todos los cines (<code>double</code>).</li>
-<li><strong>Constante:</strong> El precio de la entrada es fijo: <strong>5.99 €</strong>.</li>
+<li><code>recaudacionTotal</code>: (Estático) Acumula la recaudación total de todos los cines (<code>double</code>).</li>
+<li><strong>Constantes:</strong> El precio de la entrada es fijo: <strong>5.99</strong> (<code>double</code>). El número de filas y de las columnas son <strong>6</strong> y <strong>10</strong>, respectivamente (<code>int</code>).</li>
 </ul>
 </li>
 <li>
-<p><strong>Constructor:</strong></p>
-<ul>
-<li><strong>Constructor</strong>: Recibe <code>numSala</code>, <code>pelicula</code> y <code>horaProyeccion</code>. Crea por defecto una sala de <strong>6 filas x 10 columnas</strong>.</li>
-</ul>
+<p><strong>Constructores:</strong></p>
+<ol>
+<li><strong>Constructor por defecto</strong>: No recibe parámetros. Crea por defecto una sala de <strong>6 filas x 10 columnas</strong>, el número de la sala es 0, la película es "", la hora de la proyección es "" y la recaudación de la sala es 0.</li>
+<li><strong>Constructor parcial</strong>: Recibe <code>numSala</code>, <code>pelicula</code> y <code>horaProyeccion</code>. Crea por defecto una sala de <strong>6 filas x 10 columnas</strong> y pone la recaudación de la sala a 0.</li>
+</ol>
 <div class="admonition tip">
 <p class="admonition-title">Nota</p>
 <p>El constructor debe inicializar la matriz de asientos con el carácter <code>'.'</code> (libre).</p>
@@ -1799,7 +1800,8 @@
 <li><code>double getRecaudacionSala()</code>: Devuelve el dinero recaudado.</li>
 <li><code>int getAsientosDisponibles()</code>: Devuelve el número total de asientos vacíos en la sala.</li>
 <li><code>String toString()</code>: Devuelve una cadena con la información de la sala: número, película, hora y número de asientos disponibles.</li>
-<li><strong>Getters y Setters:</strong> Debes implementar los métodos <em>get</em> y <em>set</em> para los atributos que lo requieran.</li>
+<li><code>static double getRecaudacionTotal()</code>: Método estático que devuelve la <strong>recaudación total</strong> de todas las salas.</li>
+<li><strong>Getters y Setters:</strong> Debes implementar los métodos <em>get</em> y <em>set</em> para los atributos <code>numSala</code>, <code>pelicula</code> y <code>horaProyeccion</code>.</li>
 </ul>
 </li>
 </ul>
@@ -1807,7 +1809,9 @@
 <p>Usa un <code>ArrayList&lt;Sala&gt;</code> para gestionar las diferentes salas del cine. El programa debe permitir:</p>
 <ol>
 <li><strong>Configuración inicial:</strong> Crea varias salas con diferentes películas y añádelas a tu lista.</li>
-<li><strong>Menú de opciones:</strong><ul>
+<li>
+<p><strong>Menú de opciones:</strong></p>
+<ul>
 <li><strong>A) Crear sala</strong> (Añadir una nueva sala al cine).
     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1">1</a></span>
 <span class="normal"><a href="#__codelineno-0-2">2</a></span>
@@ -1847,7 +1851,8 @@
 <a id="__codelineno-2-7" name="__codelineno-2-7"></a>2 . . . . . . . . . .
 <a id="__codelineno-2-8" name="__codelineno-2-8"></a>...
 </code></pre></div></td></tr></table></div></li>
-<li><strong>D) Vender entrada</strong> (Pedir sala, fila y columna, validando disponibilidad).
+<li>
+<p><strong>D) Vender entrada</strong> (Pedir sala, fila y columna, validando disponibilidad).
     <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span>
 <span class="normal"><a href="#__codelineno-3-3">3</a></span>
@@ -1857,13 +1862,26 @@
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a>Ingrese fila: 1
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a>Ingrese columna: 3
 <a id="__codelineno-3-5" name="__codelineno-3-5"></a>[OK] Entrada vendida (Precio: 5.99€).
+</code></pre></div></td></tr></table></div></p>
+<p>En caso de no poder realizar la venta, porque el asiento no está disponible, mostrará el siguiente mensaje:
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>[ASIENTO NO DISPONIBLE]
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li>
+<p><strong>E) Ver recaudación de sala</strong> (Muestra el dinero reacudado por una sala).
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span>
+<span class="normal"><a href="#__codelineno-5-2">2</a></span>
+<span class="normal"><a href="#__codelineno-5-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a>&gt; Seleccione opción: E
+<a id="__codelineno-5-2" name="__codelineno-5-2"></a>Ingrese número de sala: 1
+<a id="__codelineno-5-3" name="__codelineno-5-3"></a>[INFO] La sala 1 ha recaudado: 35.94€
+</code></pre></div></td></tr></table></div></p>
+</li>
+<li><strong>F) Recaudación total del cine</strong> (Recaudación de todas las salas).
+    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1">1</a></span>
+<span class="normal"><a href="#__codelineno-6-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a>&gt; Seleccione opción: F
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a>Recaudación total del cine: 450.25€
 </code></pre></div></td></tr></table></div></li>
-<li><strong>E) Recaudación total del cine</strong> (Recaudación de todas las salas).
-    <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
-<span class="normal"><a href="#__codelineno-4-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>&gt; Seleccione opción: E
-<a id="__codelineno-4-2" name="__codelineno-4-2"></a>Recaudación total del cine: 450.25€
-</code></pre></div></td></tr></table></div></li>
-<li><strong>F) Salir.</strong></li>
+<li><strong>G) Salir.</strong></li>
 </ul>
 </li>
 </ol>

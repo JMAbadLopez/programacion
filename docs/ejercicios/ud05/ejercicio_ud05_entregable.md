@@ -2,7 +2,7 @@
 
 **Objetivo:** Diseñar y construir un programa orientado a objetos aplicando encapsulamiento, constructores, y estructuras de datos dinámicas como `ArrayList`.
 
-**Resultados de Aprendizaje (RAs) Trabajados: RA4, RA6.**
+**Resultados de Aprendizaje (RAs) Trabajados: RA2, RA4, RA6.**
 
 * Se han diseñado clases con sus atributos y métodos.
 * Se han utilizado constructores para inicializar objetos.
@@ -27,11 +27,12 @@ Esta clase representará cada una de las salas del cine.
     *   `pelicula`: Título de la película (`String`).
     *   `horaProyeccion`: Hora de la sesión (`String`, ej: "18:00").
     *   `recaudacionSala`: Dinero acumulado por ventas (`double`).
-    *   `recaudacionTotal`: (Estático y Público) Acumula la recaudación total de todos los cines (`double`).
-    *   **Constante:** El precio de la entrada es fijo: **5.99 €**.
+    *   `recaudacionTotal`: (Estático) Acumula la recaudación total de todos los cines (`double`).
+    *   **Constantes:** El precio de la entrada es fijo: **5.99** (`double`). El número de filas y de las columnas son **6** y **10**, respectivamente (`int`).
 
-*   **Constructor:**
-    *   **Constructor**: Recibe `numSala`, `pelicula` y `horaProyeccion`. Crea por defecto una sala de **6 filas x 10 columnas**.
+*   **Constructores:**
+    1. **Constructor por defecto**: No recibe parámetros. Crea por defecto una sala de **6 filas x 10 columnas**, el número de la sala es 0, la película es "", la hora de la proyección es "" y la recaudación de la sala es 0.
+    2. **Constructor parcial**: Recibe `numSala`, `pelicula` y `horaProyeccion`. Crea por defecto una sala de **6 filas x 10 columnas** y pone la recaudación de la sala a 0.
     !!! tip "Nota"
         El constructor debe inicializar la matriz de asientos con el carácter `'.'` (libre).
 
@@ -42,7 +43,8 @@ Esta clase representará cada una de las salas del cine.
     *   `double getRecaudacionSala()`: Devuelve el dinero recaudado.
     *   `int getAsientosDisponibles()`: Devuelve el número total de asientos vacíos en la sala.
     *   `String toString()`: Devuelve una cadena con la información de la sala: número, película, hora y número de asientos disponibles.
-    *   **Getters y Setters:** Debes implementar los métodos *get* y *set* para los atributos que lo requieran.
+    *   `static double getRecaudacionTotal()`: Método estático que devuelve la **recaudación total** de todas las salas.
+    *   **Getters y Setters:** Debes implementar los métodos *get* y *set* para los atributos `numSala`, `pelicula` y `horaProyeccion`.
 
 ### 2. Clase `Main` (Programa Principal)
 
@@ -85,12 +87,24 @@ Usa un `ArrayList<Sala>` para gestionar las diferentes salas del cine. El progra
         Ingrese columna: 3
         [OK] Entrada vendida (Precio: 5.99€).
         ```
-    *   **E) Recaudación total del cine** (Recaudación de todas las salas).
+
+        En caso de no poder realizar la venta, porque el asiento no está disponible, mostrará el siguiente mensaje:
+        ```text
+        [ASIENTO NO DISPONIBLE]
+        ```
+
+    *   **E) Ver recaudación de sala** (Muestra el dinero reacudado por una sala).
         ```text
         > Seleccione opción: E
+        Ingrese número de sala: 1
+        [INFO] La sala 1 ha recaudado: 35.94€
+        ```
+    *   **F) Recaudación total del cine** (Recaudación de todas las salas).
+        ```text
+        > Seleccione opción: F
         Recaudación total del cine: 450.25€
         ```
-    *   **F) Salir.**
+    *   **G) Salir.**
 
 ---
 ### Pistas de Implementación
