@@ -30,6 +30,8 @@ nav:
       - Ejercicios de iniciación de POO: ejercicios/ud05/ejercicios_ud05_inicio.md
       - Ejercicios avanzados de POO: ejercicios/ud05/ejercicios_ud05_avanzado.md
       - Actividad entregable. Gestión de un cine: ejercicios/ud05/ejercicio_ud05_entregable.md
+    - UD6:
+      - Ejercicios de POO avanzada: ejercicios/ud06/ejercicios_ud6.md
   - Recursos:
     - Guías:
       - Instalación IntelliJ: recursos/guia_intellij.md
