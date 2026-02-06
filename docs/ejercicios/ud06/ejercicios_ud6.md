@@ -8,8 +8,10 @@ Este boletín contiene ejercicios prácticos diseñados para reforzar los concep
 
 ### Ejercicio 1: El PC Gamer
 Queremos montar un ordenador por piezas.
+
 1.  Crea las clases `Procesador` (modelo, precio), `MemoriaRAM` (capacidad, precio) y `TarjetaGrafica` (modelo, precio).
 2.  Crea la clase `Ordenador`.
+
     *   **Atributos:** Debe tener un objeto de cada uno de los componentes anteriores (Composición).
     *   **Métodos:**
         *   `getPrecioTotal()`: Suma el precio de todos los componentes.
