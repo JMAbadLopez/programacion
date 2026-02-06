@@ -20,6 +20,7 @@ Queremos montar un ordenador por piezas.
 
 ### Ejercicio 2: La Casa Real
 Vamos a modelar una vivienda.
+
 1.  Crea la clase `Habitacion` con atributos `nombre` (ej: "Salón", "Cocina") y `metrosCuadrados`.
 2.  Crea la clase `Casa`.
     *   **Atributos:** Una lista (`ArrayList`) de habitaciones.
