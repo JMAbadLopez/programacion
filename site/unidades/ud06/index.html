@@ -2476,7 +2476,7 @@ A esto se le llama <strong>Delegación</strong>: "Yo (Personaje) no calculo el d
 <a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Personaje</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">Arma</span><span class="w"> </span><span class="n">armaInicial</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
 <a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">        </span><span class="c1">// Importante: Validamos que no nos pasen un arma &#39;null&#39;</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">        </span><span class="n">setArmaEquipada</span><span class="p">(</span><span class="n">armaInicial</span><span class="p">;</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">        </span><span class="n">setArmaEquipada</span><span class="p">(</span><span class="n">armaInicial</span><span class="p">);</span>
 <a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-1-15" name="__codelineno-1-15"></a>
 <a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">atacar</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
@@ -2838,6 +2838,11 @@ Este nivel de visibilidad actúa como un punto intermedio entre la privacidad to
 </tr>
 </tbody>
 </table>
+<div class="admonition tip">
+<p class="admonition-title">¿Cuándo usar <code>protected</code>?</p>
+<p>Aunque <code>protected</code> es útil para la herencia, <strong>no abuses de él</strong>.</p>
+<p>Por defecto, intenta mantener tus atributos <code>private</code> y usa <strong>Getters/Setters</strong> (públicos o protegidos) si los hijos necesitan acceder. Usa <code>protected</code> en atributos solo cuando sea estrictamente necesario para el diseño o rendimiento.</p>
+</div>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-5-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-5-3"> 3</a></span>
@@ -2893,6 +2898,11 @@ Este nivel de visibilidad actúa como un punto intermedio entre la privacidad to
 <div class="admonition warning">
 <p class="admonition-title">Importante: super()</p>
 <p>La llamada a <strong><code>super()</code></strong> debe ser SIEMPRE la <strong>primera línea</strong> del constructor del hijo. No puedes decorar la casa si no has puesto los cimientos antes.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Curiosidad: ¿Herencia Múltiple?</p>
+<p>En Java, una subclase <strong>SOLO puede tener un PADRE</strong> (<code>extends</code>). No existe la herencia múltiple de clases (como en C++ o Python).</p>
+<p>Esto se hace para evitar conflictos (el "Problema del Diamante"). Sin embargo, Java compensa esto permitiendo implementar <strong>múltiples Interfaces</strong>.</p>
 </div>
 <h3 id="23-sobreescritura-de-metodos-override">2.3. Sobreescritura de Métodos (<code>@Override</code>)</h3>
 <p>¿Y si el hijo quiere hacer las cosas de forma diferente a su padre?
