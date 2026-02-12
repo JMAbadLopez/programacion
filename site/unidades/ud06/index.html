@@ -845,6 +845,48 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#54-sobreescritura-de-comparadores-igualdad-y-orden" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4. Sobreescritura de Comparadores (Igualdad y Orden)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.4. Sobreescritura de Comparadores (Igualdad y Orden)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#541-igualdad-de-contenido-equals" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4.1. Igualdad de Contenido (equals)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#542-orden-natural-comparable" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4.2. Orden Natural (Comparable)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#543-orden-personalizado-comparator" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4.3. Orden Personalizado (Comparator)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#6-ejemplo-completo-de-integracion" class="md-nav__link">
     <span class="md-ellipsis">
       6. Ejemplo Completo de Integración
@@ -1629,6 +1671,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ejercicios/ud06/ejercicios_ud6_juego_rol/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ejercicios de POO. Juego de Rol
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2287,6 +2352,48 @@
   <a href="#53-trasteando-con-la-herencia-casting-y-instanceof" class="md-nav__link">
     <span class="md-ellipsis">
       5.3. Trasteando con la Herencia: Casting y instanceof
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#54-sobreescritura-de-comparadores-igualdad-y-orden" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4. Sobreescritura de Comparadores (Igualdad y Orden)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="5.4. Sobreescritura de Comparadores (Igualdad y Orden)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#541-igualdad-de-contenido-equals" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4.1. Igualdad de Contenido (equals)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#542-orden-natural-comparable" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4.2. Orden Natural (Comparable)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#543-orden-personalizado-comparator" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.4.3. Orden Personalizado (Comparator)
     </span>
   </a>
   
@@ -3403,20 +3510,31 @@ No tienen NADA en común (no son familia), pero todos son <strong>Localizables</
 </ol>
 </div>
 <hr />
-<h2 id="6-ejemplo-completo-de-integracion">6. Ejemplo Completo de Integración</h2>
-<p>A continuación, tienes un ejemplo de código completo que integra <strong>Herencia, Clases Abstractas, Interfaces y Polimorfismo</strong>.
-Puedes copiar cada bloque en un archivo separado para probarlo.</p>
-<p><strong>Escenario:</strong> Un pequeño juego RPG.</p>
-<h3 id="61-la-interfaz-capacidad">6.1. La Interfaz (Capacidad)</h3>
+<h2 id="54-sobreescritura-de-comparadores-igualdad-y-orden">5.4. Sobreescritura de Comparadores (Igualdad y Orden)</h2>
+<p>En Java, a menudo necesitamos saber si dos objetos son "iguales" o cuál va antes en una lista (ordenar).
+Por defecto, <code>==</code> solo compara si son <strong>el mismo objeto en memoria</strong>, no si tienen los mismos datos.</p>
+<h3 id="541-igualdad-de-contenido-equals">5.4.1. Igualdad de Contenido (<code>equals</code>)</h3>
+<p>Para comparar el <strong>contenido</strong>, debemos sobreescribir el método <code>equals</code> (y <code>hashCode</code>, aunque por ahora nos centraremos en <code>equals</code>).</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-21-1">1</a></span>
 <span class="normal"><a href="#__codelineno-21-2">2</a></span>
 <span class="normal"><a href="#__codelineno-21-3">3</a></span>
-<span class="normal"><a href="#__codelineno-21-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="c1">// Archivo: Atacable.java</span>
-<a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Atacable</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">recibirDano</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">cantidad</span><span class="p">);</span>
-<a id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-21-4">4</a></span>
+<span class="normal"><a href="#__codelineno-21-5">5</a></span>
+<span class="normal"><a href="#__codelineno-21-6">6</a></span>
+<span class="normal"><a href="#__codelineno-21-7">7</a></span>
+<span class="normal"><a href="#__codelineno-21-8">8</a></span>
+<span class="normal"><a href="#__codelineno-21-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1"></a><span class="nd">@Override</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2"></a><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">equals</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-21-3" name="__codelineno-21-3"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"> </span><span class="c1">// Son el mismo objeto en memoria</span>
+<a id="__codelineno-21-4" name="__codelineno-21-4"></a><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">obj</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">getClass</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="na">getClass</span><span class="p">())</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// No es el mismo tipo</span>
+<a id="__codelineno-21-5" name="__codelineno-21-5"></a>
+<a id="__codelineno-21-6" name="__codelineno-21-6"></a><span class="w">    </span><span class="n">Personaje</span><span class="w"> </span><span class="n">otro</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Personaje</span><span class="p">)</span><span class="w"> </span><span class="n">obj</span><span class="p">;</span>
+<a id="__codelineno-21-7" name="__codelineno-21-7"></a><span class="w">    </span><span class="c1">// Decidimos que dos personajes son iguales si tienen el mismo nombre</span>
+<a id="__codelineno-21-8" name="__codelineno-21-8"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">otro</span><span class="p">.</span><span class="na">nombre</span><span class="p">);</span>
+<a id="__codelineno-21-9" name="__codelineno-21-9"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="62-la-clase-abstracta-identidad-base">6.2. La Clase Abstracta (Identidad Base)</h3>
+<h3 id="542-orden-natural-comparable">5.4.2. Orden Natural (<code>Comparable</code>)</h3>
+<p>Si queremos poder ordenar una lista de personajes con <code>Collections.sort(lista)</code>, nuestra clase debe implementar la interfaz <code>Comparable&lt;T&gt;</code> y su método <code>compareTo</code>.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-22-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-22-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-22-3"> 3</a></span>
@@ -3428,143 +3546,51 @@ Puedes copiar cada bloque en un archivo separado para probarlo.</p>
 <span class="normal"><a href="#__codelineno-22-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-22-10">10</a></span>
 <span class="normal"><a href="#__codelineno-22-11">11</a></span>
-<span class="normal"><a href="#__codelineno-22-12">12</a></span>
-<span class="normal"><a href="#__codelineno-22-13">13</a></span>
-<span class="normal"><a href="#__codelineno-22-14">14</a></span>
-<span class="normal"><a href="#__codelineno-22-15">15</a></span>
-<span class="normal"><a href="#__codelineno-22-16">16</a></span>
-<span class="normal"><a href="#__codelineno-22-17">17</a></span>
-<span class="normal"><a href="#__codelineno-22-18">18</a></span>
-<span class="normal"><a href="#__codelineno-22-19">19</a></span>
-<span class="normal"><a href="#__codelineno-22-20">20</a></span>
-<span class="normal"><a href="#__codelineno-22-21">21</a></span>
-<span class="normal"><a href="#__codelineno-22-22">22</a></span>
-<span class="normal"><a href="#__codelineno-22-23">23</a></span>
-<span class="normal"><a href="#__codelineno-22-24">24</a></span>
-<span class="normal"><a href="#__codelineno-22-25">25</a></span>
-<span class="normal"><a href="#__codelineno-22-26">26</a></span>
-<span class="normal"><a href="#__codelineno-22-27">27</a></span>
-<span class="normal"><a href="#__codelineno-22-28">28</a></span>
-<span class="normal"><a href="#__codelineno-22-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="c1">// Archivo: Personaje.java</span>
-<a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Personaje</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Atacable</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-22-3" name="__codelineno-22-3"></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
-<a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">vida</span><span class="p">;</span>
-<a id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nivel</span><span class="p">;</span>
-<a id="__codelineno-22-6" name="__codelineno-22-6"></a>
-<a id="__codelineno-22-7" name="__codelineno-22-7"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Personaje</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">vida</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nivel</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-22-8" name="__codelineno-22-8"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
-<a id="__codelineno-22-9" name="__codelineno-22-9"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">vida</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vida</span><span class="p">;</span>
-<a id="__codelineno-22-10" name="__codelineno-22-10"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nivel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nivel</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-22-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Personaje</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Comparable</span><span class="o">&lt;</span><span class="n">Personaje</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2"></a><span class="w">    </span><span class="c1">// ... codigo ...</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3"></a>
+<a id="__codelineno-22-4" name="__codelineno-22-4"></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">compareTo</span><span class="p">(</span><span class="n">Personaje</span><span class="w"> </span><span class="n">otro</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6"></a><span class="w">        </span><span class="c1">// Ordenamos por VIDA (de menos a más)</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">vida</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">otro</span><span class="p">.</span><span class="na">vida</span><span class="p">;</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8"></a>
+<a id="__codelineno-22-9" name="__codelineno-22-9"></a><span class="w">        </span><span class="c1">// Si quisiéramos por nombre alfabéticamente:</span>
+<a id="__codelineno-22-10" name="__codelineno-22-10"></a><span class="w">        </span><span class="c1">// return this.nombre.compareTo(otro.nombre);</span>
 <a id="__codelineno-22-11" name="__codelineno-22-11"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-22-12" name="__codelineno-22-12"></a>
-<a id="__codelineno-22-13" name="__codelineno-22-13"></a><span class="w">    </span><span class="c1">// Método abstracto: Cada hijo ataca distinto</span>
-<a id="__codelineno-22-14" name="__codelineno-22-14"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">atacar</span><span class="p">(</span><span class="n">Personaje</span><span class="w"> </span><span class="n">objetivo</span><span class="p">);</span>
-<a id="__codelineno-22-15" name="__codelineno-22-15"></a>
-<a id="__codelineno-22-16" name="__codelineno-22-16"></a><span class="w">    </span><span class="c1">// Método común implementado de la interfaz</span>
-<a id="__codelineno-22-17" name="__codelineno-22-17"></a><span class="w">    </span><span class="nd">@Override</span>
-<a id="__codelineno-22-18" name="__codelineno-22-18"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">recibirDano</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">cantidad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-22-19" name="__codelineno-22-19"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">vida</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">cantidad</span><span class="p">;</span>
-<a id="__codelineno-22-20" name="__codelineno-22-20"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">vida</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">vida</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-22-21" name="__codelineno-22-21"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; recibe &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cantidad</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; de daño. Vida restante: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">vida</span><span class="p">);</span>
-<a id="__codelineno-22-22" name="__codelineno-22-22"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-22-23" name="__codelineno-22-23"></a>
-<a id="__codelineno-22-24" name="__codelineno-22-24"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">estaVivo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-22-25" name="__codelineno-22-25"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">vida</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
-<a id="__codelineno-22-26" name="__codelineno-22-26"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-22-27" name="__codelineno-22-27"></a>
-<a id="__codelineno-22-28" name="__codelineno-22-28"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getNombre</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-22-29" name="__codelineno-22-29"></a><span class="p">}</span>
+<a id="__codelineno-22-12" name="__codelineno-22-12"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="63-las-clases-concretas-implementacion">6.3. Las Clases Concretas (Implementación)</h3>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-23-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-23-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-23-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-23-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-23-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-23-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-23-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-23-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-23-10">10</a></span>
-<span class="normal"><a href="#__codelineno-23-11">11</a></span>
-<span class="normal"><a href="#__codelineno-23-12">12</a></span>
-<span class="normal"><a href="#__codelineno-23-13">13</a></span>
-<span class="normal"><a href="#__codelineno-23-14">14</a></span>
-<span class="normal"><a href="#__codelineno-23-15">15</a></span>
-<span class="normal"><a href="#__codelineno-23-16">16</a></span>
-<span class="normal"><a href="#__codelineno-23-17">17</a></span>
-<span class="normal"><a href="#__codelineno-23-18">18</a></span>
-<span class="normal"><a href="#__codelineno-23-19">19</a></span>
-<span class="normal"><a href="#__codelineno-23-20">20</a></span>
-<span class="normal"><a href="#__codelineno-23-21">21</a></span>
-<span class="normal"><a href="#__codelineno-23-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="c1">// Archivo: Guerrero.java</span>
-<a id="__codelineno-23-2" name="__codelineno-23-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Guerrero</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Personaje</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">furia</span><span class="p">;</span>
-<a id="__codelineno-23-4" name="__codelineno-23-4"></a>
-<a id="__codelineno-23-5" name="__codelineno-23-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Guerrero</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">vida</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nivel</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">furia</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-23-6" name="__codelineno-23-6"></a><span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">vida</span><span class="p">,</span><span class="w"> </span><span class="n">nivel</span><span class="p">);</span>
-<a id="__codelineno-23-7" name="__codelineno-23-7"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">furia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">furia</span><span class="p">;</span>
-<a id="__codelineno-23-8" name="__codelineno-23-8"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-23-9" name="__codelineno-23-9"></a>
-<a id="__codelineno-23-10" name="__codelineno-23-10"></a><span class="w">    </span><span class="nd">@Override</span>
-<a id="__codelineno-23-11" name="__codelineno-23-11"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">atacar</span><span class="p">(</span><span class="n">Personaje</span><span class="w"> </span><span class="n">objetivo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-23-12" name="__codelineno-23-12"></a><span class="w">        </span><span class="c1">// El guerrero hace más daño pero gasta furia (si la usáramos)</span>
-<a id="__codelineno-23-13" name="__codelineno-23-13"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">dano</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">nivel</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
-<a id="__codelineno-23-14" name="__codelineno-23-14"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; lanza un ESPADAZO BRUTAL a &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">objetivo</span><span class="p">.</span><span class="na">getNombre</span><span class="p">());</span>
-<a id="__codelineno-23-15" name="__codelineno-23-15"></a><span class="w">        </span><span class="n">objetivo</span><span class="p">.</span><span class="na">recibirDano</span><span class="p">(</span><span class="n">dano</span><span class="p">);</span>
-<a id="__codelineno-23-16" name="__codelineno-23-16"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-23-17" name="__codelineno-23-17"></a>
-<a id="__codelineno-23-18" name="__codelineno-23-18"></a><span class="w">    </span><span class="c1">// Método exclusivo del Guerrero</span>
-<a id="__codelineno-23-19" name="__codelineno-23-19"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">gritoDeGuerra</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-23-20" name="__codelineno-23-20"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;: ¡¡POR ESPARTA!!&quot;</span><span class="p">);</span>
-<a id="__codelineno-23-21" name="__codelineno-23-21"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-23-22" name="__codelineno-23-22"></a><span class="p">}</span>
+<h3 id="543-orden-personalizado-comparator">5.4.3. Orden Personalizado (<code>Comparator</code>)</h3>
+<p>¿Y si queremos ordenar por diferentes criterios (unos por vida, otros por nombre)?
+No tocamos la clase. Creamos "Comparadores" externos.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-23-1">1</a></span>
+<span class="normal"><a href="#__codelineno-23-2">2</a></span>
+<span class="normal"><a href="#__codelineno-23-3">3</a></span>
+<span class="normal"><a href="#__codelineno-23-4">4</a></span>
+<span class="normal"><a href="#__codelineno-23-5">5</a></span>
+<span class="normal"><a href="#__codelineno-23-6">6</a></span>
+<span class="normal"><a href="#__codelineno-23-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Comparator</span><span class="p">;</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2"></a>
+<a id="__codelineno-23-3" name="__codelineno-23-3"></a><span class="c1">// Opción A: Clase anónima o Lambda (Java 8+)</span>
+<a id="__codelineno-23-4" name="__codelineno-23-4"></a><span class="n">Comparator</span><span class="o">&lt;</span><span class="n">Personaje</span><span class="o">&gt;</span><span class="w"> </span><span class="n">porNombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">p1</span><span class="p">,</span><span class="w"> </span><span class="n">p2</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">p1</span><span class="p">.</span><span class="na">getNombre</span><span class="p">().</span><span class="na">compareTo</span><span class="p">(</span><span class="n">p2</span><span class="p">.</span><span class="na">getNombre</span><span class="p">());</span>
+<a id="__codelineno-23-5" name="__codelineno-23-5"></a>
+<a id="__codelineno-23-6" name="__codelineno-23-6"></a><span class="c1">// Opción B: Uso directo en el sort</span>
+<a id="__codelineno-23-7" name="__codelineno-23-7"></a><span class="n">lista</span><span class="p">.</span><span class="na">sort</span><span class="p">(</span><span class="n">Comparator</span><span class="p">.</span><span class="na">comparing</span><span class="p">(</span><span class="n">Personaje</span><span class="p">::</span><span class="n">getNombre</span><span class="p">));</span>
 </code></pre></div></td></tr></table></div>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-24-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-24-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-24-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-24-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-24-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-24-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-24-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-24-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-24-10">10</a></span>
-<span class="normal"><a href="#__codelineno-24-11">11</a></span>
-<span class="normal"><a href="#__codelineno-24-12">12</a></span>
-<span class="normal"><a href="#__codelineno-24-13">13</a></span>
-<span class="normal"><a href="#__codelineno-24-14">14</a></span>
-<span class="normal"><a href="#__codelineno-24-15">15</a></span>
-<span class="normal"><a href="#__codelineno-24-16">16</a></span>
-<span class="normal"><a href="#__codelineno-24-17">17</a></span>
-<span class="normal"><a href="#__codelineno-24-18">18</a></span>
-<span class="normal"><a href="#__codelineno-24-19">19</a></span>
-<span class="normal"><a href="#__codelineno-24-20">20</a></span>
-<span class="normal"><a href="#__codelineno-24-21">21</a></span>
-<span class="normal"><a href="#__codelineno-24-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="c1">// Archivo: Mago.java</span>
-<a id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Mago</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Personaje</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-24-3" name="__codelineno-24-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">mana</span><span class="p">;</span>
-<a id="__codelineno-24-4" name="__codelineno-24-4"></a>
-<a id="__codelineno-24-5" name="__codelineno-24-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Mago</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">vida</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nivel</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">mana</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-24-6" name="__codelineno-24-6"></a><span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">vida</span><span class="p">,</span><span class="w"> </span><span class="n">nivel</span><span class="p">);</span>
-<a id="__codelineno-24-7" name="__codelineno-24-7"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">mana</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mana</span><span class="p">;</span>
-<a id="__codelineno-24-8" name="__codelineno-24-8"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-24-9" name="__codelineno-24-9"></a>
-<a id="__codelineno-24-10" name="__codelineno-24-10"></a><span class="w">    </span><span class="nd">@Override</span>
-<a id="__codelineno-24-11" name="__codelineno-24-11"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">atacar</span><span class="p">(</span><span class="n">Personaje</span><span class="w"> </span><span class="n">objetivo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-24-12" name="__codelineno-24-12"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">mana</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-24-13" name="__codelineno-24-13"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">dano</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">nivel</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// El mago pega más fuerte</span>
-<a id="__codelineno-24-14" name="__codelineno-24-14"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">mana</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
-<a id="__codelineno-24-15" name="__codelineno-24-15"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; lanza BOLA DE FUEGO a &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">objetivo</span><span class="p">.</span><span class="na">getNombre</span><span class="p">());</span>
-<a id="__codelineno-24-16" name="__codelineno-24-16"></a><span class="w">            </span><span class="n">objetivo</span><span class="p">.</span><span class="na">recibirDano</span><span class="p">(</span><span class="n">dano</span><span class="p">);</span>
-<a id="__codelineno-24-17" name="__codelineno-24-17"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-24-18" name="__codelineno-24-18"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; no tiene maná y golpea con el bastón (puf...)&quot;</span><span class="p">);</span>
-<a id="__codelineno-24-19" name="__codelineno-24-19"></a><span class="w">            </span><span class="n">objetivo</span><span class="p">.</span><span class="na">recibirDano</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-<a id="__codelineno-24-20" name="__codelineno-24-20"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-24-21" name="__codelineno-24-21"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-24-22" name="__codelineno-24-22"></a><span class="p">}</span>
+<hr />
+<h2 id="6-ejemplo-completo-de-integracion">6. Ejemplo Completo de Integración</h2>
+<p>A continuación, tienes un ejemplo de código completo que integra <strong>Herencia, Clases Abstractas, Interfaces y Polimorfismo</strong>.
+Puedes copiar cada bloque en un archivo separado para probarlo.</p>
+<p><strong>Escenario:</strong> Un pequeño juego RPG.</p>
+<h3 id="61-la-interfaz-capacidad">6.1. La Interfaz (Capacidad)</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-24-1">1</a></span>
+<span class="normal"><a href="#__codelineno-24-2">2</a></span>
+<span class="normal"><a href="#__codelineno-24-3">3</a></span>
+<span class="normal"><a href="#__codelineno-24-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1"></a><span class="c1">// Archivo: Atacable.java</span>
+<a id="__codelineno-24-2" name="__codelineno-24-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">interface</span> <span class="nc">Atacable</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-24-3" name="__codelineno-24-3"></a><span class="w">    </span><span class="kt">void</span><span class="w"> </span><span class="nf">recibirDano</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">cantidad</span><span class="p">);</span>
+<a id="__codelineno-24-4" name="__codelineno-24-4"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="64-el-main-polimorfismo-en-accion">6.4. El Main (Polimorfismo en Acción)</h3>
+<h3 id="62-la-clase-abstracta-identidad-base">6.2. La Clase Abstracta (Identidad Base)</h3>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-25-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-25-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-25-3"> 3</a></span>
@@ -3591,33 +3617,181 @@ Puedes copiar cada bloque en un archivo separado para probarlo.</p>
 <span class="normal"><a href="#__codelineno-25-24">24</a></span>
 <span class="normal"><a href="#__codelineno-25-25">25</a></span>
 <span class="normal"><a href="#__codelineno-25-26">26</a></span>
-<span class="normal"><a href="#__codelineno-25-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="c1">// Archivo: JuegoRPG.java</span>
-<a id="__codelineno-25-2" name="__codelineno-25-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
-<a id="__codelineno-25-3" name="__codelineno-25-3"></a>
-<a id="__codelineno-25-4" name="__codelineno-25-4"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">JuegoRPG</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-25-5" name="__codelineno-25-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-25-6" name="__codelineno-25-6"></a><span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Personaje</span><span class="o">&gt;</span><span class="w"> </span><span class="n">equipo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-<a id="__codelineno-25-7" name="__codelineno-25-7"></a>
-<a id="__codelineno-25-8" name="__codelineno-25-8"></a><span class="w">        </span><span class="c1">// Polimorfismo: Guardamos Hijos en variables Padre (lista)</span>
-<a id="__codelineno-25-9" name="__codelineno-25-9"></a><span class="w">        </span><span class="n">equipo</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Guerrero</span><span class="p">(</span><span class="s">&quot;Conan&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">150</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">));</span>
-<a id="__codelineno-25-10" name="__codelineno-25-10"></a><span class="w">        </span><span class="n">equipo</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Mago</span><span class="p">(</span><span class="s">&quot;Gandalf&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">));</span>
-<a id="__codelineno-25-11" name="__codelineno-25-11"></a>
-<a id="__codelineno-25-12" name="__codelineno-25-12"></a><span class="w">        </span><span class="c1">// Enemigo dummy para probar</span>
-<a id="__codelineno-25-13" name="__codelineno-25-13"></a><span class="w">        </span><span class="n">Guerrero</span><span class="w"> </span><span class="n">enemigo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Guerrero</span><span class="p">(</span><span class="s">&quot;Orco Feo&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
-<a id="__codelineno-25-14" name="__codelineno-25-14"></a>
-<a id="__codelineno-25-15" name="__codelineno-25-15"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;--- EMPIEZA LA BATALLA ---&quot;</span><span class="p">);</span>
-<a id="__codelineno-25-16" name="__codelineno-25-16"></a>
-<a id="__codelineno-25-17" name="__codelineno-25-17"></a><span class="w">        </span><span class="c1">// Bucle Polimórfico</span>
-<a id="__codelineno-25-18" name="__codelineno-25-18"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Personaje</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">equipo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-25-19" name="__codelineno-25-19"></a><span class="w">            </span><span class="n">p</span><span class="p">.</span><span class="na">atacar</span><span class="p">(</span><span class="n">enemigo</span><span class="p">);</span><span class="w"> </span><span class="c1">// Java decide qué atacar() usar dinámicamente</span>
-<a id="__codelineno-25-20" name="__codelineno-25-20"></a>
-<a id="__codelineno-25-21" name="__codelineno-25-21"></a><span class="w">            </span><span class="c1">// Uso de instanceof para acceder a métodos exclusivos</span>
-<a id="__codelineno-25-22" name="__codelineno-25-22"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">Guerrero</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-25-23" name="__codelineno-25-23"></a><span class="w">                </span><span class="p">((</span><span class="n">Guerrero</span><span class="p">)</span><span class="w"> </span><span class="n">p</span><span class="p">).</span><span class="na">gritoDeGuerra</span><span class="p">();</span><span class="w"> </span><span class="c1">// Downcasting seguro</span>
-<a id="__codelineno-25-24" name="__codelineno-25-24"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-25-25" name="__codelineno-25-25"></a><span class="w">        </span><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-25-27">27</a></span>
+<span class="normal"><a href="#__codelineno-25-28">28</a></span>
+<span class="normal"><a href="#__codelineno-25-29">29</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1"></a><span class="c1">// Archivo: Personaje.java</span>
+<a id="__codelineno-25-2" name="__codelineno-25-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Personaje</span><span class="w"> </span><span class="kd">implements</span><span class="w"> </span><span class="n">Atacable</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-3" name="__codelineno-25-3"></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<a id="__codelineno-25-4" name="__codelineno-25-4"></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">vida</span><span class="p">;</span>
+<a id="__codelineno-25-5" name="__codelineno-25-5"></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nivel</span><span class="p">;</span>
+<a id="__codelineno-25-6" name="__codelineno-25-6"></a>
+<a id="__codelineno-25-7" name="__codelineno-25-7"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Personaje</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">vida</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nivel</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-8" name="__codelineno-25-8"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<a id="__codelineno-25-9" name="__codelineno-25-9"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">vida</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">vida</span><span class="p">;</span>
+<a id="__codelineno-25-10" name="__codelineno-25-10"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nivel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nivel</span><span class="p">;</span>
+<a id="__codelineno-25-11" name="__codelineno-25-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-25-12" name="__codelineno-25-12"></a>
+<a id="__codelineno-25-13" name="__codelineno-25-13"></a><span class="w">    </span><span class="c1">// Método abstracto: Cada hijo ataca distinto</span>
+<a id="__codelineno-25-14" name="__codelineno-25-14"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">abstract</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">atacar</span><span class="p">(</span><span class="n">Personaje</span><span class="w"> </span><span class="n">objetivo</span><span class="p">);</span>
+<a id="__codelineno-25-15" name="__codelineno-25-15"></a>
+<a id="__codelineno-25-16" name="__codelineno-25-16"></a><span class="w">    </span><span class="c1">// Método común implementado de la interfaz</span>
+<a id="__codelineno-25-17" name="__codelineno-25-17"></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-25-18" name="__codelineno-25-18"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">recibirDano</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">cantidad</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-19" name="__codelineno-25-19"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">vida</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="n">cantidad</span><span class="p">;</span>
+<a id="__codelineno-25-20" name="__codelineno-25-20"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">vida</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">vida</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<a id="__codelineno-25-21" name="__codelineno-25-21"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; recibe &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">cantidad</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; de daño. Vida restante: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">vida</span><span class="p">);</span>
+<a id="__codelineno-25-22" name="__codelineno-25-22"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-25-23" name="__codelineno-25-23"></a>
+<a id="__codelineno-25-24" name="__codelineno-25-24"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">estaVivo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-25-25" name="__codelineno-25-25"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">vida</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
 <a id="__codelineno-25-26" name="__codelineno-25-26"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-25-27" name="__codelineno-25-27"></a><span class="p">}</span>
+<a id="__codelineno-25-27" name="__codelineno-25-27"></a>
+<a id="__codelineno-25-28" name="__codelineno-25-28"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getNombre</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-25-29" name="__codelineno-25-29"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="63-las-clases-concretas-implementacion">6.3. Las Clases Concretas (Implementación)</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-26-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-26-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-26-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-26-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-26-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-26-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-26-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-26-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-26-10">10</a></span>
+<span class="normal"><a href="#__codelineno-26-11">11</a></span>
+<span class="normal"><a href="#__codelineno-26-12">12</a></span>
+<span class="normal"><a href="#__codelineno-26-13">13</a></span>
+<span class="normal"><a href="#__codelineno-26-14">14</a></span>
+<span class="normal"><a href="#__codelineno-26-15">15</a></span>
+<span class="normal"><a href="#__codelineno-26-16">16</a></span>
+<span class="normal"><a href="#__codelineno-26-17">17</a></span>
+<span class="normal"><a href="#__codelineno-26-18">18</a></span>
+<span class="normal"><a href="#__codelineno-26-19">19</a></span>
+<span class="normal"><a href="#__codelineno-26-20">20</a></span>
+<span class="normal"><a href="#__codelineno-26-21">21</a></span>
+<span class="normal"><a href="#__codelineno-26-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="c1">// Archivo: Guerrero.java</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Guerrero</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Personaje</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">furia</span><span class="p">;</span>
+<a id="__codelineno-26-4" name="__codelineno-26-4"></a>
+<a id="__codelineno-26-5" name="__codelineno-26-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Guerrero</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">vida</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nivel</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">furia</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-26-6" name="__codelineno-26-6"></a><span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">vida</span><span class="p">,</span><span class="w"> </span><span class="n">nivel</span><span class="p">);</span>
+<a id="__codelineno-26-7" name="__codelineno-26-7"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">furia</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">furia</span><span class="p">;</span>
+<a id="__codelineno-26-8" name="__codelineno-26-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-26-9" name="__codelineno-26-9"></a>
+<a id="__codelineno-26-10" name="__codelineno-26-10"></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-26-11" name="__codelineno-26-11"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">atacar</span><span class="p">(</span><span class="n">Personaje</span><span class="w"> </span><span class="n">objetivo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-26-12" name="__codelineno-26-12"></a><span class="w">        </span><span class="c1">// El guerrero hace más daño pero gasta furia (si la usáramos)</span>
+<a id="__codelineno-26-13" name="__codelineno-26-13"></a><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">dano</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">nivel</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">2</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-26-14" name="__codelineno-26-14"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; lanza un ESPADAZO BRUTAL a &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">objetivo</span><span class="p">.</span><span class="na">getNombre</span><span class="p">());</span>
+<a id="__codelineno-26-15" name="__codelineno-26-15"></a><span class="w">        </span><span class="n">objetivo</span><span class="p">.</span><span class="na">recibirDano</span><span class="p">(</span><span class="n">dano</span><span class="p">);</span>
+<a id="__codelineno-26-16" name="__codelineno-26-16"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-26-17" name="__codelineno-26-17"></a>
+<a id="__codelineno-26-18" name="__codelineno-26-18"></a><span class="w">    </span><span class="c1">// Método exclusivo del Guerrero</span>
+<a id="__codelineno-26-19" name="__codelineno-26-19"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">gritoDeGuerra</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-26-20" name="__codelineno-26-20"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;: ¡¡POR ESPARTA!!&quot;</span><span class="p">);</span>
+<a id="__codelineno-26-21" name="__codelineno-26-21"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-26-22" name="__codelineno-26-22"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-27-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-27-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-27-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-27-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-27-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-27-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-27-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-27-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-27-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-27-10">10</a></span>
+<span class="normal"><a href="#__codelineno-27-11">11</a></span>
+<span class="normal"><a href="#__codelineno-27-12">12</a></span>
+<span class="normal"><a href="#__codelineno-27-13">13</a></span>
+<span class="normal"><a href="#__codelineno-27-14">14</a></span>
+<span class="normal"><a href="#__codelineno-27-15">15</a></span>
+<span class="normal"><a href="#__codelineno-27-16">16</a></span>
+<span class="normal"><a href="#__codelineno-27-17">17</a></span>
+<span class="normal"><a href="#__codelineno-27-18">18</a></span>
+<span class="normal"><a href="#__codelineno-27-19">19</a></span>
+<span class="normal"><a href="#__codelineno-27-20">20</a></span>
+<span class="normal"><a href="#__codelineno-27-21">21</a></span>
+<span class="normal"><a href="#__codelineno-27-22">22</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1"></a><span class="c1">// Archivo: Mago.java</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Mago</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Personaje</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-27-3" name="__codelineno-27-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">mana</span><span class="p">;</span>
+<a id="__codelineno-27-4" name="__codelineno-27-4"></a>
+<a id="__codelineno-27-5" name="__codelineno-27-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Mago</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">vida</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nivel</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">mana</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-27-6" name="__codelineno-27-6"></a><span class="w">        </span><span class="kd">super</span><span class="p">(</span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">vida</span><span class="p">,</span><span class="w"> </span><span class="n">nivel</span><span class="p">);</span>
+<a id="__codelineno-27-7" name="__codelineno-27-7"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">mana</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">mana</span><span class="p">;</span>
+<a id="__codelineno-27-8" name="__codelineno-27-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-27-9" name="__codelineno-27-9"></a>
+<a id="__codelineno-27-10" name="__codelineno-27-10"></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-27-11" name="__codelineno-27-11"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">atacar</span><span class="p">(</span><span class="n">Personaje</span><span class="w"> </span><span class="n">objetivo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-27-12" name="__codelineno-27-12"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">mana</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">10</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-27-13" name="__codelineno-27-13"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">dano</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">nivel</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="mi">3</span><span class="p">;</span><span class="w"> </span><span class="c1">// El mago pega más fuerte</span>
+<a id="__codelineno-27-14" name="__codelineno-27-14"></a><span class="w">            </span><span class="k">this</span><span class="p">.</span><span class="na">mana</span><span class="w"> </span><span class="o">-=</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span>
+<a id="__codelineno-27-15" name="__codelineno-27-15"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; lanza BOLA DE FUEGO a &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">objetivo</span><span class="p">.</span><span class="na">getNombre</span><span class="p">());</span>
+<a id="__codelineno-27-16" name="__codelineno-27-16"></a><span class="w">            </span><span class="n">objetivo</span><span class="p">.</span><span class="na">recibirDano</span><span class="p">(</span><span class="n">dano</span><span class="p">);</span>
+<a id="__codelineno-27-17" name="__codelineno-27-17"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-27-18" name="__codelineno-27-18"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; no tiene maná y golpea con el bastón (puf...)&quot;</span><span class="p">);</span>
+<a id="__codelineno-27-19" name="__codelineno-27-19"></a><span class="w">            </span><span class="n">objetivo</span><span class="p">.</span><span class="na">recibirDano</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-27-20" name="__codelineno-27-20"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-27-21" name="__codelineno-27-21"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-27-22" name="__codelineno-27-22"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<h3 id="64-el-main-polimorfismo-en-accion">6.4. El Main (Polimorfismo en Acción)</h3>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-28-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-28-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-28-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-28-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-28-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-28-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-28-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-28-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-28-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-28-10">10</a></span>
+<span class="normal"><a href="#__codelineno-28-11">11</a></span>
+<span class="normal"><a href="#__codelineno-28-12">12</a></span>
+<span class="normal"><a href="#__codelineno-28-13">13</a></span>
+<span class="normal"><a href="#__codelineno-28-14">14</a></span>
+<span class="normal"><a href="#__codelineno-28-15">15</a></span>
+<span class="normal"><a href="#__codelineno-28-16">16</a></span>
+<span class="normal"><a href="#__codelineno-28-17">17</a></span>
+<span class="normal"><a href="#__codelineno-28-18">18</a></span>
+<span class="normal"><a href="#__codelineno-28-19">19</a></span>
+<span class="normal"><a href="#__codelineno-28-20">20</a></span>
+<span class="normal"><a href="#__codelineno-28-21">21</a></span>
+<span class="normal"><a href="#__codelineno-28-22">22</a></span>
+<span class="normal"><a href="#__codelineno-28-23">23</a></span>
+<span class="normal"><a href="#__codelineno-28-24">24</a></span>
+<span class="normal"><a href="#__codelineno-28-25">25</a></span>
+<span class="normal"><a href="#__codelineno-28-26">26</a></span>
+<span class="normal"><a href="#__codelineno-28-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1"></a><span class="c1">// Archivo: JuegoRPG.java</span>
+<a id="__codelineno-28-2" name="__codelineno-28-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
+<a id="__codelineno-28-3" name="__codelineno-28-3"></a>
+<a id="__codelineno-28-4" name="__codelineno-28-4"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">JuegoRPG</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-28-5" name="__codelineno-28-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-28-6" name="__codelineno-28-6"></a><span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Personaje</span><span class="o">&gt;</span><span class="w"> </span><span class="n">equipo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-28-7" name="__codelineno-28-7"></a>
+<a id="__codelineno-28-8" name="__codelineno-28-8"></a><span class="w">        </span><span class="c1">// Polimorfismo: Guardamos Hijos en variables Padre (lista)</span>
+<a id="__codelineno-28-9" name="__codelineno-28-9"></a><span class="w">        </span><span class="n">equipo</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Guerrero</span><span class="p">(</span><span class="s">&quot;Conan&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">150</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="mi">100</span><span class="p">));</span>
+<a id="__codelineno-28-10" name="__codelineno-28-10"></a><span class="w">        </span><span class="n">equipo</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Mago</span><span class="p">(</span><span class="s">&quot;Gandalf&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">));</span>
+<a id="__codelineno-28-11" name="__codelineno-28-11"></a>
+<a id="__codelineno-28-12" name="__codelineno-28-12"></a><span class="w">        </span><span class="c1">// Enemigo dummy para probar</span>
+<a id="__codelineno-28-13" name="__codelineno-28-13"></a><span class="w">        </span><span class="n">Guerrero</span><span class="w"> </span><span class="n">enemigo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Guerrero</span><span class="p">(</span><span class="s">&quot;Orco Feo&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+<a id="__codelineno-28-14" name="__codelineno-28-14"></a>
+<a id="__codelineno-28-15" name="__codelineno-28-15"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;--- EMPIEZA LA BATALLA ---&quot;</span><span class="p">);</span>
+<a id="__codelineno-28-16" name="__codelineno-28-16"></a>
+<a id="__codelineno-28-17" name="__codelineno-28-17"></a><span class="w">        </span><span class="c1">// Bucle Polimórfico</span>
+<a id="__codelineno-28-18" name="__codelineno-28-18"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Personaje</span><span class="w"> </span><span class="n">p</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">equipo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-28-19" name="__codelineno-28-19"></a><span class="w">            </span><span class="n">p</span><span class="p">.</span><span class="na">atacar</span><span class="p">(</span><span class="n">enemigo</span><span class="p">);</span><span class="w"> </span><span class="c1">// Java decide qué atacar() usar dinámicamente</span>
+<a id="__codelineno-28-20" name="__codelineno-28-20"></a>
+<a id="__codelineno-28-21" name="__codelineno-28-21"></a><span class="w">            </span><span class="c1">// Uso de instanceof para acceder a métodos exclusivos</span>
+<a id="__codelineno-28-22" name="__codelineno-28-22"></a><span class="w">            </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">p</span><span class="w"> </span><span class="k">instanceof</span><span class="w"> </span><span class="n">Guerrero</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-28-23" name="__codelineno-28-23"></a><span class="w">                </span><span class="p">((</span><span class="n">Guerrero</span><span class="p">)</span><span class="w"> </span><span class="n">p</span><span class="p">).</span><span class="na">gritoDeGuerra</span><span class="p">();</span><span class="w"> </span><span class="c1">// Downcasting seguro</span>
+<a id="__codelineno-28-24" name="__codelineno-28-24"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-28-25" name="__codelineno-28-25"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-28-26" name="__codelineno-28-26"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-28-27" name="__codelineno-28-27"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="65-diagrama-uml-completo-del-sistema">6.5. Diagrama UML Completo del Sistema</h3>
 <pre class="mermaid"><code>classDiagram
