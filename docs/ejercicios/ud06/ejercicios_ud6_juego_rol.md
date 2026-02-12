@@ -35,7 +35,7 @@ classDiagram
 
     Jugador <|-- Humano
     Jugador <|-- Enemigo
-    Jugador <|-- Guerrero
+    Humano <|-- Guerrero
 ```
 
 ### 1.2. Tareas
@@ -45,7 +45,8 @@ classDiagram
     *   **¿Por qué abstracta?** Porque no queremos crear un "Jugador" genérico. Solo queremos crear Humanos, Enemigos o Guerreros.
     *   Añade un constructor que reciba el nombre y la vida por defecto.
     *   Sobrescribe el método `toString()` (explicado más adelante).
-4.  Implementa las clases hijas `Humano`, `Enemigo` y `Guerrero`.
+4.  Implementa las clases hijas `Humano` y `Enemigo` que heredan de `Jugador`.
+5.  Implementa la clase `Guerrero` que hereda de **`Humano`**.
     *   Deben tener un constructor que reciba el nombre y la vida, e invoque al constructor del padre usando **`super(name, life)`**.
     *   En el constructor, añade un `System.out.println("He creado un " + this.getClass().getSimpleName());` para depurar.
 
@@ -112,6 +113,7 @@ Ahora aprovecharemos el Polimorfismo para que cada raza se comporte de forma ún
     *   **Furia Berserker**: Si tienen **más de 20 de vida**, atacan con **+3** de daño extra, pero su defensa se reduce en **-3** (se vuelven imprudentes).
     *   Sobrescribe `atacar()` y `defender()` para aplicar esta lógica.
 3.  **Guerreros (`Guerrero`)**:
+    *   Al heredar de `Humano`, mantiene la restricción de vida máxima (100).
     *   **Piel Dura**: Si reciben menos de 5 puntos de daño real, ¡lo ignoran completamente! (El daño se convierte en 0).
     *   Sobrescribe `defender()` para esto.
 
@@ -233,7 +235,7 @@ classDiagram
     ICombatiente <|.. Jugador : Implements
     Jugador <|-- Humano
     Jugador <|-- Enemigo
-    Jugador <|-- Guerrero
+    Humano <|-- Guerrero
 
     Jugador "0..*" <--> "0..*" Equipo : Pertenece
     Jugador "1" *-- "0..*" Item : Tiene (Composición)
