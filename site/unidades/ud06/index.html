@@ -3339,14 +3339,16 @@ No tienen NADA en común (no son familia), pero todos son <strong>Localizables</
 <span class="normal"><a href="#__codelineno-14-5">5</a></span>
 <span class="normal"><a href="#__codelineno-14-6">6</a></span>
 <span class="normal"><a href="#__codelineno-14-7">7</a></span>
-<span class="normal"><a href="#__codelineno-14-8">8</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Coordenadas</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-14-2" name="__codelineno-14-2"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">latitud</span><span class="p">,</span><span class="w"> </span><span class="n">longitud</span><span class="p">;</span>
-<a id="__codelineno-14-3" name="__codelineno-14-3"></a>
-<a id="__codelineno-14-4" name="__codelineno-14-4"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Coordenadas</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">latitud</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">longitud</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">latitud</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">latitud</span><span class="p">;</span>
-<a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">longitud</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">longitud</span><span class="p">;</span>
-<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-14-8">8</a></span>
+<span class="normal"><a href="#__codelineno-14-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Coordenadas</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-2" name="__codelineno-14-2"></a>
+<a id="__codelineno-14-3" name="__codelineno-14-3"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">latitud</span><span class="p">,</span><span class="w"> </span><span class="n">longitud</span><span class="p">;</span>
+<a id="__codelineno-14-4" name="__codelineno-14-4"></a>
+<a id="__codelineno-14-5" name="__codelineno-14-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Coordenadas</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">latitud</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">longitud</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-14-6" name="__codelineno-14-6"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">latitud</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">latitud</span><span class="p">;</span>
+<a id="__codelineno-14-7" name="__codelineno-14-7"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">longitud</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">longitud</span><span class="p">;</span>
+<a id="__codelineno-14-8" name="__codelineno-14-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-14-9" name="__codelineno-14-9"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Ahora, vamos a definir la interfaz <code>Localizable</code>. Estará implementada por todas las clases que quieran ser localizables y usaremos el objeto <code>Coordenadas</code> para almacenar las coordenadas en cada clase.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-15-1">1</a></span>
