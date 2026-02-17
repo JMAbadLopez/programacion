@@ -3626,24 +3626,33 @@ No tienen NADA en común (no son familia), pero todos son <strong>Localizables</
 <a id="__codelineno-22-5" name="__codelineno-22-5"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <div class="admonition question">
-<p class="admonition-title">💻 Reto Final de Unidad: El Zoológico Interactivo</p>
-<p>Vamos a juntar todo lo aprendido (Herencia, Abstractas, Interfaces y Polimorfismo).</p>
+<p class="admonition-title">💻 Reto Final de Unidad: El Zoológico Interactivo 🦁🐬🐶</p>
+<p>Vamos a crear un simulador de zoológico con gestión de energía.</p>
 <ol>
-<li><strong>Jerarquía:</strong><ul>
-<li>Clase abstracta <code>Animal</code> (<code>nombre</code>, <code>comer()</code>).</li>
-<li>Clases <code>Leon</code> (come carne), <code>Delfin</code> (come peces) y <code>Perro</code> (come pienso).</li>
+<li><strong>Clase Abstracta <code>Animal</code>:</strong><ul>
+<li>Atributos: <code>nombre</code>, <code>energia</code> (empieza en 50).</li>
+<li>Método <code>jugar(int gasto)</code>: Resta energía e imprime <em>"[Nombre] está jugando... Energía restante: [X]"</em>.</li>
+<li>Método Abstracto <strong><code>comer(String comida)</code></strong>: Cada animal recupera energía de forma distinta según lo que coma.</li>
 </ul>
 </li>
-<li><strong>Habilidad Especial:</strong><ul>
-<li>Interfaz <code>Trucos</code> con método <code>hacerTruco()</code>.</li>
-<li>SOLO el <code>Delfin</code> y el <code>Perro</code> la implementan (el León es muy orgulloso para hacer trucos).</li>
+<li><strong>Interfaz <code>Trucos</code>:</strong><ul>
+<li>Método <code>hacerTruco()</code>: Muestra un mensaje especial.</li>
+</ul>
+</li>
+<li><strong>Las Especies:</strong><ul>
+<li><strong><code>Leon</code>:</strong> Solo come "Carne" (+100 de energía). Si le das otra cosa, se enfada y pierde 10. <em>No hace trucos</em>.</li>
+<li><strong><code>Delfin</code>:</strong> Come "Peces" (+50) y "Calamar" (+80). Implementa <code>Trucos</code>: <em>"¡Hace un salto mortal hacia atrás!"</em>.</li>
+<li><strong><code>Perro</code>:</strong> Come de todo ("Carne" +50, "Pienso" +30). Implementa <code>Trucos</code>: <em>"¡Da la patita y rueda!"</em>.</li>
 </ul>
 </li>
 <li><strong>El Show (Main):</strong><ul>
-<li>Crea un <code>ArrayList&lt;Animal&gt;</code>. Mete un León, un Delfín y un Perro.</li>
-<li>Recorre la lista (bucle polimórfico).</li>
-<li>Haz que <strong>TODOS</strong> coman.</li>
-<li>Intenta que hagan trucos... <strong>¡PERO OJO!</strong> Tienes que usar <code>instanceof</code> para preguntar antes. Si es un León, saluda con respeto; si es uno de los otros, hazle hacer el truco.</li>
+<li>Crea un <code>ArrayList&lt;Animal&gt;</code> con uno de cada.</li>
+<li><strong>Bucle del Show:</strong><ol>
+<li>Haz que todos <strong>jueguen</strong> (gastan 20 de energía).</li>
+<li>Aliméntalos a todos con "Carne". (Observa cómo el Delfín no la querrá).</li>
+<li>Si el animal sabe hacer <strong>trucos</strong> (<code>instanceof</code>), ¡que actúe para el público!</li>
+</ol>
+</li>
 </ul>
 </li>
 </ol>
