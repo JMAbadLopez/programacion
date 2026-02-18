@@ -8,22 +8,25 @@ public class MainPolimorfismo {
 
         ArrayList<Personaje> grupo = new ArrayList<>();
 
-        grupo.add(new Guerrero("Conan", 100, 2, 10));
+        Guerrero guerrero = new Guerrero("Conan", 100, 2, 10);
+
+        grupo.add(guerrero);
+
         grupo.add(new Mago("Gandalf", 120, 5, 10));
 
         Personaje enemigo = new Orco("Orokhur", 100, 2, 8);
 
         for (Personaje p : grupo) {
+
             p.atacar(enemigo);
+
+            if(p instanceof Guerrero){
+                /** Hacemos downcasting */
+                Guerrero g = (Guerrero)p;
+                g.gritoDeGuerra();
+            }
         }
 
-        Personaje p = grupo.get(0); // Recuperamos al primero (Sabemos que es Conan)
-        // p.gritoDeGuerra(); // ERROR: La clase Personaje no tiene ese método.
 
-        if(p instanceof Guerrero){
-            /** Hacemos downcasting */
-            Guerrero guerrero = (Guerrero)p;
-            guerrero.gritoDeGuerra();
-        }
     }
 }
