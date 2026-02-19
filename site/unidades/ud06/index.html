@@ -3767,27 +3767,13 @@ Por defecto, <code>==</code> solo compara si son <strong>el mismo objeto en memo
 </code></pre></div></td></tr></table></div>
 <p><strong>Ejemplo 2: Ordenar por Nivel (Numérico)</strong></p>
 <p>Si preferimos ordenar por su poder (nivel), comparamos enteros.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-26-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-26-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-26-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-26-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-26-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-26-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-26-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-26-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-26-10">10</a></span>
-<span class="normal"><a href="#__codelineno-26-11">11</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="nd">@Override</span>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-26-1">1</a></span>
+<span class="normal"><a href="#__codelineno-26-2">2</a></span>
+<span class="normal"><a href="#__codelineno-26-3">3</a></span>
+<span class="normal"><a href="#__codelineno-26-4">4</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1"></a><span class="nd">@Override</span>
 <a id="__codelineno-26-2" name="__codelineno-26-2"></a><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">compareTo</span><span class="p">(</span><span class="n">Personaje</span><span class="w"> </span><span class="n">o</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-26-3" name="__codelineno-26-3"></a><span class="w">    </span><span class="c1">// Opción A: Resta (Cuidado con desbordamientos en números muy grandes)</span>
-<a id="__codelineno-26-4" name="__codelineno-26-4"></a><span class="w">    </span><span class="c1">// return this.nivel - o.nivel; </span>
-<a id="__codelineno-26-5" name="__codelineno-26-5"></a>
-<a id="__codelineno-26-6" name="__codelineno-26-6"></a><span class="w">    </span><span class="c1">// Opción B: Usar el helper de la clase wrapper (Recomendado)</span>
-<a id="__codelineno-26-7" name="__codelineno-26-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">Integer</span><span class="p">.</span><span class="na">compare</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">nivel</span><span class="p">,</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="na">nivel</span><span class="p">);</span><span class="w"> </span><span class="c1">// Orden Ascendente (1, 2, 3...)</span>
-<a id="__codelineno-26-8" name="__codelineno-26-8"></a>
-<a id="__codelineno-26-9" name="__codelineno-26-9"></a><span class="w">    </span><span class="c1">// Truco: Para Orden Descendente (3, 2, 1...), invierte los parámetros:</span>
-<a id="__codelineno-26-10" name="__codelineno-26-10"></a><span class="w">    </span><span class="c1">// return Integer.compare(o.nivel, this.nivel);</span>
-<a id="__codelineno-26-11" name="__codelineno-26-11"></a><span class="p">}</span>
+<a id="__codelineno-26-3" name="__codelineno-26-3"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">nivel</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">o</span><span class="p">.</span><span class="na">nivel</span><span class="p">;</span><span class="w"> </span>
+<a id="__codelineno-26-4" name="__codelineno-26-4"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <hr />
 <h2 id="6-ejemplo-completo-de-integracion">6. Ejemplo Completo de Integración</h2>
