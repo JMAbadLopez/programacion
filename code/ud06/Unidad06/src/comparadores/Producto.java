@@ -42,9 +42,9 @@ public class Producto implements Comparable<Producto> {
 
     @Override
     public int compareTo(Producto o) {
-        //return Integer.compare(this.stock, o.stock);
-        return Double.compare(this.precio, o.precio);
-        //return this.nombre.compareTo(o.nombre);
+        // return Integer.compare(this.stock, o.stock);
+        // return Double.compare(this.precio, o.precio);
+        return this.nombre.compareTo(o.nombre);
     }
 
     @Override

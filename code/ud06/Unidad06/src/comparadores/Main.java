@@ -17,10 +17,10 @@ public class Main {
         almacen.add(pr2);
         almacen.add(pr3);
 
-        /** Compara el objeto */
-        if(almacen.get(0).equals(almacen.get(1))) {
+        /** Compara el objeto
+        if(almacen.get(0).equals(almacen.get(0))) {
             System.out.println("Es el mismo producto");
-        }
+        }*/
 
         Collections.sort(almacen);
 
