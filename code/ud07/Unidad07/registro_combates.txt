@@ -1,0 +1,4 @@
+=====================================
+NUEVA SESIÓN DE JUEGO INICIADA
+[COMBATE] Aragorn ha atacado a Orco Feo.
+[DAÑO] Se han infligido 45 puntos de daño.
