@@ -50,28 +50,28 @@ Crea un programa que lea este archivo y calcule la nota media. Sin embargo, el p
 
 ---
 
-## Ejercicio 4: Serialización de la "Lista de Deseos" (Nivel: Avanzado)
+## Ejercicio 4: Agenda Telefónica (Nivel: Avanzado)
 
 **Objetivo:** Escritura estructurada y persistencia de colecciones.
 
-Crea una clase `Producto` con atributos `nombre` (String) y `precio` (double). Luego, desarrolla un programa que:
+Crea una clase `Contacto` con atributos `nombre` (String), `edad` (int) y `telefono` (String). Luego, desarrolla un programa que:
 
-1. Cree un `ArrayList<Producto>` y añada 3 o 4 objetos creados por ti.
-2. Implemente un método `guardarLista(ArrayList<Producto> lista, String nombreArchivo)` que recorra la lista y guarde cada producto en el archivo, escribiendo el nombre en una línea y el precio en la siguiente.
-3. Implemente un método `cargarLista(String nombreArchivo)` que lea el archivo, reconstruya los objetos `Producto` y los devuelva en un nuevo `ArrayList`.
-4. Muestra la lista final por consola para verificar que la información ha "sobrevivido" al proceso de guardado y carga.
+1. Cree un `ArrayList<Contacto>` y añada varios contactos a la lista.
+2. Implemente un método `guardarAgenda(ArrayList<Contacto> lista, String archivo)` que guarde cada contacto en el archivo `agenda.txt`. Cada contacto debe ocupar tres líneas: nombre, edad y teléfono.
+3. Implemente un método `cargarAgenda(String archivo)` que lea el archivo, reconstruya los objetos `Contacto` y los añada a un `ArrayList`.
+4. Muestra el contenido de la agenda por pantalla tras cargarla del archivo para verificar la persistencia.
 
 ---
 
-## Ejercicio 5: Registro del Gremio Pro (Nivel: Experto)
+## Ejercicio 5: Registro de Libros (Nivel: Experto)
 
 **Objetivo:** Sistema completo con Menú, Modo Append y Try-with-resources.
 
-Desarrolla una aplicación para gestionar los aventureros de un gremio. El programa debe mostrar un menú interactivo:
+Desarrolla una aplicación para gestionar una biblioteca personal. Implementa la clase `Libro` con los siguientes atributos: `autor`, `titulo`, `anyo` (int), `numPaginas` (int) y `precio` (double). El programa debe mostrar un menú interactivo:
 
-1. **Inscribir Aventurero:** Pide el nombre y la clase (Guerrero, Mago, etc.). Guarda estos datos al final del archivo `gremio.txt` usando `FileOutputStream(archivo, true)` y `PrintStream`. Utiliza obligatoriamente la estructura **try-with-resources**.
-2. **Listar Gremio:** Lee el archivo `gremio.txt` y muestra todos los aventureros registrados. Si el archivo no existe, captura la `FileNotFoundException` para mostrar el mensaje: "Aún no hay aventureros inscritos".
-3. **Vaciar Registro:** Borra físicamente el archivo `gremio.txt` del disco.
+1. **Añadir Libro:** Pide los datos del libro por teclado. Guarda estos datos al final del archivo `biblioteca.txt` usando `FileOutputStream(archivo, true)` y `PrintStream`. Asegúrate de guardar cada atributo en una línea distinta. Utiliza obligatoriamente la estructura **try-with-resources**.
+2. **Listar Biblioteca:** Lee el archivo `biblioteca.txt` y muestra todos los libros registrados de forma legible. Si el archivo no existe, captura la `FileNotFoundException` para mostrar el mensaje: "La biblioteca está vacía.".
+3. **Vaciar Estantería:** Borra físicamente el archivo `biblioteca.txt` del disco.
 4. **Salir.**
 
 **Reto extra:** Asegúrate de que el flujo de datos se cierre automáticamente en todas las operaciones usando `try-with-resources`.

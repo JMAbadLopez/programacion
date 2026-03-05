@@ -1469,18 +1469,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejercicio-4-serializacion-de-la-lista-de-deseos-nivel-avanzado" class="md-nav__link">
+  <a href="#ejercicio-4-agenda-telefonica-nivel-avanzado" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejercicio 4: Serialización de la "Lista de Deseos" (Nivel: Avanzado)
+      Ejercicio 4: Agenda Telefónica (Nivel: Avanzado)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejercicio-5-registro-del-gremio-pro-nivel-experto" class="md-nav__link">
+  <a href="#ejercicio-5-registro-de-libros-nivel-experto" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejercicio 5: Registro del Gremio Pro (Nivel: Experto)
+      Ejercicio 5: Registro de Libros (Nivel: Experto)
     </span>
   </a>
   
@@ -1927,18 +1927,18 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejercicio-4-serializacion-de-la-lista-de-deseos-nivel-avanzado" class="md-nav__link">
+  <a href="#ejercicio-4-agenda-telefonica-nivel-avanzado" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejercicio 4: Serialización de la "Lista de Deseos" (Nivel: Avanzado)
+      Ejercicio 4: Agenda Telefónica (Nivel: Avanzado)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ejercicio-5-registro-del-gremio-pro-nivel-experto" class="md-nav__link">
+  <a href="#ejercicio-5-registro-de-libros-nivel-experto" class="md-nav__link">
     <span class="md-ellipsis">
-      Ejercicio 5: Registro del Gremio Pro (Nivel: Experto)
+      Ejercicio 5: Registro de Libros (Nivel: Experto)
     </span>
   </a>
   
@@ -2006,23 +2006,23 @@
 <li>Muestra la media final de los datos que sí sean válidos.</li>
 </ol>
 <hr />
-<h2 id="ejercicio-4-serializacion-de-la-lista-de-deseos-nivel-avanzado">Ejercicio 4: Serialización de la "Lista de Deseos" (Nivel: Avanzado)</h2>
+<h2 id="ejercicio-4-agenda-telefonica-nivel-avanzado">Ejercicio 4: Agenda Telefónica (Nivel: Avanzado)</h2>
 <p><strong>Objetivo:</strong> Escritura estructurada y persistencia de colecciones.</p>
-<p>Crea una clase <code>Producto</code> con atributos <code>nombre</code> (String) y <code>precio</code> (double). Luego, desarrolla un programa que:</p>
+<p>Crea una clase <code>Contacto</code> con atributos <code>nombre</code> (String), <code>edad</code> (int) y <code>telefono</code> (String). Luego, desarrolla un programa que:</p>
 <ol>
-<li>Cree un <code>ArrayList&lt;Producto&gt;</code> y añada 3 o 4 objetos creados por ti.</li>
-<li>Implemente un método <code>guardarLista(ArrayList&lt;Producto&gt; lista, String nombreArchivo)</code> que recorra la lista y guarde cada producto en el archivo, escribiendo el nombre en una línea y el precio en la siguiente.</li>
-<li>Implemente un método <code>cargarLista(String nombreArchivo)</code> que lea el archivo, reconstruya los objetos <code>Producto</code> y los devuelva en un nuevo <code>ArrayList</code>.</li>
-<li>Muestra la lista final por consola para verificar que la información ha "sobrevivido" al proceso de guardado y carga.</li>
+<li>Cree un <code>ArrayList&lt;Contacto&gt;</code> y añada varios contactos a la lista.</li>
+<li>Implemente un método <code>guardarAgenda(ArrayList&lt;Contacto&gt; lista, String archivo)</code> que guarde cada contacto en el archivo <code>agenda.txt</code>. Cada contacto debe ocupar tres líneas: nombre, edad y teléfono.</li>
+<li>Implemente un método <code>cargarAgenda(String archivo)</code> que lea el archivo, reconstruya los objetos <code>Contacto</code> y los añada a un <code>ArrayList</code>.</li>
+<li>Muestra el contenido de la agenda por pantalla tras cargarla del archivo para verificar la persistencia.</li>
 </ol>
 <hr />
-<h2 id="ejercicio-5-registro-del-gremio-pro-nivel-experto">Ejercicio 5: Registro del Gremio Pro (Nivel: Experto)</h2>
+<h2 id="ejercicio-5-registro-de-libros-nivel-experto">Ejercicio 5: Registro de Libros (Nivel: Experto)</h2>
 <p><strong>Objetivo:</strong> Sistema completo con Menú, Modo Append y Try-with-resources.</p>
-<p>Desarrolla una aplicación para gestionar los aventureros de un gremio. El programa debe mostrar un menú interactivo:</p>
+<p>Desarrolla una aplicación para gestionar una biblioteca personal. Implementa la clase <code>Libro</code> con los siguientes atributos: <code>autor</code>, <code>titulo</code>, <code>anyo</code> (int), <code>numPaginas</code> (int) y <code>precio</code> (double). El programa debe mostrar un menú interactivo:</p>
 <ol>
-<li><strong>Inscribir Aventurero:</strong> Pide el nombre y la clase (Guerrero, Mago, etc.). Guarda estos datos al final del archivo <code>gremio.txt</code> usando <code>FileOutputStream(archivo, true)</code> y <code>PrintStream</code>. Utiliza obligatoriamente la estructura <strong>try-with-resources</strong>.</li>
-<li><strong>Listar Gremio:</strong> Lee el archivo <code>gremio.txt</code> y muestra todos los aventureros registrados. Si el archivo no existe, captura la <code>FileNotFoundException</code> para mostrar el mensaje: "Aún no hay aventureros inscritos".</li>
-<li><strong>Vaciar Registro:</strong> Borra físicamente el archivo <code>gremio.txt</code> del disco.</li>
+<li><strong>Añadir Libro:</strong> Pide los datos del libro por teclado. Guarda estos datos al final del archivo <code>biblioteca.txt</code> usando <code>FileOutputStream(archivo, true)</code> y <code>PrintStream</code>. Asegúrate de guardar cada atributo en una línea distinta. Utiliza obligatoriamente la estructura <strong>try-with-resources</strong>.</li>
+<li><strong>Listar Biblioteca:</strong> Lee el archivo <code>biblioteca.txt</code> y muestra todos los libros registrados de forma legible. Si el archivo no existe, captura la <code>FileNotFoundException</code> para mostrar el mensaje: "La biblioteca está vacía.".</li>
+<li><strong>Vaciar Estantería:</strong> Borra físicamente el archivo <code>biblioteca.txt</code> del disco.</li>
 <li><strong>Salir.</strong></li>
 </ol>
 <p><strong>Reto extra:</strong> Asegúrate de que el flujo de datos se cierre automáticamente en todas las operaciones usando <code>try-with-resources</code>.</p>
