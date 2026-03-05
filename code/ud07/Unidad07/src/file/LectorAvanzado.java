@@ -5,6 +5,7 @@ import java.util.Scanner;
 import java.io.FileNotFoundException;
 
 public class LectorAvanzado {
+
     public static void main(String[] args) throws FileNotFoundException {
         File archivoStats = new File("estadisticas_personaje.txt");
 

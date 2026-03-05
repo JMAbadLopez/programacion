@@ -34,6 +34,8 @@ nav:
     - UD6:
       - Ejercicios de POO avanzada: ejercicios/ud06/ejercicios_ud6.md
       - Ejercicios de POO. Juego de Rol: ejercicios/ud06/ejercicios_ud6_juego_rol.md
+    - UD7:
+      - Ejercicios de Ficheros y Excepciones: ejercicios/ud07/ejercicios_ud07.md
   - Recursos:
     - Guías:
       - Instalación IntelliJ: recursos/guia_intellij.md
