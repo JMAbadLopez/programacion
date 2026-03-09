@@ -75,7 +75,7 @@ class Personaje {
 
         // Debemos extraer los datos exactamente en el mismo orden en que se guardaron
         String nom = lector.nextLine();
-        int niv = lector.nextInt();
+        int niv = Integer.parseInt(String.valueOf(lector.nextInt()));
         double puntosVida = lector.nextDouble();
 
         lector.close();
