@@ -12,7 +12,7 @@
 
 ## Contexto
 
-La empresa **"Logística 4.0"** necesita una herramienta para gestionar el stock de sus productos. Hasta ahora, usaban hojas de cálculo, pero quieren un programa en Java que guarde los datos en un archivo `productos.csv`. Como programador/a, tu tarea es crear este sistema robusto que permita manipular los datos y asegurar que se guarden correctamente al salir.
+La empresa **"Logistic Camp"** necesita una herramienta para gestionar el stock de sus productos. Hasta ahora, usaban hojas de cálculo, pero quieren un programa en Java que guarde los datos en un archivo `productos.csv`. Como programador/a, tu tarea es crear este sistema robusto que permita manipular los datos y asegurar que se guarden correctamente al salir.
 
 ## Requisitos Técnicos
 
@@ -28,9 +28,9 @@ Esta clase debe representar los elementos lógicos del inventario.
 
 El programa gestionará un `ArrayList<Producto>` que se sincronizará con el archivo `productos.csv`.
 
-#### Funcionalidades obligatorias:
+#### Funcionalidades obligatorias y menú:
 
-1.  **Leer todos los productos:** Al arrancar, el programa debe cargar los datos del fichero CSV (si existe). Si no existe, debe empezar con la lista vacía.
+1.  **Mostrar todos los productos:** Al arrancar, el programa debe mostrar los datos del fichero CSV (si existe). Si no existe, debe mostrar un mensaje indicando que no hay productos.
 2.  **Crear un nuevo producto:** Solicita datos al usuario y añade el producto a la lista en memoria.
 3.  **Buscar y modificar:** Busca un producto por su `id`. Si existe, permite cambiar su stock o su precio.
 4.  **Eliminar un producto:** Elimina un producto de la lista buscando por su `id`.
