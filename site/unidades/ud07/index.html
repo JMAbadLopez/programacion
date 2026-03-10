@@ -882,39 +882,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#7-ciclo-de-vida-completo-guardando-y-cargando-objetos" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Ciclo de Vida Completo: Guardando y Cargando Objetos
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="7. Ciclo de Vida Completo: Guardando y Cargando Objetos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#71-serializacion-manual-de-texto" class="md-nav__link">
-    <span class="md-ellipsis">
-      7.1. Serialización Manual de Texto
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#72-el-bucle-principal-del-juego-main" class="md-nav__link">
-    <span class="md-ellipsis">
-      7.2. El Bucle Principal del Juego (Main)
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1737,6 +1704,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ejercicios/ud07/ejercicio_ud07_entregable/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Actividad entregable. Gestión de Almacén con Persistencia
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2410,39 +2400,6 @@
   <a href="#62-la-solucion-moderna-try-with-resources" class="md-nav__link">
     <span class="md-ellipsis">
       6.2. La solución moderna: Try-with-resources
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#7-ciclo-de-vida-completo-guardando-y-cargando-objetos" class="md-nav__link">
-    <span class="md-ellipsis">
-      7. Ciclo de Vida Completo: Guardando y Cargando Objetos
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="7. Ciclo de Vida Completo: Guardando y Cargando Objetos">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#71-serializacion-manual-de-texto" class="md-nav__link">
-    <span class="md-ellipsis">
-      7.1. Serialización Manual de Texto
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#72-el-bucle-principal-del-juego-main" class="md-nav__link">
-    <span class="md-ellipsis">
-      7.2. El Bucle Principal del Juego (Main)
     </span>
   </a>
   
@@ -3433,253 +3390,6 @@
 <div class="admonition tip">
 <p class="admonition-title">Consejo Pro: Try-with-resources</p>
 <p>A partir de Java 7, existe una forma más moderna y limpia de escribir esto que cierra los ficheros automáticamente sin necesidad de usar <code>finally</code>. ¡Investiga sobre el <strong>Try-with-resources</strong> si quieres llevar tu código al siguiente nivel!</p>
-</div>
-<hr />
-<h2 id="7-ciclo-de-vida-completo-guardando-y-cargando-objetos">7. Ciclo de Vida Completo: Guardando y Cargando Objetos</h2>
-<p>En las aplicaciones reales no guardamos variables sueltas desvinculadas entre sí; persistimos <strong>el estado de nuestros objetos</strong>. Si tenemos una clase <code>Personaje</code>, lo ideal es que la propia clase sepa cómo empaquetar sus atributos para guardarlos en disco y cómo leerlos para reconstruirse.</p>
-<p>A este proceso de transformar un objeto de la memoria RAM a un formato de almacenamiento (texto o binario) se le conoce formalmente como <strong>Serialización</strong>. El proceso inverso, reconstruir el objeto en RAM a partir del archivo, es la <strong>Deserialización</strong>.</p>
-<h3 id="71-serializacion-manual-de-texto">7.1. Serialización Manual de Texto</h3>
-<p>Vamos a modificar nuestra clase <code>Personaje</code> para dotarla de persistencia. Elegiremos un formato estructurado muy sencillo: guardaremos cada atributo en una línea distinta del archivo.</p>
-<ul>
-<li><strong>Línea 1:</strong> Nombre (<code>String</code>)</li>
-<li><strong>Línea 2:</strong> Nivel (<code>int</code>)</li>
-<li><strong>Línea 3:</strong> Puntos de Salud (<code>double</code>)</li>
-</ul>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-12-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-12-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-12-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-12-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-12-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-12-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-12-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-12-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-12-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-12-10">10</a></span>
-<span class="normal"><a href="#__codelineno-12-11">11</a></span>
-<span class="normal"><a href="#__codelineno-12-12">12</a></span>
-<span class="normal"><a href="#__codelineno-12-13">13</a></span>
-<span class="normal"><a href="#__codelineno-12-14">14</a></span>
-<span class="normal"><a href="#__codelineno-12-15">15</a></span>
-<span class="normal"><a href="#__codelineno-12-16">16</a></span>
-<span class="normal"><a href="#__codelineno-12-17">17</a></span>
-<span class="normal"><a href="#__codelineno-12-18">18</a></span>
-<span class="normal"><a href="#__codelineno-12-19">19</a></span>
-<span class="normal"><a href="#__codelineno-12-20">20</a></span>
-<span class="normal"><a href="#__codelineno-12-21">21</a></span>
-<span class="normal"><a href="#__codelineno-12-22">22</a></span>
-<span class="normal"><a href="#__codelineno-12-23">23</a></span>
-<span class="normal"><a href="#__codelineno-12-24">24</a></span>
-<span class="normal"><a href="#__codelineno-12-25">25</a></span>
-<span class="normal"><a href="#__codelineno-12-26">26</a></span>
-<span class="normal"><a href="#__codelineno-12-27">27</a></span>
-<span class="normal"><a href="#__codelineno-12-28">28</a></span>
-<span class="normal"><a href="#__codelineno-12-29">29</a></span>
-<span class="normal"><a href="#__codelineno-12-30">30</a></span>
-<span class="normal"><a href="#__codelineno-12-31">31</a></span>
-<span class="normal"><a href="#__codelineno-12-32">32</a></span>
-<span class="normal"><a href="#__codelineno-12-33">33</a></span>
-<span class="normal"><a href="#__codelineno-12-34">34</a></span>
-<span class="normal"><a href="#__codelineno-12-35">35</a></span>
-<span class="normal"><a href="#__codelineno-12-36">36</a></span>
-<span class="normal"><a href="#__codelineno-12-37">37</a></span>
-<span class="normal"><a href="#__codelineno-12-38">38</a></span>
-<span class="normal"><a href="#__codelineno-12-39">39</a></span>
-<span class="normal"><a href="#__codelineno-12-40">40</a></span>
-<span class="normal"><a href="#__codelineno-12-41">41</a></span>
-<span class="normal"><a href="#__codelineno-12-42">42</a></span>
-<span class="normal"><a href="#__codelineno-12-43">43</a></span>
-<span class="normal"><a href="#__codelineno-12-44">44</a></span>
-<span class="normal"><a href="#__codelineno-12-45">45</a></span>
-<span class="normal"><a href="#__codelineno-12-46">46</a></span>
-<span class="normal"><a href="#__codelineno-12-47">47</a></span>
-<span class="normal"><a href="#__codelineno-12-48">48</a></span>
-<span class="normal"><a href="#__codelineno-12-49">49</a></span>
-<span class="normal"><a href="#__codelineno-12-50">50</a></span>
-<span class="normal"><a href="#__codelineno-12-51">51</a></span>
-<span class="normal"><a href="#__codelineno-12-52">52</a></span>
-<span class="normal"><a href="#__codelineno-12-53">53</a></span>
-<span class="normal"><a href="#__codelineno-12-54">54</a></span>
-<span class="normal"><a href="#__codelineno-12-55">55</a></span>
-<span class="normal"><a href="#__codelineno-12-56">56</a></span>
-<span class="normal"><a href="#__codelineno-12-57">57</a></span>
-<span class="normal"><a href="#__codelineno-12-58">58</a></span>
-<span class="normal"><a href="#__codelineno-12-59">59</a></span>
-<span class="normal"><a href="#__codelineno-12-60">60</a></span>
-<span class="normal"><a href="#__codelineno-12-61">61</a></span>
-<span class="normal"><a href="#__codelineno-12-62">62</a></span>
-<span class="normal"><a href="#__codelineno-12-63">63</a></span>
-<span class="normal"><a href="#__codelineno-12-64">64</a></span>
-<span class="normal"><a href="#__codelineno-12-65">65</a></span>
-<span class="normal"><a href="#__codelineno-12-66">66</a></span>
-<span class="normal"><a href="#__codelineno-12-67">67</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.File</span><span class="p">;</span>
-<a id="__codelineno-12-2" name="__codelineno-12-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.PrintStream</span><span class="p">;</span>
-<a id="__codelineno-12-3" name="__codelineno-12-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span>
-<a id="__codelineno-12-4" name="__codelineno-12-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileNotFoundException</span><span class="p">;</span>
-<a id="__codelineno-12-5" name="__codelineno-12-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Locale</span><span class="p">;</span>
-<a id="__codelineno-12-6" name="__codelineno-12-6"></a>
-<a id="__codelineno-12-7" name="__codelineno-12-7"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Personaje</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-8" name="__codelineno-12-8"></a>
-<a id="__codelineno-12-9" name="__codelineno-12-9"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
-<a id="__codelineno-12-10" name="__codelineno-12-10"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nivel</span><span class="p">;</span>
-<a id="__codelineno-12-11" name="__codelineno-12-11"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">puntosVida</span><span class="p">;</span>
-<a id="__codelineno-12-12" name="__codelineno-12-12"></a>
-<a id="__codelineno-12-13" name="__codelineno-12-13"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Personaje</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">nivel</span><span class="p">,</span><span class="w"> </span><span class="kt">double</span><span class="w"> </span><span class="n">puntosVida</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-14" name="__codelineno-12-14"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
-<a id="__codelineno-12-15" name="__codelineno-12-15"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nivel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nivel</span><span class="p">;</span>
-<a id="__codelineno-12-16" name="__codelineno-12-16"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">puntosVida</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">puntosVida</span><span class="p">;</span>
-<a id="__codelineno-12-17" name="__codelineno-12-17"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-12-18" name="__codelineno-12-18"></a>
-<a id="__codelineno-12-19" name="__codelineno-12-19"></a><span class="w">    </span><span class="c1">// Comportamiento del personaje</span>
-<a id="__codelineno-12-20" name="__codelineno-12-20"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">recibirCura</span><span class="p">(</span><span class="kt">double</span><span class="w"> </span><span class="n">puntos</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-21" name="__codelineno-12-21"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">puntosVida</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">puntos</span><span class="p">;</span>
-<a id="__codelineno-12-22" name="__codelineno-12-22"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-12-23" name="__codelineno-12-23"></a>
-<a id="__codelineno-12-24" name="__codelineno-12-24"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">subirNivel</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-25" name="__codelineno-12-25"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nivel</span><span class="o">++</span><span class="p">;</span>
-<a id="__codelineno-12-26" name="__codelineno-12-26"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-12-27" name="__codelineno-12-27"></a>
-<a id="__codelineno-12-28" name="__codelineno-12-28"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">mostrarInfo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-29" name="__codelineno-12-29"></a><span class="w">        </span><span class="c1">// Usamos Locale.US para que la salida por consola también use punto decimal</span>
-<a id="__codelineno-12-30" name="__codelineno-12-30"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">printf</span><span class="p">(</span><span class="n">Locale</span><span class="p">.</span><span class="na">US</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Héroe: %s | Nivel: %d | Salud: %.1f\n&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="n">nivel</span><span class="p">,</span><span class="w"> </span><span class="n">puntosVida</span><span class="p">);</span>
-<a id="__codelineno-12-31" name="__codelineno-12-31"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-12-32" name="__codelineno-12-32"></a>
-<a id="__codelineno-12-33" name="__codelineno-12-33"></a><span class="w">    </span><span class="c1">// --- MÉTODOS DE PERSISTENCIA ---</span>
-<a id="__codelineno-12-34" name="__codelineno-12-34"></a>
-<a id="__codelineno-12-35" name="__codelineno-12-35"></a><span class="w">    </span><span class="cm">/**</span>
-<a id="__codelineno-12-36" name="__codelineno-12-36"></a><span class="cm">     * SERIALIZACIÓN: Vuelca el estado actual del objeto al fichero indicado.</span>
-<a id="__codelineno-12-37" name="__codelineno-12-37"></a><span class="cm">     */</span>
-<a id="__codelineno-12-38" name="__codelineno-12-38"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">guardarPartida</span><span class="p">(</span><span class="n">File</span><span class="w"> </span><span class="n">archivoDestino</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">FileNotFoundException</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-39" name="__codelineno-12-39"></a><span class="w">        </span><span class="c1">// Usamos try-with-resources para asegurar el cierre del flujo</span>
-<a id="__codelineno-12-40" name="__codelineno-12-40"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">PrintStream</span><span class="w"> </span><span class="n">escritor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">PrintStream</span><span class="p">(</span><span class="n">archivoDestino</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-41" name="__codelineno-12-41"></a><span class="w">            </span><span class="c1">// Forzamos el uso del punto como separador decimal (Estándar US)</span>
-<a id="__codelineno-12-42" name="__codelineno-12-42"></a><span class="w">            </span><span class="n">escritor</span><span class="p">.</span><span class="na">useLocale</span><span class="p">(</span><span class="n">Locale</span><span class="p">.</span><span class="na">US</span><span class="p">);</span>
-<a id="__codelineno-12-43" name="__codelineno-12-43"></a>
-<a id="__codelineno-12-44" name="__codelineno-12-44"></a><span class="w">            </span><span class="n">escritor</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="p">);</span>
-<a id="__codelineno-12-45" name="__codelineno-12-45"></a><span class="w">            </span><span class="n">escritor</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">nivel</span><span class="p">);</span>
-<a id="__codelineno-12-46" name="__codelineno-12-46"></a><span class="w">            </span><span class="n">escritor</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="na">puntosVida</span><span class="p">);</span>
-<a id="__codelineno-12-47" name="__codelineno-12-47"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-12-48" name="__codelineno-12-48"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-12-49" name="__codelineno-12-49"></a>
-<a id="__codelineno-12-50" name="__codelineno-12-50"></a><span class="w">    </span><span class="cm">/**</span>
-<a id="__codelineno-12-51" name="__codelineno-12-51"></a><span class="cm">     * DESERIALIZACIÓN (Patrón Factory): Es un método ESTÁTICO porque necesitamos</span>
-<a id="__codelineno-12-52" name="__codelineno-12-52"></a><span class="cm">     * invocarlo ANTES de tener el objeto creado. Lee el fichero y fabrica el objeto.</span>
-<a id="__codelineno-12-53" name="__codelineno-12-53"></a><span class="cm">     */</span>
-<a id="__codelineno-12-54" name="__codelineno-12-54"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="n">Personaje</span><span class="w"> </span><span class="nf">cargarPartida</span><span class="p">(</span><span class="n">File</span><span class="w"> </span><span class="n">archivoOrigen</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">FileNotFoundException</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-55" name="__codelineno-12-55"></a><span class="w">        </span><span class="c1">// Usamos try-with-resources para asegurar el cierre del flujo</span>
-<a id="__codelineno-12-56" name="__codelineno-12-56"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">Scanner</span><span class="w"> </span><span class="n">lector</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">archivoOrigen</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-12-57" name="__codelineno-12-57"></a><span class="w">            </span><span class="c1">// Forzamos al Scanner a buscar puntos decimales, no comas</span>
-<a id="__codelineno-12-58" name="__codelineno-12-58"></a><span class="w">            </span><span class="n">lector</span><span class="p">.</span><span class="na">useLocale</span><span class="p">(</span><span class="n">Locale</span><span class="p">.</span><span class="na">US</span><span class="p">);</span>
-<a id="__codelineno-12-59" name="__codelineno-12-59"></a>
-<a id="__codelineno-12-60" name="__codelineno-12-60"></a><span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">nom</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lector</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span>
-<a id="__codelineno-12-61" name="__codelineno-12-61"></a><span class="w">            </span><span class="kt">int</span><span class="w"> </span><span class="n">niv</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lector</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span>
-<a id="__codelineno-12-62" name="__codelineno-12-62"></a><span class="w">            </span><span class="kt">double</span><span class="w"> </span><span class="n">vida</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">lector</span><span class="p">.</span><span class="na">nextDouble</span><span class="p">();</span>
-<a id="__codelineno-12-63" name="__codelineno-12-63"></a>
-<a id="__codelineno-12-64" name="__codelineno-12-64"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Personaje</span><span class="p">(</span><span class="n">nom</span><span class="p">,</span><span class="w"> </span><span class="n">niv</span><span class="p">,</span><span class="w"> </span><span class="n">vida</span><span class="p">);</span>
-<a id="__codelineno-12-65" name="__codelineno-12-65"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-12-66" name="__codelineno-12-66"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-12-67" name="__codelineno-12-67"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<h3 id="72-el-bucle-principal-del-juego-main">7.2. El Bucle Principal del Juego (Main)</h3>
-<p>Ahora implementaremos la clase principal que actuará como motor del juego. Seguirá un flujo lógico profesional:
-1. Comprobar si existe un archivo de guardado previo.
-2. Si existe, cargar el estado reconstruyendo el objeto.
-3. Si no existe, instanciar un objeto nuevo desde cero.
-4. Jugar (modificar el estado en RAM).
-5. Guardar la partida antes de salir.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-13-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-13-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-13-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-13-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-13-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-13-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-13-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-13-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-13-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-13-10">10</a></span>
-<span class="normal"><a href="#__codelineno-13-11">11</a></span>
-<span class="normal"><a href="#__codelineno-13-12">12</a></span>
-<span class="normal"><a href="#__codelineno-13-13">13</a></span>
-<span class="normal"><a href="#__codelineno-13-14">14</a></span>
-<span class="normal"><a href="#__codelineno-13-15">15</a></span>
-<span class="normal"><a href="#__codelineno-13-16">16</a></span>
-<span class="normal"><a href="#__codelineno-13-17">17</a></span>
-<span class="normal"><a href="#__codelineno-13-18">18</a></span>
-<span class="normal"><a href="#__codelineno-13-19">19</a></span>
-<span class="normal"><a href="#__codelineno-13-20">20</a></span>
-<span class="normal"><a href="#__codelineno-13-21">21</a></span>
-<span class="normal"><a href="#__codelineno-13-22">22</a></span>
-<span class="normal"><a href="#__codelineno-13-23">23</a></span>
-<span class="normal"><a href="#__codelineno-13-24">24</a></span>
-<span class="normal"><a href="#__codelineno-13-25">25</a></span>
-<span class="normal"><a href="#__codelineno-13-26">26</a></span>
-<span class="normal"><a href="#__codelineno-13-27">27</a></span>
-<span class="normal"><a href="#__codelineno-13-28">28</a></span>
-<span class="normal"><a href="#__codelineno-13-29">29</a></span>
-<span class="normal"><a href="#__codelineno-13-30">30</a></span>
-<span class="normal"><a href="#__codelineno-13-31">31</a></span>
-<span class="normal"><a href="#__codelineno-13-32">32</a></span>
-<span class="normal"><a href="#__codelineno-13-33">33</a></span>
-<span class="normal"><a href="#__codelineno-13-34">34</a></span>
-<span class="normal"><a href="#__codelineno-13-35">35</a></span>
-<span class="normal"><a href="#__codelineno-13-36">36</a></span>
-<span class="normal"><a href="#__codelineno-13-37">37</a></span>
-<span class="normal"><a href="#__codelineno-13-38">38</a></span>
-<span class="normal"><a href="#__codelineno-13-39">39</a></span>
-<span class="normal"><a href="#__codelineno-13-40">40</a></span>
-<span class="normal"><a href="#__codelineno-13-41">41</a></span>
-<span class="normal"><a href="#__codelineno-13-42">42</a></span>
-<span class="normal"><a href="#__codelineno-13-43">43</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.File</span><span class="p">;</span>
-<a id="__codelineno-13-2" name="__codelineno-13-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.FileNotFoundException</span><span class="p">;</span>
-<a id="__codelineno-13-3" name="__codelineno-13-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span>
-<a id="__codelineno-13-4" name="__codelineno-13-4"></a>
-<a id="__codelineno-13-5" name="__codelineno-13-5"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MotorJuego</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-6" name="__codelineno-13-6"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">FileNotFoundException</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-7" name="__codelineno-13-7"></a>
-<a id="__codelineno-13-8" name="__codelineno-13-8"></a><span class="w">        </span><span class="n">File</span><span class="w"> </span><span class="n">archivoSave</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">File</span><span class="p">(</span><span class="s">&quot;savegame.txt&quot;</span><span class="p">);</span>
-<a id="__codelineno-13-9" name="__codelineno-13-9"></a><span class="w">        </span><span class="n">Personaje</span><span class="w"> </span><span class="n">jugador</span><span class="p">;</span>
-<a id="__codelineno-13-10" name="__codelineno-13-10"></a>
-<a id="__codelineno-13-11" name="__codelineno-13-11"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;--- INICIANDO SISTEMA ---&quot;</span><span class="p">);</span>
-<a id="__codelineno-13-12" name="__codelineno-13-12"></a>
-<a id="__codelineno-13-13" name="__codelineno-13-13"></a><span class="w">        </span><span class="c1">// 1 y 2. FASE DE CARGA (Input)</span>
-<a id="__codelineno-13-14" name="__codelineno-13-14"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">archivoSave</span><span class="p">.</span><span class="na">exists</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-15" name="__codelineno-13-15"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Archivo de guardado detectado. Restaurando sesión...&quot;</span><span class="p">);</span>
-<a id="__codelineno-13-16" name="__codelineno-13-16"></a><span class="w">            </span><span class="n">jugador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Personaje</span><span class="p">.</span><span class="na">cargarPartida</span><span class="p">(</span><span class="n">archivoSave</span><span class="p">);</span>
-<a id="__codelineno-13-17" name="__codelineno-13-17"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-18" name="__codelineno-13-18"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;No hay partidas previas. Creando nueva sesión...&quot;</span><span class="p">);</span>
-<a id="__codelineno-13-19" name="__codelineno-13-19"></a><span class="w">            </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-20" name="__codelineno-13-20"></a><span class="w">                </span><span class="n">archivoSave</span><span class="p">.</span><span class="na">createNewFile</span><span class="p">();</span>
-<a id="__codelineno-13-21" name="__codelineno-13-21"></a><span class="w">            </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-13-22" name="__codelineno-13-22"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error crítico de E/S: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
-<a id="__codelineno-13-23" name="__codelineno-13-23"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-13-24" name="__codelineno-13-24"></a><span class="w">            </span><span class="n">jugador</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Personaje</span><span class="p">(</span><span class="s">&quot;Guerrero Novato&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mf">100.0</span><span class="p">);</span>
-<a id="__codelineno-13-25" name="__codelineno-13-25"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-13-26" name="__codelineno-13-26"></a>
-<a id="__codelineno-13-27" name="__codelineno-13-27"></a><span class="w">        </span><span class="c1">// Mostramos el estado inicial</span>
-<a id="__codelineno-13-28" name="__codelineno-13-28"></a><span class="w">        </span><span class="n">jugador</span><span class="p">.</span><span class="na">mostrarInfo</span><span class="p">();</span>
-<a id="__codelineno-13-29" name="__codelineno-13-29"></a>
-<a id="__codelineno-13-30" name="__codelineno-13-30"></a><span class="w">        </span><span class="c1">// 4. FASE DE JUEGO (Modificación en RAM)</span>
-<a id="__codelineno-13-31" name="__codelineno-13-31"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\n[EVENTO] Has descansado en la posada y entrenado duro.&quot;</span><span class="p">);</span>
-<a id="__codelineno-13-32" name="__codelineno-13-32"></a><span class="w">        </span><span class="n">jugador</span><span class="p">.</span><span class="na">recibirCura</span><span class="p">(</span><span class="mf">25.5</span><span class="p">);</span>
-<a id="__codelineno-13-33" name="__codelineno-13-33"></a><span class="w">        </span><span class="n">jugador</span><span class="p">.</span><span class="na">subirNivel</span><span class="p">();</span>
-<a id="__codelineno-13-34" name="__codelineno-13-34"></a>
-<a id="__codelineno-13-35" name="__codelineno-13-35"></a><span class="w">        </span><span class="n">jugador</span><span class="p">.</span><span class="na">mostrarInfo</span><span class="p">();</span>
-<a id="__codelineno-13-36" name="__codelineno-13-36"></a>
-<a id="__codelineno-13-37" name="__codelineno-13-37"></a><span class="w">        </span><span class="c1">// 5. FASE DE GUARDADO (Output)</span>
-<a id="__codelineno-13-38" name="__codelineno-13-38"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\nGuardando progreso en el disco...&quot;</span><span class="p">);</span>
-<a id="__codelineno-13-39" name="__codelineno-13-39"></a><span class="w">        </span><span class="n">jugador</span><span class="p">.</span><span class="na">guardarPartida</span><span class="p">(</span><span class="n">archivoSave</span><span class="p">);</span>
-<a id="__codelineno-13-40" name="__codelineno-13-40"></a>
-<a id="__codelineno-13-41" name="__codelineno-13-41"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Sistema apagado con éxito.&quot;</span><span class="p">);</span>
-<a id="__codelineno-13-42" name="__codelineno-13-42"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-13-43" name="__codelineno-13-43"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<div class="admonition question">
-<p class="admonition-title">💻 Momento de Práctica: Persistencia de Inventarios</p>
-<p>Vamos a expandir este concepto para manejar colecciones de datos.</p>
-<ol>
-<li>Crea un programa que gestione una clase <code>Inventario</code>. Esta clase contendrá internamente un <code>ArrayList&lt;String&gt;</code> llamado <code>objetos</code>.</li>
-<li>Diseña un método <code>guardarInventario(File f)</code>. Este método debe usar un <code>PrintStream</code> para recorrer el <code>ArrayList</code> con un bucle <code>for</code> e imprimir un objeto por cada línea del fichero.</li>
-<li>Diseña el método estático <code>Inventario cargarInventario(File f)</code>. Usará un <code>Scanner</code> y un bucle <code>while(lector.hasNextLine())</code> para leer línea a línea e ir añadiendo los objetos a un nuevo <code>ArrayList</code>. Finalmente devolverá el objeto <code>Inventario</code> restaurado.</li>
-</ol>
 </div>
 <div class="admonition question">
 <p class="admonition-title">💻 Reto Final de Unidad: El Registro del Gremio</p>
