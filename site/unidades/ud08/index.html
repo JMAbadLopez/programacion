@@ -798,7 +798,7 @@
           <li class="md-nav__item">
   <a href="#71-paso-1-el-modelo-la-clase-pojo" class="md-nav__link">
     <span class="md-ellipsis">
-      7.1. Paso 1: El Modelo (La Clase Pojo)
+      7.1. Paso 1: El Modelo (La Clase POJO)
     </span>
   </a>
   
@@ -814,9 +814,33 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#73-paso-3-uso-en-el-main" class="md-nav__link">
+  <a href="#73-paso-3-uso-en-el-programa-principal" class="md-nav__link">
     <span class="md-ellipsis">
-      7.3. Paso 3: Uso en el Main
+      7.3. Paso 3: Uso en el Programa Principal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-estructuracion-y-empaquetado-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Estructuración y Empaquetado del Proyecto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Estructuración y Empaquetado del Proyecto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-por-que-organizarlo-en-paquetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1. ¿Por qué organizarlo en paquetes?
     </span>
   </a>
   
@@ -2248,7 +2272,7 @@
           <li class="md-nav__item">
   <a href="#71-paso-1-el-modelo-la-clase-pojo" class="md-nav__link">
     <span class="md-ellipsis">
-      7.1. Paso 1: El Modelo (La Clase Pojo)
+      7.1. Paso 1: El Modelo (La Clase POJO)
     </span>
   </a>
   
@@ -2264,9 +2288,33 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#73-paso-3-uso-en-el-main" class="md-nav__link">
+  <a href="#73-paso-3-uso-en-el-programa-principal" class="md-nav__link">
     <span class="md-ellipsis">
-      7.3. Paso 3: Uso en el Main
+      7.3. Paso 3: Uso en el Programa Principal
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#8-estructuracion-y-empaquetado-del-proyecto" class="md-nav__link">
+    <span class="md-ellipsis">
+      8. Estructuración y Empaquetado del Proyecto
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="8. Estructuración y Empaquetado del Proyecto">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#81-por-que-organizarlo-en-paquetes" class="md-nav__link">
+    <span class="md-ellipsis">
+      8.1. ¿Por qué organizarlo en paquetes?
     </span>
   </a>
   
@@ -2318,19 +2366,63 @@
 <span class="normal"><a href="#__codelineno-0-10">10</a></span>
 <span class="normal"><a href="#__codelineno-0-11">11</a></span>
 <span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">-- Estructura de nuestra BD de ejemplo</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">fabricantes</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="w">    </span><span class="n">clave_fabricante</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="w">    </span><span class="n">nombre</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">)</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="p">);</span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span>
+<span class="normal"><a href="#__codelineno-0-19">19</a></span>
+<span class="normal"><a href="#__codelineno-0-20">20</a></span>
+<span class="normal"><a href="#__codelineno-0-21">21</a></span>
+<span class="normal"><a href="#__codelineno-0-22">22</a></span>
+<span class="normal"><a href="#__codelineno-0-23">23</a></span>
+<span class="normal"><a href="#__codelineno-0-24">24</a></span>
+<span class="normal"><a href="#__codelineno-0-25">25</a></span>
+<span class="normal"><a href="#__codelineno-0-26">26</a></span>
+<span class="normal"><a href="#__codelineno-0-27">27</a></span>
+<span class="normal"><a href="#__codelineno-0-28">28</a></span>
+<span class="normal"><a href="#__codelineno-0-29">29</a></span>
+<span class="normal"><a href="#__codelineno-0-30">30</a></span>
+<span class="normal"><a href="#__codelineno-0-31">31</a></span>
+<span class="normal"><a href="#__codelineno-0-32">32</a></span>
+<span class="normal"><a href="#__codelineno-0-33">33</a></span>
+<span class="normal"><a href="#__codelineno-0-34">34</a></span>
+<span class="normal"><a href="#__codelineno-0-35">35</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="c1">-- Estructura de nuestra BD de ejemplo</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">tienda_informatica</span><span class="p">;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="c1">-- Conectarse a la base de datos en PostgreSQL</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="err">\</span><span class="k">c</span><span class="w"> </span><span class="n">tienda_informatica</span><span class="p">;</span>
 <a id="__codelineno-0-6" name="__codelineno-0-6"></a>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">articulos</span><span class="w"> </span><span class="p">(</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="n">clave_articulo</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="n">nombre</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">30</span><span class="p">),</span>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="n">precio</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="n">c_fab</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="k">FOREIGN</span><span class="w"> </span><span class="k">KEY</span><span class="w"> </span><span class="p">(</span><span class="n">c_fab</span><span class="p">)</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">fabricantes</span><span class="p">(</span><span class="n">clave_fabricante</span><span class="p">)</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="p">);</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">fabricantes</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="n">id_fabricante</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="n">nombre</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="p">);</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">articulos</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">    </span><span class="n">id_articulo</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="n">nombre</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="w"> </span><span class="p">(</span><span class="mi">100</span><span class="p">),</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">    </span><span class="n">precio</span><span class="w"> </span><span class="nb">INT</span><span class="p">,</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">    </span><span class="n">id_fab</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">REFERENCES</span><span class="w"> </span><span class="n">fabricantes</span><span class="p">(</span><span class="n">id_fabricante</span><span class="p">)</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="p">);</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a>
+<a id="__codelineno-0-19" name="__codelineno-0-19"></a>
+<a id="__codelineno-0-20" name="__codelineno-0-20"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">fabricantes</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Kingston&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">fabricantes</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Adata&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">fabricantes</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Logitech&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">fabricantes</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Lexar&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">fabricantes</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Seagate&#39;</span><span class="p">);</span>
+<a id="__codelineno-0-25" name="__codelineno-0-25"></a>
+<a id="__codelineno-0-26" name="__codelineno-0-26"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">articulos</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Teclado&#39;</span><span class="p">,</span><span class="w">  </span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">articulos</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Disco Duro 300GB&#39;</span><span class="p">,</span><span class="w">  </span><span class="mi">500</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">articulos</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Mouse&#39;</span><span class="p">,</span><span class="w">  </span><span class="mi">80</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">articulos</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Memoria USB&#39;</span><span class="p">,</span><span class="w">  </span><span class="mi">140</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">);</span>
+<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">articulos</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Memoria RAM&#39;</span><span class="p">,</span><span class="w">  </span><span class="mi">290</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">articulos</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Disco Duro Extraible 230 GB&#39;</span><span class="p">,</span><span class="w">  </span><span class="mi">650</span><span class="p">,</span><span class="w"> </span><span class="mi">5</span><span class="p">);</span>
+<a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">articulos</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Memoria USB&#39;</span><span class="p">,</span><span class="w">  </span><span class="mi">279</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">);</span>
+<a id="__codelineno-0-33" name="__codelineno-0-33"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">articulos</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;DVD ROM&#39;</span><span class="p">,</span><span class="w">  </span><span class="mi">450</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-0-34" name="__codelineno-0-34"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">articulos</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">9</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;CD ROM&#39;</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">);</span>
+<a id="__codelineno-0-35" name="__codelineno-0-35"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">articulos</span><span class="w"> </span><span class="k">VALUES</span><span class="w"> </span><span class="p">(</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;Tarjeta de red&#39;</span><span class="p">,</span><span class="w">  </span><span class="mi">180</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
 </code></pre></div></td></tr></table></div>
 <hr />
 <h2 id="2-jdbc-y-el-concepto-de-api">2. JDBC y el concepto de API</h2>
@@ -2353,28 +2445,36 @@
 <p>Java incluye la API JDBC de fábrica instalada en su núcleo, pero <strong>NO incluye los drivers específicos</strong> de cada base de datos. Un driver es una librería externa (un archivo <code>.jar</code>) desarrollada por el fabricante que sabe exactamente cómo traducir las órdenes genéricas de Java (JDBC) al dialecto específico de su base de datos (MySQL, SQLite, PostgreSQL, etc.).</p>
 <p>Para añadir este driver a nuestro proyecto de forma profesional, no debemos descargar el archivo a mano. En su lugar, utilizamos un <strong>Gestor de Dependencias</strong> como <strong>Gradle</strong> (el estándar moderno ampliamente utilizado en IDEs como IntelliJ IDEA).</p>
 <h3 id="31-configuracion-paso-a-paso-con-gradle">3.1. Configuración paso a paso con Gradle</h3>
-<p>A continuación, veremos cómo añadir el driver de <strong>MySQL / MariaDB</strong> a tu proyecto usando Gradle:</p>
+<p>A continuación, veremos cómo añadir el driver de tu base de datos (<strong>MySQL / MariaDB</strong> o <strong>PostgreSQL</strong>) a tu proyecto usando Gradle:</p>
 <p><strong>Paso 1: Localizar el archivo de configuración</strong>
 En tu proyecto Gradle, busca en la carpeta raíz un archivo llamado <code>build.gradle</code>. Este archivo contiene la receta de construcción y las dependencias de tu proyecto.</p>
 <p><strong>Paso 2: Añadir la dependencia</strong>
-Abre el archivo y busca el bloque llamado <code>dependencies { ... }</code>. Dentro de este bloque, debes añadir la línea correspondiente al conector JDBC.</p>
-<p>Edita el archivo para incluir la siguiente línea:</p>
+Abre el archivo y busca el bloque llamado <code>dependencies { ... }</code>. Dentro de este bloque, debes añadir la línea correspondiente al conector JDBC del motor que vayas a utilizar.</p>
+<p>Edita el archivo para incluir la dependencia que necesites (asegúrate de incluir solo la correspondiente a tu base de datos):</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1">1</a></span>
 <span class="normal"><a href="#__codelineno-1-2">2</a></span>
 <span class="normal"><a href="#__codelineno-1-3">3</a></span>
 <span class="normal"><a href="#__codelineno-1-4">4</a></span>
-<span class="normal"><a href="#__codelineno-1-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
+<span class="normal"><a href="#__codelineno-1-5">5</a></span>
+<span class="normal"><a href="#__codelineno-1-6">6</a></span>
+<span class="normal"><a href="#__codelineno-1-7">7</a></span>
+<span class="normal"><a href="#__codelineno-1-8">8</a></span>
+<span class="normal"><a href="#__codelineno-1-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="n">dependencies</span><span class="w"> </span><span class="o">{</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="w">    </span><span class="c1">// ... otras dependencias</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="w">    </span><span class="c1">// Driver oficial para conectar Java con MySQL y MariaDB</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;com.mysql:mysql-connector-j:8.0.33&#39;</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="o">}</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="w">    </span><span class="c1">// OPCION A: Driver oficial para conectar Java con MySQL y MariaDB</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;com.mysql:mysql-connector-j:8.0.33&#39;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="w">    </span><span class="c1">// OPCION B: Driver oficial para conectar Java con PostgreSQL</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="n">implementation</span><span class="w"> </span><span class="s1">&#39;org.postgresql:postgresql:42.6.0&#39;</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="o">}</span>
 </code></pre></div></td></tr></table></div>
 <div class="admonition note">
-<p class="admonition-title">¿Qué significa esta instrucción?</p>
+<p class="admonition-title">¿Qué significan estas instrucciones?</p>
 <ul>
 <li><strong><code>implementation</code></strong>: Le indica a Gradle que esta librería es necesaria para compilar y ejecutar nuestro programa.</li>
-<li><strong><code>com.mysql:mysql-connector-j</code></strong>: Es el identificador único (Grupo y Artefacto) de la librería en los repositorios centrales de internet.</li>
-<li><strong><code>8.0.33</code></strong>: Es la versión exacta que queremos descargar.</li>
+<li><strong>Grupo y Artefacto (ej. <code>com.mysql:mysql-connector-j</code> o <code>org.postgresql:postgresql</code>)</strong>: Es el identificador único de la librería en los repositorios centrales de internet.</li>
+<li><strong>Versión (ej. <code>8.0.33</code> o <code>42.6.0</code>)</strong>: Es la versión exacta que queremos descargar.</li>
 </ul>
 </div>
 <p><strong>Paso 3: Sincronizar el proyecto (¡Paso crítico!)</strong>
@@ -2388,13 +2488,23 @@ Una vez modificado el archivo <code>build.gradle</code>, <strong>el driver todav
 <p class="admonition-title">La importancia de Gradle y Maven</p>
 <p>Aprender a manejar herramientas como Gradle (o su alternativa, Maven) te ahorrará muchísimos problemas de versiones y librerías perdidas ("En mi máquina sí funciona"). Son el estándar absoluto hoy en día en cualquier empresa de desarrollo de software.</p>
 </div>
+<div class="admonition question">
+<p class="admonition-title">Práctica Guiada: Tu Primer Proyecto JDBC</p>
+<p>¡Es hora de mancharse las manos de código! Vamos a crear desde cero el entorno de trabajo que usaremos durante toda esta unidad.</p>
+<ol>
+<li><strong>Crear el proyecto:</strong> Abre IntelliJ IDEA (o tu IDE favorito) y crea un nuevo proyecto seleccionando explícitamente <strong>Gradle</strong> como sistema de construcción (<em>Build system</em>).</li>
+<li><strong>Configurar el <code>build.gradle</code>:</strong> Localiza el archivo de configuración de Gradle y añade dentro de su bloque <code>dependencies</code> la ruta oficial del conector JDBC para tu motor de base de datos (PostgreSQL, preferentemente), tal y como acabamos de ver en el apartado 3.1.</li>
+<li><strong>Sincronizar el entorno:</strong> Recarga el proyecto (pulsando en el icono del elefante u opción de sincronizar) para que la librería sea descargada de internet e integrada en el proyecto de manera automática.</li>
+<li><strong>Verificar las dependencias:</strong> Asegúrate de que no existan líneas rojas subyacentes indicando un error en el archivo <code>build.gradle</code>. Si todo se cargó con éxito, tu proyecto Java recién nacido ya estará capacitado arquitectónicamente para conectarse con un Sistema Gestor de Bases de Datos.</li>
+</ol>
+</div>
 <hr />
 <h2 id="4-el-conector-de-la-bd-connection">4. El Conector de la BD (<code>Connection</code>)</h2>
 <p>Para operar con la base de datos, el primer paso indispensable es establecer un "túnel" de comunicación. Esto se hace mediante la interfaz <strong><code>Connection</code></strong> y la clase <strong><code>DriverManager</code></strong>.</p>
 <p>Necesitamos tres datos clave (que encapsularemos como <strong>Constantes</strong> de clase para centralizar su configuración y evitar sobreescrituras):</p>
 <ol>
-<li><strong>URL de conexión:</strong> Indica el protocolo, la IP, el puerto y el nombre de la BD (ej. <code>jdbc:mysql://localhost:3306/tienda_informatica</code>).</li>
-<li><strong>Usuario:</strong> Credencial de acceso (ej: <code>root</code>).</li>
+<li><strong>URL de conexión:</strong> Indica el protocolo, la IP, el puerto y el nombre de la BD (ej. <code>jdbc:postgresql://localhost:5432/tienda_informatica</code>).</li>
+<li><strong>Usuario:</strong> Credencial de acceso (ej: <code>postgres</code>).</li>
 <li><strong>Contraseña:</strong> Clave del usuario.</li>
 </ol>
 <p>Como la conexión por red puede fallar, <strong>es obligatorio usar <code>try-catch</code></strong> (concretamente capturando <code>SQLException</code>). Una buena práctica es encapsular y aislar esta lógica en su propio método (por ejemplo, <code>conectar()</code>) en lugar de amontonar código en el <code>main</code>.</p>
@@ -2452,13 +2562,13 @@ Una vez modificado el archivo <code>build.gradle</code>, <strong>el driver todav
 <a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ConexionBD</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-2-6" name="__codelineno-2-6"></a>
 <a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="c1">// 1. Definimos los datos de conexión granulares como constantes de clase</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">HOST</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;localhost:3306&quot;</span><span class="p">;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">HOST</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;localhost:5432&quot;</span><span class="p">;</span>
 <a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">DB_NAME</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;tienda_informatica&quot;</span><span class="p">;</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">USUARIO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;root&quot;</span><span class="p">;</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">USUARIO</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;postgres&quot;</span><span class="p">;</span>
 <a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">PASSWORD</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;tu_password&quot;</span><span class="p">;</span>
 <a id="__codelineno-2-12" name="__codelineno-2-12"></a>
 <a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">    </span><span class="c1">// Construimos la URL completa uniendo las variables</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">URL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;jdbc:mysql://&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">HOST</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">DB_NAME</span><span class="p">;</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kd">final</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">URL</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;jdbc:postgresql://&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">HOST</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;/&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">DB_NAME</span><span class="p">;</span>
 <a id="__codelineno-2-15" name="__codelineno-2-15"></a>
 <a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">    </span><span class="cm">/**</span>
 <a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="cm">     * Establece y devuelve una conexión con la base de datos</span>
@@ -2494,6 +2604,17 @@ Una vez modificado el archivo <code>build.gradle</code>, <strong>el driver todav
 <a id="__codelineno-2-47" name="__codelineno-2-47"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-2-48" name="__codelineno-2-48"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<div class="admonition question">
+<p class="admonition-title">Práctica Guiada: Tu primera clase de Conexión</p>
+<p>¡Seguimos ampliando el proyecto! Ahora vamos a sentar las bases de la comunicación creando nuestra primera clase.</p>
+<ol>
+<li><strong>Crear el paquete:</strong> En tu proyecto (dentro de <code>src/main/java</code>), crea un paquete organizativo llamado <code>model</code> o <code>database</code>.</li>
+<li><strong>Crear la clase:</strong> Crea una nueva clase de Java llamada <code>ConexionBD</code> y copia o transcribe la estructura que hemos definido arriba.</li>
+<li><strong>Ajustar constantes:</strong> Modifica el valor de las constantes <code>USUARIO</code> y <code>PASSWORD</code> para que coincidan explícitamente con los que configuraste durante la instalación de tu servidor PostgreSQL.</li>
+<li><strong>Comprobar errores sintácticos:</strong> Revisa que los <code>import</code> funcionen y que tu IDE no marque la interfaz <code>Connection</code> en rojo. Si aparece subrayada en rojo, significa que la descarga del driver en el <code>build.gradle</code> (la práctica 1) no se sincronizó correctamente.</li>
+<li><strong>Prueba de fuego:</strong> Ejecuta el método <code>main</code> alojado dentro de <code>ConexionBD</code>. Si la consola inferior imprime <em>"¡Conexión establecida con éxito!"</em>, ¡enhorabuena, tu programa Java y tu Base de Datos ya están hablando!</li>
+</ol>
+</div>
 <hr />
 <h2 id="5-ejecucion-de-consultas-planificacion-y-tipos">5. Ejecución de Consultas: Planificación y Tipos</h2>
 <p>Una vez conectados, necesitamos un "vehículo" para enviar nuestras instrucciones SQL. Java nos ofrece dos opciones principales:</p>
@@ -2562,7 +2683,7 @@ Una vez modificado el archivo <code>build.gradle</code>, <strong>el driver todav
 <span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
 <span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
 <span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-3-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">String</span><span class="w"> </span><span class="n">sqlInsert</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;INSERT INTO articulos (clave_articulo, nombre, precio, c_fab) VALUES (?, ?, ?, ?)&quot;</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">String</span><span class="w"> </span><span class="n">sqlInsert</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;INSERT INTO articulos (id_articulo, nombre, precio, id_fab) VALUES (?, ?, ?, ?)&quot;</span><span class="p">;</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">PreparedStatement</span><span class="w"> </span><span class="n">pstmt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="n">sqlInsert</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="w">    </span><span class="n">pstmt</span><span class="p">.</span><span class="na">setInt</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">999</span><span class="p">);</span><span class="w"> </span><span class="c1">// Inventamos un super ID</span>
 <a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="n">pstmt</span><span class="p">.</span><span class="na">setString</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Teclado Mecánico RGB&quot;</span><span class="p">);</span>
@@ -2592,13 +2713,13 @@ Una vez modificado el archivo <code>build.gradle</code>, <strong>el driver todav
 <span class="normal"><a href="#__codelineno-4-10">10</a></span>
 <span class="normal"><a href="#__codelineno-4-11">11</a></span>
 <span class="normal"><a href="#__codelineno-4-12">12</a></span>
-<span class="normal"><a href="#__codelineno-4-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">String</span><span class="w"> </span><span class="n">sqlSelect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT clave_articulo, nombre, precio FROM articulos WHERE clave_articulo = ?&quot;</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-4-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="n">String</span><span class="w"> </span><span class="n">sqlSelect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT id_articulo, nombre, precio FROM articulos WHERE id_articulo = ?&quot;</span><span class="p">;</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">PreparedStatement</span><span class="w"> </span><span class="n">pstmt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="n">sqlSelect</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3"></a><span class="w">    </span><span class="n">pstmt</span><span class="p">.</span><span class="na">setInt</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">999</span><span class="p">);</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4"></a>
 <a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pstmt</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">next</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;READ -&gt; Encontrado ID &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="s">&quot;clave_articulo&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;READ -&gt; Encontrado ID &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="s">&quot;id_articulo&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
 <a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">                               </span><span class="s">&quot;: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;nombre&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; por &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="s">&quot;precio&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;€&quot;</span><span class="p">);</span>
 <a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-4-10" name="__codelineno-4-10"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error: No se ha encontrado el nuevo producto.&quot;</span><span class="p">);</span>
@@ -2620,7 +2741,7 @@ Una vez modificado el archivo <code>build.gradle</code>, <strong>el driver todav
 <span class="normal"><a href="#__codelineno-5-6">6</a></span>
 <span class="normal"><a href="#__codelineno-5-7">7</a></span>
 <span class="normal"><a href="#__codelineno-5-8">8</a></span>
-<span class="normal"><a href="#__codelineno-5-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">String</span><span class="w"> </span><span class="n">sqlUpdate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UPDATE articulos SET nombre = ?, precio = ? WHERE clave_articulo = ?&quot;</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-5-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="n">String</span><span class="w"> </span><span class="n">sqlUpdate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UPDATE articulos SET nombre = ?, precio = ? WHERE id_articulo = ?&quot;</span><span class="p">;</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2"></a><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">PreparedStatement</span><span class="w"> </span><span class="n">pstmt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="n">sqlUpdate</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-5-3" name="__codelineno-5-3"></a><span class="w">    </span><span class="n">pstmt</span><span class="p">.</span><span class="na">setString</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Teclado Mecánico RGB (Reacondicionado)&quot;</span><span class="p">);</span>
 <a id="__codelineno-5-4" name="__codelineno-5-4"></a><span class="w">    </span><span class="n">pstmt</span><span class="p">.</span><span class="na">setInt</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">);</span><span class="w">  </span><span class="c1">// Nuevo precio</span>
@@ -2642,7 +2763,7 @@ Una vez modificado el archivo <code>build.gradle</code>, <strong>el driver todav
 <span class="normal"><a href="#__codelineno-6-4">4</a></span>
 <span class="normal"><a href="#__codelineno-6-5">5</a></span>
 <span class="normal"><a href="#__codelineno-6-6">6</a></span>
-<span class="normal"><a href="#__codelineno-6-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">String</span><span class="w"> </span><span class="n">sqlDelete</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;DELETE FROM articulos WHERE clave_articulo = ?&quot;</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-6-7">7</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="n">String</span><span class="w"> </span><span class="n">sqlDelete</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;DELETE FROM articulos WHERE id_articulo = ?&quot;</span><span class="p">;</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">PreparedStatement</span><span class="w"> </span><span class="n">pstmt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="n">sqlDelete</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="n">pstmt</span><span class="p">.</span><span class="na">setInt</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">999</span><span class="p">);</span>
 <a id="__codelineno-6-4" name="__codelineno-6-4"></a>
@@ -2745,7 +2866,7 @@ Una vez modificado el archivo <code>build.gradle</code>, <strong>el driver todav
 <a id="__codelineno-7-18" name="__codelineno-7-18"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;\n--- INICIANDO CICLO CRUD ---&quot;</span><span class="p">);</span>
 <a id="__codelineno-7-19" name="__codelineno-7-19"></a>
 <a id="__codelineno-7-20" name="__codelineno-7-20"></a><span class="w">            </span><span class="c1">// A) CREATE: Insertamos una nueva fila</span>
-<a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">sqlInsert</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;INSERT INTO articulos (clave_articulo, nombre, precio, c_fab) VALUES (?, ?, ?, ?)&quot;</span><span class="p">;</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21"></a><span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">sqlInsert</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;INSERT INTO articulos (id_articulo, nombre, precio, id_fab) VALUES (?, ?, ?, ?)&quot;</span><span class="p">;</span>
 <a id="__codelineno-7-22" name="__codelineno-7-22"></a><span class="w">            </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">PreparedStatement</span><span class="w"> </span><span class="n">pstmt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="n">sqlInsert</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-7-23" name="__codelineno-7-23"></a><span class="w">                </span><span class="n">pstmt</span><span class="p">.</span><span class="na">setInt</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">999</span><span class="p">);</span><span class="w"> </span><span class="c1">// Inventamos un super ID</span>
 <a id="__codelineno-7-24" name="__codelineno-7-24"></a><span class="w">                </span><span class="n">pstmt</span><span class="p">.</span><span class="na">setString</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Teclado Mecánico RGB&quot;</span><span class="p">);</span>
@@ -2757,13 +2878,13 @@ Una vez modificado el archivo <code>build.gradle</code>, <strong>el driver todav
 <a id="__codelineno-7-30" name="__codelineno-7-30"></a><span class="w">            </span><span class="p">}</span>
 <a id="__codelineno-7-31" name="__codelineno-7-31"></a>
 <a id="__codelineno-7-32" name="__codelineno-7-32"></a><span class="w">            </span><span class="c1">// B) READ: Leemos el artículo que acabamos de guardar</span>
-<a id="__codelineno-7-33" name="__codelineno-7-33"></a><span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">sqlSelect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT clave_articulo, nombre, precio FROM articulos WHERE clave_articulo = ?&quot;</span><span class="p">;</span>
+<a id="__codelineno-7-33" name="__codelineno-7-33"></a><span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">sqlSelect</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT id_articulo, nombre, precio FROM articulos WHERE id_articulo = ?&quot;</span><span class="p">;</span>
 <a id="__codelineno-7-34" name="__codelineno-7-34"></a><span class="w">            </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">PreparedStatement</span><span class="w"> </span><span class="n">pstmt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="n">sqlSelect</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-7-35" name="__codelineno-7-35"></a><span class="w">                </span><span class="n">pstmt</span><span class="p">.</span><span class="na">setInt</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">999</span><span class="p">);</span>
 <a id="__codelineno-7-36" name="__codelineno-7-36"></a>
 <a id="__codelineno-7-37" name="__codelineno-7-37"></a><span class="w">                </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pstmt</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-7-38" name="__codelineno-7-38"></a><span class="w">                    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">next</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-7-39" name="__codelineno-7-39"></a><span class="w">                        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;READ -&gt; Encontrado ID &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="s">&quot;clave_articulo&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
+<a id="__codelineno-7-39" name="__codelineno-7-39"></a><span class="w">                        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;READ -&gt; Encontrado ID &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="s">&quot;id_articulo&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span>
 <a id="__codelineno-7-40" name="__codelineno-7-40"></a><span class="w">                                           </span><span class="s">&quot;: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;nombre&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; por &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="s">&quot;precio&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;€&quot;</span><span class="p">);</span>
 <a id="__codelineno-7-41" name="__codelineno-7-41"></a><span class="w">                    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-7-42" name="__codelineno-7-42"></a><span class="w">                        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error: No se ha encontrado el nuevo producto.&quot;</span><span class="p">);</span>
@@ -2772,7 +2893,7 @@ Una vez modificado el archivo <code>build.gradle</code>, <strong>el driver todav
 <a id="__codelineno-7-45" name="__codelineno-7-45"></a><span class="w">            </span><span class="p">}</span>
 <a id="__codelineno-7-46" name="__codelineno-7-46"></a>
 <a id="__codelineno-7-47" name="__codelineno-7-47"></a><span class="w">            </span><span class="c1">// C) UPDATE: Vamos a aplicarle una rebaja y cambiarle el nombre</span>
-<a id="__codelineno-7-48" name="__codelineno-7-48"></a><span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">sqlUpdate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UPDATE articulos SET nombre = ?, precio = ? WHERE clave_articulo = ?&quot;</span><span class="p">;</span>
+<a id="__codelineno-7-48" name="__codelineno-7-48"></a><span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">sqlUpdate</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;UPDATE articulos SET nombre = ?, precio = ? WHERE id_articulo = ?&quot;</span><span class="p">;</span>
 <a id="__codelineno-7-49" name="__codelineno-7-49"></a><span class="w">            </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">PreparedStatement</span><span class="w"> </span><span class="n">pstmt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="n">sqlUpdate</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-7-50" name="__codelineno-7-50"></a><span class="w">                </span><span class="n">pstmt</span><span class="p">.</span><span class="na">setString</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Teclado Mecánico RGB II&quot;</span><span class="p">);</span>
 <a id="__codelineno-7-51" name="__codelineno-7-51"></a><span class="w">                </span><span class="n">pstmt</span><span class="p">.</span><span class="na">setInt</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">90</span><span class="p">);</span><span class="w">  </span><span class="c1">// Nuevo precio</span>
@@ -2783,7 +2904,7 @@ Una vez modificado el archivo <code>build.gradle</code>, <strong>el driver todav
 <a id="__codelineno-7-56" name="__codelineno-7-56"></a><span class="w">            </span><span class="p">}</span>
 <a id="__codelineno-7-57" name="__codelineno-7-57"></a>
 <a id="__codelineno-7-58" name="__codelineno-7-58"></a><span class="w">            </span><span class="c1">// D) DELETE: Probado que todo funciona, limpiamos la base de datos para no ensuciar</span>
-<a id="__codelineno-7-59" name="__codelineno-7-59"></a><span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">sqlDelete</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;DELETE FROM articulos WHERE clave_articulo = ?&quot;</span><span class="p">;</span>
+<a id="__codelineno-7-59" name="__codelineno-7-59"></a><span class="w">            </span><span class="n">String</span><span class="w"> </span><span class="n">sqlDelete</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;DELETE FROM articulos WHERE id_articulo = ?&quot;</span><span class="p">;</span>
 <a id="__codelineno-7-60" name="__codelineno-7-60"></a><span class="w">            </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">PreparedStatement</span><span class="w"> </span><span class="n">pstmt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="n">sqlDelete</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-7-61" name="__codelineno-7-61"></a><span class="w">                </span><span class="n">pstmt</span><span class="p">.</span><span class="na">setInt</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">999</span><span class="p">);</span>
 <a id="__codelineno-7-62" name="__codelineno-7-62"></a>
@@ -2799,6 +2920,17 @@ Una vez modificado el archivo <code>build.gradle</code>, <strong>el driver todav
 <a id="__codelineno-7-72" name="__codelineno-7-72"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-7-73" name="__codelineno-7-73"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<div class="admonition question">
+<p class="admonition-title">Práctica Guiada: Jugando con el CRUD</p>
+<p>Ha llegado el momento de poner a prueba la sintaxis SQL. Crea la clase <code>PruebaCRUD</code>, asegúrate de que tiene acceso a <code>ConexionBD</code> y ejecuta el programa.</p>
+<p>Una vez te funcione el flujo por defecto, intenta realizar las siguientes <strong>variaciones</strong> para ganar destreza:</p>
+<ol>
+<li><strong>Añadir:</strong> Modifica el código de inserción para crear dos artículos distintos a la vez (por ejemplo, un "Ratón Inalámbrico" y unos "Auriculares Gaming"). </li>
+<li><strong>Actualizar:</strong> Cambia la sentencia <code>UPDATE</code> para que, en lugar de modificar el nombre y el precio, modifique el <code>id_fab</code> (fabricante) del artículo 2 traspasándolo al fabricante 1.</li>
+<li><strong>Borrar / Persistencia:</strong> Comenta (desactiva) el bloque de código dedicado al <code>DELETE</code>, ejecuta el programa, y comprueba visualmente (usando IntelliJ u otro cliente) cómo tus nuevos datos se han quedado guardados de forma totalmente persistente en tu PostgreSQL.</li>
+<li><strong>El reto del Fabricante:</strong> Crea un bloque desde cero para insertar un nuevo Fabricante en la base de datos (ej. id 6, nombre "Corsair").</li>
+</ol>
+</div>
 <hr />
 <h2 id="7-arquitectura-profesional-construccion-de-un-dao">7. Arquitectura Profesional: Construcción de un DAO</h2>
 <p>Si escribimos el código SQL mezclado con la lógica de nuestra aplicación (nuestros menús, nuestras ventanas), el código se volverá un caos inmanejable.</p>
@@ -2808,8 +2940,15 @@ Si el programa principal quiere un artículo, no hace un <code>SELECT</code>; en
 <pre class="mermaid"><code>graph LR
     A[Main / Lógica de App] --&gt;|Pide o guarda objetos| B[ArticuloDAO]
     B --&gt;|Ejecuta SQL seguro| C[(Base de Datos)]</code></pre>
-<h3 id="71-paso-1-el-modelo-la-clase-pojo">7.1. Paso 1: El Modelo (La Clase Pojo)</h3>
-<p>Primero, necesitamos una clase normal (Unidad 5) que represente la tabla.</p>
+<h3 id="71-paso-1-el-modelo-la-clase-pojo">7.1. Paso 1: El Modelo (La Clase POJO)</h3>
+<p>El primer paso para aplicar el patrón DAO es crear una representación de nuestra tabla SQL mediante una clase en Java. A estas clases transaccionales se las conoce comúnmente en la industria técnica como <strong>POJO</strong> (<em>Plain Old Java Object</em> - Objeto Java simple y tradicional).</p>
+<p>Un POJO es simplemente una clase estándar que cumple tres características fundamentales:</p>
+<ol>
+<li>Contiene <strong>atributos privados</strong> que mapean directamente las columnas de la tabla de la base de datos.</li>
+<li>Contiene <strong>constructores</strong> para instanciar e inicializar la clase.</li>
+<li>Ofrece métodos <strong>Getters</strong> y <strong>Setters</strong> públicos para leer y modificar sus datos.</li>
+</ol>
+<p>Estas clases no heredan de lógicas complejas ni cargan librerías de terceros; su único propósito es servir como un contendor limpio y ligero para transportar información desde la base de datos hacia nuestro programa, y viceversa.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-8-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-8-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-8-3"> 3</a></span>
@@ -2825,25 +2964,98 @@ Si el programa principal quiere un artículo, no hace un <code>SELECT</code>; en
 <span class="normal"><a href="#__codelineno-8-13">13</a></span>
 <span class="normal"><a href="#__codelineno-8-14">14</a></span>
 <span class="normal"><a href="#__codelineno-8-15">15</a></span>
-<span class="normal"><a href="#__codelineno-8-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1">// Archivo: Articulo.java</span>
+<span class="normal"><a href="#__codelineno-8-16">16</a></span>
+<span class="normal"><a href="#__codelineno-8-17">17</a></span>
+<span class="normal"><a href="#__codelineno-8-18">18</a></span>
+<span class="normal"><a href="#__codelineno-8-19">19</a></span>
+<span class="normal"><a href="#__codelineno-8-20">20</a></span>
+<span class="normal"><a href="#__codelineno-8-21">21</a></span>
+<span class="normal"><a href="#__codelineno-8-22">22</a></span>
+<span class="normal"><a href="#__codelineno-8-23">23</a></span>
+<span class="normal"><a href="#__codelineno-8-24">24</a></span>
+<span class="normal"><a href="#__codelineno-8-25">25</a></span>
+<span class="normal"><a href="#__codelineno-8-26">26</a></span>
+<span class="normal"><a href="#__codelineno-8-27">27</a></span>
+<span class="normal"><a href="#__codelineno-8-28">28</a></span>
+<span class="normal"><a href="#__codelineno-8-29">29</a></span>
+<span class="normal"><a href="#__codelineno-8-30">30</a></span>
+<span class="normal"><a href="#__codelineno-8-31">31</a></span>
+<span class="normal"><a href="#__codelineno-8-32">32</a></span>
+<span class="normal"><a href="#__codelineno-8-33">33</a></span>
+<span class="normal"><a href="#__codelineno-8-34">34</a></span>
+<span class="normal"><a href="#__codelineno-8-35">35</a></span>
+<span class="normal"><a href="#__codelineno-8-36">36</a></span>
+<span class="normal"><a href="#__codelineno-8-37">37</a></span>
+<span class="normal"><a href="#__codelineno-8-38">38</a></span>
+<span class="normal"><a href="#__codelineno-8-39">39</a></span>
+<span class="normal"><a href="#__codelineno-8-40">40</a></span>
+<span class="normal"><a href="#__codelineno-8-41">41</a></span>
+<span class="normal"><a href="#__codelineno-8-42">42</a></span>
+<span class="normal"><a href="#__codelineno-8-43">43</a></span>
+<span class="normal"><a href="#__codelineno-8-44">44</a></span>
+<span class="normal"><a href="#__codelineno-8-45">45</a></span>
+<span class="normal"><a href="#__codelineno-8-46">46</a></span>
+<span class="normal"><a href="#__codelineno-8-47">47</a></span>
+<span class="normal"><a href="#__codelineno-8-48">48</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1"></a><span class="c1">// Archivo: Articulo.java</span>
 <a id="__codelineno-8-2" name="__codelineno-8-2"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Articulo</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">clave</span><span class="p">;</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">idArticulo</span><span class="p">;</span>
 <a id="__codelineno-8-4" name="__codelineno-8-4"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
 <a id="__codelineno-8-5" name="__codelineno-8-5"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">precio</span><span class="p">;</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">claveFabricante</span><span class="p">;</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">idFabricante</span><span class="p">;</span>
 <a id="__codelineno-8-7" name="__codelineno-8-7"></a>
-<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">    </span><span class="c1">// Constructor, Getters y Setters...</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Articulo</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">clave</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">precio</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">claveFabricante</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">clave</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">clave</span><span class="p">;</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8"></a><span class="w">    </span><span class="c1">// Constructor</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Articulo</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">idArticulo</span><span class="p">,</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">precio</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">idFabricante</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">idArticulo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">idArticulo</span><span class="p">;</span>
 <a id="__codelineno-8-11" name="__codelineno-8-11"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
 <a id="__codelineno-8-12" name="__codelineno-8-12"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">precio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">precio</span><span class="p">;</span>
-<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">claveFabricante</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">claveFabricante</span><span class="p">;</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">idFabricante</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">idFabricante</span><span class="p">;</span>
 <a id="__codelineno-8-14" name="__codelineno-8-14"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-8-15" name="__codelineno-8-15"></a><span class="w">    </span><span class="c1">// ... (Getters omitidos por brevedad) ...</span>
-<a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="p">}</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15"></a>
+<a id="__codelineno-8-16" name="__codelineno-8-16"></a><span class="w">    </span><span class="c1">// Getters y Setters</span>
+<a id="__codelineno-8-17" name="__codelineno-8-17"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getIdArticulo</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-18" name="__codelineno-8-18"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">idArticulo</span><span class="p">;</span>
+<a id="__codelineno-8-19" name="__codelineno-8-19"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-20" name="__codelineno-8-20"></a>
+<a id="__codelineno-8-21" name="__codelineno-8-21"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setIdArticulo</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">idArticulo</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-22" name="__codelineno-8-22"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">idArticulo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">idArticulo</span><span class="p">;</span>
+<a id="__codelineno-8-23" name="__codelineno-8-23"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-24" name="__codelineno-8-24"></a>
+<a id="__codelineno-8-25" name="__codelineno-8-25"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">getNombre</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-26" name="__codelineno-8-26"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<a id="__codelineno-8-27" name="__codelineno-8-27"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-28" name="__codelineno-8-28"></a>
+<a id="__codelineno-8-29" name="__codelineno-8-29"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setNombre</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">nombre</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-30" name="__codelineno-8-30"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">nombre</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">nombre</span><span class="p">;</span>
+<a id="__codelineno-8-31" name="__codelineno-8-31"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-32" name="__codelineno-8-32"></a>
+<a id="__codelineno-8-33" name="__codelineno-8-33"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getPrecio</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-34" name="__codelineno-8-34"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">precio</span><span class="p">;</span>
+<a id="__codelineno-8-35" name="__codelineno-8-35"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-36" name="__codelineno-8-36"></a>
+<a id="__codelineno-8-37" name="__codelineno-8-37"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setPrecio</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">precio</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-38" name="__codelineno-8-38"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">precio</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">precio</span><span class="p">;</span>
+<a id="__codelineno-8-39" name="__codelineno-8-39"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-40" name="__codelineno-8-40"></a>
+<a id="__codelineno-8-41" name="__codelineno-8-41"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">getIdFabricante</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-42" name="__codelineno-8-42"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">idFabricante</span><span class="p">;</span>
+<a id="__codelineno-8-43" name="__codelineno-8-43"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-44" name="__codelineno-8-44"></a>
+<a id="__codelineno-8-45" name="__codelineno-8-45"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">setIdFabricante</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">idFabricante</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-8-46" name="__codelineno-8-46"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">idFabricante</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">idFabricante</span><span class="p">;</span>
+<a id="__codelineno-8-47" name="__codelineno-8-47"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-48" name="__codelineno-8-48"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <h3 id="72-paso-2-la-clase-dao">7.2. Paso 2: La Clase DAO</h3>
-<p>Aquí agrupamos todas las operaciones CRUD referidas a los artículos.</p>
+<p>Aquí agrupamos todas las operaciones CRUD referidas a los artículos en un único punto centralizado. A continuación se muestra su diagrama de clases UML con los atributos y métodos de las operaciones:</p>
+<pre class="mermaid"><code>classDiagram
+    class ArticuloDAO {
+        + ArticuloDAO()
+        + ArrayList~Articulo~ obtenerTodos()
+        + boolean insertar(Articulo art)
+        + boolean actualizar(Articulo art)
+        + boolean eliminar(int idArticulo)
+        + Articulo obtenerPorId(int idArticulo)
+    }</code></pre>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-9-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-9-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-9-3"> 3</a></span>
@@ -2900,45 +3112,45 @@ Si el programa principal quiere un artículo, no hace un <code>SELECT</code>; en
 <a id="__codelineno-9-3" name="__codelineno-9-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.ArrayList</span><span class="p">;</span>
 <a id="__codelineno-9-4" name="__codelineno-9-4"></a>
 <a id="__codelineno-9-5" name="__codelineno-9-5"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ArticuloDAO</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-6" name="__codelineno-9-6"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Connection</span><span class="w"> </span><span class="n">conexion</span><span class="p">;</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6"></a>
 <a id="__codelineno-9-7" name="__codelineno-9-7"></a>
-<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">    </span><span class="c1">// Al crear el DAO, le pasamos la conexión abierta</span>
-<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">ArticuloDAO</span><span class="p">(</span><span class="n">Connection</span><span class="w"> </span><span class="n">conexion</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">conexion</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conexion</span><span class="p">;</span>
-<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8"></a><span class="w">    </span><span class="c1">// MÉTODO READ: Devuelve objetos, NO ResultSets</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Articulo</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">obtenerTodos</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10"></a><span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Articulo</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">sql</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT id_articulo, nombre, precio, id_fab FROM articulos&quot;</span><span class="p">;</span>
 <a id="__codelineno-9-12" name="__codelineno-9-12"></a>
-<a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="w">    </span><span class="c1">// MÉTODO READ: Devuelve objetos, NO ResultSets</span>
-<a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Articulo</span><span class="o">&gt;</span><span class="w"> </span><span class="nf">obtenerTodos</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="w">        </span><span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">Articulo</span><span class="o">&gt;</span><span class="w"> </span><span class="n">lista</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArrayList</span><span class="o">&lt;&gt;</span><span class="p">();</span>
-<a id="__codelineno-9-16" name="__codelineno-9-16"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">sql</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;SELECT * FROM articulos&quot;</span><span class="p">;</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13"></a><span class="w">        </span><span class="c1">// Abrimos la tubería en el propio DAO mediante nuestra clase de apoyo ConexionBD</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">Connection</span><span class="w"> </span><span class="n">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ConexionBD</span><span class="p">.</span><span class="na">conectar</span><span class="p">();</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15"></a><span class="w">             </span><span class="n">PreparedStatement</span><span class="w"> </span><span class="n">pstmt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="n">sql</span><span class="p">);</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16"></a><span class="w">             </span><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pstmt</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-9-17" name="__codelineno-9-17"></a>
-<a id="__codelineno-9-18" name="__codelineno-9-18"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">PreparedStatement</span><span class="w"> </span><span class="n">pstmt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conexion</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="n">sql</span><span class="p">);</span>
-<a id="__codelineno-9-19" name="__codelineno-9-19"></a><span class="w">             </span><span class="n">ResultSet</span><span class="w"> </span><span class="n">rs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">pstmt</span><span class="p">.</span><span class="na">executeQuery</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-20" name="__codelineno-9-20"></a>
-<a id="__codelineno-9-21" name="__codelineno-9-21"></a><span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">next</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-22" name="__codelineno-9-22"></a><span class="w">                </span><span class="c1">// Traducimos de Relacional a Orientado a Objetos (Mapeo)</span>
-<a id="__codelineno-9-23" name="__codelineno-9-23"></a><span class="w">                </span><span class="n">Articulo</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Articulo</span><span class="p">(</span>
-<a id="__codelineno-9-24" name="__codelineno-9-24"></a><span class="w">                    </span><span class="n">rs</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="s">&quot;clave_articulo&quot;</span><span class="p">),</span>
-<a id="__codelineno-9-25" name="__codelineno-9-25"></a><span class="w">                    </span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;nombre&quot;</span><span class="p">),</span>
-<a id="__codelineno-9-26" name="__codelineno-9-26"></a><span class="w">                    </span><span class="n">rs</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="s">&quot;precio&quot;</span><span class="p">),</span>
-<a id="__codelineno-9-27" name="__codelineno-9-27"></a><span class="w">                    </span><span class="n">rs</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="s">&quot;c_fab&quot;</span><span class="p">)</span>
-<a id="__codelineno-9-28" name="__codelineno-9-28"></a><span class="w">                </span><span class="p">);</span>
-<a id="__codelineno-9-29" name="__codelineno-9-29"></a><span class="w">                </span><span class="n">lista</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">a</span><span class="p">);</span><span class="w"> </span><span class="c1">// Añadimos a la lista</span>
-<a id="__codelineno-9-30" name="__codelineno-9-30"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-9-31" name="__codelineno-9-31"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-32" name="__codelineno-9-32"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error al obtener artículos: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
-<a id="__codelineno-9-33" name="__codelineno-9-33"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-9-34" name="__codelineno-9-34"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">lista</span><span class="p">;</span>
-<a id="__codelineno-9-35" name="__codelineno-9-35"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-9-36" name="__codelineno-9-36"></a>
-<a id="__codelineno-9-37" name="__codelineno-9-37"></a><span class="w">    </span><span class="c1">// MÉTODO CREATE: Recibe un objeto y lo guarda</span>
-<a id="__codelineno-9-38" name="__codelineno-9-38"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">insertar</span><span class="p">(</span><span class="n">Articulo</span><span class="w"> </span><span class="n">art</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-39" name="__codelineno-9-39"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">sql</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;INSERT INTO articulos VALUES (?, ?, ?, ?)&quot;</span><span class="p">;</span>
-<a id="__codelineno-9-40" name="__codelineno-9-40"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">PreparedStatement</span><span class="w"> </span><span class="n">pstmt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">conexion</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="n">sql</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-41" name="__codelineno-9-41"></a><span class="w">            </span><span class="n">pstmt</span><span class="p">.</span><span class="na">setInt</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">art</span><span class="p">.</span><span class="na">getClave</span><span class="p">());</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18"></a><span class="w">            </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">rs</span><span class="p">.</span><span class="na">next</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19"></a><span class="w">                </span><span class="c1">// Traducimos de Relacional a Orientado a Objetos (Mapeo)</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20"></a><span class="w">                </span><span class="n">Articulo</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Articulo</span><span class="p">(</span>
+<a id="__codelineno-9-21" name="__codelineno-9-21"></a><span class="w">                    </span><span class="n">rs</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="s">&quot;id_articulo&quot;</span><span class="p">),</span>
+<a id="__codelineno-9-22" name="__codelineno-9-22"></a><span class="w">                    </span><span class="n">rs</span><span class="p">.</span><span class="na">getString</span><span class="p">(</span><span class="s">&quot;nombre&quot;</span><span class="p">),</span>
+<a id="__codelineno-9-23" name="__codelineno-9-23"></a><span class="w">                    </span><span class="n">rs</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="s">&quot;precio&quot;</span><span class="p">),</span>
+<a id="__codelineno-9-24" name="__codelineno-9-24"></a><span class="w">                    </span><span class="n">rs</span><span class="p">.</span><span class="na">getInt</span><span class="p">(</span><span class="s">&quot;id_fab&quot;</span><span class="p">)</span>
+<a id="__codelineno-9-25" name="__codelineno-9-25"></a><span class="w">                </span><span class="p">);</span>
+<a id="__codelineno-9-26" name="__codelineno-9-26"></a><span class="w">                </span><span class="n">lista</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">a</span><span class="p">);</span><span class="w"> </span><span class="c1">// Añadimos a la lista</span>
+<a id="__codelineno-9-27" name="__codelineno-9-27"></a><span class="w">            </span><span class="p">}</span>
+<a id="__codelineno-9-28" name="__codelineno-9-28"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-29" name="__codelineno-9-29"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error al obtener artículos: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<a id="__codelineno-9-30" name="__codelineno-9-30"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-9-31" name="__codelineno-9-31"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">lista</span><span class="p">;</span>
+<a id="__codelineno-9-32" name="__codelineno-9-32"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-33" name="__codelineno-9-33"></a>
+<a id="__codelineno-9-34" name="__codelineno-9-34"></a><span class="w">    </span><span class="c1">// MÉTODO CREATE: Recibe un objeto y lo guarda</span>
+<a id="__codelineno-9-35" name="__codelineno-9-35"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">insertar</span><span class="p">(</span><span class="n">Articulo</span><span class="w"> </span><span class="n">art</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-36" name="__codelineno-9-36"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">sql</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;INSERT INTO articulos (id_articulo, nombre, precio, id_fab) VALUES (?, ?, ?, ?)&quot;</span><span class="p">;</span>
+<a id="__codelineno-9-37" name="__codelineno-9-37"></a>
+<a id="__codelineno-9-38" name="__codelineno-9-38"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">Connection</span><span class="w"> </span><span class="n">con</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ConexionBD</span><span class="p">.</span><span class="na">conectar</span><span class="p">();</span>
+<a id="__codelineno-9-39" name="__codelineno-9-39"></a><span class="w">             </span><span class="n">PreparedStatement</span><span class="w"> </span><span class="n">pstmt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">con</span><span class="p">.</span><span class="na">prepareStatement</span><span class="p">(</span><span class="n">sql</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-40" name="__codelineno-9-40"></a>
+<a id="__codelineno-9-41" name="__codelineno-9-41"></a><span class="w">            </span><span class="n">pstmt</span><span class="p">.</span><span class="na">setInt</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">art</span><span class="p">.</span><span class="na">getIdArticulo</span><span class="p">());</span>
 <a id="__codelineno-9-42" name="__codelineno-9-42"></a><span class="w">            </span><span class="n">pstmt</span><span class="p">.</span><span class="na">setString</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="n">art</span><span class="p">.</span><span class="na">getNombre</span><span class="p">());</span>
 <a id="__codelineno-9-43" name="__codelineno-9-43"></a><span class="w">            </span><span class="n">pstmt</span><span class="p">.</span><span class="na">setInt</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">art</span><span class="p">.</span><span class="na">getPrecio</span><span class="p">());</span>
-<a id="__codelineno-9-44" name="__codelineno-9-44"></a><span class="w">            </span><span class="n">pstmt</span><span class="p">.</span><span class="na">setInt</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">art</span><span class="p">.</span><span class="na">getClaveFabricante</span><span class="p">());</span>
+<a id="__codelineno-9-44" name="__codelineno-9-44"></a><span class="w">            </span><span class="n">pstmt</span><span class="p">.</span><span class="na">setInt</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="n">art</span><span class="p">.</span><span class="na">getIdFabricante</span><span class="p">());</span>
 <a id="__codelineno-9-45" name="__codelineno-9-45"></a>
 <a id="__codelineno-9-46" name="__codelineno-9-46"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">pstmt</span><span class="p">.</span><span class="na">executeUpdate</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// Devuelve true si afectó a alguna fila</span>
 <a id="__codelineno-9-47" name="__codelineno-9-47"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
@@ -2948,8 +3160,10 @@ Si el programa principal quiere un artículo, no hace un <code>SELECT</code>; en
 <a id="__codelineno-9-51" name="__codelineno-9-51"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-9-52" name="__codelineno-9-52"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<h3 id="73-paso-3-uso-en-el-main">7.3. Paso 3: Uso en el Main</h3>
-<p>Observa lo limpio que queda el programa principal. ¡Ni rastro de SQL!</p>
+<h3 id="73-paso-3-uso-en-el-programa-principal">7.3. Paso 3: Uso en el Programa Principal</h3>
+<p>Llegó el momento de recoger los frutos de nuestra arquitectura orientada a objetos. Nuestro programa principal (la clase <code>AppTienda</code>, que perfectamente podría representar la lógica detrás de una ventana visual o un menú) ya no se ensuciará con cadenas de texto SQL, interrogaciones enredadas ni problemas sintácticos con la base de datos.</p>
+<p>Toda esa complejidad técnica queda encapsulada en la capa inferior. El programa ahora simplemente instancia un objeto DAO, le pasa objetos Java convencionales (nuestros POJOs) y recibe resultados limpios y tipados. Al delegar la conexión internamente en el DAO a través de <code>ConexionBD</code>, nuestro <code>main</code> se desliga por competo de abrir y cerrar túneles.</p>
+<p>Observa lo legible, abstracto y fácil de mantener que resulta el código de alto nivel:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-10-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-10-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-10-3"> 3</a></span>
@@ -2968,47 +3182,92 @@ Si el programa principal quiere un artículo, no hace un <code>SELECT</code>; en
 <span class="normal"><a href="#__codelineno-10-16">16</a></span>
 <span class="normal"><a href="#__codelineno-10-17">17</a></span>
 <span class="normal"><a href="#__codelineno-10-18">18</a></span>
-<span class="normal"><a href="#__codelineno-10-19">19</a></span>
-<span class="normal"><a href="#__codelineno-10-20">20</a></span>
-<span class="normal"><a href="#__codelineno-10-21">21</a></span>
-<span class="normal"><a href="#__codelineno-10-22">22</a></span>
-<span class="normal"><a href="#__codelineno-10-23">23</a></span>
-<span class="normal"><a href="#__codelineno-10-24">24</a></span>
-<span class="normal"><a href="#__codelineno-10-25">25</a></span>
-<span class="normal"><a href="#__codelineno-10-26">26</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AppTienda</span><span class="w"> </span><span class="p">{</span>
+<span class="normal"><a href="#__codelineno-10-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">AppTienda</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3"></a><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;jdbc:mysql://localhost:3306/tienda_informatica&quot;</span><span class="p">;</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4"></a>
-<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">(</span><span class="n">Connection</span><span class="w"> </span><span class="n">conn</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DriverManager</span><span class="p">.</span><span class="na">getConnection</span><span class="p">(</span><span class="n">url</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;root&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;password&quot;</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3"></a>
+<a id="__codelineno-10-4" name="__codelineno-10-4"></a><span class="w">        </span><span class="c1">// Instanciamos el DAO de Articulos</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5"></a><span class="w">        </span><span class="n">ArticuloDAO</span><span class="w"> </span><span class="n">dao</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArticuloDAO</span><span class="p">();</span>
 <a id="__codelineno-10-6" name="__codelineno-10-6"></a>
-<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="w">            </span><span class="c1">// Instanciamos el DAO pasándole el &quot;túnel&quot;</span>
-<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">            </span><span class="n">ArticuloDAO</span><span class="w"> </span><span class="n">dao</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">ArticuloDAO</span><span class="p">(</span><span class="n">conn</span><span class="p">);</span>
-<a id="__codelineno-10-9" name="__codelineno-10-9"></a>
-<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="w">            </span><span class="c1">// 1. Insertamos un nuevo objeto</span>
-<a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="w">            </span><span class="n">Articulo</span><span class="w"> </span><span class="n">nuevo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Articulo</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Webcam HD&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
-<a id="__codelineno-10-12" name="__codelineno-10-12"></a><span class="w">            </span><span class="k">if</span><span class="p">(</span><span class="n">dao</span><span class="p">.</span><span class="na">insertar</span><span class="p">(</span><span class="n">nuevo</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;✅ Artículo guardado con éxito.&quot;</span><span class="p">);</span>
-<a id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-10-15" name="__codelineno-10-15"></a>
-<a id="__codelineno-10-16" name="__codelineno-10-16"></a><span class="w">            </span><span class="c1">// 2. Recuperamos todos y los listamos</span>
-<a id="__codelineno-10-17" name="__codelineno-10-17"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;--- LISTA DE ARTÍCULOS ---&quot;</span><span class="p">);</span>
-<a id="__codelineno-10-18" name="__codelineno-10-18"></a><span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Articulo</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">dao</span><span class="p">.</span><span class="na">obtenerTodos</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-19" name="__codelineno-10-19"></a><span class="w">                </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">getNombre</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; - &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">getPrecio</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;€&quot;</span><span class="p">);</span>
-<a id="__codelineno-10-20" name="__codelineno-10-20"></a><span class="w">            </span><span class="p">}</span>
-<a id="__codelineno-10-21" name="__codelineno-10-21"></a>
-<a id="__codelineno-10-22" name="__codelineno-10-22"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-10-23" name="__codelineno-10-23"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Fallo del sistema: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
-<a id="__codelineno-10-24" name="__codelineno-10-24"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-10-25" name="__codelineno-10-25"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-10-26" name="__codelineno-10-26"></a><span class="p">}</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7"></a><span class="w">        </span><span class="c1">// 1. Instanciamos y rellenamos un POJO con los datos para evitar inserts larguísimos</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8"></a><span class="w">        </span><span class="n">Articulo</span><span class="w"> </span><span class="n">nuevo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Articulo</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Webcam HD&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">45</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">);</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9"></a><span class="w">        </span><span class="k">if</span><span class="p">(</span><span class="n">dao</span><span class="p">.</span><span class="na">insertar</span><span class="p">(</span><span class="n">nuevo</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Artículo guardado con éxito.&quot;</span><span class="p">);</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12"></a>
+<a id="__codelineno-10-13" name="__codelineno-10-13"></a><span class="w">        </span><span class="c1">// 2. Recuperamos la información de la DB directamente en formato Lista de Objetos</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14"></a><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;--- LISTA DE ARTÍCULOS ---&quot;</span><span class="p">);</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15"></a><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">Articulo</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">dao</span><span class="p">.</span><span class="na">obtenerTodos</span><span class="p">())</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">a</span><span class="p">.</span><span class="na">getNombre</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot; - &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">a</span><span class="p">.</span><span class="na">getPrecio</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&quot;€&quot;</span><span class="p">);</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <div class="admonition question">
-<p class="admonition-title">💻 Reto Final de Unidad: Completando el DAO</p>
+<p class="admonition-title">Reto Final de Unidad: Diseñando la Aplicación</p>
 <p>Basándote en el <code>ArticuloDAO</code> que hemos visto:</p>
 <ol>
-<li>Implementa el método <code>public boolean eliminar(int idArticulo)</code>. Deberá ejecutar un <code>DELETE</code> en la base de datos para borrar el artículo especificado por clave.</li>
+<li>Implementa el método <code>public boolean eliminar(int idArticulo)</code>. Deberá ejecutar un <code>DELETE</code> en la base de datos para borrar el artículo especificado por su id.</li>
 <li>Implementa un método <code>public Articulo obtenerPorId(int idArticulo)</code>. Deberá hacer un <code>SELECT</code> con un <code>WHERE</code>, extraer el resultado y devolver un solo objeto <code>Articulo</code> (o <code>null</code> si no existe).</li>
-<li>Prueba tus nuevos métodos en el <code>main</code>.</li>
+<li>Implementa el método <code>public boolean actualizar(Articulo art)</code>. Deberá ejecutar un <code>UPDATE</code> basándose en el id del objeto para sobrescribir en bloque sus atributos.</li>
+<li><strong>Aplicación Final:</strong> Construye una clase nueva (ej. <code>MenuTienda</code>) que muestre un menú interactivo por terminal (usando <code>Scanner</code>). El menú iterará en bucle y permitirá al usuario elegir entre:<ul>
+<li>Listar todos los artículos.</li>
+<li>Buscar y mostrar un artículo concreto por id.</li>
+<li>Dar de alta un nuevo artículo (pidiendo los campos).</li>
+<li>Modificar los datos de un artículo existente.</li>
+<li>Eliminar un artículo.</li>
+<li>Salir del programa.</li>
+</ul>
+</li>
+</ol>
+<p><em>El objetivo principal de esta práctica es que estructures un programa donde tu clase principal visual interactúe exclusivamente con los métodos Java de tu <code>ArticuloDAO</code>, manteniendo las mecánicas SQL totalmente separadas e invisibles para el menú.</em></p>
+</div>
+<hr />
+<h2 id="8-estructuracion-y-empaquetado-del-proyecto">8. Estructuración y Empaquetado del Proyecto</h2>
+<p>A medida que nuestras aplicaciones crecen, tener todos los archivos Java mezclados dentro de la misma carpeta raíz (o en el paquete "por defecto") acaba produciendo un caos organizativo insostenible.</p>
+<p>Una buena práctica universal en la industria del software es separar nuestras clases en diferentes <strong>paquetes</strong> (<em>Packages</em> en Java) dependiendo de la responsabilidad o tarea principal que realicen. A este famoso patrón arquitectónico se le conoce como <strong>Separación de Responsabilidades</strong>.</p>
+<p>De cara a este reto final y a tus futuros proyectos profesionales orientados al acceso a datos, tu árbol de carpetas principal (<code>src/main/java/</code>) debería asimilarse a la siguiente estructura formal:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-11-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-11-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-11-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-11-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-11-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-11-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-11-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-11-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-11-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-11-10">10</a></span>
+<span class="normal"><a href="#__codelineno-11-11">11</a></span>
+<span class="normal"><a href="#__codelineno-11-12">12</a></span>
+<span class="normal"><a href="#__codelineno-11-13">13</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1"></a>src/
+<a id="__codelineno-11-2" name="__codelineno-11-2"></a>└── main/
+<a id="__codelineno-11-3" name="__codelineno-11-3"></a>    └── java/
+<a id="__codelineno-11-4" name="__codelineno-11-4"></a>        └── org.camp.tienda/
+<a id="__codelineno-11-5" name="__codelineno-11-5"></a>            ├── model/              # Aquí ubicamos todos nuestros POJOs puros
+<a id="__codelineno-11-6" name="__codelineno-11-6"></a>            │   ├── Articulo.java
+<a id="__codelineno-11-7" name="__codelineno-11-7"></a>            │   └── Fabricante.java
+<a id="__codelineno-11-8" name="__codelineno-11-8"></a>            ├── database/           # Toda la lógica de red, conexión y manipulación SQL
+<a id="__codelineno-11-9" name="__codelineno-11-9"></a>            │   ├── ConexionBD.java
+<a id="__codelineno-11-10" name="__codelineno-11-10"></a>            │   ├── ArticuloDAO.java
+<a id="__codelineno-11-11" name="__codelineno-11-11"></a>            │   └── FabricanteDAO.java
+<a id="__codelineno-11-12" name="__codelineno-11-12"></a>            └── view/               # Interfaz de usuario, menús visuales y puntos de entrada
+<a id="__codelineno-11-13" name="__codelineno-11-13"></a>                └── MenuTienda.java # (Contiene tu public static void main)
+</code></pre></div></td></tr></table></div>
+<h3 id="81-por-que-organizarlo-en-paquetes">8.1. ¿Por qué organizarlo en paquetes?</h3>
+<ol>
+<li><strong>Escalabilidad:</strong> Si en el futuro decides sustituir el espartano <code>MenuTienda.java</code> de texto por una ventana visual moderna (<code>VentanaApp.java</code>), las capas de conexión (<code>database</code>) y los modelos (<code>model</code>) no sufren ningún cambio porque están totalmente divorciados de la interfaz gráfica.</li>
+<li><strong>Mantenibilidad:</strong> Si salta una excepción SQL durante la ejecución de la app, instintivamente ya sabes que la avería técnica reside en exclusiva dentro de alguna de las escasas clases del paquete <code>database</code>.</li>
+<li><strong>Trabajo en Equipo:</strong> En la industria nunca programarás solo. Esta separación permite que un desarrollador de <em>backend</em> pueda estar optimizando la capa del <code>DAO</code> mientras que, en paralelo y sin producir conflictos de git, otro compañero diagrama el menú en el paquete de vistas.</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Práctica Final: Refactorizando el Proyecto</p>
+<p>Antes de dar la unidad por concluida, vamos a aplicar estas estrictas reglas de jerarquía profesional a todo el código que has escrito para tu <strong>Reto Final</strong>:</p>
+<ol>
+<li>Localiza tu carpeta principal <code>src/main/java/org/camp/tienda/</code> (o tu paquete base), haz clic derecho sobre ella y crea en su interior los tres paquetes fundamentales: <code>model</code>, <code>database</code> y <code>view</code>.</li>
+<li>Selecciona y arrastra tus clases POJO (<code>Articulo</code> y <code>Fabricante</code>) dentro de la carpeta <code>model</code>.</li>
+<li>Pincha y desplaza tu herramienta <code>ConexionBD</code> y todo el grueso del <code>ArticuloDAO</code> hacia su nuevo hogar lógico: <code>database</code>.</li>
+<li>Por último, localiza tu clase ejecutable principal <code>MenuTienda</code> (la que contiene la función <code>main</code>) y confínala dentro de <code>view</code>.</li>
+<li>Al realizar esta reestructuración masiva, asegúrate de utilizar la herramienta de refactorización de tu IDE o bien revisa los nuevos <code>import</code> en las cabeceras de tus archivos para solucionar cualquier dependencia rota.</li>
+<li>Vuelve a arrancar la máquina virtual ejecutando el <code>main</code>. ¡Si compila a la primera y tu menú por consola sigue dominando los registros de PostgreSQL, habrás completado con un rotundo éxito esta unidad técnica!</li>
 </ol>
 </div>
 
