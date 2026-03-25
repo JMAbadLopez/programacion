@@ -703,18 +703,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#51-el-ciclo-de-vida-de-una-consulta-planificacion" class="md-nav__link">
+  <a href="#51-objetos-principales-de-jdbc" class="md-nav__link">
     <span class="md-ellipsis">
-      5.1. El Ciclo de Vida de una Consulta (Planificación)
+      5.1. Objetos principales de JDBC
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#52-tipos-de-ejecucion" class="md-nav__link">
+  <a href="#52-el-ciclo-de-vida-de-una-consulta-planificacion" class="md-nav__link">
     <span class="md-ellipsis">
-      5.2. Tipos de Ejecución
+      5.2. El Ciclo de Vida de una Consulta (Planificación)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-tipos-de-ejecucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3. Tipos de Ejecución
     </span>
   </a>
   
@@ -2177,18 +2186,27 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#51-el-ciclo-de-vida-de-una-consulta-planificacion" class="md-nav__link">
+  <a href="#51-objetos-principales-de-jdbc" class="md-nav__link">
     <span class="md-ellipsis">
-      5.1. El Ciclo de Vida de una Consulta (Planificación)
+      5.1. Objetos principales de JDBC
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#52-tipos-de-ejecucion" class="md-nav__link">
+  <a href="#52-el-ciclo-de-vida-de-una-consulta-planificacion" class="md-nav__link">
     <span class="md-ellipsis">
-      5.2. Tipos de Ejecución
+      5.2. El Ciclo de Vida de una Consulta (Planificación)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#53-tipos-de-ejecucion" class="md-nav__link">
+    <span class="md-ellipsis">
+      5.3. Tipos de Ejecución
     </span>
   </a>
   
@@ -2646,7 +2664,40 @@ Una vez modificado el archivo <code>build.gradle</code>, <strong>el driver todav
 <p class="admonition-title">La regla de oro de la seguridad</p>
 <p><strong>NUNCA</strong> construyas una consulta SQL concatenando Strings con variables del usuario (ej: <code>"SELECT * FROM tabla WHERE id = " + idUsuario</code>). Esto abre la puerta a la vulnerabilidad más famosa de la historia: la <strong>Inyección SQL</strong>. Utiliza siempre <code>PreparedStatement</code>.</p>
 </div>
-<h3 id="51-el-ciclo-de-vida-de-una-consulta-planificacion">5.1. El Ciclo de Vida de una Consulta (Planificación)</h3>
+<h3 id="51-objetos-principales-de-jdbc">5.1. Objetos principales de JDBC</h3>
+<p>Para interactuar con una base de datos relacional desde Java, utilizaremos principalmente cuatro objetos o interfaces clave proporcionados por la API JDBC. Conocer su propósito es fundamental para entender cómo fluyen los datos en nuestra aplicación.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Objeto / Interfaz</th>
+<th style="text-align: left;">Descripción</th>
+<th style="text-align: left;">Propósito principal</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong><code>Connection</code></strong></td>
+<td style="text-align: left;">Representa la conexión física con la base de datos. Es el punto de partida (el "túnel" de comunicación).</td>
+<td style="text-align: left;">Iniciar la comunicación, gestionar transacciones y servir como fábrica para crear objetos <code>Statement</code> o <code>PreparedStatement</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>Statement</code></strong></td>
+<td style="text-align: left;">Se utiliza para ejecutar sentencias SQL estáticas (sin parámetros fijados en tiempo de ejecución) y obtener sus resultados.</td>
+<td style="text-align: left;">Ejecutar consultas simples y estáticas (ej. <code>SELECT * FROM tabla</code>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>PreparedStatement</code></strong></td>
+<td style="text-align: left;">Una subinterfaz de <code>Statement</code> que representa una sentencia SQL precompilada. Permite inyectar parámetros (<code>?</code>) de forma dinámica y segura.</td>
+<td style="text-align: left;">Ejecutar consultas dinámicas protegiendo contra la <strong>inyección SQL</strong> (ej. <code>SELECT * FROM tabla WHERE id = ?</code>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong><code>ResultSet</code></strong></td>
+<td style="text-align: left;">Representa el conjunto de resultados (la tabla de datos) generado al ejecutar una orden <code>SELECT</code>.</td>
+<td style="text-align: left;">Actúa como un cursor o iterador que nos permite recorrer la tabla virtual resultante fila por fila y extraer sus valores.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="52-el-ciclo-de-vida-de-una-consulta-planificacion">5.2. El Ciclo de Vida de una Consulta (Planificación)</h3>
 <p>Cualquier interacción con la base de datos sigue siempre un ciclo de vida compuesto de tres fases fundamentales: <strong>preparación</strong>, <strong>ejecución</strong> y <strong>tratamiento</strong>.</p>
 <pre class="mermaid"><code>graph TD
     A(1. Preparación) --&gt;|Llenamos el vehículo con datos| B(2. Ejecución)
@@ -2654,11 +2705,11 @@ Una vez modificado el archivo <code>build.gradle</code>, <strong>el driver todav
     C --&gt;|executeQuery| D[3. Tratamiento: ResultSet]
     C --&gt;|executeUpdate| E[3. Tratamiento: Filas afectadas]</code></pre>
 <ol>
-<li><strong>Preparación</strong>: Se define el texto de la sentencia SQL asegurada (usualmente con las interrogaciones <code>?</code> reservando espacios) y se le inyectan los valores reales que el usuario haya escrito en el formulario.</li>
+<li><strong>Preparación</strong>: Se define el texto de la sentencia SQL asegurada (usualmente con las interrogaciones <code>?</code> reservando espacios en un <code>PreparedStatement</code>) y se le inyectan los valores reales que el usuario haya escrito en el formulario.</li>
 <li><strong>Ejecución</strong>: El "vehículo" sale de nuestra aplicación Java hacia el motor de base de datos para que esta valide y procese la instrucción de forma segura sin peligro de inyección.</li>
 <li><strong>Tratamiento</strong>: La base de datos responde. Si hemos leído información (<code>SELECT</code>), debemos iterar y traducir la tabla devuelta fila a fila con un <code>ResultSet</code>. Si hemos modificado datos (<code>INSERT</code>, <code>UPDATE</code>, <code>DELETE</code>), recibiremos un número o <code>int</code> comprobando el número de registros que han sido modificados.</li>
 </ol>
-<h3 id="52-tipos-de-ejecucion">5.2. Tipos de Ejecución</h3>
+<h3 id="53-tipos-de-ejecucion">5.3. Tipos de Ejecución</h3>
 <p>Dependiendo de la consulta SQL que envíemos en la fase de Ejecución, invocaremos un método diferente:</p>
 <ol>
 <li><strong><code>executeQuery()</code></strong>: Para consultas <code>SELECT</code>. Devuelve un objeto <strong><code>ResultSet</code></strong> (una tabla con los resultados).</li>
@@ -2915,7 +2966,7 @@ Una vez modificado el archivo <code>build.gradle</code>, <strong>el driver todav
 <a id="__codelineno-7-67" name="__codelineno-7-67"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;--- PRUEBA CRUD FINALIZADA ---&quot;</span><span class="p">);</span>
 <a id="__codelineno-7-68" name="__codelineno-7-68"></a>
 <a id="__codelineno-7-69" name="__codelineno-7-69"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-7-70" name="__codelineno-7-70"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Fallo fatal de base de datos interrumpiendo el flujo: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<a id="__codelineno-7-70" name="__codelineno-7-70"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Fallo fatal de base de datos interrumpiendo el flujo: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
 <a id="__codelineno-7-71" name="__codelineno-7-71"></a><span class="w">        </span><span class="p">}</span>
 <a id="__codelineno-7-72" name="__codelineno-7-72"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-7-73" name="__codelineno-7-73"></a><span class="p">}</span>
@@ -3135,7 +3186,7 @@ Si el programa principal quiere un artículo, no hace un <code>SELECT</code>; en
 <a id="__codelineno-9-26" name="__codelineno-9-26"></a><span class="w">                </span><span class="n">lista</span><span class="p">.</span><span class="na">add</span><span class="p">(</span><span class="n">a</span><span class="p">);</span><span class="w"> </span><span class="c1">// Añadimos a la lista</span>
 <a id="__codelineno-9-27" name="__codelineno-9-27"></a><span class="w">            </span><span class="p">}</span>
 <a id="__codelineno-9-28" name="__codelineno-9-28"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-29" name="__codelineno-9-29"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error al obtener artículos: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<a id="__codelineno-9-29" name="__codelineno-9-29"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error al obtener artículos: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
 <a id="__codelineno-9-30" name="__codelineno-9-30"></a><span class="w">        </span><span class="p">}</span>
 <a id="__codelineno-9-31" name="__codelineno-9-31"></a><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">lista</span><span class="p">;</span>
 <a id="__codelineno-9-32" name="__codelineno-9-32"></a><span class="w">    </span><span class="p">}</span>
@@ -3154,7 +3205,7 @@ Si el programa principal quiere un artículo, no hace un <code>SELECT</code>; en
 <a id="__codelineno-9-45" name="__codelineno-9-45"></a>
 <a id="__codelineno-9-46" name="__codelineno-9-46"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="n">pstmt</span><span class="p">.</span><span class="na">executeUpdate</span><span class="p">()</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// Devuelve true si afectó a alguna fila</span>
 <a id="__codelineno-9-47" name="__codelineno-9-47"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">SQLException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-9-48" name="__codelineno-9-48"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">err</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error al insertar: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
+<a id="__codelineno-9-48" name="__codelineno-9-48"></a><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&quot;Error al insertar: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">e</span><span class="p">.</span><span class="na">getMessage</span><span class="p">());</span>
 <a id="__codelineno-9-49" name="__codelineno-9-49"></a><span class="w">            </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
 <a id="__codelineno-9-50" name="__codelineno-9-50"></a><span class="w">        </span><span class="p">}</span>
 <a id="__codelineno-9-51" name="__codelineno-9-51"></a><span class="w">    </span><span class="p">}</span>
