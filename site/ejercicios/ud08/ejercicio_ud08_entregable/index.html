@@ -1690,6 +1690,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ampliacion-log-de-accesos-ficheros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ampliación: Log de Accesos (Ficheros)
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2229,6 +2238,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#ampliacion-log-de-accesos-ficheros" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ampliación: Log de Accesos (Ficheros)
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2362,6 +2380,21 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
 <span class="normal"><a href="#__codelineno-3-2">2</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="n">java</span><span class="p">.</span><span class="na">sql</span><span class="p">.</span><span class="na">Date</span><span class="w"> </span><span class="n">fechaSql</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">rs</span><span class="p">.</span><span class="na">getDate</span><span class="p">(</span><span class="s">&quot;fecha_creacion&quot;</span><span class="p">);</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">LocalDate</span><span class="w"> </span><span class="n">fechaModerna</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fechaSql</span><span class="p">.</span><span class="na">toLocalDate</span><span class="p">();</span>
+</code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="ampliacion-log-de-accesos-ficheros">Ampliación: Log de Accesos (Ficheros)</h2>
+<p>Para conectar los conocimientos de la UD7 (Ficheros) con la UD8 (Bases de Datos), se propone este reto final:</p>
+<p>Cada vez que un usuario complete el login con éxito en la Fase 1, el programa deberá añadir una nueva línea en un archivo de texto plano llamado <code>accesos.log</code>. Esta línea dejará constancia de qué correo electrónico ha iniciado sesión y en qué momento exacto.</p>
+<div class="admonition warning">
+<p class="admonition-title">¡Ojo!</p>
+<p>La clase <code>LocalDate</code> solo sirve para guardar fechas simples (Año-Mes-Día). Como se te pide registrar también las horas, minutos y segundos, tendrás que investigar y usar su clase hermana <strong><code>LocalDateTime</code></strong> (invocando a <code>LocalDateTime.now()</code>) para capturar el instante preciso del login tal y como se pide.</p>
+</div>
+<p><strong>Ejemplo de cómo debería verse el contenido de tu archivo <code>accesos.log</code>:</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a>admin@empresa.com - 2024-05-10T08:30:15.123
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a>pepe@gmail.com - 2024-05-10T09:15:42.859
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>admin@empresa.com - 2024-05-10T14:02:05.401
 </code></pre></div></td></tr></table></div>
 
 

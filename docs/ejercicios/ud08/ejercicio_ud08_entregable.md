@@ -131,3 +131,22 @@ Aquí tienes las pistas clave para que logres insertar y recuperar la fecha por 
   java.sql.Date fechaSql = rs.getDate("fecha_creacion");
   LocalDate fechaModerna = fechaSql.toLocalDate();
   ```
+
+---
+
+## Ampliación: Log de Accesos (Ficheros)
+
+Para conectar los conocimientos de la UD7 (Ficheros) con la UD8 (Bases de Datos), se propone este reto final:
+
+Cada vez que un usuario complete el login con éxito en la Fase 1, el programa deberá añadir una nueva línea en un archivo de texto plano llamado `accesos.log`. Esta línea dejará constancia de qué correo electrónico ha iniciado sesión y en qué momento exacto.
+
+!!! warning "¡Ojo!"
+    La clase `LocalDate` solo sirve para guardar fechas simples (Año-Mes-Día). Como se te pide registrar también las horas, minutos y segundos, tendrás que investigar y usar su clase hermana **`LocalDateTime`** (invocando a `LocalDateTime.now()`) para capturar el instante preciso del login tal y como se pide.
+
+**Ejemplo de cómo debería verse el contenido de tu archivo `accesos.log`:**
+
+```text
+admin@empresa.com - 2024-05-10T08:30:15.123
+pepe@gmail.com - 2024-05-10T09:15:42.859
+admin@empresa.com - 2024-05-10T14:02:05.401
+```
