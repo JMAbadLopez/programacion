@@ -33,7 +33,6 @@ erDiagram
         date fecha_creacion
         int id_usuario
     }
-    USUARIO ||--o{ NOTA : crea
 ```
 
 ---
