@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://jmabadlopez.github.io/programacion/site/ejercicios/ud08/ejercicio_ud08_entregable/">
       
       
-        <link rel="prev" href="../../ud07/ejercicios_ud07/">
+        <link rel="prev" href="../../ud07/ejercicio_ud07_entregable/">
       
       
         <link rel="next" href="../../../recursos/guia_intellij/">
@@ -1436,7 +1436,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ud07/ejercicio_ud07_entregable." class="md-nav__link">
+      <a href="../../ud07/ejercicio_ud07_entregable/" class="md-nav__link">
         
   
   
@@ -2280,27 +2280,26 @@
 <p>Se requiere desarrollar una aplicación backend en Java para gestionar un "Bloc de Notas" de usuarios. La aplicación debe permitir a distintos usuarios iniciar sesión en el sistema usando su correo electrónico y su contraseña. Una vez verificada su identidad ante la base de datos, el usuario podrá acceder a su tablón personal donde podrá leer sus notas anteriores, crear nuevas anotaciones (cada una con su texto y la fecha en la que fue creada) y eliminar las que ya no necesite.</p>
 <hr />
 <h2 id="diagrama-er">Diagrama E/R</h2>
-<p>El modelo relacional está compuesto por dos entidades principales: <code>usuarios</code> y <code>notas</code>. Un usuario puede tener muchas notas, pero una nota siempre pertenece a un único usuario (relación 1:N).</p>
+<p>El modelo relacional está compuesto por dos entidades principales: <code>usuario</code> y <code>nota</code>. Un usuario puede tener muchas notas, pero una nota siempre pertenece a un único usuario (relación 1:N).</p>
 <pre class="mermaid"><code>erDiagram
-    USUARIOS {
+    USUARIO {
         int id_usuario
         varchar email
         varchar password
     }
-    NOTAS {
+    NOTA {
         int id_nota
         text texto
         date fecha_creacion
         int id_usuario
     }
-
-    USUARIOS ||--o{ NOTAS : "crea"</code></pre>
+    USUARIO ||--o{ NOTA : crea</code></pre>
 <hr />
 <h2 id="requisitos-tecnicos">Requisitos Técnicos</h2>
 <h3 id="1-base-de-datos">1. Base de Datos</h3>
 <ul>
-<li>Crea el esquema necesario en tu motor de base de datos (PostgreSQL, MariaDB o MySQL) prestando atención a las tablas <code>usuarios</code> y <code>notas</code>.</li>
-<li>Es obligatorio establecer correctamente la clave foránea (FK) en la tabla <code>notas</code> apuntando a <code>usuarios</code>, respetando la integridad referencial.</li>
+<li>Crea el esquema necesario en tu motor de base de datos (PostgreSQL, MariaDB o MySQL) prestando atención a las tablas <code>usuario</code> y <code>nota</code>.</li>
+<li>Es obligatorio establecer correctamente la clave foránea (FK) en la tabla <code>nota</code> apuntando a <code>usuario</code>, respetando la integridad referencial.</li>
 <li>Se recomienda insertar un par de usuarios iniciales directamente desde SQL (por consola o PGAdmin/DBeaver) para poder probar el login.</li>
 </ul>
 <h3 id="2-clases-modelo-pojo">2. Clases Modelo (POJO)</h3>
@@ -2338,6 +2337,7 @@
 <li><strong>Crear nueva nota:</strong> Se pedirá al usuario el texto de la nota. El sistema asignará la fecha actual de forma automática y preparará la guardada en BD asociada al <code>id_usuario</code> activo.</li>
 <li><strong>Eliminar nota:</strong> Se pedirá el ID de la nota a borrar y se eliminará de la base de datos (asegurando siempre que el ID de la nota borrada le pertenece).</li>
 <li><strong>Cerrar Sesión (Logout):</strong> Eliminará al "usuario activo" de la memoria y volverá a la Fase 1 de Login.</li>
+<li><strong>Salir:</strong> Cerrará la aplicación.</li>
 </ol>
 <hr />
 <h2 id="tips-y-ayuda-trabajando-con-fechas-date-en-jdbc">Tips y Ayuda: Trabajando con Fechas (Date) en JDBC</h2>
@@ -2431,7 +2431,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Pie" >
         
           
-          <a href="../../ud07/ejercicios_ud07/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Ejercicios de Ficheros y Excepciones">
+          <a href="../../ud07/ejercicio_ud07_entregable/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Actividad entregable. Gestión de Almacén con Persistencia">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
@@ -2441,7 +2441,7 @@
                 Anterior
               </span>
               <div class="md-ellipsis">
-                Ejercicios de Ficheros y Excepciones
+                Actividad entregable. Gestión de Almacén con Persistencia
               </div>
             </div>
           </a>

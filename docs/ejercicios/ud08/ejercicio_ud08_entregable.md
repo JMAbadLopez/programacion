@@ -18,23 +18,22 @@ Se requiere desarrollar una aplicación backend en Java para gestionar un "Bloc 
 
 ## Diagrama E/R
 
-El modelo relacional está compuesto por dos entidades principales: `usuarios` y `notas`. Un usuario puede tener muchas notas, pero una nota siempre pertenece a un único usuario (relación 1:N).
+El modelo relacional está compuesto por dos entidades principales: `usuario` y `nota`. Un usuario puede tener muchas notas, pero una nota siempre pertenece a un único usuario (relación 1:N).
 
 ```mermaid
 erDiagram
-    USUARIOS {
+    USUARIO {
         int id_usuario
         varchar email
         varchar password
     }
-    NOTAS {
+    NOTA {
         int id_nota
         text texto
         date fecha_creacion
         int id_usuario
     }
-
-    USUARIOS ||--o{ NOTAS : "crea"
+    USUARIO ||--o{ NOTA : crea
 ```
 
 ---
@@ -43,8 +42,8 @@ erDiagram
 
 ### 1. Base de Datos
 
-* Crea el esquema necesario en tu motor de base de datos (PostgreSQL, MariaDB o MySQL) prestando atención a las tablas `usuarios` y `notas`.
-* Es obligatorio establecer correctamente la clave foránea (FK) en la tabla `notas` apuntando a `usuarios`, respetando la integridad referencial.
+* Crea el esquema necesario en tu motor de base de datos (PostgreSQL, MariaDB o MySQL) prestando atención a las tablas `usuario` y `nota`.
+* Es obligatorio establecer correctamente la clave foránea (FK) en la tabla `nota` apuntando a `usuario`, respetando la integridad referencial.
 * Se recomienda insertar un par de usuarios iniciales directamente desde SQL (por consola o PGAdmin/DBeaver) para poder probar el login.
 
 ### 2. Clases Modelo (POJO)
@@ -86,6 +85,7 @@ Mostrará un menú en bucle con estas opciones:
 2. **Crear nueva nota:** Se pedirá al usuario el texto de la nota. El sistema asignará la fecha actual de forma automática y preparará la guardada en BD asociada al `id_usuario` activo.
 3. **Eliminar nota:** Se pedirá el ID de la nota a borrar y se eliminará de la base de datos (asegurando siempre que el ID de la nota borrada le pertenece).
 4. **Cerrar Sesión (Logout):** Eliminará al "usuario activo" de la memoria y volverá a la Fase 1 de Login.
+5. **Salir:** Cerrará la aplicación.
 
 ---
 
