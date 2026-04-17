@@ -3,7 +3,7 @@ site_url: https://jmabadlopez.github.io/programacion/site/
 
 nav:
   - Unidades:
-    - UD1 - Introducción a la programación. Lenguaje Java.: unidades/ud01.md
+    - UD1 - Introducción a la programación. Lenguaje Java: unidades/ud01.md
     - UD2 - Programación estructurada. Estructuras de control y repetición: unidades/ud02.md
     - UD3 - Funciones y procedimientos: unidades/ud03.md
     - UD4 - Estructuras de datos dinámicas: unidades/ud04.md
@@ -11,34 +11,36 @@ nav:
     - UD6 - POO Avanzada: unidades/ud06.md
     - UD7 - Ficheros y Excepciones: unidades/ud07.md
     - UD8 - Acceso a Bases de Datos: unidades/ud08.md
+    - UD9 - Interfaces gráficas con JavaFX: 
+      - Introducción: unidades/ud09/introduccion.md
   - Ejercicios:
-    - UD1: 
+    - UD1 - Introducción a la programación. Lenguaje Java:
       - Ejercicios de introducción: ejercicios/ud01/introduccion.md
       - Ejercicios del lenguaje Java: ejercicios/ud01/lenguaje_java.md
-    - UD2:
+    - UD2 - Programación estructurada. Estructuras de control y repetición:
       - Ejercicios de programación estructurada: ejercicios/ud02/ejercicios_ud02.md
       - Ejercicios de condicionales y bucles: ejercicios/ud02/ejercicios_ud02_bucles.md
       - Actividades entregables: ejercicios/ud02/entregable_ud02.md
-    - UD3:
+    - UD3 - Funciones y procedimientos:
       - Ejercicios de funciones y procedimientos: ejercicios/ud03/ejercicios_ud03_inicio.md
       - Actividad entregable. Gestor de Inventario de Ferreteria: ejercicios/ud03/ejercicio_ud03_ferreteria.md
       - Actividad (EXTRA). Analizador de textos: ejercicios/ud03/ejercicio_ud03_analizador_texto.md
-    - UD4:
+    - UD4 - Estructuras de datos dinámicas:
       - Ejercicios de listas: ejercicios/ud04/ejercicios_ud4_arraylist_inicio.md
       - Ejercicios avanzados de listas: ejercicios/ud04/ejercicios_ud4_listas_avanzado.md
       - Ejercicios de conjuntos y mapas: ejercicios/ud04/ejercicios_ud4_set_map.md
       - Actividad entregable. La logística de Santa Claus: ejercicios/ud04/ejercicios_ud4_entregable.md
-    - UD5:
+    - UD5 - Programación Orientada a Objetos (POO):
       - Ejercicios de iniciación de POO: ejercicios/ud05/ejercicios_ud05_inicio.md
       - Ejercicios avanzados de POO: ejercicios/ud05/ejercicios_ud05_avanzado.md
       - Actividad entregable. Gestión de un cine: ejercicios/ud05/ejercicio_ud05_entregable.md
-    - UD6:
+    - UD6 - POO Avanzada:
       - Ejercicios de POO avanzada: ejercicios/ud06/ejercicios_ud6.md
       - Ejercicios de POO. Juego de Rol: ejercicios/ud06/ejercicios_ud6_juego_rol.md
-    - UD7:
+    - UD7 - Ficheros y Excepciones:
       - Ejercicios de Ficheros y Excepciones: ejercicios/ud07/ejercicios_ud07.md
       - Actividad entregable. Gestión de Almacén con Persistencia: ejercicios/ud07/ejercicio_ud07_entregable.md
-    - UD8:
+    - UD8 - Acceso a Bases de Datos:
       - Actividad entregable. Bloc de notas: ejercicios/ud08/ejercicio_ud08_entregable.md
   - Recursos:
     - Guías:
@@ -76,7 +78,6 @@ theme:
     - search.highlight
     - navigation.top
     - navigation.footer
-    - navigation.sections
     - navigation.tabs
     - navigation.tabs.sticky
     - navigation.path
