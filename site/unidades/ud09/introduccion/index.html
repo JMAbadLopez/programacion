@@ -706,21 +706,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Estructura de las Ventanas en JavaFX">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-ejemplo-una-aplicacion-100-en-codigo-java" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.1. Ejemplo: Una aplicación 100% en código Java
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -2034,6 +2019,29 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../recursos/propuesta_proyecto/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Otros
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -2112,21 +2120,6 @@
       2. Estructura de las Ventanas en JavaFX
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="2. Estructura de las Ventanas en JavaFX">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-ejemplo-una-aplicacion-100-en-codigo-java" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.1. Ejemplo: Una aplicación 100% en código Java
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2248,72 +2241,6 @@
     Pane --&gt; N1[Node: Etiqueta de texto]
     Pane --&gt; N2[Node: Campo de entrada]
     Pane --&gt; N3[Node: Botón de acción]</code></pre>
-<h3 id="21-ejemplo-una-aplicacion-100-en-codigo-java">2.1. Ejemplo: Una aplicación 100% en código Java</h3>
-<p>Veamos cómo se traduce esta jerarquía a código real creando una ventana simple programada íntegramente en Java:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-0-10">10</a></span>
-<span class="normal"><a href="#__codelineno-0-11">11</a></span>
-<span class="normal"><a href="#__codelineno-0-12">12</a></span>
-<span class="normal"><a href="#__codelineno-0-13">13</a></span>
-<span class="normal"><a href="#__codelineno-0-14">14</a></span>
-<span class="normal"><a href="#__codelineno-0-15">15</a></span>
-<span class="normal"><a href="#__codelineno-0-16">16</a></span>
-<span class="normal"><a href="#__codelineno-0-17">17</a></span>
-<span class="normal"><a href="#__codelineno-0-18">18</a></span>
-<span class="normal"><a href="#__codelineno-0-19">19</a></span>
-<span class="normal"><a href="#__codelineno-0-20">20</a></span>
-<span class="normal"><a href="#__codelineno-0-21">21</a></span>
-<span class="normal"><a href="#__codelineno-0-22">22</a></span>
-<span class="normal"><a href="#__codelineno-0-23">23</a></span>
-<span class="normal"><a href="#__codelineno-0-24">24</a></span>
-<span class="normal"><a href="#__codelineno-0-25">25</a></span>
-<span class="normal"><a href="#__codelineno-0-26">26</a></span>
-<span class="normal"><a href="#__codelineno-0-27">27</a></span>
-<span class="normal"><a href="#__codelineno-0-28">28</a></span>
-<span class="normal"><a href="#__codelineno-0-29">29</a></span>
-<span class="normal"><a href="#__codelineno-0-30">30</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.application.Application</span><span class="p">;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.scene.Scene</span><span class="p">;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.scene.control.Label</span><span class="p">;</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.scene.layout.StackPane</span><span class="p">;</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.stage.Stage</span><span class="p">;</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6"></a>
-<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="c1">// Toda app JavaFX debe heredar de &#39;Application&#39;</span>
-<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HolaJavaFX</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Application</span><span class="w"> </span><span class="p">{</span><span class="w"> </span>
-<a id="__codelineno-0-9" name="__codelineno-0-9"></a>
-<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="nd">@Override</span>
-<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">start</span><span class="p">(</span><span class="n">Stage</span><span class="w"> </span><span class="n">stage</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">        </span><span class="c1">// 1. Creamos un Nodo hoja (Etiqueta)</span>
-<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="w">        </span><span class="n">Label</span><span class="w"> </span><span class="n">etiqueta</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Label</span><span class="p">(</span><span class="s">&quot;Hola JavaFX&quot;</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-0-14" name="__codelineno-0-14"></a>
-<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="w">        </span><span class="c1">// 2. Creamos un Contenedor (Pane) y metemos la etiqueta dentro</span>
-<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">        </span><span class="n">StackPane</span><span class="w"> </span><span class="n">raiz</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StackPane</span><span class="p">(</span><span class="n">etiqueta</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-0-17" name="__codelineno-0-17"></a>
-<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="w">        </span><span class="c1">// 3. Creamos la Escena indicando su contenedor raíz y su tamaño (ancho x alto)</span>
-<a id="__codelineno-0-19" name="__codelineno-0-19"></a><span class="w">        </span><span class="n">Scene</span><span class="w"> </span><span class="n">escena</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scene</span><span class="p">(</span><span class="n">raiz</span><span class="p">,</span><span class="w"> </span><span class="mi">300</span><span class="p">,</span><span class="w"> </span><span class="mi">200</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-0-20" name="__codelineno-0-20"></a>
-<a id="__codelineno-0-21" name="__codelineno-0-21"></a><span class="w">        </span><span class="c1">// 4. Configuramos la Ventana (Stage)</span>
-<a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="w">        </span><span class="n">stage</span><span class="p">.</span><span class="na">setTitle</span><span class="p">(</span><span class="s">&quot;Primera App&quot;</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-0-23" name="__codelineno-0-23"></a><span class="w">        </span><span class="n">stage</span><span class="p">.</span><span class="na">setScene</span><span class="p">(</span><span class="n">escena</span><span class="p">);</span><span class="w"> </span>
-<a id="__codelineno-0-24" name="__codelineno-0-24"></a><span class="w">        </span><span class="n">stage</span><span class="p">.</span><span class="na">show</span><span class="p">();</span><span class="w"> </span><span class="c1">// Mostramos la ventana en pantalla</span>
-<a id="__codelineno-0-25" name="__codelineno-0-25"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-26" name="__codelineno-0-26"></a>
-<a id="__codelineno-0-27" name="__codelineno-0-27"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-0-28" name="__codelineno-0-28"></a><span class="w">        </span><span class="n">launch</span><span class="p">(</span><span class="n">args</span><span class="p">);</span><span class="w"> </span><span class="c1">// Método que arranca el ciclo de vida de JavaFX</span>
-<a id="__codelineno-0-29" name="__codelineno-0-29"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-0-30" name="__codelineno-0-30"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<div class="admonition note">
-<p class="admonition-title">Análisis del código</p>
-<p>Observa que la aplicación extiende de la clase <code>javafx.application.Application</code>, lo que nos obliga a implementar el método principal <code>start()</code>. Este método recibe por parámetro la ventana principal (<code>Stage</code>). Generamos la jerarquía <code>Node -&gt; Pane -&gt; Scene -&gt; Stage</code> y finalmente invocamos <code>show()</code> para hacerla visible.</p>
-</div>
 <hr />
 <h2 id="3-el-patron-mvc-modelo-vista-controlador">3. El Patrón MVC (Modelo-Vista-Controlador)</h2>
 <p>Aunque podemos crear interfaces programando cada botón y cada margen en Java (como vimos arriba), <strong>no es una buena práctica</strong> profesional. Mezclar código de lógica con código de diseño visual hace que los programas sean inmanejables.</p>
@@ -2345,6 +2272,48 @@
 <p>Vamos a diseccionar el proyecto por defecto que nos crea IntelliJ IDEA para entender cómo se enlazan la Vista, el Controlador y el Cargador.</p>
 <h3 id="51-la-vista-hello-viewfxml">5.1. La Vista (<code>hello-view.fxml</code>)</h3>
 <p>En lugar de construir la escena con código Java, definimos la estructura en un archivo XML:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a><span class="cp">&lt;?import javafx.geometry.Insets?&gt;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="cp">&lt;?import javafx.scene.control.Label?&gt;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a><span class="cp">&lt;?import javafx.scene.layout.VBox?&gt;</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="cp">&lt;?import javafx.scene.control.Button?&gt;</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="nt">&lt;VBox</span><span class="w"> </span><span class="na">alignment=</span><span class="s">&quot;CENTER&quot;</span><span class="w"> </span><span class="na">spacing=</span><span class="s">&quot;20.0&quot;</span><span class="w"> </span><span class="na">xmlns:fx=</span><span class="s">&quot;[http://javafx.com/fxml](http://javafx.com/fxml)&quot;</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">      </span><span class="na">fx:controller=</span><span class="s">&quot;org.example.demo.HelloController&quot;</span><span class="nt">&gt;</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="nt">&lt;padding&gt;</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="w">        </span><span class="nt">&lt;Insets</span><span class="w"> </span><span class="na">bottom=</span><span class="s">&quot;20.0&quot;</span><span class="w"> </span><span class="na">left=</span><span class="s">&quot;20.0&quot;</span><span class="w"> </span><span class="na">right=</span><span class="s">&quot;20.0&quot;</span><span class="w"> </span><span class="na">top=</span><span class="s">&quot;20.0&quot;</span><span class="nt">/&gt;</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a><span class="w">    </span><span class="nt">&lt;/padding&gt;</span>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="w">    </span><span class="nt">&lt;Label</span><span class="w"> </span><span class="na">fx:id=</span><span class="s">&quot;welcomeText&quot;</span><span class="nt">/&gt;</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="w">    </span><span class="nt">&lt;Button</span><span class="w"> </span><span class="na">text=</span><span class="s">&quot;Hello!&quot;</span><span class="w"> </span><span class="na">onAction=</span><span class="s">&quot;#onHelloButtonClick&quot;</span><span class="nt">/&gt;</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="nt">&lt;/VBox&gt;</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>Puntos clave:</strong></p>
+<ul>
+<li><code>fx:controller</code>: Enlaza directamente este archivo FXML con la clase Java que lo va a gobernar.</li>
+<li><code>fx:id</code>: Es como bautizar a un componente. Nos permite capturarlo desde Java.</li>
+<li><code>onAction</code>: Vincula un evento (como un clic) a un método específico.</li>
+</ul>
+<h3 id="52-el-controlador-hellocontrollerjava">5.2. El Controlador (<code>HelloController.java</code>)</h3>
+<p>Es una clase Java normal, pero utiliza la etiqueta "mágica" <strong><code>@FXML</code></strong>.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
@@ -2361,32 +2330,30 @@
 <span class="normal"><a href="#__codelineno-1-14">14</a></span>
 <span class="normal"><a href="#__codelineno-1-15">15</a></span>
 <span class="normal"><a href="#__codelineno-1-16">16</a></span>
-<span class="normal"><a href="#__codelineno-1-17">17</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a><span class="cp">&lt;?import javafx.geometry.Insets?&gt;</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="cp">&lt;?import javafx.scene.control.Label?&gt;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="cp">&lt;?import javafx.scene.layout.VBox?&gt;</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="cp">&lt;?import javafx.scene.control.Button?&gt;</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="nt">&lt;VBox</span><span class="w"> </span><span class="na">alignment=</span><span class="s">&quot;CENTER&quot;</span><span class="w"> </span><span class="na">spacing=</span><span class="s">&quot;20.0&quot;</span><span class="w"> </span><span class="na">xmlns:fx=</span><span class="s">&quot;[http://javafx.com/fxml](http://javafx.com/fxml)&quot;</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">      </span><span class="na">fx:controller=</span><span class="s">&quot;org.example.demo.HelloController&quot;</span><span class="nt">&gt;</span>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="nt">&lt;padding&gt;</span>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">        </span><span class="nt">&lt;Insets</span><span class="w"> </span><span class="na">bottom=</span><span class="s">&quot;20.0&quot;</span><span class="w"> </span><span class="na">left=</span><span class="s">&quot;20.0&quot;</span><span class="w"> </span><span class="na">right=</span><span class="s">&quot;20.0&quot;</span><span class="w"> </span><span class="na">top=</span><span class="s">&quot;20.0&quot;</span><span class="nt">/&gt;</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">    </span><span class="nt">&lt;/padding&gt;</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a>
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">    </span><span class="nt">&lt;Label</span><span class="w"> </span><span class="na">fx:id=</span><span class="s">&quot;welcomeText&quot;</span><span class="nt">/&gt;</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a>
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">    </span><span class="nt">&lt;Button</span><span class="w"> </span><span class="na">text=</span><span class="s">&quot;Hello!&quot;</span><span class="w"> </span><span class="na">onAction=</span><span class="s">&quot;#onHelloButtonClick&quot;</span><span class="nt">/&gt;</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="nt">&lt;/VBox&gt;</span>
+<span class="normal"><a href="#__codelineno-1-17">17</a></span>
+<span class="normal"><a href="#__codelineno-1-18">18</a></span>
+<span class="normal"><a href="#__codelineno-1-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">org.example.demo</span><span class="p">;</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.fxml.FXML</span><span class="p">;</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.scene.control.Label</span><span class="p">;</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HelloController</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a><span class="w">    </span><span class="c1">// La anotación @FXML inyecta el componente creado en el XML dentro de esta variable</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="w">    </span><span class="c1">// ¡El nombre de la variable DEBE coincidir con el fx:id del XML!</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a><span class="w">    </span><span class="nd">@FXML</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Label</span><span class="w"> </span><span class="n">welcomeText</span><span class="p">;</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>
+<a id="__codelineno-1-13" name="__codelineno-1-13"></a><span class="w">    </span><span class="c1">// Método que se ejecutará cuando se dispare el evento onAction del botón</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">    </span><span class="nd">@FXML</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onHelloButtonClick</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">        </span><span class="c1">// Modificamos el nodo visual desde Java</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">        </span><span class="n">welcomeText</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="s">&quot;¡Bienvenido al mundo de JavaFX!&quot;</span><span class="p">);</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
-<p><strong>Puntos clave:</strong></p>
-<ul>
-<li><code>fx:controller</code>: Enlaza directamente este archivo FXML con la clase Java que lo va a gobernar.</li>
-<li><code>fx:id</code>: Es como bautizar a un componente. Nos permite capturarlo desde Java.</li>
-<li><code>onAction</code>: Vincula un evento (como un clic) a un método específico.</li>
-</ul>
-<h3 id="52-el-controlador-hellocontrollerjava">5.2. El Controlador (<code>HelloController.java</code>)</h3>
-<p>Es una clase Java normal, pero utiliza la etiqueta "mágica" <strong><code>@FXML</code></strong>.</p>
+<h3 id="53-el-lanzador-helloapplicationjava">5.3. El Lanzador (<code>HelloApplication.java</code>)</h3>
+<p>Por último, la clase principal que arranca la aplicación usando el <code>FXMLLoader</code>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
@@ -2405,81 +2372,41 @@
 <span class="normal"><a href="#__codelineno-2-16">16</a></span>
 <span class="normal"><a href="#__codelineno-2-17">17</a></span>
 <span class="normal"><a href="#__codelineno-2-18">18</a></span>
-<span class="normal"><a href="#__codelineno-2-19">19</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">org.example.demo</span><span class="p">;</span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span>
+<span class="normal"><a href="#__codelineno-2-22">22</a></span>
+<span class="normal"><a href="#__codelineno-2-23">23</a></span>
+<span class="normal"><a href="#__codelineno-2-24">24</a></span>
+<span class="normal"><a href="#__codelineno-2-25">25</a></span>
+<span class="normal"><a href="#__codelineno-2-26">26</a></span>
+<span class="normal"><a href="#__codelineno-2-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">org.example.demo</span><span class="p">;</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.fxml.FXML</span><span class="p">;</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.scene.control.Label</span><span class="p">;</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HelloController</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="c1">// La anotación @FXML inyecta el componente creado en el XML dentro de esta variable</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="c1">// ¡El nombre de la variable DEBE coincidir con el fx:id del XML!</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="nd">@FXML</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">Label</span><span class="w"> </span><span class="n">welcomeText</span><span class="p">;</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12"></a>
-<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">    </span><span class="c1">// Método que se ejecutará cuando se dispare el evento onAction del botón</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">    </span><span class="nd">@FXML</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onHelloButtonClick</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">        </span><span class="c1">// Modificamos el nodo visual desde Java</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">        </span><span class="n">welcomeText</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="s">&quot;¡Bienvenido al mundo de JavaFX!&quot;</span><span class="p">);</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="p">}</span>
-</code></pre></div></td></tr></table></div>
-<h3 id="53-el-lanzador-helloapplicationjava">5.3. El Lanzador (<code>HelloApplication.java</code>)</h3>
-<p>Por último, la clase principal que arranca la aplicación usando el <code>FXMLLoader</code>:</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
-<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
-<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
-<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
-<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
-<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
-<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
-<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
-<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
-<span class="normal"><a href="#__codelineno-3-10">10</a></span>
-<span class="normal"><a href="#__codelineno-3-11">11</a></span>
-<span class="normal"><a href="#__codelineno-3-12">12</a></span>
-<span class="normal"><a href="#__codelineno-3-13">13</a></span>
-<span class="normal"><a href="#__codelineno-3-14">14</a></span>
-<span class="normal"><a href="#__codelineno-3-15">15</a></span>
-<span class="normal"><a href="#__codelineno-3-16">16</a></span>
-<span class="normal"><a href="#__codelineno-3-17">17</a></span>
-<span class="normal"><a href="#__codelineno-3-18">18</a></span>
-<span class="normal"><a href="#__codelineno-3-19">19</a></span>
-<span class="normal"><a href="#__codelineno-3-20">20</a></span>
-<span class="normal"><a href="#__codelineno-3-21">21</a></span>
-<span class="normal"><a href="#__codelineno-3-22">22</a></span>
-<span class="normal"><a href="#__codelineno-3-23">23</a></span>
-<span class="normal"><a href="#__codelineno-3-24">24</a></span>
-<span class="normal"><a href="#__codelineno-3-25">25</a></span>
-<span class="normal"><a href="#__codelineno-3-26">26</a></span>
-<span class="normal"><a href="#__codelineno-3-27">27</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">org.example.demo</span><span class="p">;</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.application.Application</span><span class="p">;</span>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.fxml.FXMLLoader</span><span class="p">;</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.scene.Scene</span><span class="p">;</span>
-<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.stage.Stage</span><span class="p">;</span>
-<a id="__codelineno-3-7" name="__codelineno-3-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span>
-<a id="__codelineno-3-8" name="__codelineno-3-8"></a>
-<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HelloApplication</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Application</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">    </span><span class="nd">@Override</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">start</span><span class="p">(</span><span class="n">Stage</span><span class="w"> </span><span class="n">stage</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">        </span><span class="c1">// 1. Cargamos el archivo FXML</span>
-<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">        </span><span class="n">FXMLLoader</span><span class="w"> </span><span class="n">fxmlLoader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FXMLLoader</span><span class="p">(</span><span class="n">HelloApplication</span><span class="p">.</span><span class="na">class</span><span class="p">.</span><span class="na">getResource</span><span class="p">(</span><span class="s">&quot;hello-view.fxml&quot;</span><span class="p">));</span>
-<a id="__codelineno-3-14" name="__codelineno-3-14"></a>
-<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">        </span><span class="c1">// 2. Creamos la escena usando la interfaz cargada</span>
-<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">        </span><span class="n">Scene</span><span class="w"> </span><span class="n">scene</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scene</span><span class="p">(</span><span class="n">fxmlLoader</span><span class="p">.</span><span class="na">load</span><span class="p">(),</span><span class="w"> </span><span class="mi">320</span><span class="p">,</span><span class="w"> </span><span class="mi">240</span><span class="p">);</span>
-<a id="__codelineno-3-17" name="__codelineno-3-17"></a>
-<a id="__codelineno-3-18" name="__codelineno-3-18"></a><span class="w">        </span><span class="c1">// 3. Mostramos la ventana</span>
-<a id="__codelineno-3-19" name="__codelineno-3-19"></a><span class="w">        </span><span class="n">stage</span><span class="p">.</span><span class="na">setTitle</span><span class="p">(</span><span class="s">&quot;App Modular MVC&quot;</span><span class="p">);</span>
-<a id="__codelineno-3-20" name="__codelineno-3-20"></a><span class="w">        </span><span class="n">stage</span><span class="p">.</span><span class="na">setScene</span><span class="p">(</span><span class="n">scene</span><span class="p">);</span>
-<a id="__codelineno-3-21" name="__codelineno-3-21"></a><span class="w">        </span><span class="n">stage</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
-<a id="__codelineno-3-22" name="__codelineno-3-22"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-23" name="__codelineno-3-23"></a>
-<a id="__codelineno-3-24" name="__codelineno-3-24"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-3-25" name="__codelineno-3-25"></a><span class="w">        </span><span class="n">launch</span><span class="p">();</span>
-<a id="__codelineno-3-26" name="__codelineno-3-26"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-27" name="__codelineno-3-27"></a><span class="p">}</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.application.Application</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.fxml.FXMLLoader</span><span class="p">;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.scene.Scene</span><span class="p">;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.stage.Stage</span><span class="p">;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HelloApplication</span><span class="w"> </span><span class="kd">extends</span><span class="w"> </span><span class="n">Application</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="nd">@Override</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">start</span><span class="p">(</span><span class="n">Stage</span><span class="w"> </span><span class="n">stage</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">        </span><span class="c1">// 1. Cargamos el archivo FXML</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">        </span><span class="n">FXMLLoader</span><span class="w"> </span><span class="n">fxmlLoader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FXMLLoader</span><span class="p">(</span><span class="n">HelloApplication</span><span class="p">.</span><span class="na">class</span><span class="p">.</span><span class="na">getResource</span><span class="p">(</span><span class="s">&quot;hello-view.fxml&quot;</span><span class="p">));</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">        </span><span class="c1">// 2. Creamos la escena usando la interfaz cargada</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">        </span><span class="n">Scene</span><span class="w"> </span><span class="n">scene</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scene</span><span class="p">(</span><span class="n">fxmlLoader</span><span class="p">.</span><span class="na">load</span><span class="p">(),</span><span class="w"> </span><span class="mi">320</span><span class="p">,</span><span class="w"> </span><span class="mi">240</span><span class="p">);</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">        </span><span class="c1">// 3. Mostramos la ventana</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">        </span><span class="n">stage</span><span class="p">.</span><span class="na">setTitle</span><span class="p">(</span><span class="s">&quot;App Modular MVC&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">        </span><span class="n">stage</span><span class="p">.</span><span class="na">setScene</span><span class="p">(</span><span class="n">scene</span><span class="p">);</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">        </span><span class="n">stage</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23"></a>
+<a id="__codelineno-2-24" name="__codelineno-2-24"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">        </span><span class="n">launch</span><span class="p">();</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <hr />
 <h2 id="6-puesta-en-practica">6. Puesta en Práctica</h2>
@@ -2490,18 +2417,18 @@
 <ol>
 <li>Abre IntelliJ y ve a <strong>File -&gt; New -&gt; Project</strong>.</li>
 <li>En el panel izquierdo, selecciona <strong>JavaFX</strong>.</li>
-<li>Asegúrate de configurar:<ul>
-<li>Language: <strong>Java</strong>.</li>
-<li>Build system: <strong>Gradle</strong>.</li>
-<li>Group / Artifact: Puedes usar <code>org.example</code> y <code>demo</code>.</li>
+<li>Asegúrate de configurar:
+    <em>Language: </em><em>Java</em>*.<ul>
+<li>Build system: <strong>Gradle</strong>.
+*Group / Artifact: Puedes usar <code>org.example</code> y <code>demo</code>.</li>
 </ul>
 </li>
 <li>Pulsa <strong>Create</strong>.</li>
 <li>Localiza en la estructura del proyecto (<code>src/main/...</code>) los tres archivos clave que hemos estudiado: el <code>Application</code>, el <code>.fxml</code> (en <code>resources</code>) y el <code>Controller</code>.</li>
 <li><strong>Ejecuta</strong> la aplicación y pulsa el botón.</li>
 <li><strong>Misión de experimentación:</strong><ul>
-<li>Ve al controlador y cambia el texto de respuesta.</li>
-<li>Ve al archivo <code>.fxml</code> y cambia el texto que dice <code>text="Hello!"</code> por algo en español.</li>
+<li>Ve al controlador y cambia el texto de respuesta.
+*Ve al archivo <code>.fxml</code> y cambia el texto que dice <code>text="Hello!"</code> por algo en español.</li>
 <li>Vuelve a ejecutar y comprueba los cambios. ¿Entiendes cómo se comunican la Vista y el Controlador?</li>
 </ul>
 </li>

@@ -36,46 +36,6 @@ graph TD
     Pane --> N3[Node: Botón de acción]
 ```
 
-### 2.1. Ejemplo: Una aplicación 100% en código Java
-
-Veamos cómo se traduce esta jerarquía a código real creando una ventana simple programada íntegramente en Java:
-
-```java
-import javafx.application.Application;
-import javafx.scene.Scene;
-import javafx.scene.control.Label;
-import javafx.scene.layout.StackPane;
-import javafx.stage.Stage;
-
-// Toda app JavaFX debe heredar de 'Application'
-public class HolaJavaFX extends Application { 
-    
-    @Override
-    public void start(Stage stage) {
-        // 1. Creamos un Nodo hoja (Etiqueta)
-        Label etiqueta = new Label("Hola JavaFX"); 
-        
-        // 2. Creamos un Contenedor (Pane) y metemos la etiqueta dentro
-        StackPane raiz = new StackPane(etiqueta); 
-        
-        // 3. Creamos la Escena indicando su contenedor raíz y su tamaño (ancho x alto)
-        Scene escena = new Scene(raiz, 300, 200); 
-
-        // 4. Configuramos la Ventana (Stage)
-        stage.setTitle("Primera App"); 
-        stage.setScene(escena); 
-        stage.show(); // Mostramos la ventana en pantalla
-    }
-
-    public static void main(String[] args) {
-        launch(args); // Método que arranca el ciclo de vida de JavaFX
-    }
-}
-```
-
-!!! note "Análisis del código"
-    Observa que la aplicación extiende de la clase `javafx.application.Application`, lo que nos obliga a implementar el método principal `start()`. Este método recibe por parámetro la ventana principal (`Stage`). Generamos la jerarquía `Node -> Pane -> Scene -> Stage` y finalmente invocamos `show()` para hacerla visible.
-
 ---
 
 ## 3. El Patrón MVC (Modelo-Vista-Controlador)
@@ -219,13 +179,13 @@ Es hora de comprobar que tu entorno de desarrollo está listo. IntelliJ IDEA inc
     1. Abre IntelliJ y ve a **File -> New -> Project**.
     2. En el panel izquierdo, selecciona **JavaFX**.
     3. Asegúrate de configurar:
-        * Language: **Java**.
+        *Language: **Java**.
         * Build system: **Gradle**.
-        * Group / Artifact: Puedes usar `org.example` y `demo`.
+        *Group / Artifact: Puedes usar `org.example` y `demo`.
     4. Pulsa **Create**.
     5. Localiza en la estructura del proyecto (`src/main/...`) los tres archivos clave que hemos estudiado: el `Application`, el `.fxml` (en `resources`) y el `Controller`.
     6. **Ejecuta** la aplicación y pulsa el botón.
     7. **Misión de experimentación:**
         * Ve al controlador y cambia el texto de respuesta.
-        * Ve al archivo `.fxml` y cambia el texto que dice `text="Hello!"` por algo en español.
+        *Ve al archivo `.fxml` y cambia el texto que dice `text="Hello!"` por algo en español.
         * Vuelve a ejecutar y comprueba los cambios. ¿Entiendes cómo se comunican la Vista y el Controlador?
