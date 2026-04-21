@@ -1,40 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="org.example.demo.HelloController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-  </padding>
+<?import javafx.scene.control.Button?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.demo.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+    </padding>
 
-  <Label fx:id="welcomeText" />
-  <Button fx:id="btnHello" onAction="#onHelloButtonClick" text="Say hello!" />
+    <Label fx:id="welcomeText"/>
+    <Button text="¡Hola!" onAction="#onHelloButtonClick"/>
 
-  <!-- Alertas -->
-  <Button text="Error" onAction="#mostrarAlertError" />
-  <Button text="Info" onAction="#mostrarAlertInfo" />
-  <Button text="Warning" onAction="#mostrarAlertWarning" />
-  <Button text="Confirmation" onAction="#mostrarAlertConfirmation" />
-
-  <!-- Radio -->
-  <RadioButton text="Man" fx:id="rbMan"
-               onMouseClicked="#pressMan" />
-  <RadioButton text="Woman" fx:id="rbWoman"
-               onMouseClicked="#pressWoman" />
-  <RadioButton text="Other" fx:id="rbOther"
-               onMouseClicked="#pressOther" />
-
-  <!-- CheckBox -->
-  <CheckBox fx:id="cbOK" mnemonicParsing="false" selected="false"
-            text="CheckBox" onAction="#pressOk"/>
-
-  <!-- Input text -->
-  <TextField fx:id="txtName" promptText="UserName" />
-  <TextField fx:id="txtAge" promptText="UserAge" />
-
-  <TextArea fx:id="txtAreaNote" promptText="Write something cool..." />
-  <Button fx:id="btnSave" text="Save" onAction="#saveNote" />
-
+    <!-- Añadimos nuestro conductor de escena -->
+    <Button text="Ir al Formulario" onAction="#onOpenButtonClick"/>
 </VBox>

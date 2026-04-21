@@ -137,6 +137,8 @@ public class PopupController {
 }
 ```
 
+<img src="../../../assets/images/ud09/ud09_3.png" alt="Hola mundo" style="zoom:50%;" />
+
 Al ejecutarse el `close()`, como la ventana funcionaba en modo `APPLICATION_MODAL`, el programa devolverá el foco visual y el código continuará su curso en la ventana subyacente.
 
 !!! question "💻 Reto: Modalidades"

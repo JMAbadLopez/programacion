@@ -2315,7 +2315,7 @@
 <p>Aunque podemos crear interfaces programando cada botón y cada margen en Java (como vimos arriba), <strong>no es una buena práctica</strong> profesional. Mezclar código de lógica con código de diseño visual hace que los programas sean inmanejables.</p>
 <p>JavaFX promueve el uso del <strong>Patrón de Arquitectura MVC</strong>, separando las responsabilidades de nuestro programa en tres bloques:</p>
 <ul>
-<li><strong>Modelo (Model):</strong> Son tus clases Java tradicionales (Unidades 5 y 6). Representan los datos, la lógica de negocio y las reglas (ej: <code>Producto</code>, <code>Usuario</code>, calculadoras, conexiones a BD).</li>
+<li><strong>Modelo (Model):</strong> Son tus clases Java tradicionales (Unidades 5, 6 y 8). Representan los datos, la lógica de negocio y las reglas (ej: <code>Producto</code>, <code>Usuario</code>, calculadoras, conexiones a BD).</li>
 <li><strong>Vista (View):</strong> Es puramente la interfaz gráfica. En JavaFX se define utilizando archivos <strong>FXML</strong>. Describe qué botones hay y dónde se colocan, pero <em>no tiene ni idea</em> de qué hacer cuando se pulsan.</li>
 <li><strong>Controlador (Controller):</strong> Es una clase Java vinculada a la vista. Es el "cerebro intermedio". Detecta las acciones del usuario en la Vista (clics, textos), consulta al Modelo y actualiza la Vista con las respuestas.</li>
 </ul>
@@ -2486,23 +2486,24 @@
 <ol>
 <li>Abre IntelliJ y ve a <strong>File -&gt; New -&gt; Project</strong>.</li>
 <li>En el panel izquierdo, selecciona <strong>JavaFX</strong>.</li>
-<li>Asegúrate de configurar:<ul>
-<li>Language: <strong>Java</strong>.</li>
-<li>Build system: <strong>Maven</strong>.</li>
-<li>Group / Artifact: Puedes usar <code>org.example</code> y <code>demo</code>.</li>
+<li>Asegúrate de configurar:
+    <em>Language: </em><em>Java</em>*.<ul>
+<li>Build system: <strong>Maven</strong>.
+*Group / Artifact: Puedes usar <code>org.example</code> y <code>demo</code>.</li>
 </ul>
 </li>
 <li>Pulsa <strong>Create</strong>.</li>
 <li>Localiza en la estructura del proyecto (<code>src/main/...</code>) los tres archivos clave que hemos estudiado: el <code>Application</code>, el <code>.fxml</code> (en <code>resources</code>) y el <code>Controller</code>.</li>
 <li><strong>Ejecuta</strong> la aplicación y pulsa el botón.</li>
 <li><strong>Misión de experimentación:</strong><ul>
-<li>Ve al controlador y cambia el texto de respuesta.</li>
-<li>Ve al archivo <code>.fxml</code> y cambia el texto que dice <code>text="Hello!"</code> por algo en español.</li>
+<li>Ve al controlador y cambia el texto de respuesta.
+*Ve al archivo <code>.fxml</code> y cambia el texto que dice <code>text="Hello!"</code> por algo en español.</li>
 <li>Vuelve a ejecutar y comprueba los cambios. ¿Entiendes cómo se comunican la Vista y el Controlador?</li>
 </ul>
 </li>
 </ol>
 </div>
+<p><img src="../../../assets/images/ud09/ud09_2.png" alt="Hola mundo" style="zoom:50%;" /></p>
 
 
 

@@ -2,125 +2,56 @@ package org.example.demo;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
-import javafx.scene.input.MouseEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.stage.Modality;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class HelloController {
     @FXML
     private Label welcomeText;
-    @FXML
-    private Button btnHello;
-
-    @FXML
-    private RadioButton rbMan;
-    @FXML
-    private RadioButton rbWoman;
-    @FXML
-    private RadioButton rbOther;
-
-    @FXML
-    private TextField txtName;
-
-    @FXML
-    private TextField txtAge;
-
-    @FXML
-    private CheckBox cbOK;
-
-    @FXML
-    private TextArea txtAreaNote;
 
     @FXML
     protected void onHelloButtonClick() {
-        welcomeText.setText("Welcome to JavaFX Application!");
-        btnHello.setText("It Changes!");
-        btnHello.setDisable(true);
-    }
 
-    @FXML
-    public void initialize() {
-        welcomeText.setText("Press button to welcome!");
-        btnHello.setText("Say Hello!");
+        try {
+            // 1. Invocamos al FXML
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("popup.fxml"));
 
-        ToggleGroup toggleGroup = new ToggleGroup();
-        rbMan.setToggleGroup(toggleGroup);
-        rbWoman.setToggleGroup(toggleGroup);
-        rbOther.setToggleGroup(toggleGroup);
-    }
+            // 2. Creamos y dotamos de contenido a la nueva ventana (Stage secundario)
+            Stage popupStage = new Stage();
+            popupStage.setScene(new Scene(loader.load()));
+            popupStage.setTitle("Ventana emergente");
 
-    @FXML
-    public void mostrarAlertError(ActionEvent actionEvent) {
-        Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setHeaderText(null);
-        alert.setTitle("Error");
-        alert.setContentText("Something went wrong!");
-        alert.showAndWait();
-    }
+            // 3. Comportamiento modal (el popup bloqueará la ventana generadora)
+            popupStage.initModality(Modality.APPLICATION_MODAL);
 
-    @FXML
-    public void mostrarAlertInfo(ActionEvent actionEvent) {
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setHeaderText(null);
-        alert.setTitle("Info");
-        alert.setContentText("Getting data...");
+            // 4. Mostramos el popup y obligamos al código a "esperar" aquí hasta el cierre
+            popupStage.showAndWait();
 
-        String nameText = txtName.getText();
-        String ageText = txtAge.getText();
-
-        welcomeText.setText("Hello, " + nameText + " you are " + ageText +" y.o.");
-        alert.showAndWait();
-    }
-
-    @FXML
-    public void mostrarAlertWarning(ActionEvent actionEvent) {
-        Alert alert = new Alert(Alert.AlertType.WARNING);
-        alert.setHeaderText(null);
-        alert.setTitle("Warning");
-        alert.setContentText("Warning about your application!");
-        alert.showAndWait();
-    }
-
-    @FXML
-    public void mostrarAlertConfirmation(ActionEvent actionEvent) {
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setHeaderText(null);
-        alert.setTitle("Confirmation");
-        alert.setContentText("Do you want to continue?");
-        alert.showAndWait();
-    }
-
-    public void pressMan(MouseEvent mouseEvent) {
-        welcomeText.setText(rbMan.getText());
-    }
-
-    public void pressWoman(MouseEvent mouseEvent) {
-        welcomeText.setText(rbWoman.getText());
-    }
-
-    public void pressOther(MouseEvent mouseEvent) {
-        welcomeText.setText(rbOther.getText());
-    }
-
-    public void pressOk(ActionEvent actionEvent) {
-        if(cbOK.isSelected()) {
-            welcomeText.setText("Checkbox OK!");
-        } else {
-            welcomeText.setText("Checkbox Cancel!");
+        } catch (IOException e) {
+            // Gestionamos un posible fallo de lectura (archivo perdido, etc.)
+            throw new RuntimeException("Error al abrir la ventana", e);
         }
+
+
     }
+    @FXML
+    public void onOpenButtonClick(ActionEvent event) throws IOException {
+        welcomeText.setText("Cambiando de ventana");
 
-    public void saveNote(ActionEvent actionEvent) {
 
-        String area = txtAreaNote.getText();
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("formulario.fxml"));
 
-        Alert alert = new Alert(Alert.AlertType.INFORMATION);
-        alert.setHeaderText(null);
-        alert.setTitle("Information");
-        alert.setContentText("Saving your note...");
-        alert.showAndWait();
+            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
 
-        welcomeText.setText(area);
-        txtAreaNote.setText("");
+            stage.setScene(new Scene(loader.load()));
+
+            stage.setTitle("Zona de Registro");
 
     }
 }

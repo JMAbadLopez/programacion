@@ -2,7 +2,7 @@
 
 ## 1. Introducción: Cambio de Escenas
 
-Abrir un _popup_ es útil para avisos rápidos, pero en una aplicación madura lo habitual es **navegar entre distintas pantallas dentro de la misma ventana** (por ejemplo, pasar de una pantalla de _Login_ a un panel de control). 
+Abrir un _popup_ es útil para avisos rápidos, pero en una aplicación madura lo habitual es **navegar entre distintas pantallas dentro de la misma ventana** (por ejemplo, pasar de una pantalla de _Login_ a un panel de control).
 
 La estrategia principal consiste en **sustituir la `Scene` activa** del `Stage` actual por una completamente nueva generada a partir de otro archivo FXML.
 
@@ -80,7 +80,7 @@ public class FormularioController {
   
     @FXML  
     private void limpiarFormularioButtonClick() {  
-        txtNombre.clear();  
+        txtNombre.clear(); 
         // Vaciamos la elección del usuario
         comboCategoria.getSelectionModel().clearSelection();  
         chkAcepto.setSelected(false);  

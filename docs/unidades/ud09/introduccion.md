@@ -44,7 +44,7 @@ Aunque podemos crear interfaces programando cada botón y cada margen en Java (c
 
 JavaFX promueve el uso del **Patrón de Arquitectura MVC**, separando las responsabilidades de nuestro programa en tres bloques:
 
-* **Modelo (Model):** Son tus clases Java tradicionales (Unidades 5 y 6). Representan los datos, la lógica de negocio y las reglas (ej: `Producto`, `Usuario`, calculadoras, conexiones a BD).
+* **Modelo (Model):** Son tus clases Java tradicionales (Unidades 5, 6 y 8). Representan los datos, la lógica de negocio y las reglas (ej: `Producto`, `Usuario`, calculadoras, conexiones a BD).
 * **Vista (View):** Es puramente la interfaz gráfica. En JavaFX se define utilizando archivos **FXML**. Describe qué botones hay y dónde se colocan, pero *no tiene ni idea* de qué hacer cuando se pulsan.
 * **Controlador (Controller):** Es una clase Java vinculada a la vista. Es el "cerebro intermedio". Detecta las acciones del usuario en la Vista (clics, textos), consulta al Modelo y actualiza la Vista con las respuestas.
 
@@ -179,13 +179,15 @@ Es hora de comprobar que tu entorno de desarrollo está listo. IntelliJ IDEA inc
     1. Abre IntelliJ y ve a **File -> New -> Project**.
     2. En el panel izquierdo, selecciona **JavaFX**.
     3. Asegúrate de configurar:
-        * Language: **Java**.
+        *Language: **Java**.
         * Build system: **Maven**.
-        * Group / Artifact: Puedes usar `org.example` y `demo`.
+        *Group / Artifact: Puedes usar `org.example` y `demo`.
     4. Pulsa **Create**.
     5. Localiza en la estructura del proyecto (`src/main/...`) los tres archivos clave que hemos estudiado: el `Application`, el `.fxml` (en `resources`) y el `Controller`.
     6. **Ejecuta** la aplicación y pulsa el botón.
     7. **Misión de experimentación:**
         * Ve al controlador y cambia el texto de respuesta.
-        * Ve al archivo `.fxml` y cambia el texto que dice `text="Hello!"` por algo en español.
+        *Ve al archivo `.fxml` y cambia el texto que dice `text="Hello!"` por algo en español.
         * Vuelve a ejecutar y comprueba los cambios. ¿Entiendes cómo se comunican la Vista y el Controlador?
+
+<img src="../../../assets/images/ud09/ud09_2.png" alt="Hola mundo" style="zoom:50%;" />
