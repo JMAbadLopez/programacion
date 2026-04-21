@@ -179,13 +179,13 @@ Es hora de comprobar que tu entorno de desarrollo está listo. IntelliJ IDEA inc
     1. Abre IntelliJ y ve a **File -> New -> Project**.
     2. En el panel izquierdo, selecciona **JavaFX**.
     3. Asegúrate de configurar:
-        *Language: **Java**.
-        * Build system: **Gradle**.
-        *Group / Artifact: Puedes usar `org.example` y `demo`.
+        * Language: **Java**.
+        * Build system: **Maven**.
+        * Group / Artifact: Puedes usar `org.example` y `demo`.
     4. Pulsa **Create**.
     5. Localiza en la estructura del proyecto (`src/main/...`) los tres archivos clave que hemos estudiado: el `Application`, el `.fxml` (en `resources`) y el `Controller`.
     6. **Ejecuta** la aplicación y pulsa el botón.
     7. **Misión de experimentación:**
         * Ve al controlador y cambia el texto de respuesta.
-        *Ve al archivo `.fxml` y cambia el texto que dice `text="Hello!"` por algo en español.
+        * Ve al archivo `.fxml` y cambia el texto que dice `text="Hello!"` por algo en español.
         * Vuelve a ejecutar y comprueba los cambios. ¿Entiendes cómo se comunican la Vista y el Controlador?

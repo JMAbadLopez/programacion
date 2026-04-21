@@ -13,6 +13,9 @@ nav:
     - UD8 - Acceso a Bases de Datos: unidades/ud08.md
     - UD9 - Interfaces gráficas con JavaFX: 
       - Introducción: unidades/ud09/introduccion.md
+      - Gestión de ventanas: unidades/ud09/ventanas.md
+      - Navegación entre pantallas: unidades/ud09/navegacion.md
+      - Menús: unidades/ud09/menus.md
   - Ejercicios:
     - UD1 - Introducción a la programación. Lenguaje Java:
       - Ejercicios de introducción: ejercicios/ud01/introduccion.md
