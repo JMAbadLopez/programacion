@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demoelementos.HelloController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <Label fx:id="lbBienvenido" text="Texto inicial" />
+    <Button fx:id="btHola" onAction="#onHelloButtonClick" text="Dime hola" />
+
+    <TextField fx:id="txfNombre" promptText="Escribe aquí tu nombre..." />
+    <TextArea fx:id="txaDescripcion" prefRowCount="4" promptText="Escribe un texo..." />
+    <Button fx:id="btTexto" onAction="#procesarTextos" text="Procesar texto" />
+
+    <RadioButton fx:id="rbHombre" onMouseClicked="#pulsadoButtonRadio" text="Hombre" />
+    <RadioButton fx:id="rbMujer" onMouseClicked="#pulsadoButtonRadio" text="Mujer" />
+    <RadioButton fx:id="rbOtros" onMouseClicked="#pulsadoButtonRadio" text="Otros" />
+
+    <CheckBox fx:id="cbAceptar" onAction="#pulsadoAceptar" selected="false" text="Acepto la política de privacidad" />
+
+    <ListView fx:id="lwSistemas" prefHeight="100" />
+    <ComboBox fx:id="combSistemas" promptText="Selecciona un SO base..." />
+   <Button fx:id="btAlerta" mnemonicParsing="false" onAction="#mostrarErrorCritico" style="-fx-background-color: red;" text="Alerta error" textFill="WHITE" />
+   <Button fx:id="btConfirmacion" mnemonicParsing="false" onAction="#mostrarAvisoSalida" style="-fx-background-color: green;" text="Confirmación" textFill="WHITE" />
+
+
+
+</VBox>

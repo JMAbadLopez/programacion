@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.demo.MenuController">
+
+    <!-- La barra fija superior (Nuestra Navegación) -->
+    <top>
+        <HBox fx:id="menuBar" spacing="10" style="-fx-padding: 10; -fx-background-color: #EEE;">
+            <Button text="Inicio (Hello)" onAction="#goHello"/>
+            <Button text="Formulario" onAction="#goFormulario"/>
+        </HBox>
+    </top>
+
+    <!-- Zona Central Dinámica (Cambiará según el botón pulsado) -->
+    <center>
+        <!-- Este VBox es el lienzo contenedor mágico donde aterrizarán las páginas -->
+        <VBox fx:id="contentArea" alignment="CENTER" spacing="20"/>
+    </center>
+
+</BorderPane>
