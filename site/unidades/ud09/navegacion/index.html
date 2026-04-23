@@ -11,7 +11,7 @@
         <link rel="canonical" href="https://jmabadlopez.github.io/programacion/site/unidades/ud09/navegacion/">
       
       
-        <link rel="prev" href="../ventanas/">
+        <link rel="prev" href="../elementos/">
       
       
         <link rel="next" href="../menus/">
@@ -684,29 +684,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../ventanas/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    Gestión de ventanas
-    
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -781,6 +758,15 @@
   <a href="#3-enlace-desde-la-escena-principal" class="md-nav__link">
     <span class="md-ellipsis">
       3. Enlace desde la Escena Principal
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#4-paso-de-datos-entre-pantallas" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Paso de Datos entre Pantallas
     </span>
   </a>
   
@@ -2164,6 +2150,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#4-paso-de-datos-entre-pantallas" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. Paso de Datos entre Pantallas
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2258,6 +2253,7 @@
 <a id="__codelineno-0-31" name="__codelineno-0-31"></a><span class="w">    </span><span class="nt">&lt;/HBox&gt;</span><span class="w">  </span>
 <a id="__codelineno-0-32" name="__codelineno-0-32"></a><span class="nt">&lt;/VBox&gt;</span>
 </code></pre></div></td></tr></table></div>
+<p><img src="../../../assets/images/ud09/ud09_6.png" alt="Controles" style="zoom:50%;" /></p>
 <p><strong>Puntos clave:</strong></p>
 <ul>
 <li><strong>Estructura combinada</strong>: Hemos anidado varios contenedores <code>HBox</code> (en horizontal) dentro de un gran contenedor <code>VBox</code> (en vertical).</li>
@@ -2370,13 +2366,14 @@
 <span class="normal"><a href="#__codelineno-2-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nt">&lt;VBox</span><span class="w"> </span><span class="na">alignment=</span><span class="s">&quot;CENTER&quot;</span><span class="w"> </span><span class="na">spacing=</span><span class="s">&quot;20.0&quot;</span><span class="w"> </span><span class="na">xmlns:fx=</span><span class="s">&quot;http://javafx.com/fxml&quot;</span><span class="w">  </span>
 <a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="w">      </span><span class="na">fx:controller=</span><span class="s">&quot;org.example.demo.HelloController&quot;</span><span class="nt">&gt;</span><span class="w">  </span>
 <a id="__codelineno-2-3" name="__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="nt">&lt;Label</span><span class="w"> </span><span class="na">fx:id=</span><span class="s">&quot;welcomeText&quot;</span><span class="nt">/&gt;</span><span class="w">  </span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="nt">&lt;Label</span><span class="w"> </span><span class="na">fx:id=</span><span class="s">&quot;welcomeText&quot;</span><span class="w"> </span><span class="na">text=</span><span class="s">&quot;Pantalla principal&quot;</span><span class="nt">/&gt;</span><span class="w">  </span>
 <a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="nt">&lt;Button</span><span class="w"> </span><span class="na">text=</span><span class="s">&quot;Hello!&quot;</span><span class="w"> </span><span class="na">onAction=</span><span class="s">&quot;#onHelloButtonClick&quot;</span><span class="nt">/&gt;</span><span class="w">  </span>
 <a id="__codelineno-2-6" name="__codelineno-2-6"></a>
 <a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="w">    </span><span class="cm">&lt;!-- Añadimos nuestro conductor de escena --&gt;</span>
 <a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="nt">&lt;Button</span><span class="w"> </span><span class="na">text=</span><span class="s">&quot;Ir al Formulario&quot;</span><span class="w"> </span><span class="na">onAction=</span><span class="s">&quot;#onOpenButtonClick&quot;</span><span class="nt">/&gt;</span><span class="w">  </span>
 <a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="nt">&lt;/VBox&gt;</span>
 </code></pre></div></td></tr></table></div>
+<p><img src="../../../assets/images/ud09/ud09_7.png" alt="Controles" style="zoom:50%;" /></p>
 <p>Finalmente, programamos en su controlador de origen (<code>HelloController</code>) la transición. Nota que, a diferencia del proceso para abrir ventanas secundarias, aquí <strong>reutlizaremos el <code>Stage</code> recuperándolo en lugar de crear uno nuevo</strong>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
@@ -2420,7 +2417,7 @@
 <a id="__codelineno-3-11" name="__codelineno-3-11"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">HelloController</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
 <a id="__codelineno-3-12" name="__codelineno-3-12"></a>
 <a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">    </span><span class="nd">@FXML</span><span class="w">  </span>
-<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">    </span><span class="kd">protected</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onOpenButtonClick</span><span class="p">(</span><span class="n">ActionEvent</span><span class="w"> </span><span class="n">evento</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onOpenButtonClick</span><span class="p">(</span><span class="n">ActionEvent</span><span class="w"> </span><span class="n">evento</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
 <a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
 <a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="w">            </span><span class="c1">// 1. Cargamos el archivo físico FXML de la nueva pantalla</span>
 <a id="__codelineno-3-17" name="__codelineno-3-17"></a><span class="w">            </span><span class="n">FXMLLoader</span><span class="w"> </span><span class="n">loader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FXMLLoader</span><span class="p">(</span><span class="n">getClass</span><span class="p">().</span><span class="na">getResource</span><span class="p">(</span><span class="s">&quot;formulario.fxml&quot;</span><span class="p">));</span><span class="w">  </span>
@@ -2439,9 +2436,94 @@
 <a id="__codelineno-3-30" name="__codelineno-3-30"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
 <p>Al hacer clic, el efecto que experimentará el usuario será un cambio nativo, nítido y directo hacia la nueva pantalla en exactamente la misma ventana; brindando la experiencia unificada tradicional del desarrollo de software.</p>
+<hr />
+<h2 id="4-paso-de-datos-entre-pantallas">4. Paso de Datos entre Pantallas</h2>
+<p>Una necesidad muy común al navegar es llevar <strong>información de una pantalla a otra</strong> (por ejemplo, enviar el nombre del usuario logueado desde la pantalla de Inicio hacia un Panel de Control).</p>
+<p>Para hacer esto, debemos pausar sutilmente la carga de la escena. Debemos recuperar el <strong>Controlador de destino</strong> justo antes de mostrarlo, e inyectarle los datos gracias a un método público que hayamos programado en él.</p>
+<p><strong>1. En el Controlador destino (ej: <code>FormularioController.java</code>)</strong></p>
+<p>Allí donde vamos a aterrizar, creamos un método público diseñado para recibir la información:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-4-1">1</a></span>
+<span class="normal"><a href="#__codelineno-4-2">2</a></span>
+<span class="normal"><a href="#__codelineno-4-3">3</a></span>
+<span class="normal"><a href="#__codelineno-4-4">4</a></span>
+<span class="normal"><a href="#__codelineno-4-5">5</a></span>
+<span class="normal"><a href="#__codelineno-4-6">6</a></span>
+<span class="normal"><a href="#__codelineno-4-7">7</a></span>
+<span class="normal"><a href="#__codelineno-4-8">8</a></span>
+<span class="normal"><a href="#__codelineno-4-9">9</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">FormularioController</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2"></a><span class="w">    </span><span class="nd">@FXML</span><span class="w"> </span><span class="kd">private</span><span class="w"> </span><span class="n">TextField</span><span class="w"> </span><span class="n">txtNombre</span><span class="p">;</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3"></a>
+<a id="__codelineno-4-4" name="__codelineno-4-4"></a><span class="w">    </span><span class="c1">// Método público que llamaremos desde la ventana anterior</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">recibirDatoPrecalculado</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">usuario</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6"></a><span class="w">        </span><span class="c1">// En este ejemplo, auto-rellenamos el campo nombre con la información recibida</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7"></a><span class="w">        </span><span class="n">txtNombre</span><span class="p">.</span><span class="na">setText</span><span class="p">(</span><span class="n">usuario</span><span class="p">);</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>2. En la Vista y el Controlador origen (ej: <code>hello-view.fxml</code> y <code>HelloController.java</code>)</strong></p>
+<p>Añadimos un nuevo botón en nuestra vista principal diseñado específicamente para invocar este trasvase de datos:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-5-1">1</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1"></a><span class="nt">&lt;Button</span><span class="w"> </span><span class="na">text=</span><span class="s">&quot;Pasar datos al Formulario&quot;</span><span class="w"> </span><span class="na">onAction=</span><span class="s">&quot;#onOpenButtonSendData&quot;</span><span class="nt">/&gt;</span><span class="w">  </span>
+</code></pre></div></td></tr></table></div>
+<p><img src="../../../assets/images/ud09/ud09_5.png" alt="Controles" style="zoom:50%;" /></p>
+<p>A continuación, programamos este método inédito en nuestro proceso de salto para "atrapar" el controlador secundario antes de dar el cambiazo de escenario definitivo:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-6-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-6-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-6-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-6-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-6-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-6-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-6-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-6-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-6-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-6-10">10</a></span>
+<span class="normal"><a href="#__codelineno-6-11">11</a></span>
+<span class="normal"><a href="#__codelineno-6-12">12</a></span>
+<span class="normal"><a href="#__codelineno-6-13">13</a></span>
+<span class="normal"><a href="#__codelineno-6-14">14</a></span>
+<span class="normal"><a href="#__codelineno-6-15">15</a></span>
+<span class="normal"><a href="#__codelineno-6-16">16</a></span>
+<span class="normal"><a href="#__codelineno-6-17">17</a></span>
+<span class="normal"><a href="#__codelineno-6-18">18</a></span>
+<span class="normal"><a href="#__codelineno-6-19">19</a></span>
+<span class="normal"><a href="#__codelineno-6-20">20</a></span>
+<span class="normal"><a href="#__codelineno-6-21">21</a></span>
+<span class="normal"><a href="#__codelineno-6-22">22</a></span>
+<span class="normal"><a href="#__codelineno-6-23">23</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1"></a><span class="nd">@FXML</span><span class="w">  </span>
+<a id="__codelineno-6-2" name="__codelineno-6-2"></a><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">onOpenButtonSendData</span><span class="p">(</span><span class="n">ActionEvent</span><span class="w"> </span><span class="n">evento</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+<a id="__codelineno-6-3" name="__codelineno-6-3"></a><span class="w">    </span><span class="k">try</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+<a id="__codelineno-6-4" name="__codelineno-6-4"></a><span class="w">        </span><span class="n">FXMLLoader</span><span class="w"> </span><span class="n">loader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FXMLLoader</span><span class="p">(</span><span class="n">getClass</span><span class="p">().</span><span class="na">getResource</span><span class="p">(</span><span class="s">&quot;formulario.fxml&quot;</span><span class="p">));</span><span class="w">  </span>
+<a id="__codelineno-6-5" name="__codelineno-6-5"></a>
+<a id="__codelineno-6-6" name="__codelineno-6-6"></a><span class="w">        </span><span class="c1">// 1. Cargamos el Parent raíz primero (sin atarlo a una escena aún)</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7"></a><span class="w">        </span><span class="n">Parent</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loader</span><span class="p">.</span><span class="na">load</span><span class="p">();</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8"></a>
+<a id="__codelineno-6-9" name="__codelineno-6-9"></a><span class="w">        </span><span class="c1">// 2. Extraemos el Controlador de la pantalla destino</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10"></a><span class="w">        </span><span class="n">FormularioController</span><span class="w"> </span><span class="n">controladorDestino</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">loader</span><span class="p">.</span><span class="na">getController</span><span class="p">();</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11"></a>
+<a id="__codelineno-6-12" name="__codelineno-6-12"></a><span class="w">        </span><span class="c1">// 3. ¡Inyectamos los datos en remoto!</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13"></a><span class="w">        </span><span class="n">controladorDestino</span><span class="p">.</span><span class="na">recibirDatoPrecalculado</span><span class="p">(</span><span class="s">&quot;Aragorn&quot;</span><span class="p">);</span>
+<a id="__codelineno-6-14" name="__codelineno-6-14"></a>
+<a id="__codelineno-6-15" name="__codelineno-6-15"></a><span class="w">        </span><span class="c1">// 4. Cambiamos la escena normalmente usando el Parent ya &quot;rellenado&quot;</span>
+<a id="__codelineno-6-16" name="__codelineno-6-16"></a><span class="w">        </span><span class="n">Stage</span><span class="w"> </span><span class="n">stage</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Stage</span><span class="p">)</span><span class="w"> </span><span class="p">((</span><span class="n">Node</span><span class="p">)</span><span class="w"> </span><span class="n">evento</span><span class="p">.</span><span class="na">getSource</span><span class="p">()).</span><span class="na">getScene</span><span class="p">().</span><span class="na">getWindow</span><span class="p">();</span><span class="w">  </span>
+<a id="__codelineno-6-17" name="__codelineno-6-17"></a><span class="w">        </span><span class="n">stage</span><span class="p">.</span><span class="na">setScene</span><span class="p">(</span><span class="k">new</span><span class="w"> </span><span class="n">Scene</span><span class="p">(</span><span class="n">root</span><span class="p">));</span><span class="w">  </span>
+<a id="__codelineno-6-18" name="__codelineno-6-18"></a><span class="w">        </span><span class="n">stage</span><span class="p">.</span><span class="na">setTitle</span><span class="p">(</span><span class="s">&quot;Formulario Autocompletado&quot;</span><span class="p">);</span>
+<a id="__codelineno-6-19" name="__codelineno-6-19"></a>
+<a id="__codelineno-6-20" name="__codelineno-6-20"></a><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">ex</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+<a id="__codelineno-6-21" name="__codelineno-6-21"></a><span class="w">        </span><span class="k">throw</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">RuntimeException</span><span class="p">(</span><span class="n">ex</span><span class="p">);</span>
+<a id="__codelineno-6-22" name="__codelineno-6-22"></a><span class="w">    </span><span class="p">}</span><span class="w">  </span>
+<a id="__codelineno-6-23" name="__codelineno-6-23"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p><img src="../../../assets/images/ud09/ud09_8.png" alt="Controles" style="zoom:50%;" /></p>
+<p>Con este sencillo y poderosísimo puente lógico, la nueva pantalla arrancará conociendo y habiendo cargado los datos que se le enviaron desde la primera.</p>
+<hr />
 <div class="admonition question">
-<p class="admonition-title">💻 Reto: Billete de Vuelta</p>
-<p>Tu aplicación saltará exitosamente a la pantalla de Registro, ¡pero el viaje no tiene billete de retorno! Intenta modificar temporalmente el diseño de <code>formulario.fxml</code> añadiendo un botón «Volver al Inicio» y programa en el controlador correspondiente la operación de navegación regresiva hacia nuestro archivo <code>hello-view.fxml</code>.</p>
+<p class="admonition-title">💻 Reto: Navegación Inversa con Paso de Datos</p>
+<p>Actualmente la navegación está implementada de forma unidireccional. Modifica el proyecto para permitir el retorno dinámico a la pantalla principal completando la siguiente funcionalidad:</p>
+<ol>
+<li>En el método <code>enviarFormularioButtonClick()</code>, añade el flujo de navegación mediante <code>FXMLLoader</code> para cargar de nuevo el diseño previo <code>hello-view.fxml</code>.</li>
+<li>Recupera la instancia del controlador de la vista principal (<code>HelloController</code>) antes de cargar la escena.</li>
+<li>Asegúrate de diseñar un método público en <code>HelloController</code> capaz de recibir un texto por parámetro y asignarlo a tu <code>Label</code> principal (<code>welcomeText</code>).</li>
+<li>Invoca este método inyectándole los datos del formulario (ej. el nombre y la categoría seleccionados) y cambia la escena. De esta forma, al pulsar "Enviar", la aplicación regresará a la ventana inicial mostrando un mensaje personalizado.</li>
+</ol>
 </div>
 
 
@@ -2478,7 +2560,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Pie" >
         
           
-          <a href="../ventanas/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Gestión de ventanas">
+          <a href="../elementos/" class="md-footer__link md-footer__link--prev" aria-label="Anterior: Elementos de una interfaz">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path fill="currentColor" d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L77.3 256l137.3-137.4c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"/></svg>
@@ -2488,7 +2570,7 @@
                 Anterior
               </span>
               <div class="md-ellipsis">
-                Gestión de ventanas
+                Elementos de una interfaz
               </div>
             </div>
           </a>

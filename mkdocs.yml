@@ -14,7 +14,6 @@ nav:
     - UD9 - Interfaces gráficas con JavaFX: 
       - Introducción: unidades/ud09/introduccion.md
       - Elementos de una interfaz: unidades/ud09/elementos.md
-      - Gestión de ventanas: unidades/ud09/ventanas.md
       - Navegación entre pantallas: unidades/ud09/navegacion.md
       - Menús: unidades/ud09/menus.md
   - Ejercicios:

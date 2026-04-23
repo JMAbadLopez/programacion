@@ -50,6 +50,9 @@ El primer paso es diseñar la estructura visual de la pantalla destino. Crearemo
 </VBox>
 ```
 
+<img src="../../../assets/images/ud09/ud09_6.png" alt="Controles" style="zoom:50%;" />
+
+
 **Puntos clave:**
 
 * **Estructura combinada**: Hemos anidado varios contenedores `HBox` (en horizontal) dentro de un gran contenedor `VBox` (en vertical).
@@ -117,13 +120,15 @@ Una vez con el destino listo, instruimos a la pantalla de origen (nuestro visor 
 <VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"  
       fx:controller="org.example.demo.HelloController">  
       
-    <Label fx:id="welcomeText"/>  
+    <Label fx:id="welcomeText" text="Pantalla principal"/>  
     <Button text="Hello!" onAction="#onHelloButtonClick"/>  
     
     <!-- Añadimos nuestro conductor de escena -->
     <Button text="Ir al Formulario" onAction="#onOpenButtonClick"/>  
 </VBox>
 ```
+
+<img src="../../../assets/images/ud09/ud09_7.png" alt="Controles" style="zoom:50%;" />
 
 Finalmente, programamos en su controlador de origen (`HelloController`) la transición. Nota que, a diferencia del proceso para abrir ventanas secundarias, aquí **reutlizaremos el `Stage` recuperándolo en lugar de crear uno nuevo**:
 
@@ -141,7 +146,7 @@ import java.io.IOException;
 public class HelloController {  
 
     @FXML  
-    protected void onOpenButtonClick(ActionEvent evento) {  
+    private void onOpenButtonClick(ActionEvent evento) {  
         try {  
             // 1. Cargamos el archivo físico FXML de la nueva pantalla
             FXMLLoader loader = new FXMLLoader(getClass().getResource("formulario.fxml"));  
@@ -162,5 +167,78 @@ public class HelloController {
 
 Al hacer clic, el efecto que experimentará el usuario será un cambio nativo, nítido y directo hacia la nueva pantalla en exactamente la misma ventana; brindando la experiencia unificada tradicional del desarrollo de software.
 
-!!! question "💻 Reto: Billete de Vuelta"
-    Tu aplicación saltará exitosamente a la pantalla de Registro, ¡pero el viaje no tiene billete de retorno! Intenta modificar temporalmente el diseño de `formulario.fxml` añadiendo un botón «Volver al Inicio» y programa en el controlador correspondiente la operación de navegación regresiva hacia nuestro archivo `hello-view.fxml`.
+---
+
+## 4. Paso de Datos entre Pantallas
+
+Una necesidad muy común al navegar es llevar **información de una pantalla a otra** (por ejemplo, enviar el nombre del usuario logueado desde la pantalla de Inicio hacia un Panel de Control).
+
+Para hacer esto, debemos pausar sutilmente la carga de la escena. Debemos recuperar el **Controlador de destino** justo antes de mostrarlo, e inyectarle los datos gracias a un método público que hayamos programado en él.
+
+**1. En el Controlador destino (ej: `FormularioController.java`)**
+
+Allí donde vamos a aterrizar, creamos un método público diseñado para recibir la información:
+
+```java
+public class FormularioController {
+    @FXML private TextField txtNombre;
+    
+    // Método público que llamaremos desde la ventana anterior
+    public void recibirDatoPrecalculado(String usuario) {
+        // En este ejemplo, auto-rellenamos el campo nombre con la información recibida
+        txtNombre.setText(usuario);
+    }
+}
+```
+
+**2. En la Vista y el Controlador origen (ej: `hello-view.fxml` y `HelloController.java`)**
+
+Añadimos un nuevo botón en nuestra vista principal diseñado específicamente para invocar este trasvase de datos:
+
+```xml
+<Button text="Pasar datos al Formulario" onAction="#onOpenButtonSendData"/>  
+```
+
+<img src="../../../assets/images/ud09/ud09_5.png" alt="Controles" style="zoom:50%;" />
+
+A continuación, programamos este método inédito en nuestro proceso de salto para "atrapar" el controlador secundario antes de dar el cambiazo de escenario definitivo:
+
+```java
+@FXML  
+private void onOpenButtonSendData(ActionEvent evento) {  
+    try {  
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("formulario.fxml"));  
+        
+        // 1. Cargamos el Parent raíz primero (sin atarlo a una escena aún)
+        Parent root = loader.load();
+        
+        // 2. Extraemos el Controlador de la pantalla destino
+        FormularioController controladorDestino = loader.getController();
+        
+        // 3. ¡Inyectamos los datos en remoto!
+        controladorDestino.recibirDatoPrecalculado("Aragorn");
+        
+        // 4. Cambiamos la escena normalmente usando el Parent ya "rellenado"
+        Stage stage = (Stage) ((Node) evento.getSource()).getScene().getWindow();  
+        stage.setScene(new Scene(root));  
+        stage.setTitle("Formulario Autocompletado");
+        
+    } catch (IOException ex) {  
+        throw new RuntimeException(ex);
+    }  
+}
+```
+
+<img src="../../../assets/images/ud09/ud09_8.png" alt="Controles" style="zoom:50%;" />
+
+Con este sencillo y poderosísimo puente lógico, la nueva pantalla arrancará conociendo y habiendo cargado los datos que se le enviaron desde la primera.
+
+---
+
+!!! question "💻 Reto: Navegación Inversa con Paso de Datos"
+    Actualmente la navegación está implementada de forma unidireccional. Modifica el proyecto para permitir el retorno dinámico a la pantalla principal completando la siguiente funcionalidad:
+    
+    1. En el método `enviarFormularioButtonClick()`, añade el flujo de navegación mediante `FXMLLoader` para cargar de nuevo el diseño previo `hello-view.fxml`.
+    2. Recupera la instancia del controlador de la vista principal (`HelloController`) antes de cargar la escena.
+    3. Asegúrate de diseñar un método público en `HelloController` capaz de recibir un texto por parámetro y asignarlo a tu `Label` principal (`welcomeText`).
+    4. Invoca este método inyectándole los datos del formulario (ej. el nombre y la categoría seleccionados) y cambia la escena. De esta forma, al pulsar "Enviar", la aplicación regresará a la ventana inicial mostrando un mensaje personalizado.

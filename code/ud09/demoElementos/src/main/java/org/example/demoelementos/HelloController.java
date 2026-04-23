@@ -55,6 +55,7 @@ public class HelloController {
 
     @FXML
     public void procesarTextos() {
+
         String nombre = txfNombre.getText();
         String descripcion = txaDescripcion.getText();
 
