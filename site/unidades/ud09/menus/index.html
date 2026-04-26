@@ -14,7 +14,7 @@
         <link rel="prev" href="../navegacion/">
       
       
-        <link rel="next" href="../../../ejercicios/ud01/introduccion/">
+        <link rel="next" href="../integracion_datos/">
       
       
       <link rel="icon" href="../../../assets/images/camp.png">
@@ -786,19 +786,33 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#4-emojis-atractivos-y-caracteres-especiales-en-menus" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Emojis, Atractivos y Caracteres Especiales en Menús
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integracion_datos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Integración de datos con BBDD
+    
+  </span>
+  
+
+      </a>
     </li>
   
 
@@ -2150,15 +2164,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#4-emojis-atractivos-y-caracteres-especiales-en-menus" class="md-nav__link">
-    <span class="md-ellipsis">
-      4. Emojis, Atractivos y Caracteres Especiales en Menús
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -2233,12 +2238,7 @@
 <a id="__codelineno-0-21" name="__codelineno-0-21"></a>
 <a id="__codelineno-0-22" name="__codelineno-0-22"></a><span class="nt">&lt;/BorderPane&gt;</span>
 </code></pre></div></td></tr></table></div>
-<p><strong>Puntos clave:</strong></p>
-<ul>
-<li><strong><code>BorderPane</code></strong>: Es excelente para patrón de <em>Layout</em>. Separa semánticamente el lienzo en regiones: <code>top</code> (menú global), <code>bottom</code> (pie de programa), <code>left</code>/<code>right</code> (menús laterales) y <code>center</code> (contenido cambiable de interés).</li>
-<li><strong><code>contentArea</code></strong>: Actúa de cajón integrador o vitrina temporal. Acogerá porciones diferentes de nuestra aplicación a petición.</li>
-</ul>
-<p>Demos vida al <strong>Controlador del Menú</strong> (<code>MenuController.java</code>). A diferencia de anteriores versiones, éste se ocupará exclusivamente de leer FXML periféricos para inyectarlos en <code>contentArea</code>:</p>
+<p>Para entender mejor la estructura de regiones de un <code>BorderPane</code>, podemos visualizar su distribución de la siguiente manera:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-1-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-1-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-1-3"> 3</a></span>
@@ -2250,69 +2250,25 @@
 <span class="normal"><a href="#__codelineno-1-9"> 9</a></span>
 <span class="normal"><a href="#__codelineno-1-10">10</a></span>
 <span class="normal"><a href="#__codelineno-1-11">11</a></span>
-<span class="normal"><a href="#__codelineno-1-12">12</a></span>
-<span class="normal"><a href="#__codelineno-1-13">13</a></span>
-<span class="normal"><a href="#__codelineno-1-14">14</a></span>
-<span class="normal"><a href="#__codelineno-1-15">15</a></span>
-<span class="normal"><a href="#__codelineno-1-16">16</a></span>
-<span class="normal"><a href="#__codelineno-1-17">17</a></span>
-<span class="normal"><a href="#__codelineno-1-18">18</a></span>
-<span class="normal"><a href="#__codelineno-1-19">19</a></span>
-<span class="normal"><a href="#__codelineno-1-20">20</a></span>
-<span class="normal"><a href="#__codelineno-1-21">21</a></span>
-<span class="normal"><a href="#__codelineno-1-22">22</a></span>
-<span class="normal"><a href="#__codelineno-1-23">23</a></span>
-<span class="normal"><a href="#__codelineno-1-24">24</a></span>
-<span class="normal"><a href="#__codelineno-1-25">25</a></span>
-<span class="normal"><a href="#__codelineno-1-26">26</a></span>
-<span class="normal"><a href="#__codelineno-1-27">27</a></span>
-<span class="normal"><a href="#__codelineno-1-28">28</a></span>
-<span class="normal"><a href="#__codelineno-1-29">29</a></span>
-<span class="normal"><a href="#__codelineno-1-30">30</a></span>
-<span class="normal"><a href="#__codelineno-1-31">31</a></span>
-<span class="normal"><a href="#__codelineno-1-32">32</a></span>
-<span class="normal"><a href="#__codelineno-1-33">33</a></span>
-<span class="normal"><a href="#__codelineno-1-34">34</a></span>
-<span class="normal"><a href="#__codelineno-1-35">35</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">org.example.demo</span><span class="p">;</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2"></a>
-<a id="__codelineno-1-3" name="__codelineno-1-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.fxml.FXML</span><span class="p">;</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.fxml.FXMLLoader</span><span class="p">;</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.scene.Parent</span><span class="p">;</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.scene.layout.VBox</span><span class="p">;</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8"></a>
-<a id="__codelineno-1-9" name="__codelineno-1-9"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MenuController</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-10" name="__codelineno-1-10"></a>
-<a id="__codelineno-1-11" name="__codelineno-1-11"></a><span class="w">    </span><span class="nd">@FXML</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">VBox</span><span class="w"> </span><span class="n">contentArea</span><span class="p">;</span><span class="w"> </span><span class="c1">// Vinculación FXML de nuestro receptáculo dinámico</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13"></a>
-<a id="__codelineno-1-14" name="__codelineno-1-14"></a><span class="w">    </span><span class="c1">// Función núcleo: lee FXML, saca su raíz y borra el panel central para injertar el nuevo</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">cargarPantalla</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">archivoFxml</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17"></a><span class="w">            </span><span class="n">Parent</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FXMLLoader</span><span class="p">.</span><span class="na">load</span><span class="p">(</span><span class="n">getClass</span><span class="p">().</span><span class="na">getResource</span><span class="p">(</span><span class="n">archivoFxml</span><span class="p">));</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18"></a><span class="w">            </span><span class="c1">// Actualización radical de los hijos del VBox &quot;contentArea&quot;</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19"></a><span class="w">            </span><span class="n">contentArea</span><span class="p">.</span><span class="na">getChildren</span><span class="p">().</span><span class="na">setAll</span><span class="p">(</span><span class="n">root</span><span class="p">);</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-21" name="__codelineno-1-21"></a><span class="w">            </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
-<a id="__codelineno-1-22" name="__codelineno-1-22"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-1-23" name="__codelineno-1-23"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-24" name="__codelineno-1-24"></a>
-<a id="__codelineno-1-25" name="__codelineno-1-25"></a><span class="w">    </span><span class="c1">// Enlaces de Acción para los botones declarados en nuestro menú maestro</span>
-<a id="__codelineno-1-26" name="__codelineno-1-26"></a><span class="w">    </span><span class="nd">@FXML</span>
-<a id="__codelineno-1-27" name="__codelineno-1-27"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">goHello</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-28" name="__codelineno-1-28"></a><span class="w">        </span><span class="n">cargarPantalla</span><span class="p">(</span><span class="s">&quot;hello-view.fxml&quot;</span><span class="p">);</span>
-<a id="__codelineno-1-29" name="__codelineno-1-29"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-30" name="__codelineno-1-30"></a>
-<a id="__codelineno-1-31" name="__codelineno-1-31"></a><span class="w">    </span><span class="nd">@FXML</span>
-<a id="__codelineno-1-32" name="__codelineno-1-32"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">goFormulario</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-33" name="__codelineno-1-33"></a><span class="w">        </span><span class="n">cargarPantalla</span><span class="p">(</span><span class="s">&quot;formulario.fxml&quot;</span><span class="p">);</span>
-<a id="__codelineno-1-34" name="__codelineno-1-34"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-35" name="__codelineno-1-35"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-1-12">12</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1"></a>+---------------------------------------------------------+
+<a id="__codelineno-1-2" name="__codelineno-1-2"></a>|                           top                           |
+<a id="__codelineno-1-3" name="__codelineno-1-3"></a>|                      (Menú global)                      |
+<a id="__codelineno-1-4" name="__codelineno-1-4"></a>+----------+-----------------------------------+----------+
+<a id="__codelineno-1-5" name="__codelineno-1-5"></a>|          |                                   |          |
+<a id="__codelineno-1-6" name="__codelineno-1-6"></a>|   left   |              center               |  right   |
+<a id="__codelineno-1-7" name="__codelineno-1-7"></a>| (Menús)  |       (Contenido dinámico)        | (Paneles)|
+<a id="__codelineno-1-8" name="__codelineno-1-8"></a>|          |                                   |          |
+<a id="__codelineno-1-9" name="__codelineno-1-9"></a>+----------+-----------------------------------+----------+
+<a id="__codelineno-1-10" name="__codelineno-1-10"></a>|                         bottom                          |
+<a id="__codelineno-1-11" name="__codelineno-1-11"></a>|                    (Pie de programa)                    |
+<a id="__codelineno-1-12" name="__codelineno-1-12"></a>+---------------------------------------------------------+
 </code></pre></div></td></tr></table></div>
-<hr />
-<h2 id="3-modificando-el-arranque-del-programa">3. Modificando el Arranque del Programa</h2>
-<p>Puesto que a partir de ahora rige la macroestructura <code>menu-layout.fxml</code>, debemos alterar el archivo raíz (<code>HelloApplication.java</code>) para que ensamble y despliegue el esqueleto maestro como envoltorio unificador en vez de arrancar con una pantalla concreta de la app.</p>
-<p>Debemos cerciorarnos además de dar la orden inicial de arranque rellenando manualmente la caja <code>contentArea</code>, en caso contrario al ejecutar la aplicación la vista quedaría en un espacio en blanco y vacío.</p>
+<p><strong>Puntos clave:</strong></p>
+<ul>
+<li><strong><code>BorderPane</code></strong>: Es excelente para patrón de <em>Layout</em>. Separa semánticamente el lienzo en regiones: <code>top</code> (menú global), <code>bottom</code> (pie de programa), <code>left</code>/<code>right</code> (menús laterales) y <code>center</code> (contenido cambiable de interés).</li>
+<li><strong><code>contentArea</code></strong>: Actúa de cajón integrador o vitrina temporal. Acogerá porciones diferentes de nuestra aplicación a petición.</li>
+</ul>
+<p>Demos vida al <strong>Controlador del Menú</strong> (<code>MenuController.java</code>). A diferencia de anteriores versiones, éste se ocupará exclusivamente de leer FXML periféricos para inyectarlos en <code>contentArea</code>:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-2-1"> 1</a></span>
 <span class="normal"><a href="#__codelineno-2-2"> 2</a></span>
 <span class="normal"><a href="#__codelineno-2-3"> 3</a></span>
@@ -2328,47 +2284,107 @@
 <span class="normal"><a href="#__codelineno-2-13">13</a></span>
 <span class="normal"><a href="#__codelineno-2-14">14</a></span>
 <span class="normal"><a href="#__codelineno-2-15">15</a></span>
-<span class="normal"><a href="#__codelineno-2-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="nd">@Override</span><span class="w">  </span>
-<a id="__codelineno-2-2" name="__codelineno-2-2"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">start</span><span class="p">(</span><span class="n">Stage</span><span class="w"> </span><span class="n">stage</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
-<a id="__codelineno-2-3" name="__codelineno-2-3"></a>
-<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="w">    </span><span class="c1">// 1. Cargamos el esquema absoluto del Menú Fijo (El esqueleto de la App)</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="w">    </span><span class="n">FXMLLoader</span><span class="w"> </span><span class="n">menuLoader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FXMLLoader</span><span class="p">(</span><span class="n">getClass</span><span class="p">().</span><span class="na">getResource</span><span class="p">(</span><span class="s">&quot;menu-layout.fxml&quot;</span><span class="p">));</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="w">    </span><span class="n">Scene</span><span class="w"> </span><span class="n">scene</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scene</span><span class="p">(</span><span class="n">menuLoader</span><span class="p">.</span><span class="na">load</span><span class="p">(),</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">);</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7"></a>
-<a id="__codelineno-2-8" name="__codelineno-2-8"></a><span class="w">    </span><span class="c1">// 2. Extraemos su controlador para delegarle de forma forzada la página 1 de inicio</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="w">    </span><span class="n">MenuController</span><span class="w"> </span><span class="n">menuController</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">menuLoader</span><span class="p">.</span><span class="na">getController</span><span class="p">();</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10"></a><span class="w">    </span><span class="n">menuController</span><span class="p">.</span><span class="na">cargarPantalla</span><span class="p">(</span><span class="s">&quot;hello-view.fxml&quot;</span><span class="p">);</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11"></a>
-<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">    </span><span class="c1">// 3. Montamos la plataforma final visual</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13"></a><span class="w">    </span><span class="n">stage</span><span class="p">.</span><span class="na">setScene</span><span class="p">(</span><span class="n">scene</span><span class="p">);</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">    </span><span class="n">stage</span><span class="p">.</span><span class="na">setTitle</span><span class="p">(</span><span class="s">&quot;Software Profesional: Menú Global e inyección dinámica&quot;</span><span class="p">);</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">    </span><span class="n">stage</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="p">}</span>
+<span class="normal"><a href="#__codelineno-2-16">16</a></span>
+<span class="normal"><a href="#__codelineno-2-17">17</a></span>
+<span class="normal"><a href="#__codelineno-2-18">18</a></span>
+<span class="normal"><a href="#__codelineno-2-19">19</a></span>
+<span class="normal"><a href="#__codelineno-2-20">20</a></span>
+<span class="normal"><a href="#__codelineno-2-21">21</a></span>
+<span class="normal"><a href="#__codelineno-2-22">22</a></span>
+<span class="normal"><a href="#__codelineno-2-23">23</a></span>
+<span class="normal"><a href="#__codelineno-2-24">24</a></span>
+<span class="normal"><a href="#__codelineno-2-25">25</a></span>
+<span class="normal"><a href="#__codelineno-2-26">26</a></span>
+<span class="normal"><a href="#__codelineno-2-27">27</a></span>
+<span class="normal"><a href="#__codelineno-2-28">28</a></span>
+<span class="normal"><a href="#__codelineno-2-29">29</a></span>
+<span class="normal"><a href="#__codelineno-2-30">30</a></span>
+<span class="normal"><a href="#__codelineno-2-31">31</a></span>
+<span class="normal"><a href="#__codelineno-2-32">32</a></span>
+<span class="normal"><a href="#__codelineno-2-33">33</a></span>
+<span class="normal"><a href="#__codelineno-2-34">34</a></span>
+<span class="normal"><a href="#__codelineno-2-35">35</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1"></a><span class="kn">package</span><span class="w"> </span><span class="nn">org.example.demo</span><span class="p">;</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2"></a>
+<a id="__codelineno-2-3" name="__codelineno-2-3"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.fxml.FXML</span><span class="p">;</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.fxml.FXMLLoader</span><span class="p">;</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.scene.Parent</span><span class="p">;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6"></a><span class="kn">import</span><span class="w"> </span><span class="nn">javafx.scene.layout.VBox</span><span class="p">;</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7"></a><span class="kn">import</span><span class="w"> </span><span class="nn">java.io.IOException</span><span class="p">;</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8"></a>
+<a id="__codelineno-2-9" name="__codelineno-2-9"></a><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">MenuController</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10"></a>
+<a id="__codelineno-2-11" name="__codelineno-2-11"></a><span class="w">    </span><span class="nd">@FXML</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">VBox</span><span class="w"> </span><span class="n">contentArea</span><span class="p">;</span><span class="w"> </span><span class="c1">// Vinculación FXML de nuestro receptáculo dinámico</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13"></a>
+<a id="__codelineno-2-14" name="__codelineno-2-14"></a><span class="w">    </span><span class="c1">// Función núcleo: lee FXML, saca su raíz y borra el panel central para injertar el nuevo</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15"></a><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">cargarPantalla</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">archivoFxml</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16"></a><span class="w">        </span><span class="k">try</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17"></a><span class="w">            </span><span class="n">Parent</span><span class="w"> </span><span class="n">root</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FXMLLoader</span><span class="p">.</span><span class="na">load</span><span class="p">(</span><span class="n">getClass</span><span class="p">().</span><span class="na">getResource</span><span class="p">(</span><span class="n">archivoFxml</span><span class="p">));</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18"></a><span class="w">            </span><span class="c1">// Actualización radical de los hijos del VBox &quot;contentArea&quot;</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19"></a><span class="w">            </span><span class="n">contentArea</span><span class="p">.</span><span class="na">getChildren</span><span class="p">().</span><span class="na">setAll</span><span class="p">(</span><span class="n">root</span><span class="p">);</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20"></a><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">catch</span><span class="w"> </span><span class="p">(</span><span class="n">IOException</span><span class="w"> </span><span class="n">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21"></a><span class="w">            </span><span class="n">e</span><span class="p">.</span><span class="na">printStackTrace</span><span class="p">();</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24"></a>
+<a id="__codelineno-2-25" name="__codelineno-2-25"></a><span class="w">    </span><span class="c1">// Enlaces de Acción para los botones declarados en nuestro menú maestro</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26"></a><span class="w">    </span><span class="nd">@FXML</span>
+<a id="__codelineno-2-27" name="__codelineno-2-27"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">goHello</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-28" name="__codelineno-2-28"></a><span class="w">        </span><span class="n">cargarPantalla</span><span class="p">(</span><span class="s">&quot;hello-view.fxml&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-29" name="__codelineno-2-29"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-30" name="__codelineno-2-30"></a>
+<a id="__codelineno-2-31" name="__codelineno-2-31"></a><span class="w">    </span><span class="nd">@FXML</span>
+<a id="__codelineno-2-32" name="__codelineno-2-32"></a><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">goFormulario</span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-33" name="__codelineno-2-33"></a><span class="w">        </span><span class="n">cargarPantalla</span><span class="p">(</span><span class="s">&quot;formulario.fxml&quot;</span><span class="p">);</span>
+<a id="__codelineno-2-34" name="__codelineno-2-34"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-35" name="__codelineno-2-35"></a><span class="p">}</span>
 </code></pre></div></td></tr></table></div>
+<hr />
+<h2 id="3-modificando-el-arranque-del-programa">3. Modificando el Arranque del Programa</h2>
+<p>Puesto que a partir de ahora rige la macroestructura <code>menu-layout.fxml</code>, debemos alterar el archivo raíz (<code>HelloApplication.java</code>) para que ensamble y despliegue el esqueleto maestro como envoltorio unificador en vez de arrancar con una pantalla concreta de la app.</p>
+<p>Debemos cerciorarnos además de dar la orden inicial de arranque rellenando manualmente la caja <code>contentArea</code>, en caso contrario al ejecutar la aplicación la vista quedaría en un espacio en blanco y vacío.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-3-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-3-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-3-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-3-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-3-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-3-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-3-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-3-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-3-10">10</a></span>
+<span class="normal"><a href="#__codelineno-3-11">11</a></span>
+<span class="normal"><a href="#__codelineno-3-12">12</a></span>
+<span class="normal"><a href="#__codelineno-3-13">13</a></span>
+<span class="normal"><a href="#__codelineno-3-14">14</a></span>
+<span class="normal"><a href="#__codelineno-3-15">15</a></span>
+<span class="normal"><a href="#__codelineno-3-16">16</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="nd">@Override</span><span class="w">  </span>
+<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="kd">public</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">start</span><span class="p">(</span><span class="n">Stage</span><span class="w"> </span><span class="n">stage</span><span class="p">)</span><span class="w"> </span><span class="kd">throws</span><span class="w"> </span><span class="n">IOException</span><span class="w"> </span><span class="p">{</span><span class="w">  </span>
+<a id="__codelineno-3-3" name="__codelineno-3-3"></a>
+<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="w">    </span><span class="c1">// 1. Cargamos el esquema absoluto del Menú Fijo (El esqueleto de la App)</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="w">    </span><span class="n">FXMLLoader</span><span class="w"> </span><span class="n">fxmlLoader</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">FXMLLoader</span><span class="p">(</span><span class="n">getClass</span><span class="p">().</span><span class="na">getResource</span><span class="p">(</span><span class="s">&quot;menu-layout.fxml&quot;</span><span class="p">));</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6"></a><span class="w">    </span><span class="n">Scene</span><span class="w"> </span><span class="n">scene</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scene</span><span class="p">(</span><span class="n">fxmlLoader</span><span class="p">.</span><span class="na">load</span><span class="p">(),</span><span class="w"> </span><span class="mi">600</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">);</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7"></a>
+<a id="__codelineno-3-8" name="__codelineno-3-8"></a><span class="w">    </span><span class="c1">// 2. Extraemos su controlador para delegarle de forma forzada la página 1 de inicio</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9"></a><span class="w">    </span><span class="n">MenuController</span><span class="w"> </span><span class="n">menuController</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fxmlLoader</span><span class="p">.</span><span class="na">getController</span><span class="p">();</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10"></a><span class="w">    </span><span class="n">menuController</span><span class="p">.</span><span class="na">cargarPantalla</span><span class="p">(</span><span class="s">&quot;hello-view.fxml&quot;</span><span class="p">);</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11"></a>
+<a id="__codelineno-3-12" name="__codelineno-3-12"></a><span class="w">    </span><span class="c1">// 3. Montamos la plataforma final visual</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13"></a><span class="w">    </span><span class="n">stage</span><span class="p">.</span><span class="na">setScene</span><span class="p">(</span><span class="n">scene</span><span class="p">);</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14"></a><span class="w">    </span><span class="n">stage</span><span class="p">.</span><span class="na">setTitle</span><span class="p">(</span><span class="s">&quot;Software Profesional: Menú Global e inyección dinámica&quot;</span><span class="p">);</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15"></a><span class="w">    </span><span class="n">stage</span><span class="p">.</span><span class="na">show</span><span class="p">();</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16"></a><span class="p">}</span>
+</code></pre></div></td></tr></table></div>
+<p><img src="../../../assets/images/ud09/ud09_9.png" alt="Controles" style="zoom:50%;" /></p>
+<p><img src="../../../assets/images/ud09/ud09_10.png" alt="Controles" style="zoom:50%;" /></p>
 <div class="admonition tip">
 <p class="admonition-title">Extensibilidad Absoluta</p>
-<p>¡A partir de este instante es tremendamente versátil ramificarse! Cada nueva funcionalidad que desees sumar tan solo te exigirá:
-1. Diseñar el aspecto en un nuevo archivo <code>visor.fxml</code>.
-2. Establecer su propia clase controladora de comportamiento.
-3. Añadir otro dócil <code>&lt;Button&gt;</code> a la botonera principal de <code>menu-layout.fxml</code> que instancie la frase maestra <code>cargarPantalla("visor.fxml")</code>.</p>
-</div>
-<hr />
-<h2 id="4-emojis-atractivos-y-caracteres-especiales-en-menus">4. Emojis, Atractivos y Caracteres Especiales en Menús</h2>
-<p>Comúnmente desearías adornar los botones de las barras para darles viveza. Aunque la distribución estándar de JavaFX (al menos en su sabor crudo pre-CSS) no integra de serie bibliotecas externas de pictogramas tipo FontAwesome o Material Design vectoriales, su soporte es <strong>plenamente compatible garantizando representación de caracteres Unicode extendido</strong>.</p>
-<p>Esto se traduce en que puedes emplear gratuitamente iconos tipográficos, signos o llamativos "emojis" modernos insertados sencillamente como puro <strong>texto</strong>.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-3-1">1</a></span>
-<span class="normal"><a href="#__codelineno-3-2">2</a></span>
-<span class="normal"><a href="#__codelineno-3-3">3</a></span>
-<span class="normal"><a href="#__codelineno-3-4">4</a></span>
-<span class="normal"><a href="#__codelineno-3-5">5</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1"></a><span class="c1">// Incorporando pictogramas tradicionales Unicode estándar directo (\uXXXX)</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2"></a><span class="n">Button</span><span class="w"> </span><span class="n">btnHamburguesa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Button</span><span class="p">(</span><span class="s">&quot;\u2630 Opciones&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Resultado en pantalla: ☰ Opciones</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3"></a>
-<a id="__codelineno-3-4" name="__codelineno-3-4"></a><span class="c1">// Integrando Emojis interactuables ricos (Bloque de pares extendido UTF-16)</span>
-<a id="__codelineno-3-5" name="__codelineno-3-5"></a><span class="n">MenuItem</span><span class="w"> </span><span class="n">itemCarrito</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">MenuItem</span><span class="p">(</span><span class="s">&quot;\uD83D\uDED2 Revisa tu compra&quot;</span><span class="p">);</span><span class="w"> </span><span class="c1">// Resultado: 🛒 Revisa tu compra</span>
-</code></pre></div></td></tr></table></div>
-<div class="admonition question">
-<p class="admonition-title">💻 Reto: Enriqueciendo el XML</p>
-<p>Puesto que entendemos cómo se inyectan carácteres visuales vía código... ¿Entiendes que es más limpio incluirlos directamente en las propiedades del diseño inicial? Descubre cómo modificar directamente tu archivo <code>&lt;Button text="Inicio (Hello)"&gt;</code> en <code>menu-layout.fxml</code> para inyectarle emojis alusivos en forma de string en el bloque de código visual y arranca para comprobar los resultados de la mejora.</p>
+<p>¡A partir de este instante es tremendamente versátil ramificarse! Cada nueva funcionalidad que desees sumar tan solo te exigirá:</p>
+<ol>
+<li>Diseñar el aspecto en un nuevo archivo <code>visor.fxml</code>.</li>
+<li>Establecer su propia clase controladora de comportamiento.</li>
+<li>Añadir otro dócil <code>&lt;Button&gt;</code> a la botonera principal de <code>menu-layout.fxml</code> que instancie la frase maestra <code>cargarPantalla("visor.fxml")</code>.</li>
+</ol>
 </div>
 
 
@@ -2422,13 +2438,13 @@
         
         
           
-          <a href="../../../ejercicios/ud01/introduccion/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Ejercicios de introducción">
+          <a href="../integracion_datos/" class="md-footer__link md-footer__link--next" aria-label="Siguiente: Integración de datos con BBDD">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Siguiente
               </span>
               <div class="md-ellipsis">
-                Ejercicios de introducción
+                Integración de datos con BBDD
               </div>
             </div>
             <div class="md-footer__button md-icon">

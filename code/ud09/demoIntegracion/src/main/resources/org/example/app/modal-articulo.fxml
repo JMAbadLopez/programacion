@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.app.ModalArticuloController"
+      spacing="10" alignment="CENTER">
+
+    <padding>
+        <Insets top="10" right="10" bottom="10" left="10"/>
+    </padding>
+
+    <Label text="Datos del Artículo" style="-fx-font-size: 18px;"/>
+
+    <TextField fx:id="txtId" promptText="ID del artículo" prefWidth="200"/>
+    <TextField fx:id="txtNombre" promptText="Nombre del artículo" prefWidth="200"/>
+    <TextField fx:id="txtPrecio" promptText="Precio" prefWidth="200"/>
+
+    <HBox spacing="10" alignment="CENTER">
+        <Button text="Guardar" onAction="#guardar"/>
+        <Button text="Cancelar" onAction="#cancelar"/>
+    </HBox>
+</VBox>

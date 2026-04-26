@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="org.example.app.MenuController">
+
+    <top>
+        <HBox fx:id="menuBar" spacing="10" style="-fx-padding: 10; -fx-background-color: #EEE;">
+            <Button text="Ver Fabricantes" onAction="#goFabricantes"/>
+            <Button text="Ver Artículos" onAction="#goArticulos"/>
+        </HBox>
+    </top>
+
+    <center>
+        <VBox fx:id="contentArea" alignment="CENTER" spacing="20"/>
+    </center>
+
+</BorderPane>

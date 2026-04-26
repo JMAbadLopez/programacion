@@ -40,6 +40,23 @@ Vamos a definir la interfaz de control maestro de nuestra app. Diseñamos este n
 </BorderPane>
 ```
 
+Para entender mejor la estructura de regiones de un `BorderPane`, podemos visualizar su distribución de la siguiente manera:
+
+```text
++---------------------------------------------------------+
+|                           top                           |
+|                      (Menú global)                      |
++----------+-----------------------------------+----------+
+|          |                                   |          |
+|   left   |              center               |  right   |
+| (Menús)  |       (Contenido dinámico)        | (Paneles)|
+|          |                                   |          |
++----------+-----------------------------------+----------+
+|                         bottom                          |
+|                    (Pie de programa)                    |
++---------------------------------------------------------+
+```
+
 **Puntos clave:**
 
 * **`BorderPane`**: Es excelente para patrón de _Layout_. Separa semánticamente el lienzo en regiones: `top` (menú global), `bottom` (pie de programa), `left`/`right` (menús laterales) y `center` (contenido cambiable de interés).
@@ -98,11 +115,11 @@ Debemos cerciorarnos además de dar la orden inicial de arranque rellenando manu
 public void start(Stage stage) throws IOException {  
   
     // 1. Cargamos el esquema absoluto del Menú Fijo (El esqueleto de la App)
-    FXMLLoader menuLoader = new FXMLLoader(getClass().getResource("menu-layout.fxml"));
-    Scene scene = new Scene(menuLoader.load(), 600, 400);
+    FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("menu-layout.fxml"));
+    Scene scene = new Scene(fxmlLoader.load(), 600, 400);
 
     // 2. Extraemos su controlador para delegarle de forma forzada la página 1 de inicio
-    MenuController menuController = menuLoader.getController();
+    MenuController menuController = fxmlLoader.getController();
     menuController.cargarPantalla("hello-view.fxml");
 
     // 3. Montamos la plataforma final visual
@@ -112,27 +129,13 @@ public void start(Stage stage) throws IOException {
 }
 ```
 
+<img src="../../../assets/images/ud09/ud09_9.png" alt="Controles" style="zoom:50%;" />
+
+<img src="../../../assets/images/ud09/ud09_10.png" alt="Controles" style="zoom:50%;" />
+
 !!! tip "Extensibilidad Absoluta"
     ¡A partir de este instante es tremendamente versátil ramificarse! Cada nueva funcionalidad que desees sumar tan solo te exigirá:
+
     1. Diseñar el aspecto en un nuevo archivo `visor.fxml`.
     2. Establecer su propia clase controladora de comportamiento.
     3. Añadir otro dócil `<Button>` a la botonera principal de `menu-layout.fxml` que instancie la frase maestra `cargarPantalla("visor.fxml")`.
-
----
-
-## 4. Emojis, Atractivos y Caracteres Especiales en Menús
-
-Comúnmente desearías adornar los botones de las barras para darles viveza. Aunque la distribución estándar de JavaFX (al menos en su sabor crudo pre-CSS) no integra de serie bibliotecas externas de pictogramas tipo FontAwesome o Material Design vectoriales, su soporte es **plenamente compatible garantizando representación de caracteres Unicode extendido**.
-
-Esto se traduce en que puedes emplear gratuitamente iconos tipográficos, signos o llamativos "emojis" modernos insertados sencillamente como puro **texto**.
-
-```java
-// Incorporando pictogramas tradicionales Unicode estándar directo (\uXXXX)
-Button btnHamburguesa = new Button("\u2630 Opciones"); // Resultado en pantalla: ☰ Opciones
-
-// Integrando Emojis interactuables ricos (Bloque de pares extendido UTF-16)
-MenuItem itemCarrito = new MenuItem("\uD83D\uDED2 Revisa tu compra"); // Resultado: 🛒 Revisa tu compra
-```
-
-!!! question "💻 Reto: Enriqueciendo el XML"
-    Puesto que entendemos cómo se inyectan carácteres visuales vía código... ¿Entiendes que es más limpio incluirlos directamente en las propiedades del diseño inicial? Descubre cómo modificar directamente tu archivo `<Button text="Inicio (Hello)">` en `menu-layout.fxml` para inyectarle emojis alusivos en forma de string en el bloque de código visual y arranca para comprobar los resultados de la mejora.

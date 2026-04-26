@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml"
+      fx:controller="org.example.demomenus.FormularioController"
+      spacing="15" alignment="CENTER_LEFT">
+
+    <padding>
+        <Insets top="20" right="20" bottom="20" left="20"/>
+    </padding>
+
+    <Label text="Formulario de Registro" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Nombre:"/>
+        <TextField fx:id="txtNombre" promptText="Tu nombre"/>
+    </HBox>
+
+    <HBox spacing="10" alignment="CENTER_LEFT">
+        <Label text="Categoría:"/>
+        <ComboBox fx:id="comboCategoria" prefWidth="200"/>
+    </HBox>
+
+    <CheckBox fx:id="chkAcepto" text="Acepto los términos y condiciones"/>
+
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="Limpiar" onAction="#limpiarFormularioButtonClick"/>
+        <Button text="Enviar" onAction="#enviarFormularioButtonClick"/>
+    </HBox>
+</VBox>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.app.FabricantesController">
+    <padding>
+        <Insets bottom="10" left="10" right="10" top="10" />
+    </padding>
+    
+    <Label style="-fx-font-size: 20px;" text="Gestión de Fabricantes" />
+    
+    <TableView fx:id="tablaFabricantes">
+        <columns>
+            <TableColumn fx:id="colId" text="ID" />
+            <TableColumn fx:id="colNombre" text="Nombre" />
+        </columns>
+    </TableView>
+
+    <Button text="Nuevo artículo" onAction="#nuevoArticulo"/>
+    <Label text="⚠️ Selecciona un fabricante para añadir un nuevo artículo"></Label>
+</VBox>
