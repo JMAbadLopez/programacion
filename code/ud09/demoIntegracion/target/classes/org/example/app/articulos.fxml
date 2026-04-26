@@ -1,24 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.geometry.Insets?>
 
-<VBox xmlns="http://javafx.com/javafx"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.example.app.ArticulosController"
-      spacing="10" >
+<VBox spacing="10" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.app.ArticulosController">
     <padding>
-        <Insets top="10" right="10" bottom="10" left="10"/>
+        <Insets bottom="10" left="10" right="10" top="10" />
     </padding>
-  
-    <Label text="Listado de Artículos" style="-fx-font-size: 18px;"/>
-  
+    <Label style="-fx-font-size: 20px;" text="Listado de Artículos" />
+    <HBox alignment="TOP_RIGHT" spacing="10.0">
+        <children>
+            <Button mnemonicParsing="false" style="-fx-background-color: #34c9eb;" text="Actualizar" textFill="WHITE" />
+            <Button mnemonicParsing="false" style="-fx-background-color: #e34242;" text="Eliminar" textFill="WHITE" />
+        </children>
+    </HBox>
     <TableView fx:id="tablaArticulos" prefHeight="300">
         <columns>
-            <TableColumn fx:id="colId" text="ID" prefWidth="80"/>
-            <TableColumn fx:id="colNombre" text="Nombre" prefWidth="150"/>
-            <TableColumn fx:id="colPrecio" text="Precio" prefWidth="100"/>
-            <TableColumn fx:id="colFabricante" text="Fabricante" prefWidth="150"/>
+            <TableColumn fx:id="colId" prefWidth="80" text="ID" />
+            <TableColumn fx:id="colNombre" prefWidth="150" text="Nombre" />
+            <TableColumn fx:id="colPrecio" prefWidth="100" text="Precio" />
+            <TableColumn fx:id="colFabricante" prefWidth="150" text="Fabricante" />
         </columns>
     </TableView>
+    <Label text="⚠️ Selecciona un artículo para actualizar o eliminar" />
 </VBox>
