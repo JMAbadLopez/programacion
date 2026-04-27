@@ -57,7 +57,8 @@ nav:
       - Básica: recursos/algoritmica_basica.md
       - Método de la burbuja (ordenación): recursos/burbuja.html
       - Recursividad: recursos/recursividad.html
-      - Otros: recursos/propuesta_proyecto.md
+    - Otros:
+      - Propuesta de Proyecto: recursos/propuesta_proyecto.md
   - Presentación: index.md
 
 repo_url: https://github.com/jmabadlopez/programacion

@@ -10,13 +10,6 @@
     </padding>
     
     <Label style="-fx-font-size: 20px;" text="Gestión de Fabricantes" />
-    <HBox alignment="TOP_RIGHT" spacing="10.0">
-        <children>
-         <Button mnemonicParsing="false" text="Nuevo fabricante" />
-         <Button mnemonicParsing="false" style="-fx-background-color: #34c9eb;" text="Actualizar" textFill="WHITE" />
-         <Button mnemonicParsing="false" style="-fx-background-color: #e34242;" text="Eliminar" textFill="WHITE" />
-        </children>
-    </HBox>
     
     <TableView fx:id="tablaFabricantes">
         <columns>

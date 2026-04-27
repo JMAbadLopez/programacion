@@ -22,7 +22,7 @@
     
     
       
-        <title>Otros - Programación DAM</title>
+        <title>Propuesta de Proyecto - Programación DAM</title>
       
     
     
@@ -73,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#diagrama-de-clases-uml-proyecto-intermodular-posible-solucion" class="md-skip">
+          Saltar a contenido
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -104,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Otros
+              Propuesta de Proyecto
             
           </span>
         </div>
@@ -1894,8 +1899,6 @@
                 
   
   
-    
-  
   
   
     
@@ -1906,11 +1909,11 @@
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -1926,7 +1929,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_3">
             <span class="md-nav__icon md-icon"></span>
             Algorítmica
@@ -2002,6 +2005,57 @@
 
               
             
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Otros
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_4">
+            <span class="md-nav__icon md-icon"></span>
+            Otros
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
               
                 
   
@@ -2015,13 +2069,15 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
   <span class="md-ellipsis">
-    Otros
+    Propuesta de Proyecto
     
   </span>
   
@@ -2087,6 +2143,8 @@
   
   
   
+    
+  
   
 </nav>
                   </div>
@@ -2105,100 +2163,59 @@
   
 
 
-  <h1>Otros</h1>
-
-<pre class="mermaid"><code> classDiagram
-    %% Definición de Entidades (POJOs)
+<h1 id="diagrama-de-clases-uml-proyecto-intermodular-posible-solucion">Diagrama de Clases UML Proyecto Intermodular (posible solución)</h1>
+<p>A continuación se muestra una posible solución para el diagrama de las clases del proyecto, incluyendo sus atributos, métodos principales y las relaciones de cardinalidad entre ellas:</p>
+<pre class="mermaid"><code>classDiagram
     class Departamento {
-        -int id
+        -int idDepartamento
         -String nombre
         -double presupuesto
         -String ubicacion
-        +getId() int
-        +setId(int id) void
-        +getNombre() String
-        +setNombre(String nombre) void
-        +getPresupuesto() double
-        +setPresupuesto(double presupuesto) void
-        +getUbicacion() String
-        +setUbicacion(String ubicacion) void
+        +aumentarPresupuesto(double cantidad)
+        +reducirPresupuesto(double cantidad)
     }
 
     class Empleado {
-        -String dni
+        -int idEmpleado
         -String nombre
         -String apellidos
         -Date fechaContratacion
         -double salario
         -String rol
-        +getDni() String
-        +setDni(String dni) void
-        +getNombre() String
-        +setNombre(String nombre) void
-        +getApellidos() String
-        +setApellidos(String apellidos) void
-        +getFechaContratacion() Date
-        +setFechaContratacion(Date fecha) void
-        +getSalario() double
-        +setSalario(double salario) void
-        +getRol() String
-        +setRol(String rol) void
-        +getNombreCompleto() String
-        +asignarDepartamento(Departamento d) void
+        -Departamento departamento
+        +asignarDepartamento(Departamento d)
+        +actualizarSalario(double porcentaje)
+        +obtenerAntiguedad() int
     }
 
     class Dispositivo {
+        -int idDispositivo
         -String mac
         -String ip
         -String tipo
         -String sistemaOperativo
-        +getMac() String
-        +setMac(String mac) void
-        +getIp() String
-        +setIp(String ip) void
-        +getTipo() String
-        +setTipo(String tipo) void
-        +getSistemaOperativo() String
-        +setSistemaOperativo(String so) void
-        +asignarResponsable(Empleado e) void
+        -Empleado responsable
+        +asignarResponsable(Empleado e)
+        +liberarDispositivo()
     }
 
-    %% Definición de la capa DAO (Acceso a Datos)
-    class DepartamentoDAO {
-        &lt;&lt;interface&gt;&gt;
-        +crear(Departamento d) boolean
-        +leerTodos() List~Departamento~
-        +leerPorId(int id) Departamento
-        +actualizar(Departamento d) boolean
-        +borrar(int id) boolean
+    class Incidencia {
+        -int idIncidencia
+        -String estado
+        -Dispositivo dispositivo
+        -Empleado resolutor
+        -Date fechaAlta
+        -Date fechaCierre
+        +vincularDispositivo(Dispositivo d)
+        +asignarResolutor(Empleado e)
+        +cambiarEstado(String nuevoEstado)
+        +cerrarIncidencia()
     }
 
-    class EmpleadoDAO {
-        &lt;&lt;interface&gt;&gt;
-        +crear(Empleado e) boolean
-        +leerTodos() List~Empleado~
-        +leerPorDni(String dni) Empleado
-        +actualizar(Empleado e) boolean
-        +borrar(String dni) boolean
-    }
-
-    class DispositivoDAO {
-        &lt;&lt;interface&gt;&gt;
-        +crear(Dispositivo d) boolean
-        +leerTodos() List~Dispositivo~
-        +leerPorMac(String mac) Dispositivo
-        +actualizar(Dispositivo d) boolean
-        +borrar(String mac) boolean
-    }
-
-    %% Relaciones entre entidades
-    Departamento "1" *-- "0..*" Empleado : agrupa a
-    Empleado "1" o-- "0..*" Dispositivo : custodia
-
-    %% Dependencias de uso (DAO -&gt; POJO)
-    DepartamentoDAO ..&gt; Departamento : gestiona
-    EmpleadoDAO ..&gt; Empleado : gestiona
-    DispositivoDAO ..&gt; Dispositivo : gestiona</code></pre>
+    Departamento "1" o-- "0..*" Empleado : pertenece
+    Empleado "1" -- "0..*" Dispositivo : es_responsable
+    Dispositivo "1" *-- "0..*" Incidencia : tiene
+    Empleado "0..1" -- "0..*" Incidencia : resuelve</code></pre>
 
 
 

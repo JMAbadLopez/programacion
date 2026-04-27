@@ -1,94 +1,57 @@
+# Diagrama de Clases UML Proyecto Intermodular (posible solución)
+
+A continuación se muestra una posible solución para el diagrama de las clases del proyecto, incluyendo sus atributos, métodos principales y las relaciones de cardinalidad entre ellas:
+
 ```mermaid
- classDiagram
-    %% Definición de Entidades (POJOs)
+classDiagram
     class Departamento {
-        -int id
+        -int idDepartamento
         -String nombre
         -double presupuesto
         -String ubicacion
-        +getId() int
-        +setId(int id) void
-        +getNombre() String
-        +setNombre(String nombre) void
-        +getPresupuesto() double
-        +setPresupuesto(double presupuesto) void
-        +getUbicacion() String
-        +setUbicacion(String ubicacion) void
+        +aumentarPresupuesto(double cantidad)
+        +reducirPresupuesto(double cantidad)
     }
 
     class Empleado {
-        -String dni
+        -int idEmpleado
         -String nombre
         -String apellidos
         -Date fechaContratacion
         -double salario
         -String rol
-        +getDni() String
-        +setDni(String dni) void
-        +getNombre() String
-        +setNombre(String nombre) void
-        +getApellidos() String
-        +setApellidos(String apellidos) void
-        +getFechaContratacion() Date
-        +setFechaContratacion(Date fecha) void
-        +getSalario() double
-        +setSalario(double salario) void
-        +getRol() String
-        +setRol(String rol) void
-        +getNombreCompleto() String
-        +asignarDepartamento(Departamento d) void
+        -Departamento departamento
+        +asignarDepartamento(Departamento d)
+        +actualizarSalario(double porcentaje)
+        +obtenerAntiguedad() int
     }
 
     class Dispositivo {
+        -int idDispositivo
         -String mac
         -String ip
         -String tipo
         -String sistemaOperativo
-        +getMac() String
-        +setMac(String mac) void
-        +getIp() String
-        +setIp(String ip) void
-        +getTipo() String
-        +setTipo(String tipo) void
-        +getSistemaOperativo() String
-        +setSistemaOperativo(String so) void
-        +asignarResponsable(Empleado e) void
+        -Empleado responsable
+        +asignarResponsable(Empleado e)
+        +liberarDispositivo()
     }
 
-    %% Definición de la capa DAO (Acceso a Datos)
-    class DepartamentoDAO {
-        <<interface>>
-        +crear(Departamento d) boolean
-        +leerTodos() List~Departamento~
-        +leerPorId(int id) Departamento
-        +actualizar(Departamento d) boolean
-        +borrar(int id) boolean
+    class Incidencia {
+        -int idIncidencia
+        -String estado
+        -Dispositivo dispositivo
+        -Empleado resolutor
+        -Date fechaAlta
+        -Date fechaCierre
+        +vincularDispositivo(Dispositivo d)
+        +asignarResolutor(Empleado e)
+        +cambiarEstado(String nuevoEstado)
+        +cerrarIncidencia()
     }
 
-    class EmpleadoDAO {
-        <<interface>>
-        +crear(Empleado e) boolean
-        +leerTodos() List~Empleado~
-        +leerPorDni(String dni) Empleado
-        +actualizar(Empleado e) boolean
-        +borrar(String dni) boolean
-    }
-
-    class DispositivoDAO {
-        <<interface>>
-        +crear(Dispositivo d) boolean
-        +leerTodos() List~Dispositivo~
-        +leerPorMac(String mac) Dispositivo
-        +actualizar(Dispositivo d) boolean
-        +borrar(String mac) boolean
-    }
-
-    %% Relaciones entre entidades
-    Departamento "1" *-- "0..*" Empleado : agrupa a
-    Empleado "1" o-- "0..*" Dispositivo : custodia
-    
-    %% Dependencias de uso (DAO -> POJO)
-    DepartamentoDAO ..> Departamento : gestiona
-    EmpleadoDAO ..> Empleado : gestiona
-    DispositivoDAO ..> Dispositivo : gestiona
+    Departamento "1" o-- "0..*" Empleado : pertenece
+    Empleado "1" -- "0..*" Dispositivo : es_responsable
+    Dispositivo "1" *-- "0..*" Incidencia : tiene
+    Empleado "0..1" -- "0..*" Incidencia : resuelve
 ```
