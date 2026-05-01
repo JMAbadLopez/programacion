@@ -8,8 +8,8 @@
     <!-- La barra fija superior (Nuestra Navegación) -->
     <top>
         <HBox fx:id="menuBar" spacing="10" style="-fx-padding: 10; -fx-background-color: #EEE;">
-            <Button text="🏠 Inicio" onAction="#goHello"/>
-            <Button text="✏️Formulario" onAction="#goFormulario"/>
+            <Button text="Inicio" onAction="#goHello"/>
+            <Button text="Formulario" onAction="#goFormulario"/>
         </HBox>
     </top>
 

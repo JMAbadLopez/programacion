@@ -20,5 +20,5 @@
 
 
     <Button onAction="#nuevoArticulo" text="Nuevo artículo" />
-    <Label text="⚠️ Selecciona un fabricante para añadir un nuevo artículo" />
+    <Label text="Selecciona un fabricante para añadir un nuevo artículo" />
 </VBox>

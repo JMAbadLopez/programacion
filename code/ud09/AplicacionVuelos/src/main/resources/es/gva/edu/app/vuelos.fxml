@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox alignment="CENTER_LEFT" prefWidth="560.0" spacing="10.0"
+      xmlns:fx="[http://javafx.com/fxml](http://javafx.com/fxml)"
+      fx:controller="es.gva.edu.app.VuelosController">
+    <children>
+        <TableView fx:id="tblFlights" prefWidth="560.0">
+            <columns>
+                <TableColumn fx:id="colNumFlight" prefWidth="100.0" text="Flight Number" />
+                <TableColumn fx:id="colDestination" prefWidth="100.0" text="Destination" />
+                <TableColumn fx:id="colDeparture" prefWidth="100.0" text="Departure" />
+                <TableColumn fx:id="colDuration" prefWidth="100.0" text="Duration" />
+            </columns>
+        </TableView>
+        <Label text="Flight" />
+        <TextField fx:id="tfNumFlight" prefHeight="26.0" prefWidth="200.0" promptText="Flight number" />
+        <Label text="Destination" textAlignment="CENTER" />
+        <TextField fx:id="tfDestination" prefHeight="26.0" prefWidth="200.0" promptText="Destination" />
+        <Label text="Date" />
+        <DatePicker fx:id="dpDeparture" prefHeight="26.0" prefWidth="165.0" promptText="01/01/2026" />
+        <Label text="Duration" />
+        <TextField fx:id="tfDuration" prefHeight="26.0" prefWidth="200.0" promptText="Minutes" />
+        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+            <children>
+                <Button fx:id="btnAdd" mnemonicParsing="false" style="-fx-background-color: green;" text="Add flight" textFill="WHITE"
+                onAction="#addFlight"/>
+                <Button fx:id="btnDelete" mnemonicParsing="false" style="-fx-background-color: red;" text="Delete" textFill="WHITE"
+                        onAction="#deleteFlight" />
+                <Button fx:id="btnRefresh" text="Refresh flights"
+                        onAction="#refreshTable" />
+            </children>
+            <VBox.margin>
+                <Insets />
+            </VBox.margin>
+        </HBox>
+        <HBox prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+            <children>
+                <ComboBox fx:id="cbxFilter" prefHeight="26.0" prefWidth="400.0" promptText="Select filter" />
+                <Button fx:id="btnFilter" mnemonicParsing="false" style="-fx-background-color: grey;" text="Apply filter" textFill="WHITE"
+                onAction="#filter"/>
+            </children>
+        </HBox>
+        <Label fx:id="lblInfo"></Label>
+
+    </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>

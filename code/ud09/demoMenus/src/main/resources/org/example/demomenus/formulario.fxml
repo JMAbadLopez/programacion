@@ -1,32 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.geometry.Insets?>
+
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<VBox xmlns:fx="http://javafx.com/fxml"
-      fx:controller="org.example.demomenus.FormularioController"
-      spacing="15" alignment="CENTER_LEFT">
+<VBox alignment="CENTER_LEFT" spacing="15" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/17.0.12" fx:controller="org.example.demomenus.FormularioController">
 
     <padding>
-        <Insets top="20" right="20" bottom="20" left="20"/>
+        <Insets bottom="20" left="20" right="20" top="20" />
     </padding>
 
-    <Label text="Formulario de Registro" style="-fx-font-size: 18px; -fx-font-weight: bold;"/>
+    <Label style="-fx-background-color: red; -fx-font-weight: bold; -fx-font-size: 20px;" text="Formulario de Registro" />
 
-    <HBox spacing="10" alignment="CENTER_LEFT">
-        <Label text="Nombre:"/>
-        <TextField fx:id="txtNombre" promptText="Tu nombre"/>
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <Label text="Nombre:" />
+        <TextField fx:id="txtNombre" promptText="Tu nombre" />
     </HBox>
 
-    <HBox spacing="10" alignment="CENTER_LEFT">
-        <Label text="Categoría:"/>
-        <ComboBox fx:id="comboCategoria" prefWidth="200"/>
+    <HBox alignment="CENTER_LEFT" spacing="10">
+        <Label text="Categoría:" />
+        <ComboBox fx:id="comboCategoria" prefWidth="200" />
     </HBox>
 
-    <CheckBox fx:id="chkAcepto" text="Acepto los términos y condiciones"/>
+    <CheckBox fx:id="chkAcepto" text="Acepto los términos y condiciones" />
 
-    <HBox spacing="10" alignment="CENTER_RIGHT">
-        <Button text="Limpiar" onAction="#limpiarFormularioButtonClick"/>
-        <Button text="Enviar" onAction="#enviarFormularioButtonClick"/>
+    <HBox alignment="CENTER_RIGHT" spacing="10">
+        <Button onAction="#limpiarFormularioButtonClick" text="Limpiar" />
+        <Button onAction="#enviarFormularioButtonClick" text="Enviar" />
     </HBox>
 </VBox>

@@ -51,7 +51,7 @@ classDiagram
     }
 
     Departamento "1" o-- "0..*" Empleado : pertenece
-    Empleado "1" -- "0..*" Dispositivo : es_responsable
+    Empleado "1" -- "0..*" Dispositivo : usa
     Dispositivo "1" *-- "0..*" Incidencia : tiene
     Empleado "0..1" -- "0..*" Incidencia : resuelve
 ```

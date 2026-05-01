@@ -26,6 +26,7 @@
     <ComboBox fx:id="combSistemas" promptText="Selecciona un SO base..." />
    <Button fx:id="btAlerta" mnemonicParsing="false" onAction="#mostrarErrorCritico" style="-fx-background-color: red;" text="Alerta error" textFill="WHITE" />
    <Button fx:id="btConfirmacion" mnemonicParsing="false" onAction="#mostrarAvisoSalida" style="-fx-background-color: green;" text="Confirmación" textFill="WHITE" />
+   <Label fx:id="lblHola2" text="Hola 2" />
 
 
 
