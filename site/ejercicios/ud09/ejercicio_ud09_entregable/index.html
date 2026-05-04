@@ -1826,13 +1826,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-aplicar-filtros-opcional" class="md-nav__link">
+  <a href="#4-aplicar-filtros" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Aplicar Filtros (Opcional)
+      4. Aplicar Filtros
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4. Aplicar Filtros (Opcional)">
+    <nav class="md-nav" aria-label="4. Aplicar Filtros">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2396,13 +2396,13 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-aplicar-filtros-opcional" class="md-nav__link">
+  <a href="#4-aplicar-filtros" class="md-nav__link">
     <span class="md-ellipsis">
-      4. Aplicar Filtros (Opcional)
+      4. Aplicar Filtros
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="4. Aplicar Filtros (Opcional)">
+    <nav class="md-nav" aria-label="4. Aplicar Filtros">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2484,13 +2484,13 @@
 <ul>
 <li>Deberás crear una base de datos con una tabla <code>vuelo</code> que almacene la información descrita.</li>
 <li>Implementar el patrón <strong>DAO</strong> (por ejemplo, un <code>VueloDAO</code>) para aislar la lógica de acceso a la base de datos de la interfaz gráfica.</li>
-<li>El DAO debe contener métodos para, al menos: insertar un nuevo vuelo, eliminar un vuelo existente y obtener la lista de todos los vuelos.</li>
+<li>El DAO debe contener métodos para, al menos: insertar un nuevo vuelo, eliminar un vuelo existente y obtener la lista de todos los vuelos. También los métodos para la parte de filtrado.</li>
 </ul>
 <h3 id="2-interfaz-de-usuario-javafx">2. Interfaz de Usuario (JavaFX)</h3>
 <ul>
 <li>Toda la interacción se realizará en <strong>una única pantalla</strong> (un único archivo <code>.fxml</code>).</li>
 <li>La pantalla debe estar dividida en dos zonas principales:</li>
-<li><strong>Formulario de Entrada</strong>: Con los campos necesarios para introducir el número de vuelo, destino y duración, además de un botón "Añadir Vuelo".</li>
+<li><strong>Formulario de Entrada</strong>: Con los campos necesarios para introducir el número de vuelo, fecha, destino y duración, además de un botón "Añadir Vuelo" y "Borrar Vuelo".</li>
 <li><strong>Visor de Datos</strong>: Un <code>TableView</code> que muestre en tiempo real los vuelos registrados.</li>
 </ul>
 <h3 id="3-funcionalidades-obligatorias">3. Funcionalidades Obligatorias</h3>
@@ -2499,12 +2499,13 @@
 <li><strong>Añadir Vuelo</strong>: Al rellenar el formulario y pulsar el botón, el vuelo debe guardarse en la base de datos mediante el DAO y, a continuación, el <code>TableView</code> debe actualizarse para mostrar el nuevo registro.</li>
 <li><strong>Eliminar Vuelo</strong>: Se debe permitir seleccionar una fila en el <code>TableView</code> y pulsar un botón "Eliminar". Esto borrará el registro de la base de datos y refrescará la vista. (Recomendado: Añadir un diálogo de confirmación <code>Alert</code> antes de proceder al borrado definitivo).</li>
 </ul>
-<h3 id="4-aplicar-filtros-opcional">4. Aplicar Filtros (Opcional)</h3>
+<h3 id="4-aplicar-filtros">4. Aplicar Filtros</h3>
 <p>Añadir opciones en la interfaz para aplicar los siguientes filtros:</p>
 <ul>
 <li><strong>Filtro 1</strong>: Mostrará los vuelos de más de 3 horas (180 minutos).</li>
 <li><strong>Filtro 2</strong>: Cogerá el campo Ciudad de destino y mostrará sólo los vuelos a esa ciudad.</li>
 </ul>
+<p>Puedes usar un desplegable con dos opciones para aplicar los filtros y un botón para aplicar el filtro. Por defecto no debe estar ningún filtro aplicado, es decir, se deben mostrar todos los vuelos.</p>
 <p><em>Nota: La lógica de ordenación o filtrado puedes realizarla mediante consultas SQL específicas en el DAO o manipulando la colección de datos en Java.</em></p>
 <h4 id="ejemplo-de-la-interfaz">Ejemplo de la interfaz</h4>
 <p><img src="../../../assets/images/ud09/ud09_19.png" alt="Hola mundo" style="zoom:50%;" /></p>

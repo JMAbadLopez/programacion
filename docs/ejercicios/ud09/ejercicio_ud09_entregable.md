@@ -28,13 +28,13 @@ La aplicación debe cumplir con los siguientes requisitos:
 
 * Deberás crear una base de datos con una tabla `vuelo` que almacene la información descrita.
 * Implementar el patrón **DAO** (por ejemplo, un `VueloDAO`) para aislar la lógica de acceso a la base de datos de la interfaz gráfica.
-* El DAO debe contener métodos para, al menos: insertar un nuevo vuelo, eliminar un vuelo existente y obtener la lista de todos los vuelos.
+* El DAO debe contener métodos para, al menos: insertar un nuevo vuelo, eliminar un vuelo existente y obtener la lista de todos los vuelos. También los métodos para la parte de filtrado.
 
 ### 2. Interfaz de Usuario (JavaFX)
 
 * Toda la interacción se realizará en **una única pantalla** (un único archivo `.fxml`).
 * La pantalla debe estar dividida en dos zonas principales:
-  * **Formulario de Entrada**: Con los campos necesarios para introducir el número de vuelo, destino y duración, además de un botón "Añadir Vuelo".
+  * **Formulario de Entrada**: Con los campos necesarios para introducir el número de vuelo, fecha, destino y duración, además de un botón "Añadir Vuelo" y "Borrar Vuelo".
   * **Visor de Datos**: Un `TableView` que muestre en tiempo real los vuelos registrados.
 
 ### 3. Funcionalidades Obligatorias
@@ -43,12 +43,14 @@ La aplicación debe cumplir con los siguientes requisitos:
 * **Añadir Vuelo**: Al rellenar el formulario y pulsar el botón, el vuelo debe guardarse en la base de datos mediante el DAO y, a continuación, el `TableView` debe actualizarse para mostrar el nuevo registro.
 * **Eliminar Vuelo**: Se debe permitir seleccionar una fila en el `TableView` y pulsar un botón "Eliminar". Esto borrará el registro de la base de datos y refrescará la vista. (Recomendado: Añadir un diálogo de confirmación `Alert` antes de proceder al borrado definitivo).
 
-### 4. Aplicar Filtros (Opcional)
+### 4. Aplicar Filtros
 
 Añadir opciones en la interfaz para aplicar los siguientes filtros:
 
 * **Filtro 1**: Mostrará los vuelos de más de 3 horas (180 minutos).
 * **Filtro 2**: Cogerá el campo Ciudad de destino y mostrará sólo los vuelos a esa ciudad.
+
+Puedes usar un desplegable con dos opciones para aplicar los filtros y un botón para aplicar el filtro. Por defecto no debe estar ningún filtro aplicado, es decir, se deben mostrar todos los vuelos.
 
 *Nota: La lógica de ordenación o filtrado puedes realizarla mediante consultas SQL específicas en el DAO o manipulando la colección de datos en Java.*
 
