@@ -122,6 +122,7 @@ extra:
   social:
     - icon: fontawesome/brands/github 
       link: https://github.com/jmabadlopez/programacion
+
 # plugins:
 #   - to-pdf:
 #       author: José Manuel Abad López

@@ -56,6 +56,29 @@ Añadir opciones en la interfaz para aplicar los siguientes filtros:
 
 <img src="../../../assets/images/ud09/ud09_19.png" alt="Hola mundo" style="zoom:50%;" />
 
+#### Script de inicialización Base de Datos
+
+```sql
+CREATE DATABASE app_flights;
+
+\c app_flights;
+
+CREATE TABLE flight (
+    id_flight SERIAL PRIMARY KEY,
+    num_flight VARCHAR(100) UNIQUE NOT NULL,
+    destination VARCHAR(100) NOT NULL,
+    departure DATE NOT NULL,
+    duration INT DEFAULT 30
+);
+
+INSERT INTO flight(num_flight,destination,departure,duration) VALUES('IB601N','Bilbao','2026-05-04',83);
+INSERT INTO flight(num_flight,destination,departure,duration) VALUES('RY112A','Edinburgh','2026-05-04',192);
+INSERT INTO flight(num_flight,destination,departure,duration) VALUES('AA295H','New York','2026-05-05',452);
+INSERT INTO flight(num_flight,destination,departure,duration) VALUES('RY131P','London','2026-05-05',175);
+INSERT INTO flight(num_flight,destination,departure,duration) VALUES('WA338L','Krakow','2026-05-07',175);
+INSERT INTO flight(num_flight,destination,departure,duration) VALUES('RY117H','Bilbao','2026-05-07',83);
+```
+
 ## Rúbrica y Consideraciones Adicionales
 
 Se valorará de forma positiva:

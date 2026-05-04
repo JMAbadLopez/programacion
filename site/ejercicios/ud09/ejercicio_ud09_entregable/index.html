@@ -1844,6 +1844,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#script-de-inicializacion-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Script de inicialización Base de Datos
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2405,6 +2414,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#script-de-inicializacion-base-de-datos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Script de inicialización Base de Datos
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2490,6 +2508,43 @@
 <p><em>Nota: La lógica de ordenación o filtrado puedes realizarla mediante consultas SQL específicas en el DAO o manipulando la colección de datos en Java.</em></p>
 <h4 id="ejemplo-de-la-interfaz">Ejemplo de la interfaz</h4>
 <p><img src="../../../assets/images/ud09/ud09_19.png" alt="Hola mundo" style="zoom:50%;" /></p>
+<h4 id="script-de-inicializacion-base-de-datos">Script de inicialización Base de Datos</h4>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"><a href="#__codelineno-0-1"> 1</a></span>
+<span class="normal"><a href="#__codelineno-0-2"> 2</a></span>
+<span class="normal"><a href="#__codelineno-0-3"> 3</a></span>
+<span class="normal"><a href="#__codelineno-0-4"> 4</a></span>
+<span class="normal"><a href="#__codelineno-0-5"> 5</a></span>
+<span class="normal"><a href="#__codelineno-0-6"> 6</a></span>
+<span class="normal"><a href="#__codelineno-0-7"> 7</a></span>
+<span class="normal"><a href="#__codelineno-0-8"> 8</a></span>
+<span class="normal"><a href="#__codelineno-0-9"> 9</a></span>
+<span class="normal"><a href="#__codelineno-0-10">10</a></span>
+<span class="normal"><a href="#__codelineno-0-11">11</a></span>
+<span class="normal"><a href="#__codelineno-0-12">12</a></span>
+<span class="normal"><a href="#__codelineno-0-13">13</a></span>
+<span class="normal"><a href="#__codelineno-0-14">14</a></span>
+<span class="normal"><a href="#__codelineno-0-15">15</a></span>
+<span class="normal"><a href="#__codelineno-0-16">16</a></span>
+<span class="normal"><a href="#__codelineno-0-17">17</a></span>
+<span class="normal"><a href="#__codelineno-0-18">18</a></span></pre></div></td><td class="code"><div><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">DATABASE</span><span class="w"> </span><span class="n">app_flights</span><span class="p">;</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2"></a>
+<a id="__codelineno-0-3" name="__codelineno-0-3"></a><span class="err">\</span><span class="k">c</span><span class="w"> </span><span class="n">app_flights</span><span class="p">;</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4"></a>
+<a id="__codelineno-0-5" name="__codelineno-0-5"></a><span class="k">CREATE</span><span class="w"> </span><span class="k">TABLE</span><span class="w"> </span><span class="n">flight</span><span class="w"> </span><span class="p">(</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6"></a><span class="w">    </span><span class="n">id_flight</span><span class="w"> </span><span class="nb">SERIAL</span><span class="w"> </span><span class="k">PRIMARY</span><span class="w"> </span><span class="k">KEY</span><span class="p">,</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7"></a><span class="w">    </span><span class="n">num_flight</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="k">UNIQUE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-8" name="__codelineno-0-8"></a><span class="w">    </span><span class="n">destination</span><span class="w"> </span><span class="nb">VARCHAR</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-9" name="__codelineno-0-9"></a><span class="w">    </span><span class="n">departure</span><span class="w"> </span><span class="nb">DATE</span><span class="w"> </span><span class="k">NOT</span><span class="w"> </span><span class="k">NULL</span><span class="p">,</span>
+<a id="__codelineno-0-10" name="__codelineno-0-10"></a><span class="w">    </span><span class="n">duration</span><span class="w"> </span><span class="nb">INT</span><span class="w"> </span><span class="k">DEFAULT</span><span class="w"> </span><span class="mi">30</span>
+<a id="__codelineno-0-11" name="__codelineno-0-11"></a><span class="p">);</span>
+<a id="__codelineno-0-12" name="__codelineno-0-12"></a>
+<a id="__codelineno-0-13" name="__codelineno-0-13"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">flight</span><span class="p">(</span><span class="n">num_flight</span><span class="p">,</span><span class="n">destination</span><span class="p">,</span><span class="n">departure</span><span class="p">,</span><span class="n">duration</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="p">(</span><span class="s1">&#39;IB601N&#39;</span><span class="p">,</span><span class="s1">&#39;Bilbao&#39;</span><span class="p">,</span><span class="s1">&#39;2026-05-04&#39;</span><span class="p">,</span><span class="mi">83</span><span class="p">);</span>
+<a id="__codelineno-0-14" name="__codelineno-0-14"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">flight</span><span class="p">(</span><span class="n">num_flight</span><span class="p">,</span><span class="n">destination</span><span class="p">,</span><span class="n">departure</span><span class="p">,</span><span class="n">duration</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="p">(</span><span class="s1">&#39;RY112A&#39;</span><span class="p">,</span><span class="s1">&#39;Edinburgh&#39;</span><span class="p">,</span><span class="s1">&#39;2026-05-04&#39;</span><span class="p">,</span><span class="mi">192</span><span class="p">);</span>
+<a id="__codelineno-0-15" name="__codelineno-0-15"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">flight</span><span class="p">(</span><span class="n">num_flight</span><span class="p">,</span><span class="n">destination</span><span class="p">,</span><span class="n">departure</span><span class="p">,</span><span class="n">duration</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="p">(</span><span class="s1">&#39;AA295H&#39;</span><span class="p">,</span><span class="s1">&#39;New York&#39;</span><span class="p">,</span><span class="s1">&#39;2026-05-05&#39;</span><span class="p">,</span><span class="mi">452</span><span class="p">);</span>
+<a id="__codelineno-0-16" name="__codelineno-0-16"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">flight</span><span class="p">(</span><span class="n">num_flight</span><span class="p">,</span><span class="n">destination</span><span class="p">,</span><span class="n">departure</span><span class="p">,</span><span class="n">duration</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="p">(</span><span class="s1">&#39;RY131P&#39;</span><span class="p">,</span><span class="s1">&#39;London&#39;</span><span class="p">,</span><span class="s1">&#39;2026-05-05&#39;</span><span class="p">,</span><span class="mi">175</span><span class="p">);</span>
+<a id="__codelineno-0-17" name="__codelineno-0-17"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">flight</span><span class="p">(</span><span class="n">num_flight</span><span class="p">,</span><span class="n">destination</span><span class="p">,</span><span class="n">departure</span><span class="p">,</span><span class="n">duration</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="p">(</span><span class="s1">&#39;WA338L&#39;</span><span class="p">,</span><span class="s1">&#39;Krakow&#39;</span><span class="p">,</span><span class="s1">&#39;2026-05-07&#39;</span><span class="p">,</span><span class="mi">175</span><span class="p">);</span>
+<a id="__codelineno-0-18" name="__codelineno-0-18"></a><span class="k">INSERT</span><span class="w"> </span><span class="k">INTO</span><span class="w"> </span><span class="n">flight</span><span class="p">(</span><span class="n">num_flight</span><span class="p">,</span><span class="n">destination</span><span class="p">,</span><span class="n">departure</span><span class="p">,</span><span class="n">duration</span><span class="p">)</span><span class="w"> </span><span class="k">VALUES</span><span class="p">(</span><span class="s1">&#39;RY117H&#39;</span><span class="p">,</span><span class="s1">&#39;Bilbao&#39;</span><span class="p">,</span><span class="s1">&#39;2026-05-07&#39;</span><span class="p">,</span><span class="mi">83</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
 <h2 id="rubrica-y-consideraciones-adicionales">Rúbrica y Consideraciones Adicionales</h2>
 <p>Se valorará de forma positiva:</p>
 <ul>
