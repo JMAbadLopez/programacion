@@ -17,3 +17,13 @@ Thumbs.db
 *Thumbs.db
 
 code/ud09/AplicacionVuelos/
+# MkDocs generated site (regenerar con: mkdocs build)
+site/
+site.zip
+
+# Archivos temporales de Word/LibreOffice
+~$*
+*.~lock.*
+
+# Jupyter
+.ipynb_checkpoints/
