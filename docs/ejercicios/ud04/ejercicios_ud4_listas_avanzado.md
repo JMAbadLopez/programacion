@@ -1,6 +1,12 @@
 # Ejercicios Unidad 4: Estructuras de Datos Dinámicas (Avanzados)
 
-**Objetivo:** Aplicar los conocimientos sobre `ArrayList` y estructuras de datos dinámicas para resolver problemas complejos que requieren gestión de múltiples colecciones, visualización de datos y lógica de negocio.
+!!! info "Resultados de Aprendizaje"
+    Este boletín trabaja el siguiente RA del módulo de **Programación**:
+
+    - **RA6** — Aplica colecciones dinámicas para resolver problemas complejos con lógica de negocio, gestión de múltiples listas y visualización de datos.
+
+!!! abstract "Objetivo"
+    Aplicar los conocimientos sobre `ArrayList` y estructuras de datos dinámicas para resolver problemas complejos que requieren gestión de múltiples colecciones, visualización de datos y lógica de negocio.
 
 ---
 

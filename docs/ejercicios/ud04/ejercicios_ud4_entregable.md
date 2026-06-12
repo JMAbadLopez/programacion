@@ -1,13 +1,14 @@
 # Actividad Entregable UD4: La Logística de Santa Claus 🎅🎁
 
-**Objetivo:** Diseñar y construir un programa complejo aplicando los principios de colecciones y estructuras de datos dinámicas. Haciendo un uso de `ArrayList`, `HashSet` y `HashMap`.
+!!! info "Resultados de Aprendizaje"
+    Esta actividad trabaja el siguiente RA del módulo de **Programación**:
 
-**Resultados de Aprendizaje (RAs) Trabajados: RA6.**
+    - **RA6** — Reconoce las librerías de clases relacionadas con tipos de datos avanzados. Utiliza listas, conjuntos y mapas para almacenar, procesar e iterar colecciones de objetos, eligiendo la estructura adecuada para cada problema.
 
-* Se han reconocido las librerías de clases relacionadas con tipos de datos avanzados.
-* Se han utilizado listas para almacenar y procesar información.
-* Se han utilizado iteradores para recorrer los elementos de las listas.
-* Se han reconocido las características y ventajas de cada una de las colecciones de datos disponibles.
+!!! abstract "Objetivo"
+    Diseñar y construir un programa complejo aplicando los principios de colecciones y estructuras de datos dinámicas, haciendo uso combinado de `ArrayList`, `HashSet` y `HashMap`.
+
+---
 
 ## Contexto
 

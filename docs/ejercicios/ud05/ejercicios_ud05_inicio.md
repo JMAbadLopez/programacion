@@ -1,9 +1,15 @@
 # Ejercicios Unidad 5: Iniciación a la Programación Orientada a Objetos
 
-**Instrucciones Generales:**
+!!! info "Resultados de Aprendizaje"
+    Este boletín trabaja los siguientes RAs del módulo de **Programación**:
 
-* Crea un proyecto nuevo en tu IDE llamado `InicioPOO`.
-* Para cada ejercicio, crea la clase que se pide (ej: `Libro.java`) y una clase principal para probarla (ej: `MainLibro.java`). 
+    - **RA2, RA4** — Escribe y depura código aplicando los principios de la POO: clases, objetos, encapsulamiento, constructores y métodos. Desarrolla programas organizados en clases con atributos y comportamiento propio.
+
+!!! tip "Instrucciones Generales"
+    - Crea un proyecto nuevo en tu IDE llamado `InicioPOO`.
+    - Para cada ejercicio, crea la clase que se pide (ej: `Libro.java`) y una clase principal para probarla (ej: `MainLibro.java`).
+
+---
 
 ## 1. La Biblioteca Básica
 

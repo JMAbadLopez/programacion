@@ -1,6 +1,12 @@
 # Boletín de Ejercicios - Unidad 6: Herencia y Polimorfismo
 
-Este boletín contiene ejercicios prácticos diseñados para reforzar los conceptos de la Unidad 6. Están organizados por temáticas progresivas.
+!!! info "Resultados de Aprendizaje"
+    Este boletín trabaja los siguientes RAs del módulo de **Programación**:
+
+    - **RA4** — Desarrolla programas aplicando los principios avanzados de POO: composición, herencia, clases abstractas, interfaces y polimorfismo. Utiliza colecciones de objetos con jerarquías de clases.
+
+!!! tip "Organización del boletín"
+    Los ejercicios están organizados por temáticas progresivas: **Composición → Herencia → Clases Abstractas → Interfaces → Polimorfismo**. Completa cada sección antes de pasar a la siguiente.
 
 ---
 

@@ -1,12 +1,19 @@
 # Ejercicios Iniciales: Conjuntos (Set) y Mapas (Map)
 
-**Objetivo:** Familiarizarse con la sintaxis y el comportamiento básico de las estructuras `HashSet` y `HashMap` en Java.
+!!! info "Resultados de Aprendizaje"
+    Este boletín trabaja el siguiente RA del módulo de **Programación**:
+
+    - **RA6** — Reconoce y utiliza las estructuras `HashSet` y `HashMap` del Java Collection Framework, comprendiendo sus características de unicidad y acceso directo por clave.
+
+!!! abstract "Objetivo"
+    Familiarizarse con la sintaxis y el comportamiento básico de las estructuras `HashSet` y `HashMap` en Java.
 
 ---
 
 ## Parte 1: Conjuntos (Set)
 
-Recuerda: Un `Set` es como una bolsa de elementos únicos. No tiene orden garantizado y **no admite duplicados**.
+!!! note "Recuerda"
+    Un `Set` es como una bolsa de elementos únicos. No tiene orden garantizado y **no admite duplicados**.
 
 ### Ejercicio 1.1: El Censo del Zoológico
 **Enunciado:**
@@ -44,7 +51,8 @@ El sistema antiguo del zoo ha generado una lista de identificadores de animales 
 
 ## Parte 2: Mapas (Map) - El Diccionario Clave-Valor
 
-Recuerda: Un `Map` asocia una **Clave única** con un **Valor**. Es ideal para diccionarios, agendas o inventarios.
+!!! note "Recuerda"
+    Un `Map` asocia una **Clave única** con un **Valor**. Es ideal para diccionarios, agendas o inventarios.
 
 ### Ejercicio 2.1: El Diccionario Español-Inglés
 **Enunciado:**

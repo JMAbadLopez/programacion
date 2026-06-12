@@ -1,12 +1,14 @@
 # Actividad Entregable: Analizador de Texto
 
-**Objetivo:** Diseñar y construir un programa complejo aplicando los principios de la programación modular (Unidad 3), haciendo un uso intensivo de funciones y procedimientos, y aplicando las técnicas de manipulación de `String` (Unidad 2).
+!!! info "Resultados de Aprendizaje"
+    Esta actividad trabaja los siguientes RAs del módulo de **Programación**:
 
-**Resultados de Aprendizaje (RAs) Trabajados: RA2 y RA3.**
+    - **RA2, RA3** — Escribe y depura código aplicando programación modular con funciones y procedimientos. Desarrolla programas estructurados que reutilizan código mediante parámetros, valores de retorno y manipulación de cadenas.
 
-* **Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.**
+!!! abstract "Objetivo"
+    Diseñar y construir un programa complejo aplicando los principios de la programación modular (Unidad 3), haciendo un uso intensivo de funciones y procedimientos, y aplicando las técnicas de manipulación de `String` (Unidad 2).
 
-* **Desarrolla programas aplicando la programación estructurada e introduciendo el tratamiento de datos.**
+---
 
 ## Enunciado
 

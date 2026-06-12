@@ -1,12 +1,16 @@
-# Ejercicios de la Unidad 3
+# Boletín de Ejercicios — Unidad 3: Funciones y Procedimientos
 
-| Fecha      | Versión | Descripción     |
-| ---------- | ------- | --------------- |
-| 19/09/2021 | 1.0.0   | Versión inicial |
+!!! info "Resultados de Aprendizaje"
+    Este boletín trabaja los siguientes RAs del módulo de **Programación**:
 
-## 1 Iniciación
+    - **RA2, RA3** — Escribe y depura código aplicando programación modular con funciones y procedimientos. Desarrolla programas estructurados que reutilizan código mediante el uso de parámetros, valores de retorno y ámbito de variables.
 
-> ⚡ Ninguna función mostrará nada por pantalla a no ser que se diga lo contrario.
+!!! warning "Regla de Oro de esta Unidad"
+    Ninguna función mostrará nada por pantalla a no ser que se indique explícitamente. Las funciones calculan y devuelven; los procedimientos actúan y muestran.
+
+---
+
+## 1. Iniciación
 
 1. Escribe un programa que pida dos números reales por teclado y muestre por pantalla el resultado de multiplicarlos. Implementa y utiliza la función:
 

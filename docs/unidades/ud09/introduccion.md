@@ -1,5 +1,14 @@
 # Unidad 9. Interfaces Gráficas con JavaFX
 
+!!! abstract "Objetivos de la Unidad"
+    - Comprender la arquitectura de JavaFX: Stage, Scene, Pane y Node.
+    - Diseñar interfaces gráficas con FXML usando SceneBuilder.
+    - Implementar controladores para gestionar eventos de usuario con `@FXML`.
+    - Navegar entre pantallas y construir menús de navegación con `BorderPane`.
+    - Integrar interfaces gráficas con acceso a datos (JDBC + DAO) en una aplicación completa.
+
+---
+
 ## 1. ¿Qué es JavaFX?
 
 Hasta ahora, nuestras aplicaciones se han ejecutado en la consola de comandos (texto negro y blanco). **JavaFX** es la biblioteca estándar moderna de Java diseñada específicamente para construir **Interfaces Gráficas de Usuario (GUI)**.

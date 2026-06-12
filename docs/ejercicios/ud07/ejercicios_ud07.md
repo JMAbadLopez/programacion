@@ -1,6 +1,12 @@
 # Ejercicios UD07: Ficheros y Excepciones
 
-En esta serie de ejercicios practicaremos la persistencia de datos en Java, desde la manipulación básica del sistema de archivos hasta la creación de sistemas robustos con gestión de errores profesional.
+!!! info "Resultados de Aprendizaje"
+    Este boletín trabaja el siguiente RA del módulo de **Programación**:
+
+    - **RA5** — Realiza operaciones de entrada y salida de información utilizando la clase `File`, `Scanner`, `PrintStream` y bloques `try-catch-finally` / `try-with-resources`.
+
+!!! abstract "Objetivo"
+    Practicar la persistencia de datos en Java, desde la manipulación básica del sistema de archivos hasta la creación de sistemas robustos con gestión de errores profesional.
 
 ---
 

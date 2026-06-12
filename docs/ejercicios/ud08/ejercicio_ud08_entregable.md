@@ -1,12 +1,12 @@
 # Actividad Entregable UD8: Bloc de Notas con Base de Datos 📝
 
-**Objetivo:**
+!!! info "Resultados de Aprendizaje"
+    Esta actividad trabaja el siguiente RA del módulo de **Programación**:
 
-* Implementar una aplicación Java que interactúe con una base de datos relacional para gestionar un bloc de notas multiusuario, aplicando conceptos de conexión JDBC, operaciones CRUD, sintaxis SQL y separación de responsabilidades (Patrón DAO).
+    - **RA9** — Gestiona información almacenada en bases de datos manteniendo la integridad y consistencia de los datos. Aplica el patrón DAO y opera con JDBC para realizar consultas CRUD.
 
-**Resultados de Aprendizaje (RAs) Trabajados: RA9.**
-
-* Gestiona información almacenada en bases de datos manteniendo la integridad y consistencia de los datos.
+!!! abstract "Objetivo"
+    Implementar una aplicación Java que interactúe con una base de datos relacional para gestionar un bloc de notas multiusuario, aplicando conceptos de conexión JDBC, operaciones CRUD, sintaxis SQL y separación de responsabilidades (Patrón DAO).
 
 ---
 

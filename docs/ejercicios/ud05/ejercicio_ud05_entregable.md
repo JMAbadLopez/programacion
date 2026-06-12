@@ -1,13 +1,14 @@
 # Actividad Entregable UD5: Gestión de Cine 🎬
 
-**Objetivo:** Diseñar y construir un programa orientado a objetos aplicando encapsulamiento, constructores, y estructuras de datos dinámicas como `ArrayList`.
+!!! info "Resultados de Aprendizaje"
+    Esta actividad trabaja los siguientes RAs del módulo de **Programación**:
 
-**Resultados de Aprendizaje (RAs) Trabajados: RA2, RA4, RA6.**
+    - **RA2, RA4, RA6** — Diseña clases con atributos, métodos y constructores. Aplica encapsulamiento y principios de POO. Utiliza estructuras de datos dinámicas para almacenar colecciones de objetos e implementa lógica de negocio en métodos específicos.
 
-* Se han diseñado clases con sus atributos y métodos.
-* Se han utilizado constructores para inicializar objetos.
-* Se han utilizado estructuras de datos para almacenar colecciones de objetos.
-* Se ha implementado la lógica de negocio en métodos específicos.
+!!! abstract "Objetivo"
+    Diseñar y construir un programa orientado a objetos aplicando encapsulamiento, constructores y estructuras de datos dinámicas como `ArrayList`.
+
+---
 
 ## Contexto
 

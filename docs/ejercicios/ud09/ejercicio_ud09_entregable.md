@@ -1,13 +1,14 @@
 # Ejercicio Entregable UD09: Gestión de Vuelos
 
-**Objetivo**
+!!! info "Resultados de Aprendizaje"
+    Este ejercicio trabaja los siguientes RAs del módulo de **Programación**:
 
-En este ejercicio final de la unidad, pondremos en práctica todos los conocimientos adquiridos sobre **JavaFX** (creación de interfaces, controladores y contenedores) e integraremos el acceso a datos mediante **JDBC** visto en la unidad anterior.
+    - **RA5, RA9** — Gestiona información almacenada en bases de datos manteniendo la integridad y consistencia de los datos. Crea interfaces gráficas de usuario (GUI) para aplicaciones de escritorio integrando JavaFX con acceso a datos JDBC.
 
-**Resultados de Aprendizaje (RAs) Trabajados: RA5 y RA9.**
+!!! abstract "Objetivo"
+    Poner en práctica todos los conocimientos adquiridos sobre **JavaFX** (creación de interfaces, controladores y contenedores) integrando el acceso a datos mediante **JDBC** visto en la unidad anterior.
 
-* Gestiona información almacenada en bases de datos manteniendo la integridad y consistencia de los datos.
-* Crea interfaces gráficas de usuario (GUI) sencillas para aplicaciones de escritorio.
+---
 
 ## Descripción del Proyecto
 

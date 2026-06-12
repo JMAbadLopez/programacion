@@ -1,8 +1,17 @@
 # Ejercicios Unidad 4: Estructuras de Datos Dinámicas (ArrayList)
 
-**Objetivo:** Dominar el uso de la clase `ArrayList` en Java, comprendiendo sus métodos principales y cómo iterar sobre ella de forma eficiente. Al final del documento, tienes una **tabla de referencia** con los métodos usados en estos ejercicios.
+!!! info "Resultados de Aprendizaje"
+    Este boletín trabaja el siguiente RA del módulo de **Programación**:
 
-**Nota Importante:** Para eliminar elementos concretos de las listas mientras las recorremos, utilizamos **Iteradores (`Iterator`)**. También es buena práctica familiarizarse con el bucle `for-each` para lecturas simples.
+    - **RA6** — Reconoce y utiliza las librerías de clases relacionadas con tipos de datos avanzados. Utiliza listas dinámicas para almacenar, recorrer, buscar y ordenar colecciones de objetos.
+
+!!! abstract "Objetivo"
+    Dominar el uso de la clase `ArrayList` en Java, comprendiendo sus métodos principales y cómo iterar sobre ella de forma eficiente. Al final del documento encontrarás una **tabla de referencia** con los métodos usados en estos ejercicios.
+
+!!! warning "Eliminación de elementos durante el recorrido"
+    Para eliminar elementos concretos de las listas mientras las recorremos, utilizamos **Iteradores (`Iterator`)**. También es buena práctica familiarizarse con el bucle `for-each` para lecturas simples.
+
+---
 
 ## 1. Creación y Rellenado Básico
 

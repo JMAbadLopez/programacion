@@ -1,8 +1,12 @@
 # Ejercicio Largo: La Batalla por el Trono de Código (Juego de Rol) ⚔️
 
-Este ejercicio integral está diseñado para poner en práctica **todos** los conceptos avanzados de la Programación Orientada a Objetos vistos en la Unidad 6: **herencia, clases abstractas, interfaces, polimorfismo y colecciones**.
+!!! info "Resultados de Aprendizaje"
+    Este ejercicio trabaja los siguientes RAs del módulo de **Programación**:
 
-El ejercicio se divide en fases incrementales. Debes ir completando cada fase antes de pasar a la siguiente.
+    - **RA4** — Aplica de forma integrada todos los principios avanzados de POO: herencia, clases abstractas, interfaces, polimorfismo, composición y colecciones con comparadores.
+
+!!! warning "Ejercicio por fases"
+    Este ejercicio integral está diseñado para poner en práctica **todos** los conceptos avanzados de la POO de la Unidad 6. Se divide en **8 fases incrementales** — completa cada fase antes de pasar a la siguiente.
 
 ---
 

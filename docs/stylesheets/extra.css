@@ -1,0 +1,234 @@
+/* ============================================================
+   Darcula Theme — Programación 1º DAM
+   Basado en la paleta del editor IntelliJ IDEA Darcula
+
+   default  → Darcula Light  (fondo claro, acentos Darcula)
+   slate    → Darcula Dark   (fondo oscuro, tema Darcula clásico)
+   ============================================================ */
+
+
+/* ============================================================
+   DARCULA LIGHT  (scheme: default)
+   ============================================================ */
+[data-md-color-scheme="default"] {
+
+    /* --- Estructura de color --- */
+    --md-hue: 220;
+
+    /* Header / nav primary (gris Darcula toolbar) */
+    --md-primary-fg-color: #3c3f41;
+    --md-primary-fg-color--light: #4b6eaf;
+    --md-primary-fg-color--dark: #2b2b2b;
+    --md-primary-bg-color: #ffffff;
+    --md-primary-bg-color--light: #f5f5f5;
+
+    /* Acento (naranja Darcula) */
+    --md-accent-fg-color: #cc7832;
+    --md-accent-fg-color--transparent: rgba(204, 120, 50, 0.12);
+
+    /* Fondos de página */
+    --md-default-bg-color: #f5f5f5;
+    --md-default-bg-color--light: #ebebeb;
+    --md-default-bg-color--lighter: #dcdcdc;
+    --md-default-bg-color--lightest: #d0d0d0;
+
+    /* Texto */
+    --md-default-fg-color: #2b2b2b;
+    --md-default-fg-color--light: #5c5c5c;
+    --md-default-fg-color--lighter: #7a7a7a;
+    --md-default-fg-color--lightest: #aaaaaa;
+
+    /* Bloques de código */
+    --md-code-fg-color: #2b2b2b;
+    --md-code-bg-color: #eeeeee;
+    --md-code-hl-color: #dce9fa;
+
+    /* Sintaxis — colores Darcula adaptados a fondo claro */
+    --md-code-hl-keyword-color: #cc7832;
+    /* naranja-marrón */
+    --md-code-hl-string-color: #4a7a3d;
+    /* verde oscuro   */
+    --md-code-hl-number-color: #4b7aab;
+    /* azul           */
+    --md-code-hl-comment-color: #767676;
+    /* gris           */
+    --md-code-hl-function-color: #b07830;
+    /* naranja oscuro */
+    --md-code-hl-constant-color: #7a5a8a;
+    /* morado         */
+    --md-code-hl-special-color: #8a8a20;
+    /* amarillo-verde */
+    --md-code-hl-name-color: #2b2b2b;
+    --md-code-hl-operator-color: #2b2b2b;
+    --md-code-hl-punctuation-color: #2b2b2b;
+    --md-code-hl-variable-color: #2b2b2b;
+    --md-code-hl-generic-color: #2b2b2b;
+
+    /* Scrollbar */
+    --scrollbar-track-color: #f5f5f5;
+    --scrollbar-thumb-color: #c0c0c0;
+    --scrollbar-thumb-hover-color: #a0a0a0;
+}
+
+
+/* ============================================================
+   DARCULA DARK  (scheme: slate)
+   ============================================================ */
+[data-md-color-scheme="slate"] {
+
+    /* --- Estructura de color --- */
+    --md-hue: 220;
+
+    /* Header / nav primary */
+    --md-primary-fg-color: #3c3f41;
+    --md-primary-fg-color--light: #4b6eaf;
+    --md-primary-fg-color--dark: #2b2b2b;
+    --md-primary-bg-color: #2b2b2b;
+    --md-primary-bg-color--light: #3c3f41;
+
+    /* Acento (naranja-amarillo Darcula) */
+    --md-accent-fg-color: #ffc66d;
+    --md-accent-fg-color--transparent: rgba(255, 198, 109, 0.15);
+
+    /* Fondos de página */
+    --md-default-bg-color: #2b2b2b;
+    --md-default-bg-color--light: #3c3f41;
+    --md-default-bg-color--lighter: #515151;
+    --md-default-bg-color--lightest: #5c5c5c;
+
+    /* Texto */
+    --md-default-fg-color: #a9b7c6;
+    --md-default-fg-color--light: #808080;
+    --md-default-fg-color--lighter: #606060;
+    --md-default-fg-color--lightest: #4a4a4a;
+
+    /* Bloques de código */
+    --md-code-fg-color: #a9b7c6;
+    --md-code-bg-color: #2b2b2b;
+    --md-code-hl-color: #214283;
+
+    /* Sintaxis — colores Darcula clásico */
+    --md-code-hl-keyword-color: #cc7832;
+    /* naranja-marrón */
+    --md-code-hl-string-color: #6a8759;
+    /* verde          */
+    --md-code-hl-number-color: #6897bb;
+    /* azul claro     */
+    --md-code-hl-comment-color: #808080;
+    /* gris           */
+    --md-code-hl-function-color: #ffc66d;
+    /* amarillo-naranja */
+    --md-code-hl-constant-color: #9876aa;
+    /* morado         */
+    --md-code-hl-special-color: #bbb529;
+    /* amarillo-verde */
+    --md-code-hl-name-color: #a9b7c6;
+    --md-code-hl-operator-color: #a9b7c6;
+    --md-code-hl-punctuation-color: #a9b7c6;
+    --md-code-hl-variable-color: #a9b7c6;
+    --md-code-hl-generic-color: #a9b7c6;
+
+    /* Scrollbar */
+    --scrollbar-track-color: #2b2b2b;
+    --scrollbar-thumb-color: #515151;
+    --scrollbar-thumb-hover-color: #6c6c6c;
+}
+
+
+/* ============================================================
+   HEADER Y NAVEGACIÓN  (override del primary: red de mkdocs.yml)
+   ============================================================ */
+
+/* Header principal */
+.md-header {
+    background-color: #3c3f41 !important;
+    border-bottom: 1px solid #515151;
+}
+
+/* Tabs de navegación superior */
+.md-tabs {
+    background-color: #2b2b2b !important;
+    border-bottom: 1px solid #515151;
+}
+
+/* Tabs — texto base blanco */
+.md-tabs__link {
+    color: rgba(255, 255, 255, 0.75) !important;
+}
+
+/* Tab activa y hover — amarillo-naranja Darcula */
+.md-tabs__link--active,
+.md-tabs__link:hover {
+    color: #ffc66d !important;
+    opacity: 1;
+}
+
+/* Todos los elementos de la barra superior — siempre blancos */
+.md-header,
+.md-header__button,
+.md-header__topic,
+.md-header__title,
+.md-header__source,
+.md-header .md-icon,
+.md-header nav a,
+.md-header [data-md-component="search"] .md-search__icon {
+    color: #ffffff !important;
+}
+
+/* Barra de búsqueda */
+.md-search__input {
+    background-color: #515151;
+    color: #ffffff;
+}
+
+.md-search__input::placeholder {
+    color: rgba(255, 255, 255, 0.55);
+}
+
+
+/* ============================================================
+   GLOBAL — comportamiento y detalles
+   ============================================================ */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Scrollbars personalizados */
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--scrollbar-track-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--scrollbar-thumb-color);
+    border: 2px solid var(--scrollbar-track-color);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--scrollbar-thumb-hover-color);
+}
+
+/* Links en el contenido */
+.md-content a {
+    color: var(--md-accent-fg-color);
+}
+
+.md-content a:hover {
+    color: #ffc66d;
+}
+
+/* Sidebar activa — naranja oscuro legible en fondo claro */
+[data-md-color-scheme="default"] .md-nav__link--active {
+    color: #b06820 !important;
+}
+
+/* Sidebar activa — amarillo-naranja Darcula en fondo oscuro */
+[data-md-color-scheme="slate"] .md-nav__link--active {
+    color: #ffc66d !important;
+}

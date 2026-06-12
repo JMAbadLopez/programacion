@@ -1,10 +1,14 @@
 # Ejercicios Unidad 5: Programación Orientada a Objetos (Avanzado)
 
-**Instrucciones Generales:**
+!!! info "Resultados de Aprendizaje"
+    Este boletín trabaja los siguientes RAs del módulo de **Programación**:
 
-* Crea un proyecto nuevo en tu IDE llamado `AvanzadoPOO`.
-* Para cada ejercicio, implementa la clase solicitada y una clase `Main` para realizar las pruebas.
-* Asegúrate de seguir los principios de encapsulamiento (atributos privados y métodos públicos) donde se indique.
+    - **RA2, RA4** — Diseña clases con lógica de negocio real: validaciones, atributos estáticos, constructores sobrecargados y métodos complejos. Aplica encapsulamiento y desarrolla programas orientados a objetos de mayor complejidad.
+
+!!! tip "Instrucciones Generales"
+    - Crea un proyecto nuevo en tu IDE llamado `AvanzadoPOO`.
+    - Para cada ejercicio, implementa la clase solicitada y una clase `Main` para realizar las pruebas.
+    - Asegúrate de seguir los principios de encapsulamiento (atributos privados y métodos públicos) donde se indique.
 
 ---
 

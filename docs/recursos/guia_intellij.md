@@ -1,16 +1,6 @@
----
-title: Instalación de IntelliJ y JDK.
-author: [Lorenzo Díaz de Haro, José Manuel Romero Martínez]
----
+# Guía de instalación IntelliJ
 
-| Fecha      | Versión | Descripción         |
-| ---------- | ------- | ------------------- |
-| 10/09/2021 | 1.0.0   | Versión inicial     |
-| 08/09/2025 | 1.0.1   | Versión actualizada |
-
-## Guía de instalación IntelliJ
-
-### 1. Instalación del JDK
+## 1. Instalación del JDK
 
 Para poder trabajar con **Java** necesitamos tener instalado el **JDK** en nuestro sistema. Tanto en _Windows_, _Linux_ o _macOS_, podemos saber qué versión tenemos con el comando siguiente:
 
@@ -28,7 +18,7 @@ En caso de no tenerlo, lo más recomendable es descargar la última versión **L
 
 <img src="../../assets/images/ud01/descarga_java.png" style="zoom: 70%; " />
 
-### 2. Intellij IDEA Community Edition de JetBrains
+## 2. Intellij IDEA Community Edition de JetBrains
 
 Como IDE (Entorno de Desarrollo Integrado) podemos hacer uso de la herramienta **Intellij IDEA Community Edition** de **JetBrains**.
 

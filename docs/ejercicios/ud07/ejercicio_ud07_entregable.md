@@ -1,12 +1,12 @@
 # Actividad Entregable UD7: Gestión de Almacén con Persistencia 📦
 
-**Objetivo:** 
+!!! info "Resultados de Aprendizaje"
+    Esta actividad trabaja el siguiente RA del módulo de **Programación**:
 
-* Implementar una aplicación Java que gestione el inventario de un almacén, aplicando conceptos de persistencia de datos en ficheros de texto (CSV), gestión de excepciones, y ordenación de colecciones.
+    - **RA5** — Realiza operaciones de entrada y salida de información utilizando procedimientos específicos del lenguaje y librerías de clases. Implementa persistencia de datos en ficheros CSV con gestión de excepciones.
 
-**Resultados de Aprendizaje (RAs) Trabajados: RA5.**
-
-* Realiza operaciones de entrada y salida de información, utilizando procedimientos específicos del lenguaje y librerías de clases.
+!!! abstract "Objetivo"
+    Implementar una aplicación Java que gestione el inventario de un almacén, aplicando conceptos de persistencia de datos en ficheros de texto (CSV), gestión de excepciones y ordenación de colecciones.
 
 ---
 

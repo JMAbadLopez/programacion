@@ -1,11 +1,12 @@
 # Actividad entregable: Gestor de Inventario de Ferretería
 
-**Objetivo:** Diseñar e implementar un programa modular completo desde cero, combinando los conceptos de funciones (UD3) con el manejo de arrays paralelos y `String` (UD2).
+!!! info "Resultados de Aprendizaje"
+    Esta actividad trabaja los siguientes RAs del módulo de **Programación**:
 
-**Resultados de Aprendizaje (RAs) Trabajados: RA2 y RA3.**
+    - **RA2, RA3** — Escribe y depura código aplicando programación modular. Desarrolla programas estructurados que reutilizan código mediante funciones, arrays paralelos y manipulación de datos.
 
-* **Escribe y depura código, analizando y utilizando las estructuras de control del lenguaje.**
-* **Desarrolla programas aplicando la programación estructurada e introduciendo el tratamiento de datos.**
+!!! abstract "Objetivo"
+    Diseñar e implementar un programa modular completo desde cero, combinando los conceptos de funciones (UD3) con el manejo de arrays paralelos y `String` (UD2).
 
 ---
 

@@ -52,15 +52,12 @@ nav:
   - Recursos:
     - Guías:
       - Instalación IntelliJ: recursos/guia_intellij.md
-    - Infografías:
-      - Bucles: recursos/bucles.html
-      - Array List: recursos/arraylist.html
     - Algorítmica:
       - Básica: recursos/algoritmica_basica.md
+      - Bucles: recursos/bucles.html
+      - Array List: recursos/arraylist.html
       - Método de la burbuja (ordenación): recursos/burbuja.html
       - Recursividad: recursos/recursividad.html
-    - Otros:
-      - Propuesta de Proyecto: recursos/propuesta_proyecto.md
   - Presentación: index.md
 
 repo_url: https://github.com/jmabadlopez/programacion
@@ -97,16 +94,19 @@ theme:
       toggle:
         icon: material/brightness-7 
         name: Modo oscuro
-      primary: red
-      accent: red 
+      primary: black
+      accent: black
 
     # Palette toggle for dark mode
     - scheme: slate
       toggle:
         icon: material/brightness-4
         name: Modo claro
-      primary: red
-      accent: red
+      primary: black
+      accent: black
+
+extra_css:
+  - stylesheets/extra.css
 markdown_extensions:
   - sane_lists
   - pymdownx.highlight:
@@ -118,17 +118,11 @@ markdown_extensions:
           class: mermaid
           format: !!python/name:pymdownx.superfences.fence_code_format
   - admonition
+  - pymdownx.details
+  - attr_list
+  - pymdownx.tabbed:
+      alternate_style: true
 extra:
   social:
     - icon: fontawesome/brands/github 
       link: https://github.com/jmabadlopez/programacion
-
-# plugins:
-#   - to-pdf:
-#       author: José Manuel Abad López
-#       copyright: 🄯 Creative Commons CC BY-SA 4.0 2025
-#       cover_title: Programación
-#       cover_subtitle: 1º DAM
-#       toc_title: "Contenidos"
-#       toc_level: 3
-#       output_path: ../public/libro.pdf
