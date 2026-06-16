@@ -1,5 +1,5 @@
 site_name: Programación DAM
-site_url: https://jmabadlopez.github.io/programacion/site/
+site_url: https://jmabadlopez.github.io/programacion/
 
 nav:
   - Unidades:
@@ -58,7 +58,7 @@ nav:
       - Array List: recursos/arraylist.html
       - Método de la burbuja (ordenación): recursos/burbuja.html
       - Recursividad: recursos/recursividad.html
-  - Presentación: index.md
+  - Inicio: index.md
 
 repo_url: https://github.com/jmabadlopez/programacion
 repo_name: jmabadlopez/programacion
@@ -86,7 +86,6 @@ theme:
     - navigation.footer
     - navigation.tabs
     - navigation.tabs.sticky
-    - navigation.path
 
   palette:
     # Palette toggle for light mode
