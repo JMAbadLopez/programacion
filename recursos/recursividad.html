@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: Recursividad en Java</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        
+        /* Animaciones del Stack */
+        .stack-item {
+            transition: all 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+            opacity: 0; transform: translateY(-20px) scale(0.9);
+        }
+        .stack-item.active {
+            opacity: 1; transform: translateY(0) scale(1);
+        }
+        .stack-item.resolved {
+            background-color: #dcfce7; border-color: #22c55e;
+            transform: scale(1.02);
+        }
+        .stack-item.popped {
+            opacity: 0; transform: translateX(100px);
+        }
+
+        .code-line { padding: 2px 8px; border-radius: 4px; transition: background 0.3s; }
+        .highlight-line { background-color: #fef08a; color: #854d0e; font-weight: bold; }
+        
+        .arrow-down {
+            width: 0; height: 0; 
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-top: 15px solid #94a3b8;
+            margin: 5px auto; opacity: 0; transition: opacity 0.5s;
+        }
+        .arrow-up {
+            width: 0; height: 0; 
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 15px solid #22c55e;
+            margin: 5px auto; opacity: 0; transition: opacity 0.5s;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 flex flex-col items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-6xl bg-white rounded-2xl shadow-2xl overflow-hidden flex flex-col md:flex-row min-h-[600px]">
+        
+        <!-- Panel Izquierdo: Concepto y Código -->
+        <div class="w-full md:w-1/2 p-8 border-r border-slate-200 flex flex-col">
+            <h1 class="text-3xl font-bold text-indigo-700 mb-2">La Recursividad en Java</h1>
+            <p class="text-slate-600 mb-6">Un método que se llama a sí mismo hasta llegar a un caso base.</p>
+
+            <!-- Bloque de Código Java -->
+            <div class="bg-slate-800 text-slate-200 p-6 rounded-xl font-mono text-sm shadow-lg mb-6 overflow-x-auto">
+                <div id="line-1" class="code-line"><span class="text-blue-400">public static int</span> <span class="text-yellow-400">sumar</span>(<span class="text-blue-400">int</span> n) {</div>
+                <div id="line-2" class="code-line pl-4"><span class="text-slate-400">// Caso Base: Condición de parada</span></div>
+                <div id="line-3" class="code-line pl-4"><span class="text-purple-400">if</span> (n == 1) {</div>
+                <div id="line-4" class="code-line pl-8"><span class="text-purple-400">return</span> 1;</div>
+                <div id="line-5" class="code-line pl-4">}</div>
+                <div id="line-6" class="code-line pl-4"></div>
+                <div id="line-7" class="code-line pl-4"><span class="text-slate-400">// Llamada Recursiva</span></div>
+                <div id="line-8" class="code-line pl-4"><span class="text-purple-400">return</span> n + <span class="text-yellow-400">sumar</span>(n - 1);</div>
+                <div id="line-9" class="code-line">}</div>
+            </div>
+
+            <!-- Explicación Dinámica -->
+            <div class="bg-indigo-50 p-4 rounded-lg border border-indigo-100 flex-grow">
+                <h3 class="font-bold text-indigo-800 mb-2"><i class="fa-solid fa-circle-info mr-2"></i>¿Qué está pasando?</h3>
+                <p id="explanation-text" class="text-slate-700 text-sm leading-relaxed">
+                    Pulsa "Iniciar" para ver cómo Java gestiona la memoria al calcular la suma de los números hasta 3.
+                </p>
+            </div>
+
+            <!-- Controles -->
+            <div class="mt-6 flex gap-4">
+                <button id="next-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-3 rounded-lg font-bold shadow transition w-full flex justify-center items-center gap-2">
+                    <span>Iniciar sumar(3)</span> <i class="fa-solid fa-play"></i>
+                </button>
+                <button onclick="resetSim()" class="bg-slate-200 hover:bg-slate-300 text-slate-700 px-4 py-3 rounded-lg font-bold shadow transition">
+                    <i class="fa-solid fa-rotate-right"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Panel Derecho: El STACK (La Pila) -->
+        <div class="w-full md:w-1/2 p-8 bg-slate-50 relative overflow-hidden">
+            <div class="absolute top-0 right-0 p-4 opacity-10">
+                <i class="fa-solid fa-layer-group text-9xl"></i>
+            </div>
+            
+            <h2 class="text-2xl font-bold text-slate-700 mb-6 text-center">La Pila de Llamadas (Call Stack)</h2>
+            
+            <!-- Visualización del Stack -->
+            <div class="flex flex-col-reverse items-center justify-end h-[450px] w-full" id="stack-container">
+                <!-- Los elementos del stack se inyectan aquí -->
+                <div class="text-slate-400 italic text-sm mt-auto mb-4" id="empty-stack-msg">La pila está vacía</div>
+            </div>
+            
+            <div class="border-t-4 border-slate-300 w-2/3 mx-auto mt-2"></div>
+            <p class="text-center text-xs text-slate-400 mt-1">Memoria del Sistema (JVM)</p>
+        </div>
+
+    </div>
+
+    <script>
+        let step = 0;
+        const btn = document.getElementById('next-btn');
+        const explanation = document.getElementById('explanation-text');
+        const stackContainer = document.getElementById('stack-container');
+        const emptyMsg = document.getElementById('empty-stack-msg');
+
+        // Definición de los pasos de la animación
+        // type: 'call' (apilar), 'base' (caso base), 'return' (desapilar)
+        const steps = [
+            {
+                type: 'call', n: 3, line: 1,
+                text: "Llamamos al método <b>sumar(3)</b>. La JVM crea un nuevo marco en la pila. La ejecución se pausa esperando el resultado.",
+                stackHTML: `<div id="stack-3" class="stack-item active w-64 bg-white border-2 border-indigo-300 rounded-lg p-3 mb-2 shadow-md relative">
+                                <div class="font-bold text-indigo-700">sumar(3)</div>
+                                <div class="text-xs text-slate-500">n = 3</div>
+                                <div class="text-sm mt-1">¿return 3 + <span class="font-bold text-yellow-600">sumar(2)</span>?</div>
+                                <div class="arrow-down mx-auto"></div>
+                            </div>`
+            },
+            {
+                type: 'call', n: 2, line: 8,
+                text: "Dentro de sumar(3), necesitamos el valor de <b>sumar(2)</b>. ¡Pausamos sumar(3) y apilamos una nueva llamada!",
+                stackHTML: `<div id="stack-2" class="stack-item active w-64 bg-white border-2 border-indigo-300 rounded-lg p-3 mb-2 shadow-md relative">
+                                <div class="font-bold text-indigo-700">sumar(2)</div>
+                                <div class="text-xs text-slate-500">n = 2</div>
+                                <div class="text-sm mt-1">¿return 2 + <span class="font-bold text-yellow-600">sumar(1)</span>?</div>
+                                <div class="arrow-down mx-auto"></div>
+                            </div>`
+            },
+            {
+                type: 'call', n: 1, line: 8,
+                text: "Dentro de sumar(2), necesitamos <b>sumar(1)</b>. Apilamos otra llamada más. ¡Mira cómo crece la pila en memoria!",
+                stackHTML: `<div id="stack-1" class="stack-item active w-64 bg-white border-2 border-indigo-300 rounded-lg p-3 mb-2 shadow-md relative">
+                                <div class="font-bold text-indigo-700">sumar(1)</div>
+                                <div class="text-xs text-slate-500">n = 1</div>
+                                <div class="text-sm mt-1 text-slate-400 italic">Calculando...</div>
+                            </div>`
+            },
+            {
+                type: 'base', n: 1, line: 3,
+                text: "<b>¡CASO BASE!</b> n es 1. Entramos en el <code>if</code> y devolvemos 1 directamente.",
+                action: () => {
+                    const s1 = document.getElementById('stack-1');
+                    s1.classList.add('resolved');
+                    s1.querySelector('.text-sm').innerHTML = '<span class="text-green-600 font-bold"><i class="fa-solid fa-check"></i> return 1</span>';
+                }
+            },
+            {
+                type: 'return', n: 2, line: 8,
+                text: "sumar(1) ha terminado y devuelve 1. Desapilamos y volvemos al contexto de <b>sumar(2)</b>.",
+                action: () => {
+                    document.getElementById('stack-1').classList.add('popped');
+                    setTimeout(() => document.getElementById('stack-1').remove(), 400);
+                    
+                    const s2 = document.getElementById('stack-2');
+                    s2.classList.add('resolved');
+                    s2.querySelector('.text-sm').innerHTML = 'return 2 + <span class="font-bold text-green-600">1</span> = <b>3</b>';
+                }
+            },
+            {
+                type: 'return', n: 3, line: 8,
+                text: "sumar(2) ha terminado y devuelve 3. Desapilamos y retomamos <b>sumar(3)</b>.",
+                action: () => {
+                    document.getElementById('stack-2').classList.add('popped');
+                    setTimeout(() => document.getElementById('stack-2').remove(), 400);
+
+                    const s3 = document.getElementById('stack-3');
+                    s3.classList.add('resolved');
+                    s3.querySelector('.text-sm').innerHTML = 'return 3 + <span class="font-bold text-green-600">3</span> = <b>6</b>';
+                }
+            },
+            {
+                type: 'finish', line: 9,
+                text: "<b>¡FIN!</b> sumar(3) devuelve 6. La pila está vacía y el programa continúa su ejecución.",
+                action: () => {
+                    document.getElementById('stack-3').classList.add('popped');
+                    setTimeout(() => {
+                        document.getElementById('stack-3').remove();
+                        emptyMsg.style.display = 'block';
+                        emptyMsg.innerHTML = '<span class="text-green-600 font-bold text-xl">Resultado Final: 6</span>';
+                    }, 400);
+                }
+            }
+        ];
+
+        btn.onclick = () => {
+            if (step >= steps.length) return;
+
+            const current = steps[step];
+            
+            // 1. Actualizar texto
+            explanation.innerHTML = current.text;
+
+            // 2. Resaltar línea código
+            document.querySelectorAll('.code-line').forEach(l => l.classList.remove('highlight-line'));
+            if(current.line) document.getElementById(`line-${current.line}`).classList.add('highlight-line');
+
+            // 3. Gestión del Stack
+            emptyMsg.style.display = 'none';
+            
+            if (current.type === 'call') {
+                // Mostrar flecha del anterior si existe
+                const prevStack = stackContainer.lastElementChild;
+                if(prevStack && prevStack.id !== 'empty-stack-msg') {
+                    prevStack.querySelector('.arrow-down').style.opacity = 1;
+                }
+                // Añadir nuevo
+                const tempDiv = document.createElement('div');
+                tempDiv.innerHTML = current.stackHTML;
+                stackContainer.appendChild(tempDiv.firstElementChild);
+                // Trigger reflow para animación
+                setTimeout(() => stackContainer.lastElementChild.classList.add('active'), 10);
+            } 
+            else if (current.action) {
+                current.action();
+            }
+
+            // 4. Actualizar botón
+            step++;
+            if (step >= steps.length) {
+                btn.innerHTML = '¡Terminado!';
+                btn.classList.add('bg-green-600', 'hover:bg-green-700');
+                btn.classList.remove('bg-indigo-600', 'hover:bg-indigo-700');
+                btn.disabled = true;
+            } else {
+                btn.innerHTML = 'Siguiente Paso <i class="fa-solid fa-arrow-right ml-2"></i>';
+            }
+        };
+
+        function resetSim() {
+            step = 0;
+            stackContainer.innerHTML = '';
+            stackContainer.appendChild(emptyMsg);
+            emptyMsg.style.display = 'block';
+            emptyMsg.innerHTML = 'La pila está vacía';
+            explanation.innerHTML = 'Pulsa "Iniciar" para ver cómo Java gestiona la memoria al calcular la suma de los números hasta 3.';
+            
+            btn.innerHTML = 'Iniciar sumar(3) <i class="fa-solid fa-play"></i>';
+            btn.disabled = false;
+            btn.classList.remove('bg-green-600', 'hover:bg-green-700');
+            btn.classList.add('bg-indigo-600', 'hover:bg-indigo-700');
+            
+            document.querySelectorAll('.code-line').forEach(l => l.classList.remove('highlight-line'));
+        }
+    </script>
+</body>
+</html>
