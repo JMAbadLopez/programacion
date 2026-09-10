@@ -8,8 +8,6 @@ hide:
 
 **IES Camp de Morvedre · Ciclo Formativo de Grado Superior · Desarrollo de Aplicaciones Multiplataforma**
 
-![Logo Europa](assets/images/europa.jpg){ width="30%" }
-
 ---
 
 Este sitio recoge el material didáctico completo del módulo de **Programación** de **1º de DAM**. Aquí encontrarás las unidades teóricas, los boletines de ejercicios y los recursos de apoyo que se utilizan a lo largo del curso.
