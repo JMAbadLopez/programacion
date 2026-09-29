@@ -22,28 +22,7 @@
 
 ---
 
-## 2. La Cuenta Atrás para el Lanzamiento
-
-**Reto:** Crea un programa que simule la cuenta atrás para el lanzamiento de un cohete. Muestra los números del 10 al 1 y, al final, el mensaje "¡Despegue!".
-
-!!! note "Concepto practicado"
-    Bucle `for`.
-
----
-
-## 3. El Validador de Contraseñas
-
-**Reto:** Escribe un programa que pida al usuario una contraseña. La contraseña correcta es `"programacion101"`. El programa debe seguir pidiéndola hasta que el usuario acierte. Al lograrlo, muestra "Acceso concedido".
-
-!!! note "Concepto practicado"
-    Bucle `while`, comparación de `String` con `equals()`.
-
-!!! warning "Recuerda"
-    Para comparar el contenido de dos `String` **nunca uses `==`**. Usa siempre `equals()`.
-
----
-
-## 4. El Menú del Guerrero
+## 2. El Menú del Guerrero
 
 **Reto:** Diseña el menú de acciones de un videojuego usando `switch`. Muestra un mensaje diferente para cada opción y uno especial si la opción no es válida.
 
@@ -59,21 +38,42 @@
 
 ---
 
-## 5. Calculadora de Promedios
+## 3. El Validador de Contraseñas
 
-**Reto:** Un profesor necesita calcular la nota media de su clase. El programa debe preguntar primero cuántos alumnos hay y, usando un bucle, pedir la nota de cada uno. Al final, muestra la nota media.
+**Reto:** Escribe un programa que pida al usuario una contraseña. La contraseña correcta es `"programacion101"`. El programa debe seguir pidiéndola hasta que el usuario acierte. Al lograrlo, muestra "Acceso concedido".
 
-!!! note "Conceptos practicados"
-    Bucle `for`, **acumulador** para la suma total, **contador** (implícito en el bucle `for`).
+!!! note "Concepto practicado"
+    Bucle `while`, comparación de `String` con `equals()`.
+
+!!! warning "Recuerda"
+    Para comparar el contenido de dos `String` **nunca uses `==`**. Usa siempre `equals()`.
 
 ---
 
-## 6. ¿Jugamos Otra Vez?
+## 4. ¿Jugamos Otra Vez?
 
 **Reto:** Crea un programa que pida dos números y muestre su suma. Tras mostrar el resultado, pregunta: `"¿Deseas realizar otra suma? (s/n)"`. El programa se repite mientras el usuario responda `'s'` o `'S'`.
 
 !!! note "Concepto practicado"
     Bucle `do-while`, ya que la primera suma se realiza siempre.
+
+---
+
+## 5. La Cuenta Atrás para el Lanzamiento
+
+**Reto:** Crea un programa que simule la cuenta atrás para el lanzamiento de un cohete. Muestra los números del 10 al 1 y, al final, el mensaje "¡Despegue!".
+
+!!! note "Concepto practicado"
+    Bucle `for`.
+
+---
+
+## 6. Calculadora de Promedios
+
+**Reto:** Un profesor necesita calcular la nota media de su clase. El programa debe preguntar primero cuántos alumnos hay y, usando un bucle, pedir la nota de cada uno. Al final, muestra la nota media.
+
+!!! note "Conceptos practicados"
+    Bucle `for`, **acumulador** para la suma total, **contador** (implícito en el bucle `for`).
 
 ---
 

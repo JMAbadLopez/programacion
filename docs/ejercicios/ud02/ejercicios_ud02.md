@@ -41,54 +41,54 @@
     !!! tip "Pista"
         Puede que necesites un vaso auxiliar temporal.
 
----
-
-## Bloque 2: Estructuras Condicionales
-
-7. **(df, j) ¿Par o Impar?:** Pide un número entero y determina si es par o impar, mostrando un mensaje claro al usuario.
-
-8. **(p, j) Filtrando Pares:** Pide dos números enteros y muestra todos los números pares que se encuentren en ese rango.
-
-    !!! warning "Nota"
-        Este ejercicio requiere estructuras repetitivas.
-
-9. **(p, j) Producto de Positivos:** Lee 5 números por teclado y calcula el producto de todos los que sean positivos. Los no positivos se ignoran.
-
-10. **(p, j) División Segura:** Pide dos números al usuario. Realiza la división decimal del primero entre el segundo y muestra el resultado.
-
-    !!! warning "Precaución"
-        Asegúrate de que el divisor no sea cero antes de operar.
-
-11. **(df, j) El Ordenador de Números:** Pide tres números enteros y muéstralos ordenados de menor a mayor.
-
-12. **(df, j) Mini-Calculadora:** Pide dos números y muestra el resultado de su suma, producto y división.
-
-    !!! warning "Precaución"
-        Si el segundo número es cero, la división no es posible. Muestra un mensaje de error en lugar de intentar la operación.
-
-13. **(p, j) Calculadora de Superficies:** Calcula el área de un rectángulo a partir de la base y la altura.
+7. **(p, j) Calculadora de Superficies:** Calcula el área de un rectángulo a partir de la base y la altura.
 
     !!! tip "Pista"
         `área = base * altura`
 
-14. **(p, j) El Detector de Signo:** Pide un número y di al usuario si es "Positivo" o "Negativo". (Considera el cero como positivo).
+8. **(p, j) Conversor de Temperatura:** Convierte una temperatura de grados Celsius a Fahrenheit.
+
+    <img src="../../../assets/images/ud02/img2.png" alt="Fórmula de conversión" style="zoom:50%;" />
+
+9. **(df, j) Distancia Euclidiana:** Calcula la distancia entre dos puntos P1(x1, y1) y P2(x2, y2).
+
+    <img src="../../../assets/images/ud02/img3.png" alt="Fórmula distancia euclidiana" style="zoom:50%;" />
+
+---
+
+## Bloque 2: Condicional Simple (if)
+
+10. **(df, j) El Detector de Signo:** Pide un número y di al usuario si es "Positivo" o "Negativo". (Considera el cero como positivo).
+
+11. **(df, j) ¿Par o Impar?:** Pide un número entero y determina si es par o impar, mostrando un mensaje claro al usuario.
+
+---
+
+## Bloque 3: Condicional Doble (if-else)
+
+12. **(p, j) División Segura:** Pide dos números al usuario. Realiza la división decimal del primero entre el segundo y muestra el resultado.
+
+    !!! warning "Precaución"
+        Asegúrate de que el divisor no sea cero antes de operar.
+
+13. **(df, j) Mini-Calculadora:** Pide dos números y muestra el resultado de su suma, producto y división.
+
+    !!! warning "Precaución"
+        Si el segundo número es cero, la división no es posible. Muestra un mensaje de error en lugar de intentar la operación.
+
+14. **(p, j) Gestor de Notas:** Pide las 4 notas de un alumno, calcula el promedio y muestra si ha "Aprobado" o "Suspendido". Se aprueba con un promedio ≥ 4.5.
 
 15. **(p, j) Resolviendo Ecuaciones:** Un sistema de ecuaciones lineales (`ax + by = c`, `dx + ey = f`) se puede resolver con las fórmulas de Cramer. Pide los coeficientes y calcula `x` e `y`.
 
     <img src="../../../assets/images/ud02/img1.png" alt="Fórmulas de Cramer" style="zoom:50%;" />
 
-16. **(p, j) Conversor de Temperatura:** Convierte una temperatura de grados Celsius a Fahrenheit.
+---
 
-    <img src="../../../assets/images/ud02/img2.png" alt="Fórmula de conversión" style="zoom:50%;" />
+## Bloque 4: Condicional Múltiple (if-else if-else)
 
-17. **(df, j) Detector de Años Bisiestos:** Pide un año y determina si es bisiesto.
+16. **(df, j) El Ordenador de Números:** Pide tres números enteros y muéstralos ordenados de menor a mayor.
 
-    !!! tip "Reglas"
-        Un año es bisiesto si es divisible por 4, **excepto** si es divisible por 100, **a menos que** también sea divisible por 400. (Ej: 2000 es bisiesto, 1900 no lo es).
-
-18. **(df, j) Calendario Mensual:** Pide un número de mes (1-12) y, usando `switch`, muestra cuántos días tiene ese mes. (No te preocupes por años bisiestos).
-
-19. **(df, j) Taquilla del Fútbol:** Programa el sistema de precios de un partido de fútbol sala:
+17. **(df, j) Taquilla del Fútbol:** Programa el sistema de precios de un partido de fútbol sala:
 
     | Edad | Precio |
     |---|---|
@@ -96,24 +96,7 @@
     | Entre 5 y 15 años | **2€** |
     | Mayores de 15 años | **3€** |
 
-20. **(p, j) Calificador de Exámenes:** Pide la nota de un examen (0-10) y el sexo del alumno ('H' o 'M'). Muestra la calificación adaptada al género:
-
-    | Nota | Masculino | Femenino |
-    |---|---|---|
-    | < 5 | SUSPENSO | SUSPENSA |
-    | ≥ 5 y < 7 | APROBADO | APROBADA |
-    | ≥ 7 y < 9 | NOTABLE | NOTABLE |
-    | ≥ 9 | SOBRESALIENTE | SOBRESALIENTE |
-
-21. **(p, j) Clasificador de Triángulos:** Pide las longitudes de los tres lados y determina si el triángulo es:
-
-    - **Equilátero:** 3 lados iguales.
-    - **Isósceles:** 2 lados iguales.
-    - **Escaleno:** Ningún lado igual.
-
-22. **(p, j) Gestor de Notas:** Pide las 4 notas de un alumno, calcula el promedio y muestra si ha "Aprobado" o "Suspendido". Se aprueba con un promedio ≥ 4.5.
-
-23. **(df, j) Evaluación de Nivel:** Calcula el porcentaje de aciertos de un test (total de preguntas y respuestas correctas). Muestra el nivel:
+18. **(df, j) Evaluación de Nivel:** Calcula el porcentaje de aciertos de un test (total de preguntas y respuestas correctas). Muestra el nivel:
 
     | Porcentaje | Nivel |
     |---|---|
@@ -122,11 +105,33 @@
     | ≥ 50% y < 70% | Regular |
     | < 50% | Malo |
 
-24. **(p, j) Distancia Euclidiana:** Calcula la distancia entre dos puntos P1(x1, y1) y P2(x2, y2).
+19. **(df, j) Detector de Años Bisiestos:** Pide un año y determina si es bisiesto.
 
-    <img src="../../../assets/images/ud02/img3.png" alt="Fórmula distancia euclidiana" style="zoom:50%;" />
+    !!! tip "Reglas"
+        Un año es bisiesto si es divisible por 4, **excepto** si es divisible por 100, **a menos que** también sea divisible por 400. (Ej: 2000 es bisiesto, 1900 no lo es).
 
-25. **(df, j) Asignador de Colores:** El usuario introduce un carácter y el programa muestra el color asignado (ignora mayúsculas/minúsculas):
+20. **(p, j) Clasificador de Triángulos:** Pide las longitudes de los tres lados y determina si el triángulo es:
+
+    - **Equilátero:** 3 lados iguales.
+    - **Isósceles:** 2 lados iguales.
+    - **Escaleno:** Ningún lado igual.
+
+21. **(p, j) Calificador de Exámenes:** Pide la nota de un examen (0-10) y el sexo del alumno ('H' o 'M'). Muestra la calificación adaptada al género:
+
+    | Nota | Masculino | Femenino |
+    |---|---|---|
+    | < 5 | SUSPENSO | SUSPENSA |
+    | ≥ 5 y < 7 | APROBADO | APROBADA |
+    | ≥ 7 y < 9 | NOTABLE | NOTABLE |
+    | ≥ 9 | SOBRESALIENTE | SOBRESALIENTE |
+
+---
+
+## Bloque 5: Condicional Múltiple con switch
+
+22. **(df, j) Calendario Mensual:** Pide un número de mes (1-12) y, usando `switch`, muestra cuántos días tiene ese mes. (No te preocupes por años bisiestos).
+
+23. **(df, j) Asignador de Colores:** El usuario introduce un carácter y el programa muestra el color asignado (ignora mayúsculas/minúsculas):
 
     | Carácter | Color |
     |---|---|
@@ -137,68 +142,71 @@
 
 ---
 
-## Bloque 3: Estructuras Repetitivas y Vectores
+## Bloque 6: Bucle while
 
-26. **(df, j) La Tabla de Multiplicar:** Pide un número y muestra su tabla de multiplicar completa (del 0 al 10).
+24. **(p, j) Suma hasta Negativo:** Lee números hasta que el usuario introduzca uno negativo. Muestra la suma de todos los positivos introducidos.
 
-27. **(p, j) Suma hasta Negativo:** Lee números hasta que el usuario introduzca uno negativo. Muestra la suma de todos los positivos introducidos.
+25. **(p, j) Filtrando Pares:** Pide dos números enteros y muestra todos los números pares que se encuentren en ese rango.
 
-28. **(df, j) Calculadora de Factorial:** Pide un número entero y calcula su factorial (producto de todos los enteros positivos desde 1 hasta ese número).
+26. **(p, j) Producto de Positivos:** Lee 5 números por teclado y calcula el producto de todos los que sean positivos. Los no positivos se ignoran.
 
-29. **(p, j) Filtrando Positivos:** Pide una serie de números. El programa termina cuando se introduce un `0` y muestra solo los positivos leídos.
+27. **(p, j) Filtrando Positivos:** Pide una serie de números. El programa termina cuando se introduce un `0` y muestra solo los positivos leídos.
 
-30. **(p, j) Filtro Numérico Avanzado:** Lee 10 números y muestra:
-    - Los números positivos menores que 5.
-    - Los números negativos mayores que -5.
+28. **(p, j) Suma Selectiva:** Pide números enteros positivos. El programa se detiene si se introduce un número ≤ 0. Muestra la suma total de los pares y la suma total de los impares.
 
-31. **(df, j) Suma y Producto de Pares:** Calcula y muestra la suma y el producto de los 100 primeros números pares (2, 4, 6, ..., 200).
+---
 
-32. **(p, j) Super Tabla de Multiplicar:** Muestra las tablas de multiplicar del 1 al 10.
+## Bloque 7: Bucle do-while
 
-33. **(p, j) Suma Selectiva:** Pide números enteros positivos. El programa se detiene si se introduce un número ≤ 0. Muestra la suma total de los pares y la suma total de los impares.
-
-34. **(p, j) Calculadora de Triángulos Interactiva:** Calcula la superficie de un triángulo.
+29. **(p, j) Calculadora de Triángulos Interactiva:** Calcula la superficie de un triángulo.
 
     - **Validación:** Asegúrate de que la base y la altura sean positivas. Si no, vuelve a pedirlas.
     - **Repetición:** Después de mostrar el resultado, pregunta si se desea calcular otra superficie.
 
     <img src="../../../assets/images/ud02/img4.png" alt="Fórmula área triángulo" style="zoom:50%;" />
 
-35. **(df, j) Menú Geométrico:** Crea un programa con menú para elegir entre:
-    1. Calcular el área de una circunferencia.
-    2. Calcular el volumen de una esfera.
+---
 
-    <img src="../../../assets/images/ud02/img5.png" alt="Fórmulas geométricas" style="zoom:50%;" />
+## Bloque 8: Bucle for
 
-36. **(p, df, j) El Cajero Automático:** Dado un importe en euros, calcula el desglose en el menor número de billetes posible (de 500€ a 5€).
+30. **(df, j) La Tabla de Multiplicar:** Pide un número y muestra su tabla de multiplicar completa (del 0 al 10).
 
-37. **(p, j) Calculadora de Figuras Planas:** Diseña un programa con menú para calcular el área y el perímetro de: círculo, rectángulo, cuadrado, rombo y triángulo. El usuario debe poder realizar varios cálculos sin reiniciar.
+31. **(df, j) Calculadora de Factorial:** Pide un número entero y calcula su factorial (producto de todos los enteros positivos desde 1 hasta ese número).
 
-38. **(p, j) Potencias en un Rango:** Pide dos números y muestra el cuadrado y el cubo de todos los enteros entre ellos.
+32. **(p, j) Filtro Numérico Avanzado:** Lee 10 números y muestra:
+    - Los números positivos menores que 5.
+    - Los números negativos mayores que -5.
 
-39. **(p, df, j) Menú Anidado de Juegos:** Crea un programa con menú principal. Según la opción, muestra los juegos de esa categoría o un submenú:
-    1. Juegos de salón: `cartas, ajedrez, damas, prendas`.
-    2. Juegos al aire libre:
-        - a) Individuales: `atletismo, senderismo, natación`
-        - b) Colectivos: `gimnasia, rítmica, rugby, polo, fútbol`
-    3. Salir.
+33. **(df, j) Suma y Producto de Pares:** Calcula y muestra la suma y el producto de los 100 primeros números pares (2, 4, 6, ..., 200).
 
-40. **(p, j) La Serie Numérica:** Calcula la suma de la serie `2 + 5 + 8 + 11 + ...` para todos los valores menores que 100. Resuelve el problema usando **tres bucles diferentes**: `while`, `do-while` y `for`.
+34. **(p, j) Potencias en un Rango:** Pide dos números y muestra el cuadrado y el cubo de todos los enteros entre ellos.
 
-41. **(p, j) Simulador de la Primitiva:** 
+35. **(p, j) La Serie Numérica:** Calcula la suma de la serie `2 + 5 + 8 + 11 + ...` para todos los valores menores que 100. Resuelve el problema usando **tres bucles diferentes**: `while`, `do-while` y `for`.
+
+---
+
+## Bloque 9: Bucles Anidados
+
+36. **(p, j) Super Tabla de Multiplicar:** Muestra las tablas de multiplicar del 1 al 10.
+
+---
+
+## Bloque 10: Vectores
+
+37. **(p, j) Simulador de la Primitiva:**
     1. Pide al usuario 6 números (del 1 al 49) para su boleto.
     2. Genera 6 números aleatorios (del 1 al 49, sin repetir) para la combinación ganadora.
     3. Genera un reintegro aleatorio (del 0 al 9).
     4. Compara y muestra el número de aciertos.
     5. Pregunta si quiere volver a jugar.
 
-42. **(df, j) Brain Training:** Simula un juego de cálculo mental.
+38. **(df, j) Brain Training:** Simula un juego de cálculo mental.
     1. Realiza 20 operaciones aleatorias (+, -, *, /) con números del 1 al 10.
     2. Pide el resultado al usuario en cada operación.
     3. Si acierta, suma un punto.
     4. Al final, muestra el porcentaje de aciertos.
 
-43. **(df, j) ¿Quién es el Director?:** Un juego de cine.
+39. **(df, j) ¿Quién es el Director?:** Un juego de cine.
     1. Almacena en dos vectores paralelos 5 películas y sus directores.
     2. El programa elige una película al azar y se la muestra al usuario.
     3. El usuario debe escribir el nombre del director.
@@ -208,7 +216,24 @@
 
 ---
 
-## Bloque 4: Retos Combinados
+## Bloque 11: Retos Combinados
+
+40. **(df, j) Menú Geométrico:** Crea un programa con menú para elegir entre:
+    1. Calcular el área de una circunferencia.
+    2. Calcular el volumen de una esfera.
+
+    <img src="../../../assets/images/ud02/img5.png" alt="Fórmulas geométricas" style="zoom:50%;" />
+
+41. **(p, df, j) El Cajero Automático:** Dado un importe en euros, calcula el desglose en el menor número de billetes posible (de 500€ a 5€).
+
+42. **(p, j) Calculadora de Figuras Planas:** Diseña un programa con menú para calcular el área y el perímetro de: círculo, rectángulo, cuadrado, rombo y triángulo. El usuario debe poder realizar varios cálculos sin reiniciar.
+
+43. **(p, df, j) Menú Anidado de Juegos:** Crea un programa con menú principal. Según la opción, muestra los juegos de esa categoría o un submenú:
+    1. Juegos de salón: `cartas, ajedrez, damas, prendas`.
+    2. Juegos al aire libre:
+        - a) Individuales: `atletismo, senderismo, natación`
+        - b) Colectivos: `gimnasia, rítmica, rugby, polo, fútbol`
+    3. Salir.
 
 44. **(p, j) Máquina Expendedora:** Programa el software de una máquina que vende un producto a 2,10€.
     - Pide al usuario que introduzca dinero.
@@ -274,7 +299,7 @@
 
 ---
 
-## Bloque 5: Matrices
+## Bloque 12: Matrices
 
 53. **(j) Tablero Numérico:** Crea una matriz de 3×3 y rellénala con los números del 1 al 9. Muéstrala en formato de tabla.
 
