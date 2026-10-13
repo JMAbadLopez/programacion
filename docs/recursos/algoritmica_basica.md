@@ -103,14 +103,14 @@ public class BusquedaMaximo {
 ```java
 public class BusquedaLineal {
     public static void main(String[] args) {
-        String[] frutas = {"Manzana", "Pera", "Naranja", "Plátano", "Fresa"};
-        String frutaBuscada = "Naranja";
+        int[] numeros = {14, 27, 8, 42, 15, 3, 9};
+        int numeroBuscado = 42;
         int posicionEncontrada = -1; // -1 indica "no encontrado"
 
         // 1. Recorremos el array
-        for (int i = 0; i < frutas.length; i++) {
-            // 2. Comparamos (¡OJO! Strings se comparan con .equals())
-            if (frutas[i].equals(frutaBuscada)) {
+        for (int i = 0; i < numeros.length; i++) {
+            // 2. Comparamos los valores directamente con ==
+            if (numeros[i] == numeroBuscado) {
                 // 3. ¡Encontrado! Guardamos la posición y salimos del bucle
                 posicionEncontrada = i;
                 break; // No hace falta seguir buscando
@@ -119,9 +119,9 @@ public class BusquedaLineal {
 
         // 4. Mostramos el resultado
         if (posicionEncontrada != -1) {
-            System.out.println(frutaBuscada + " encontrada en la posición: " + posicionEncontrada); // Naranja encontrada en la posición: 2
+            System.out.println("El número " + numeroBuscado + " se encuentra en la posición (índice): " + posicionEncontrada);
         } else {
-            System.out.println(frutaBuscada + " no se encuentra en el array.");
+            System.out.println("El número " + numeroBuscado + " no se encuentra en el array.");
         }
     }
 }

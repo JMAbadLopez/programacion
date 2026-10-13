@@ -132,4 +132,4 @@
 
    Modifica el programa anterior de modo que el proceso se repita una y otra vez (mostrar menú -> realizar el cálculo -> volver a mostrar menú). Añade una opción más llamada “Salir” que terminará el programa si es elegida.
 
-6. Realiza los ejercicios [**56** y **58** de la **unidad 2**](../ud02/ejercicios_ud02.md) , usando *funciones y procedimientos*.
+6. Realiza los ejercicios [**59** y **61** de la **unidad 2**](../ud02/ejercicios_ud02.md) (*Analizador de Matrices* y *Simulador de Máquina Expendedora v2.0*), usando *funciones y procedimientos*.

@@ -193,56 +193,66 @@
 
 ## Bloque 10: Vectores
 
-37. **(p, j) Simulador de la Primitiva:**
-    1. Pide al usuario 6 números (del 1 al 49) para su boleto.
-    2. Genera 6 números aleatorios (del 1 al 49, sin repetir) para la combinación ganadora.
-    3. Genera un reintegro aleatorio (del 0 al 9).
-    4. Compara y muestra el número de aciertos.
-    5. Pregunta si quiere volver a jugar.
+37. **(p, j) Espejo Numérico:** Pide al usuario 10 números enteros y almacénalos en un vector. A continuación, muestra todos los valores en orden inverso al introducido (del último al primero) indicando la posición (índice) que ocupa cada elemento.
 
-38. **(df, j) Brain Training:** Simula un juego de cálculo mental.
-    1. Realiza 20 operaciones aleatorias (+, -, *, /) con números del 1 al 10.
-    2. Pide el resultado al usuario en cada operación.
-    3. Si acierta, suma un punto.
-    4. Al final, muestra el porcentaje de aciertos.
+38. **(p, j) Estadísticas de Calificaciones:** Pide las notas finales (decimales de 0 a 10) de 10 estudiantes y guárdalas en un vector. El programa debe calcular y mostrar:
+    - La nota media del grupo.
+    - La nota máxima y la mínima, indicando además la posición (número de estudiante) en la que se encuentran.
+    - El número de estudiantes aprobados (nota ≥ 5) y suspensos (nota < 5).
 
-39. **(df, j) ¿Quién es el Director?:** Un juego de cine.
-    1. Almacena en dos vectores paralelos 5 películas y sus directores.
+39. **(df, j) El Detector de Elementos (Búsqueda Lineal):** Genera o solicita por teclado un vector de 10 números enteros. Luego, pide al usuario un número a buscar:
+    - Indica si el número se encuentra en el vector.
+    - Si existe, muestra en qué índice(s) se encuentra y cuántas veces aparece repetido.
+    - Si no existe, informa con un mensaje de que no se ha encontrado.
+
+40. **(df, j) Suma de Vectores:** Solicita por teclado los datos de dos vectores de números enteros de igual longitud (5 elementos cada uno).
+    - Genera un tercer vector cuyos elementos sean la suma de los elementos homólogos de los dos primeros (`C[i] = A[i] + B[i]`).
+    - Muestra los tres vectores por pantalla de forma clara y tabulada.
+
+41. **(df, j) ¿Quién es el Director?:** Un juego de cine con vectores paralelos.
+    1. Almacena en dos vectores paralelos 5 títulos de películas y sus respectivos directores.
     2. El programa elige una película al azar y se la muestra al usuario.
     3. El usuario debe escribir el nombre del director.
-    4. El usuario empieza con 5 vidas. Si falla, pierde una.
-    5. El juego termina si se queda sin vidas o decide no continuar.
-    6. Al final, muestra el porcentaje de aciertos.
+    4. El usuario empieza con 5 vidas. Si falla el nombre, pierde una vida.
+    5. El juego termina si se queda sin vidas o si decide no continuar tras cada ronda.
+    6. Al finalizar, muestra el balance de aciertos, fallos y el porcentaje de éxito.
+
+42. **(p, j) Simulador de la Primitiva:**
+    1. Pide al usuario 6 números (del 1 al 49) para su boleto (validando que no se repitan).
+    2. Genera 6 números aleatorios (del 1 al 49, sin repetir) para la combinación ganadora.
+    3. Genera un reintegro aleatorio (del 0 al 9).
+    4. Compara ambos vectores y muestra el número de aciertos obtenidos.
+    5. Pregunta al usuario si desea realizar otra apuesta.
 
 ---
 
 ## Bloque 11: Retos Combinados
 
-40. **(df, j) Menú Geométrico:** Crea un programa con menú para elegir entre:
+43. **(df, j) Menú Geométrico:** Crea un programa con menú para elegir entre:
     1. Calcular el área de una circunferencia.
     2. Calcular el volumen de una esfera.
 
     <img src="../../../assets/images/ud02/img5.png" alt="Fórmulas geométricas" style="zoom:50%;" />
 
-41. **(p, df, j) El Cajero Automático:** Dado un importe en euros, calcula el desglose en el menor número de billetes posible (de 500€ a 5€).
+44. **(p, df, j) El Cajero Automático:** Dado un importe en euros, calcula el desglose en el menor número de billetes posible (de 500€ a 5€).
 
-42. **(p, j) Calculadora de Figuras Planas:** Diseña un programa con menú para calcular el área y el perímetro de: círculo, rectángulo, cuadrado, rombo y triángulo. El usuario debe poder realizar varios cálculos sin reiniciar.
+45. **(p, j) Calculadora de Figuras Planas:** Diseña un programa con menú para calcular el área y el perímetro de: círculo, rectángulo, cuadrado, rombo y triángulo. El usuario debe poder realizar varios cálculos sin reiniciar.
 
-43. **(p, df, j) Menú Anidado de Juegos:** Crea un programa con menú principal. Según la opción, muestra los juegos de esa categoría o un submenú:
+46. **(p, df, j) Menú Anidado de Juegos:** Crea un programa con menú principal. Según la opción, muestra los juegos de esa categoría o un submenú:
     1. Juegos de salón: `cartas, ajedrez, damas, prendas`.
     2. Juegos al aire libre:
         - a) Individuales: `atletismo, senderismo, natación`
         - b) Colectivos: `gimnasia, rítmica, rugby, polo, fútbol`
     3. Salir.
 
-44. **(p, j) Máquina Expendedora:** Programa el software de una máquina que vende un producto a 2,10€.
+47. **(p, j) Máquina Expendedora:** Programa el software de una máquina que vende un producto a 2,10€.
     - Pide al usuario que introduzca dinero.
     - Si es insuficiente, muestra un mensaje de error.
     - Si es suficiente, calcula el cambio usando el menor número de monedas posible (50, 20, 10 y 5 céntimos).
 
-45. **(df, j) Ordenador Universal:** Pide tres números. Pregunta si el usuario quiere ordenarlos de mayor a menor o de menor a mayor. Permite repetir la operación con nuevos números.
+48. **(df, j) Ordenador Universal:** Pide tres números. Pregunta si el usuario quiere ordenarlos de mayor a menor o de menor a mayor. Permite repetir la operación con nuevos números.
 
-46. **(p, j) Calculadora de Salario Neto:** Calcula el salario neto semanal a partir de las horas trabajadas.
+49. **(p, j) Calculadora de Salario Neto:** Calcula el salario neto semanal a partir de las horas trabajadas.
 
     | Concepto | Valor |
     |---|---|
@@ -254,7 +264,7 @@
 
     El programa debe mostrar: salario bruto, total de impuestos y salario neto.
 
-47. **(df, j) Facturación de Hotel:** Calcula la factura según los días de estancia y la categoría de habitación.
+50. **(df, j) Facturación de Hotel:** Calcula la factura según los días de estancia y la categoría de habitación.
 
     | Categoría | Precio/día |
     |---|---|
@@ -263,12 +273,12 @@
     | C | 120€ |
     | D | 80€ |
 
-48. **(p, j) Simulador de Amortización de Préstamo:** Una persona pide un préstamo de P euros y lo devuelve en cuotas mensuales de A euros con un interés anual. Calcula y muestra para cada mes: el interés pagado, la reducción de deuda, el total de intereses acumulados, la deuda pendiente y el número total de pagos.
+51. **(p, j) Simulador de Amortización de Préstamo:** Una persona pide un préstamo de P euros y lo devuelve en cuotas mensuales de A euros con un interés anual. Calcula y muestra para cada mes: el interés pagado, la reducción de deuda, el total de intereses acumulados, la deuda pendiente y el número total de pagos.
 
     !!! tip "Datos de prueba"
         Préstamo de 6000€, cuota de 135€, interés del 12% anual.
 
-49. **(df, j) Facturación de Alquiler de Coches:** Calcula la factura según los kilómetros recorridos.
+52. **(df, j) Facturación de Alquiler de Coches:** Calcula la factura según los kilómetros recorridos.
 
     | Kilómetros | Tarifa |
     |---|---|
@@ -276,13 +286,13 @@
     | 101–999 Km | 1,50€/Km |
     | ≥ 1000 Km | 1€/Km |
 
-50. **(p, j) Sistema de Acceso Seguro:** Gestiona el acceso a un sistema mediante una contraseña de 4 dígitos. Menú:
+53. **(p, j) Sistema de Acceso Seguro:** Gestiona el acceso a un sistema mediante una contraseña de 4 dígitos. Menú:
     1. Introducir contraseña.
     2. Cambiar contraseña (requiere la contraseña antigua).
     3. Acceder al sistema (solo si la contraseña es correcta).
     4. Salir.
 
-51. **(df, j) Gestor de Nóminas de Empresa:** Calcula la nómina de un empleado. Pide nombre, categoría, año de ingreso y horas trabajadas.
+54. **(df, j) Gestor de Nóminas de Empresa:** Calcula la nómina de un empleado. Pide nombre, categoría, año de ingreso y horas trabajadas.
 
     | Categoría | Precio/hora |
     |---|---|
@@ -295,19 +305,19 @@
     - Antigüedad: 5% (1-3 años), 10% (4-6 años), etc.
     - Descuentos: 3% obra social, 10% jubilación sobre sueldo base.
 
-52. **(p, j) Emulador de Calculadora Científica:** Crea una calculadora con menú para operaciones básicas (suma, resta, producto, división) y complejas (potencia, raíz cuadrada). El programa debe ser robusto y controlar posibles errores de entrada.
+55. **(p, j) Emulador de Calculadora Científica:** Crea una calculadora con menú para operaciones básicas (suma, resta, producto, división) y complejas (potencia, raíz cuadrada). El programa debe ser robusto y controlar posibles errores de entrada.
 
 ---
 
 ## Bloque 12: Matrices
 
-53. **(j) Tablero Numérico:** Crea una matriz de 3×3 y rellénala con los números del 1 al 9. Muéstrala en formato de tabla.
+56. **(j) Tablero Numérico:** Crea una matriz de 3×3 y rellénala con los números del 1 al 9. Muéstrala en formato de tabla.
 
-54. **(j) Matriz Aleatoria:** Pide al usuario el número de columnas para una matriz de 5 filas. Rellénala con números aleatorios entre 0 y 10 y muéstrala.
+57. **(j) Matriz Aleatoria:** Pide al usuario el número de columnas para una matriz de 5 filas. Rellénala con números aleatorios entre 0 y 10 y muéstrala.
 
-55. **(j) Suma de Matrices:** Pide las dimensiones de dos matrices cuadradas (n×n). Solicita todos los valores para ambas. Calcula su suma en una tercera matriz y muestra las tres al final.
+58. **(j) Suma de Matrices:** Pide las dimensiones de dos matrices cuadradas (n×n). Solicita todos los valores para ambas. Calcula su suma en una tercera matriz y muestra las tres al final.
 
-56. **(j) Analizador de Matrices:** Crea un programa con menú para analizar una matriz de 4×4:
+59. **(j) Analizador de Matrices:** Crea un programa con menú para analizar una matriz de 4×4:
 
     - **Rellenar Matriz:** Pide todos los valores (debe completarse primero).
     - **Suma de Fila:** Pide un número de fila y muestra la suma de sus elementos.
@@ -318,9 +328,9 @@
 
     <img src="../../../assets/images/ud02/img6.png" alt="Ejemplo de diagonales en una matriz" />
 
-57. **(j) Matriz sin Repeticiones:** Genera una matriz de 3×3 con números aleatorios entre 1 y 9, asegurándote de que ningún número se repita.
+60. **(j) Matriz sin Repeticiones:** Genera una matriz de 3×3 con números aleatorios entre 1 y 9, asegurándote de que ningún número se repita.
 
-58. **(j) Simulador de Máquina Expendedora v2.0:** Gestiona una máquina de golosinas usando matrices.
+61. **(j) Simulador de Máquina Expendedora v2.0:** Gestiona una máquina de golosinas usando matrices.
 
     Usa estas matrices de datos de ejemplo:
 
