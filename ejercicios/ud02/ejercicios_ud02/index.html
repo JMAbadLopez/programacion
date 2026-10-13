@@ -2717,39 +2717,56 @@
 <h2 id="bloque-10-vectores">Bloque 10: Vectores</h2>
 <ol start="37">
 <li>
-<p><strong>(p, j) Simulador de la Primitiva:</strong></p>
-<ol>
-<li>Pide al usuario 6 números (del 1 al 49) para su boleto.</li>
-<li>Genera 6 números aleatorios (del 1 al 49, sin repetir) para la combinación ganadora.</li>
-<li>Genera un reintegro aleatorio (del 0 al 9).</li>
-<li>Compara y muestra el número de aciertos.</li>
-<li>Pregunta si quiere volver a jugar.</li>
-</ol>
+<p><strong>(p, j) Espejo Numérico:</strong> Pide al usuario 10 números enteros y almacénalos en un vector. A continuación, muestra todos los valores en orden inverso al introducido (del último al primero) indicando la posición (índice) que ocupa cada elemento.</p>
 </li>
 <li>
-<p><strong>(df, j) Brain Training:</strong> Simula un juego de cálculo mental.</p>
-<ol>
-<li>Realiza 20 operaciones aleatorias (+, -, *, /) con números del 1 al 10.</li>
-<li>Pide el resultado al usuario en cada operación.</li>
-<li>Si acierta, suma un punto.</li>
-<li>Al final, muestra el porcentaje de aciertos.</li>
-</ol>
+<p><strong>(p, j) Estadísticas de Calificaciones:</strong> Pide las notas finales (decimales de 0 a 10) de 10 estudiantes y guárdalas en un vector. El programa debe calcular y mostrar:</p>
+<ul>
+<li>La nota media del grupo.</li>
+<li>La nota máxima y la mínima, indicando además la posición (número de estudiante) en la que se encuentran.</li>
+<li>El número de estudiantes aprobados (nota ≥ 5) y suspensos (nota &lt; 5).</li>
+</ul>
 </li>
 <li>
-<p><strong>(df, j) ¿Quién es el Director?:</strong> Un juego de cine.</p>
+<p><strong>(df, j) El Detector de Elementos (Búsqueda Lineal):</strong> Genera o solicita por teclado un vector de 10 números enteros. Luego, pide al usuario un número a buscar:</p>
+<ul>
+<li>Indica si el número se encuentra en el vector.</li>
+<li>Si existe, muestra en qué índice(s) se encuentra y cuántas veces aparece repetido.</li>
+<li>Si no existe, informa con un mensaje de que no se ha encontrado.</li>
+</ul>
+</li>
+<li>
+<p><strong>(df, j) Suma de Vectores:</strong> Solicita por teclado los datos de dos vectores de números enteros de igual longitud (5 elementos cada uno).</p>
+<ul>
+<li>Genera un tercer vector cuyos elementos sean la suma de los elementos homólogos de los dos primeros (<code>C[i] = A[i] + B[i]</code>).</li>
+<li>Muestra los tres vectores por pantalla de forma clara y tabulada.</li>
+</ul>
+</li>
+<li>
+<p><strong>(df, j) ¿Quién es el Director?:</strong> Un juego de cine con vectores paralelos.</p>
 <ol>
-<li>Almacena en dos vectores paralelos 5 películas y sus directores.</li>
+<li>Almacena en dos vectores paralelos 5 títulos de películas y sus respectivos directores.</li>
 <li>El programa elige una película al azar y se la muestra al usuario.</li>
 <li>El usuario debe escribir el nombre del director.</li>
-<li>El usuario empieza con 5 vidas. Si falla, pierde una.</li>
-<li>El juego termina si se queda sin vidas o decide no continuar.</li>
-<li>Al final, muestra el porcentaje de aciertos.</li>
+<li>El usuario empieza con 5 vidas. Si falla el nombre, pierde una vida.</li>
+<li>El juego termina si se queda sin vidas o si decide no continuar tras cada ronda.</li>
+<li>Al finalizar, muestra el balance de aciertos, fallos y el porcentaje de éxito.</li>
+</ol>
+</li>
+<li>
+<p><strong>(p, j) Simulador de la Primitiva:</strong></p>
+<ol>
+<li>Pide al usuario 6 números (del 1 al 49) para su boleto (validando que no se repitan).</li>
+<li>Genera 6 números aleatorios (del 1 al 49, sin repetir) para la combinación ganadora.</li>
+<li>Genera un reintegro aleatorio (del 0 al 9).</li>
+<li>Compara ambos vectores y muestra el número de aciertos obtenidos.</li>
+<li>Pregunta al usuario si desea realizar otra apuesta.</li>
 </ol>
 </li>
 </ol>
 <hr />
 <h2 id="bloque-11-retos-combinados">Bloque 11: Retos Combinados</h2>
-<ol start="40">
+<ol start="43">
 <li>
 <p><strong>(df, j) Menú Geométrico:</strong> Crea un programa con menú para elegir entre:</p>
 <ol>
@@ -2931,7 +2948,7 @@
 </ol>
 <hr />
 <h2 id="bloque-12-matrices">Bloque 12: Matrices</h2>
-<ol start="53">
+<ol start="56">
 <li>
 <p><strong>(j) Tablero Numérico:</strong> Crea una matriz de 3×3 y rellénala con los números del 1 al 9. Muéstrala en formato de tabla.</p>
 </li>
