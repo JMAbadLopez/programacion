@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Método de la Burbuja</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Poppins', sans-serif; }
+        .slide { display: none; }
+        .active-slide { display: block; animation: fadeIn 0.5s; }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .bubble {
+            width: 60px; height: 60px;
+            border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            font-weight: bold; color: white;
+            transition: all 0.5s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            position: relative;
+        }
+        /* Indicador de elemento ordenado */
+        .sorted-bubble {
+            border: 4px solid #22c55e; /* Borde verde */
+            filter: brightness(1.1);
+        }
+        .code-block {
+            background-color: #1e293b; color: #e2e8f0;
+            padding: 1.5rem; border-radius: 0.5rem;
+            font-family: 'Courier New', monospace;
+            border-left: 4px solid #3b82f6;
+        }
+        .highlight { color: #60a5fa; font-weight: bold; }
+        .comment { color: #94a3b8; font-style: italic; }
+    </style>
+</head>
+<body class="bg-slate-100 flex flex-col items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-5xl bg-white rounded-2xl shadow-xl overflow-hidden">
+        
+        <!-- Contenido de las Diapositivas -->
+        <div id="slides-container" class="p-8 min-h-[550px]">
+
+            <!-- Slide 1: Intro -->
+            <div id="slide-1" class="slide active-slide text-center">
+                <h1 class="text-4xl font-bold text-slate-800 mb-6">El Método de la Burbuja 🫧</h1>
+                <p class="text-xl text-slate-600 mb-8">¿Cómo ordenamos una lista de números?</p>
+                
+                <div class="flex justify-center gap-4 mb-8">
+                    <div class="bubble bg-blue-500">5</div>
+                    <div class="bubble bg-red-500">1</div>
+                    <div class="bubble bg-green-500">4</div>
+                    <div class="bubble bg-yellow-500">2</div>
+                    <div class="bubble bg-purple-500">8</div>
+                </div>
+
+                <div class="bg-blue-50 p-6 rounded-xl border border-blue-100 inline-block text-left">
+                    <h3 class="font-bold text-blue-800 mb-2">La Idea Clave:</h3>
+                    <p class="text-slate-700">Imagina que los números más grandes son "más pesados" y se hunden al final de la lista, mientras que los más pequeños son "burbujas" que suben hacia el principio.</p>
+                </div>
+            </div>
+
+            <!-- Slide 2: La Lógica -->
+            <div id="slide-2" class="slide">
+                <h2 class="text-3xl font-bold text-slate-800 mb-6">¿Cómo funciona?</h2>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <ol class="list-decimal list-inside space-y-4 text-lg text-slate-700">
+                            <li class="p-2 bg-slate-50 rounded">Comparamos cada par de elementos adyacentes.</li>
+                            <li class="p-2 bg-slate-50 rounded">Si están en el orden incorrecto (el primero es mayor que el segundo), <span class="font-bold text-blue-600">los intercambiamos (swap)</span>.</li>
+                            <li class="p-2 bg-slate-50 rounded">Repetimos este proceso para toda la lista.</li>
+                            <li class="p-2 bg-slate-50 rounded">En cada pasada completa, el número más grande "burbujea" hasta su posición final y ya no se vuelve a tocar.</li>
+                        </ol>
+                    </div>
+                    <div class="bg-slate-50 p-6 rounded-xl border border-slate-200 flex flex-col items-center gap-4">
+                        <p class="font-semibold text-slate-600">Ejemplo: ¿5 > 1?</p>
+                        <div class="flex gap-4">
+                            <div class="bubble bg-blue-500">5</div>
+                            <div class="text-2xl font-bold text-slate-400">⇄</div>
+                            <div class="bubble bg-red-500">1</div>
+                        </div>
+                        <p class="text-green-600 font-bold">¡SÍ! Intercambiamos.</p>
+                        <div class="flex gap-4 opacity-75">
+                            <div class="bubble bg-red-500">1</div>
+                            <div class="bubble bg-blue-500">5</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: El Algoritmo en Java -->
+            <div id="slide-3" class="slide">
+                <h2 class="text-3xl font-bold text-slate-800 mb-6">El Código en Java</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="code-block text-sm">
+<pre><code><span class="keyword text-purple-400">public static void</span> burbuja(<span class="keyword text-purple-400">int</span>[] array) {
+    <span class="keyword text-purple-400">int</span> aux;
+    <span class="comment">// Bucle externo: Número de pasadas</span>
+    <span class="keyword text-purple-400">for</span> (<span class="keyword text-purple-400">int</span> i = 0; i < array.length - 1; i++) {
+        
+        <span class="comment">// Bucle interno: Comparaciones</span>
+        <span class="comment">// ¡Ojo! Restamos 'i' para no revisar lo ya ordenado</span>
+        <span class="keyword text-purple-400">for</span> (<span class="keyword text-purple-400">int</span> j = 0; j < array.length - 1 - i; j++) {
+            
+            <span class="comment">// Si el actual es mayor que el siguiente...</span>
+            <span class="keyword text-purple-400">if</span> (array[j] > array[j + 1]) {
+                <span class="comment">// ...intercambiamos (SWAP)</span>
+                aux = array[j];
+                array[j] = array[j + 1];
+                array[j + 1] = aux;
+            }
+        }
+    }
+}</code></pre>
+                    </div>
+                    <div class="space-y-4 text-slate-700">
+                        <div class="p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500">
+                            <h4 class="font-bold text-blue-700">Bucle Externo (i)</h4>
+                            <p>Controla cuántas pasadas hacemos. Necesitamos N-1 pasadas para ordenar N elementos.</p>
+                        </div>
+                        <div class="p-4 bg-green-50 rounded-lg border-l-4 border-green-500">
+                            <h4 class="font-bold text-green-700">Bucle Interno (j)</h4>
+                            <p>Recorre la lista comparando parejas. Nota el <code>- i</code>: ¡No necesitamos revisar los últimos elementos porque ya están ordenados!</p>
+                        </div>
+                        <div class="p-4 bg-orange-50 rounded-lg border-l-4 border-orange-500">
+                            <h4 class="font-bold text-orange-700">El Swap</h4>
+                            <p>Usamos una variable temporal <code>aux</code> para no perder el valor al hacer el cambio.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: Simulación Visual Completa -->
+            <div id="slide-4" class="slide text-center">
+                <h2 class="text-3xl font-bold text-slate-800 mb-4">Simulación Completa</h2>
+                <p class="text-slate-600 mb-4">Sigue los pasos hasta que la lista esté totalmente ordenada.</p>
+                
+                <div id="demo-container" class="flex justify-center gap-4 mb-8 h-24 items-center bg-slate-50 p-4 rounded-xl border border-slate-200">
+                    <!-- Se rellena con JS -->
+                </div>
+                
+                <div class="h-16 flex flex-col items-center justify-center">
+                    <p id="status-text" class="text-xl font-bold text-blue-600"></p>
+                    <p id="sub-status-text" class="text-sm text-slate-500"></p>
+                </div>
+
+                <div class="mt-4 flex justify-center gap-4">
+                    <button id="step-btn" class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 font-bold shadow-lg transition flex items-center gap-2">
+                        <span>Siguiente Paso</span> 
+                        <span class="text-xs bg-blue-800 px-2 py-1 rounded-full" id="step-counter">0</span>
+                    </button>
+                    <button id="reset-btn" class="bg-slate-400 text-white px-6 py-3 rounded-full hover:bg-slate-500 font-bold shadow-lg transition">Reiniciar</button>
+                </div>
+                
+                <!-- Barra de progreso -->
+                <div class="w-full bg-slate-200 rounded-full h-2.5 mt-8 max-w-lg mx-auto">
+                  <div id="progress-bar" class="bg-blue-600 h-2.5 rounded-full transition-all duration-300" style="width: 0%"></div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Navegación -->
+        <div class="bg-slate-200 p-4 flex justify-between items-center">
+            <button id="prev-btn" class="text-slate-600 font-bold px-4 py-2 hover:bg-slate-300 rounded disabled:opacity-50">Anterior</button>
+            <div class="flex gap-2">
+                <span class="dot w-3 h-3 rounded-full bg-slate-400 cursor-pointer" onclick="goToSlide(0)"></span>
+                <span class="dot w-3 h-3 rounded-full bg-slate-400 cursor-pointer" onclick="goToSlide(1)"></span>
+                <span class="dot w-3 h-3 rounded-full bg-slate-400 cursor-pointer" onclick="goToSlide(2)"></span>
+                <span class="dot w-3 h-3 rounded-full bg-slate-400 cursor-pointer" onclick="goToSlide(3)"></span>
+            </div>
+            <button id="next-btn" class="bg-blue-600 text-white font-bold px-6 py-2 rounded hover:bg-blue-700 shadow-md disabled:opacity-50">Siguiente</button>
+        </div>
+    </div>
+
+    <script>
+        // Lógica del Slider (Navegación entre diapositivas)
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const dots = document.querySelectorAll('.dot');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+
+        function updateSlider() {
+            slides.forEach((s, i) => {
+                s.classList.remove('active-slide');
+                dots[i].classList.remove('bg-blue-600');
+                dots[i].classList.add('bg-slate-400');
+                if (i === currentSlide) {
+                    s.classList.add('active-slide');
+                    dots[i].classList.remove('bg-slate-400');
+                    dots[i].classList.add('bg-blue-600');
+                }
+            });
+            prevBtn.disabled = currentSlide === 0;
+            nextBtn.disabled = currentSlide === slides.length - 1;
+        }
+
+        prevBtn.onclick = () => { if(currentSlide > 0) currentSlide--; updateSlider(); };
+        nextBtn.onclick = () => { if(currentSlide < slides.length - 1) currentSlide++; updateSlider(); };
+        function goToSlide(n) { currentSlide = n; updateSlider(); }
+        updateSlider();
+
+        // ==========================================
+        // GENERADOR DE PASOS DE BURBUJA
+        // ==========================================
+        
+        const initialData = [5, 3, 8, 4, 2];
+        let steps = []; // Aquí guardaremos la "película" completa de pasos
+
+        function generateSteps() {
+            let arr = [...initialData]; // Copia para trabajar
+            let generatedSteps = [];
+            let n = arr.length;
+
+            for (let i = 0; i < n - 1; i++) {
+                for (let j = 0; j < n - 1 - i; j++) {
+                    // Paso 1: Comparación
+                    generatedSteps.push({
+                        arrState: [...arr],
+                        highlight: [j, j+1],
+                        msg: `¿Es ${arr[j]} > ${arr[j+1]}?`,
+                        subMsg: `Pasada ${i+1} - Comparando índices ${j} y ${j+1}`,
+                        swap: false,
+                        sortedCount: i // Cuántos hay ordenados al final
+                    });
+
+                    if (arr[j] > arr[j+1]) {
+                        // Paso 2: Intercambio (si procede)
+                        let temp = arr[j];
+                        arr[j] = arr[j+1];
+                        arr[j+1] = temp;
+
+                        generatedSteps.push({
+                            arrState: [...arr],
+                            highlight: [j, j+1],
+                            msg: `¡Sí! Intercambiamos ${arr[j+1]} y ${arr[j]}`,
+                            subMsg: "Hacemos el SWAP",
+                            swap: true,
+                            sortedCount: i
+                        });
+                    } else {
+                         // Paso 2 Alternativo: No Intercambio
+                         generatedSteps.push({
+                            arrState: [...arr],
+                            highlight: [j, j+1],
+                            msg: `No. ${arr[j]} es menor que ${arr[j+1]}.`,
+                            subMsg: "Seguimos adelante",
+                            swap: false,
+                            sortedCount: i
+                        });
+                    }
+                }
+                // Paso 3: Elemento ordenado al final de la pasada
+                generatedSteps.push({
+                    arrState: [...arr],
+                    highlight: [],
+                    msg: `¡El número ${arr[n-1-i]} queda fijado!`,
+                    subMsg: `Fin de la pasada ${i+1}. El elemento al final ya está ordenado.`,
+                    swap: false,
+                    sortedCount: i + 1 // Ahora hay uno más ordenado
+                });
+            }
+            
+            // Paso Final: Todo ordenado
+            generatedSteps.push({
+                arrState: [...arr],
+                highlight: [],
+                msg: "¡Array totalmente ordenado!",
+                subMsg: "El algoritmo ha terminado.",
+                swap: false,
+                sortedCount: n,
+                finished: true
+            });
+
+            return generatedSteps;
+        }
+
+        // Inicializar pasos
+        steps = generateSteps();
+
+        // Lógica de Renderizado
+        let currentStepIndex = 0;
+        const container = document.getElementById('demo-container');
+        const statusText = document.getElementById('status-text');
+        const subStatusText = document.getElementById('sub-status-text');
+        const stepBtn = document.getElementById('step-btn');
+        const resetBtn = document.getElementById('reset-btn');
+        const progressBar = document.getElementById('progress-bar');
+        const stepCounter = document.getElementById('step-counter');
+
+        function render(stepIdx) {
+            if (stepIdx >= steps.length) return;
+            
+            const step = steps[stepIdx];
+            container.innerHTML = '';
+            
+            // Actualizar textos
+            statusText.textContent = step.msg;
+            subStatusText.textContent = step.subMsg;
+            statusText.className = step.finished ? "text-2xl font-bold text-green-600" : "text-xl font-bold text-blue-600";
+            
+            // Actualizar barra progreso
+            const progress = ((stepIdx + 1) / steps.length) * 100;
+            progressBar.style.width = `${progress}%`;
+            stepCounter.textContent = `${stepIdx + 1}/${steps.length}`;
+
+            // Dibujar burbujas
+            step.arrState.forEach((val, i) => {
+                const div = document.createElement('div');
+                
+                // Colores base según el número original (para mantener identidad visual)
+                let colorClass = val === 8 ? 'bg-purple-500' : val === 5 ? 'bg-blue-500' : val === 4 ? 'bg-green-500' : val === 3 ? 'bg-yellow-500' : 'bg-red-500';
+                
+                // Lógica de elementos ordenados (verde brillante)
+                // Los últimos 'step.sortedCount' elementos están ordenados
+                // O si está terminado, todos están ordenados
+                const isSorted = step.finished || (i >= (step.arrState.length - step.sortedCount));
+                
+                div.className = `bubble ${colorClass} ${isSorted ? 'sorted-bubble' : ''}`;
+                div.textContent = val;
+                
+                // Highlight de comparación/swap
+                if (step.highlight.includes(i)) {
+                    div.style.transform = step.swap ? 'translateY(-10px) scale(1.1)' : 'scale(1.1)';
+                    div.style.zIndex = 10;
+                    if (!step.swap) div.style.border = '3px solid #3b82f6'; // Borde azul si compara
+                }
+                
+                container.appendChild(div);
+            });
+        }
+
+        stepBtn.onclick = () => {
+            if (currentStepIndex < steps.length - 1) {
+                currentStepIndex++;
+                render(currentStepIndex);
+                if (currentStepIndex === steps.length - 1) {
+                    stepBtn.disabled = true;
+                    stepBtn.classList.add('opacity-50', 'cursor-not-allowed');
+                    stepBtn.innerHTML = "¡Terminado!";
+                }
+            }
+        };
+
+        resetBtn.onclick = () => {
+            currentStepIndex = 0;
+            stepBtn.disabled = false;
+            stepBtn.classList.remove('opacity-50', 'cursor-not-allowed');
+            stepBtn.innerHTML = `<span>Siguiente Paso</span> <span class="text-xs bg-blue-800 px-2 py-1 rounded-full" id="step-counter">0</span>`;
+            render(0);
+        };
+
+        // Render inicial
+        render(0);
+
+    </script>
+</body>
+</html>
