@@ -96,6 +96,7 @@ El programa debe:
 5. Si la matriz es **cuadrada** (filas == columnas), comprobar además si es **simétrica**: una matriz es simétrica si coincide exactamente con su propia transpuesta, es decir, si `M[i][j] == M[j][i]` para todos los elementos.
 
 !!! tip "Ejemplo de transposición"
+
     ```
     Original (2×3):        Transpuesta (3×2):
     1  2  3                1  4
@@ -104,6 +105,7 @@ El programa debe:
     ```
 
 !!! example "Ejemplo de matriz simétrica (3×3)"
+
     ```
     1  2  3
     2  5  4      →  Es simétrica (M[0][1]=2 == M[1][0]=2, etc.)
@@ -129,9 +131,11 @@ Escribe un programa que:
 4. Si es mágico, muestra la constante mágica. Si no lo es, indica cuál de las condiciones no se cumple.
 
 !!! example "Ejemplo de cuadrado mágico 3×3"
+
     ```
-2  7  6
+    2  7  6
     9  5  1
     4  3  8
     ```
+
     Constante mágica = **15** (todas las filas, columnas y diagonales suman 15).
