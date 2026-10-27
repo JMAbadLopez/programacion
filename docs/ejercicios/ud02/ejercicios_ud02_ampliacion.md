@@ -97,7 +97,7 @@ El programa debe:
 
 !!! tip "Ejemplo de transposición"
     ```
-Original (2×3):        Transpuesta (3×2):
+    Original (2×3):        Transpuesta (3×2):
     1  2  3                1  4
     4  5  6                2  5
                            3  6
@@ -105,7 +105,7 @@ Original (2×3):        Transpuesta (3×2):
 
 !!! example "Ejemplo de matriz simétrica (3×3)"
     ```
-1  2  3
+    1  2  3
     2  5  4      →  Es simétrica (M[0][1]=2 == M[1][0]=2, etc.)
     3  4  6
     ```
