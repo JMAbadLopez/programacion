@@ -34,22 +34,22 @@ Pide al usuario que introduzca una serie de números enteros y los almacene en u
 
 ---
 
-## Ejercicio A2: Clasificación de una Liga
+## Ejercicio A2: Clasificación de una Liga de Basket
 
-Gestiona la clasificación de una liga de fútbol usando **tres vectores paralelos**:
+Gestiona la clasificación de una liga de baloncesto usando **tres vectores paralelos**:
 
 ```java
-String[] equipos  = {"Real Madrid", "FC Barcelona", "Atlético de Madrid", "Sevilla FC", "Valencia CF"};
-int[]    puntos   = {72, 68, 65, 54, 48};
-int[]    goles    = {80, 74, 60, 55, 49};
+String[] equipos  = {"Real Madrid", "FC Barcelona", "Valencia Basket", "Unicaja", "Baskonia"};
+int[]    puntos   = {28, 26, 22, 18, 16};
+int[]    canastas = {920, 895, 860, 830, 810};
 ```
 
 El programa debe ofrecer un **menú** con las siguientes opciones:
 
 1. **Mostrar clasificación actual** — muestra la tabla en el orden en que están almacenados los datos.
 2. **Clasificación ordenada por puntos** — ordena los vectores paralelos por puntos (de mayor a menor) y muestra la tabla resultante. Usa el algoritmo que prefieras, pero recuerda que al intercambiar hay que mover los **tres vectores** a la vez.
-3. **Equipo con más goles** — busca y muestra el equipo que ha marcado más goles.
-4. **Añadir resultado** — pide el nombre de dos equipos (local y visitante) y el marcador. Actualiza los puntos de cada equipo (victoria = 3 puntos, empate = 1 punto cada uno, derrota = 0 puntos).
+3. **Equipo con más canastas** — busca y muestra el equipo que ha anotado más canastas.
+4. **Añadir resultado** — pide el nombre de dos equipos (local y visitante) y el marcador. Actualiza los puntos de cada equipo (victoria = 2 puntos, derrota = 1 punto).
 5. **Salir**.
 
 !!! warning "Precaución con los vectores paralelos"
