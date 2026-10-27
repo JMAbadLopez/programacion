@@ -49,7 +49,7 @@ El programa debe ofrecer un **menú** con las siguientes opciones:
 1. **Mostrar clasificación actual** — muestra la tabla en el orden en que están almacenados los datos.
 2. **Clasificación ordenada por puntos** — ordena los vectores paralelos por puntos (de mayor a menor) y muestra la tabla resultante. Usa el algoritmo que prefieras, pero recuerda que al intercambiar hay que mover los **tres vectores** a la vez.
 3. **Equipo con más canastas** — busca y muestra el equipo que ha anotado más canastas.
-4. **Añadir resultado** — pide el nombre de dos equipos (local y visitante) y el marcador. Actualiza los puntos de cada equipo (victoria = 2 puntos, derrota = 1 punto).
+4. **Añadir resultado** — pide el nombre de dos equipos (local y visitante) y el marcador (las canastas del partido). Actualiza los puntos de cada equipo (victoria = 2 puntos, empate = 1 punto, derrota = 0 puntos) y sus canastas (solo se actualizan el equipo local y el visitante).
 5. **Salir**.
 
 !!! warning "Precaución con los vectores paralelos"
@@ -97,7 +97,7 @@ El programa debe:
 
 !!! tip "Ejemplo de transposición"
     ```
-    Original (2×3):        Transpuesta (3×2):
+Original (2×3):        Transpuesta (3×2):
     1  2  3                1  4
     4  5  6                2  5
                            3  6
@@ -105,7 +105,7 @@ El programa debe:
 
 !!! example "Ejemplo de matriz simétrica (3×3)"
     ```
-    1  2  3
+1  2  3
     2  5  4      →  Es simétrica (M[0][1]=2 == M[1][0]=2, etc.)
     3  4  6
     ```
@@ -130,7 +130,7 @@ Escribe un programa que:
 
 !!! example "Ejemplo de cuadrado mágico 3×3"
     ```
-    2  7  6
+2  7  6
     9  5  1
     4  3  8
     ```
