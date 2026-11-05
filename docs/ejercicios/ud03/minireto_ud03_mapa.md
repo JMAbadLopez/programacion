@@ -133,11 +133,8 @@ Puntuacion total: 4
     `Math.random()` devuelve un `double` aleatorio entre `0.0` (inclusive) y `1.0` (exclusivo). Para obtener un entero en un rango concreto, multiplica y convierte con un cast:
 
     ```java
-    // Entero aleatorio entre 0 y 7 (para filas y columnas del mapa)
+    // Entero aleatorio entre 0 y 7 (para filas y/o columnas del mapa)
     int fila = (int)(Math.random() * 8);
-
-    // Entero aleatorio entre 0 y N-1 (rango genérico)
-    int n = (int)(Math.random() * N);
 
     // Elegir aleatoriamente entre dos opciones (p.ej. T o A)
     char celda = (Math.random() < 0.5) ? 'T' : 'A';
@@ -148,9 +145,10 @@ Puntuacion total: 4
 
     ```java
     Scanner teclado = new Scanner(System.in);
+    char c;
 
     System.out.print("Introduce un carácter: ");
-    char c = teclado.next().charAt(0);
+    c = teclado.next().charAt(0);
     ```
 
     Si el usuario puede introducir más de un carácter, `next()` leerá la primera "palabra" y `charAt(0)` tomará solo el primero.
@@ -221,7 +219,6 @@ public class MapaExploracion {
         }
 
         mostrarResultado();
-        teclado.close();
     }
 
 
