@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infografía: Bucles en Java</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .slide {
+            display: none;
+        }
+        .active-slide {
+            display: block;
+        }
+        .code-block {
+            background-color: #2d2d2d;
+            color: #f8f8f2;
+            padding: 1.5rem;
+            border-radius: 0.5rem;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 0.9em;
+            overflow-x: auto;
+            border-left: 5px solid #D9A7A7;
+        }
+        .keyword { color: #f92672; }
+        .type { color: #66d9ef; }
+        .string { color: #e6db74; }
+        .comment { color: #75715e; }
+        .number { color: #ae81ff; }
+        .pale-red-bg { background-color: #FADADD; }
+        .pale-red-text { color: #A94442; }
+        .pale-red-border { border-color: #D9A7A7; }
+    </style>
+</head>
+<body class="bg-gray-100 flex flex-col items-center justify-center min-h-screen p-4 md:p-8">
+
+    <div class="w-full max-w-6xl bg-white rounded-2xl shadow-2xl overflow-hidden">
+        <div id="slides-container" class="relative">
+
+            <!-- Diapositiva 1: Título -->
+            <div id="slide-1" class="slide active-slide p-8 md:p-16 text-center">
+                <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">Estructuras Repetitivas en Java</h1>
+                <p class="text-xl md:text-2xl text-gray-600">Una guía visual de los bucles `while`, `do-while` y `for`.</p>
+                <div class="mt-12">
+                    <div class="inline-block pale-red-bg text-red-800 font-semibold px-4 py-2 rounded-full">
+                        ¡Las rotondas del código!
+                    </div>
+                </div>
+            </div>
+
+            <!-- Diapositiva 2: Bucle while -->
+            <div id="slide-2" class="slide p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">1. El Bucle `while` (Mientras)</h2>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2 pale-red-text">Analogía: "El Portero Exigente"</h3>
+                        <p class="text-gray-700 mb-6">El `while` es como un portero que comprueba tu entrada (la condición) <strong class="text-gray-800">antes</strong> de dejarte pasar a la fiesta (el código). Si desde el principio no cumples la condición, no entras ni una sola vez.</p>
+                        
+                        <h3 class="text-xl font-semibold mb-2 pale-red-text">Diagrama de Flujo</h3>
+                        <div class="border-2 pale-red-border rounded-lg p-4 text-center">
+                            <div class="font-semibold">INICIO</div>
+                            <div class="my-2">↓</div>
+                            <div class="bg-red-100 border-2 border-dashed pale-red-border p-2 rounded">¿Condición verdadera?</div>
+                            <div class="flex justify-around mt-2">
+                                <div><span class="font-bold text-green-600">SÍ →</span> Ejecutar Código → ↻</div>
+                                <div><span class="font-bold text-red-600">NO ↓</span></div>
+                            </div>
+                            <div class="mt-2">FIN</div>
+                        </div>
+                         <p class="text-center mt-4 font-bold text-lg pale-red-text">Se ejecuta 0 o más veces.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Ejemplo: Tabla de Multiplicar</h3>
+                        <div class="code-block">
+<pre><code><span class="type">int</span> numero = <span class="number">5</span>;
+<span class="type">int</span> i = <span class="number">0</span>;
+
+<span class="comment">// El "portero" comprueba si i <= 10</span>
+<span class="keyword">while</span> (i <= <span class="number">10</span>) {
+    System.out.println(
+        numero + <span class="string">" x "</span> + i + <span class="string">" = "</span> + (numero * i)
+    );
+    i++; <span class="comment">// Se actualiza la condición</span>
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Diapositiva 3: Bucle do-while -->
+            <div id="slide-3" class="slide p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">2. El Bucle `do-while` (Hacer-Mientras)</h2>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2 pale-red-text">Analogía: "El Club VIP"</h3>
+                        <p class="text-gray-700 mb-6">Aquí siempre entras a la fiesta (ejecutas el código) al menos una vez. Es al salir cuando el portero comprueba si puedes volver a entrar para otra ronda (la condición).</p>
+                        
+                        <h3 class="text-xl font-semibold mb-2 pale-red-text">Diagrama de Flujo</h3>
+                        <div class="border-2 pale-red-border rounded-lg p-4 text-center">
+                            <div class="font-semibold">INICIO</div>
+                            <div class="my-2">↓</div>
+                            <div>Ejecutar Código</div>
+                             <div class="my-2">↓</div>
+                            <div class="bg-red-100 border-2 border-dashed pale-red-border p-2 rounded">¿Condición verdadera?</div>
+                            <div class="flex justify-around mt-2">
+                                <div><span class="font-bold text-green-600">SÍ → ↻</span></div>
+                                <div><span class="font-bold text-red-600">NO ↓</span></div>
+                            </div>
+                            <div class="mt-2">FIN</div>
+                        </div>
+                        <p class="text-center mt-4 font-bold text-lg pale-red-text">Se ejecuta 1 o más veces.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Ejemplo: Validar Entrada</h3>
+                        <div class="code-block">
+<pre><code><span class="type">Scanner</span> teclado = <span class="keyword">new</span> <span class="type">Scanner</span>(System.in);
+<span class="type">int</span> numero;
+
+<span class="comment">// Entras al bucle sí o sí</span>
+<span class="keyword">do</span> {
+    System.out.print(<span class="string">"Introduce un número positivo: "</span>);
+    numero = teclado.nextInt();
+} <span class="keyword">while</span> (numero <= <span class="number">0</span>); <span class="comment">// Al final, comprueban</span>
+
+System.out.println(<span class="string">"¡Correcto!: "</span> + numero);</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Diapositiva 4: Bucle for -->
+            <div id="slide-4" class="slide p-8 md:p-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-6">3. El Bucle `for` (Para)</h2>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2 pale-red-text">Analogía: "El Tren con Paradas Fijas"</h3>
+                        <p class="text-gray-700 mb-6">El `for` es como un tren que sabe exactamente dónde empieza su ruta, dónde termina y cómo avanza de una parada a la siguiente. Todo el control del viaje está en una sola línea.</p>
+                        
+                        <h3 class="text-xl font-semibold mb-2 pale-red-text">Estructura Compacta</h3>
+                        <div class="border-2 pale-red-border rounded-lg p-4">
+                            <code class="font-mono">
+                                <span class="keyword">for</span> (<span class="pale-red-text">inicio</span>; <span class="pale-red-text">condición</span>; <span class="pale-red-text">incremento</span>)
+                            </code>
+                            <ul class="list-disc list-inside mt-2 text-sm text-gray-600">
+                                <li><b>Inicio:</b> Se ejecuta una sola vez, al empezar.</li>
+                                <li><b>Condición:</b> Se comprueba antes de cada vuelta.</li>
+                                <li><b>Incremento:</b> Se ejecuta al final de cada vuelta.</li>
+                            </ul>
+                        </div>
+                        <p class="text-center mt-4 font-bold text-lg pale-red-text">Ideal para un nº fijo de repeticiones.</p>
+                    </div>
+                    <div>
+                        <h3 class="text-xl font-semibold mb-2">Ejemplo: Tabla de Multiplicar</h3>
+                        <div class="code-block">
+<pre><code><span class="type">int</span> numero = <span class="number">5</span>;
+
+<span class="comment">// Todo el control en una línea</span>
+<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i <= <span class="number">10</span>; i++) {
+    System.out.println(
+        numero + <span class="string">" x "</span> + i + <span class="string">" = "</span> + (numero * i)
+    );
+}</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Diapositiva 5: Elementos Auxiliares -->
+            <div id="slide-5" class="slide p-8 md:p-12">
+                 <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Herramientas Especializadas dentro de Bucles</h2>
+                 <div class="grid md:grid-cols-3 gap-6">
+                     
+                     <div class="border-2 pale-red-border rounded-lg p-6 shadow-lg">
+                         <h3 class="text-2xl font-bold mb-3 text-center pale-red-text">Contador</h3>
+                         <p class="text-gray-700 mb-4 text-center">"El portero de discoteca". Cuenta eventos, normalmente de 1 en 1.</p>
+                         <div class="code-block text-sm">
+<pre><code><span class="comment">// Contar números pares</span>
+<span class="type">int</span> contadorPares = <span class="number">0</span>;
+<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">1</span>; i <= <span class="number">10</span>; i++) {
+  <span class="keyword">if</span> (i % <span class="number">2</span> == <span class="number">0</span>) {
+    contadorPares++;
+  }
+}
+<span class="comment">// contadorPares será 5</span></code></pre>
+                         </div>
+                     </div>
+                     
+                     <div class="border-2 pale-red-border rounded-lg p-6 shadow-lg">
+                         <h3 class="text-2xl font-bold mb-3 text-center pale-red-text">Acumulador</h3>
+                         <p class="text-gray-700 mb-4 text-center">"El carrito de la compra". Suma valores variables para obtener un total.</p>
+                         <div class="code-block text-sm">
+<pre><code><span class="comment">// Sumar precios de la compra</span>
+<span class="type">double</span>[] precios = {<span class="number">1.5</span>, <span class="number">3.0</span>, <span class="number">2.25</span>};
+<span class="type">double</span> total = <span class="number">0.0</span>;
+<span class="keyword">for</span> (<span class="type">int</span> i = <span class="number">0</span>; i < precios.length; i++) {
+  total = total + precios[i];
+}
+<span class="comment">// total será 6.75</span></code></pre>
+                         </div>
+                     </div>
+
+                     <div class="border-2 pale-red-border rounded-lg p-6 shadow-lg">
+                         <h3 class="text-2xl font-bold mb-3 text-center pale-red-text">Interruptor</h3>
+                         <p class="text-gray-700 mb-4 text-center">"El interruptor de la luz". Recuerda si un evento ha ocurrido (`true`/`false`).</p>
+                         <div class="code-block text-sm">
+<pre><code><span class="comment">// Terminar un bucle a petición</span>
+<span class="type">boolean</span> salir = <span class="keyword">false</span>;
+<span class="type">int</span> contador = <span class="number">0</span>;
+<span class="keyword">while</span> (!salir) {
+  contador++;
+  System.out.println(<span class="string">"Vuelta nº "</span> + contador);
+  <span class="keyword">if</span> (contador >= <span class="number">3</span>) {
+    salir = <span class="keyword">true</span>; <span class="comment">// Se pulsa el interruptor</span>
+  }
+}
+<span class="comment">// El bucle termina</span></code></pre>
+                         </div>
+                     </div>
+
+                 </div>
+            </div>
+
+            <!-- Diapositiva 6: Resumen -->
+            <div id="slide-6" class="slide p-8 md:p-16">
+                 <h2 class="text-3xl font-bold text-gray-800 mb-8 text-center">Resumen: ¿Cuándo usar cada bucle?</h2>
+                 <div class="grid md:grid-cols-3 gap-6">
+                     
+                     <div class="border-2 pale-red-border rounded-lg p-6 text-center shadow-lg">
+                         <h3 class="text-2xl font-bold mb-3">while</h3>
+                         <p class="text-gray-700">Cuando <strong class="text-gray-800">NO sabes</strong> cuántas veces se repetirá, pero la condición debe comprobarse <strong class="text-gray-800">al principio</strong>.</p>
+                         <div class="mt-4 font-semibold pale-red-bg text-red-800 px-3 py-1 rounded-full inline-block">0 o más veces</div>
+                     </div>
+                     
+                     <div class="border-2 pale-red-border rounded-lg p-6 text-center shadow-lg">
+                         <h3 class="text-2xl font-bold mb-3">do-while</h3>
+                         <p class="text-gray-700">Cuando necesitas que el código se ejecute <strong class="text-gray-800">al menos una vez</strong>, sin importar la condición inicial.</p>
+                         <div class="mt-4 font-semibold pale-red-bg text-red-800 px-3 py-1 rounded-full inline-block">1 o más veces</div>
+                     </div>
+
+                     <div class="border-2 pale-red-border rounded-lg p-6 text-center shadow-lg">
+                         <h3 class="text-2xl font-bold mb-3">for</h3>
+                         <p class="text-gray-700">Cuando <strong class="text-gray-800">SÍ sabes</strong> el número exacto de repeticiones o vas a recorrer una estructura como un array.</p>
+                         <div class="mt-4 font-semibold pale-red-bg text-red-800 px-3 py-1 rounded-full inline-block">Nº fijo de veces</div>
+                     </div>
+
+                 </div>
+            </div>
+        </div>
+
+        <!-- Navegación -->
+        <div class="bg-gray-50 p-4 flex justify-between items-center border-t border-gray-200">
+            <button id="prev-btn" class="bg-gray-300 text-gray-800 font-bold py-2 px-4 rounded-lg hover:bg-gray-400 disabled:opacity-50 disabled:cursor-not-allowed">
+                Anterior
+            </button>
+            <div id="slide-counter" class="text-gray-600 font-semibold"></div>
+            <button id="next-btn" class="pale-red-bg text-red-800 font-bold py-2 px-4 rounded-lg hover:bg-red-200 disabled:opacity-50 disabled:cursor-not-allowed">
+                Siguiente
+            </button>
+        </div>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const prevBtn = document.getElementById('prev-btn');
+        const nextBtn = document.getElementById('next-btn');
+        const slideCounter = document.getElementById('slide-counter');
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            slides.forEach((slide, i) => {
+                slide.classList.remove('active-slide');
+                if (i === index) {
+                    slide.classList.add('active-slide');
+                }
+            });
+            updateButtons();
+            updateCounter();
+        }
+
+        function updateButtons() {
+            prevBtn.disabled = currentSlide === 0;
+            nextBtn.disabled = currentSlide === slides.length - 1;
+        }
+        
+        function updateCounter() {
+            slideCounter.textContent = `Diapositiva ${currentSlide + 1} de ${slides.length}`;
+        }
+
+        prevBtn.addEventListener('click', () => {
+            if (currentSlide > 0) {
+                currentSlide--;
+                showSlide(currentSlide);
+            }
+        });
+
+        nextBtn.addEventListener('click', () => {
+            if (currentSlide < slides.length - 1) {
+                currentSlide++;
+                showSlide(currentSlide);
+            }
+        });
+
+        // Inicializar
+        showSlide(currentSlide);
+    </script>
+
+</body>
+</html>
