@@ -6,18 +6,18 @@ nav:
     - UD1 - Introducción a la programación. Lenguaje Java: unidades/ud01.md
     - UD2 - Programación estructurada. Estructuras de control y repetición: unidades/ud02.md
     - UD3 - Funciones y procedimientos: unidades/ud03.md
-    - UD4 - Estructuras de datos dinámicas: unidades/ud04.md
-    - UD5 - Programación Orientada a Objetos (POO): unidades/ud05.md
-    - UD6 - POO Avanzada: unidades/ud06.md
-    - UD7 - Ficheros y Excepciones: unidades/ud07.md
-    - UD8 - Acceso a Bases de Datos: unidades/ud08.md
-    - UD9 - Interfaces gráficas con JavaFX: 
-      - Introducción: unidades/ud09/introduccion.md
-      - Elementos de una interfaz: unidades/ud09/elementos.md
-      - Navegación entre pantallas: unidades/ud09/navegacion.md
-      - Menús y layouts: unidades/ud09/menus.md
-      - Integración de datos con BBDD: unidades/ud09/integracion_datos.md
-      - Reto Final: unidades/ud09/reto_final.md
+  #  - UD4 - Estructuras de datos dinámicas: unidades/ud04.md
+  # - UD5 - Programación Orientada a Objetos (POO): unidades/ud05.md
+  # - UD6 - POO Avanzada: unidades/ud06.md
+  # - UD7 - Ficheros y Excepciones: unidades/ud07.md
+  # - UD8 - Acceso a Bases de Datos: unidades/ud08.md
+  # - UD9 - Interfaces gráficas con JavaFX: 
+  #   - Introducción: unidades/ud09/introduccion.md
+  #   - Elementos de una interfaz: unidades/ud09/elementos.md
+  #   - Navegación entre pantallas: unidades/ud09/navegacion.md
+  #   - Menús y layouts: unidades/ud09/menus.md
+  #   - Integración de datos con BBDD: unidades/ud09/integracion_datos.md
+  #   - Reto Final: unidades/ud09/reto_final.md
   - Ejercicios:
     - UD1 - Introducción a la programación. Lenguaje Java:
       - Ejercicios de introducción: ejercicios/ud01/introduccion.md
@@ -30,23 +30,23 @@ nav:
       - Ejercicios de ampliación: ejercicios/ud02/ejercicios_ud02_ampliacion.md
     - UD3 - Funciones y procedimientos:
       - Ejercicios de funciones y procedimientos: ejercicios/ud03/ejercicios_ud03_inicio.md
-      - "Mini-Reto: El Mapa de Exploración": ejercicios/ud03/minireto_ud03_mapa.md
+      - Mini-Reto. El Mapa de Exploración: ejercicios/ud03/minireto_ud03_mapa.md
       - Actividad entregable. Gestor de Inventario de Ferreteria: ejercicios/ud03/ejercicio_ud03_ferreteria.md
       - Actividad (EXTRA). Analizador de textos: ejercicios/ud03/ejercicio_ud03_analizador_texto.md
-    - UD4 - Estructuras de datos dinámicas:
-      - Ejercicios de listas: ejercicios/ud04/ejercicios_ud4_arraylist_inicio.md
-      - Ejercicios avanzados de listas: ejercicios/ud04/ejercicios_ud4_listas_avanzado.md
-      - Ejercicios de conjuntos y mapas: ejercicios/ud04/ejercicios_ud4_set_map.md
+#   - UD4 - Estructuras de datos dinámicas:
+#     - Ejercicios de listas: ejercicios/ud04/ejercicios_ud4_arraylist_inicio.md
+#     - Ejercicios avanzados de listas: ejercicios/ud04/ejercicios_ud4_listas_avanzado.md
+#     - Ejercicios de conjuntos y mapas: ejercicios/ud04/ejercicios_ud4_set_map.md
 #      - Actividad entregable. La logística de Santa Claus: ejercicios/ud04/ejercicios_ud4_entregable.md
-    - UD5 - Programación Orientada a Objetos (POO):
-      - Ejercicios de iniciación de POO: ejercicios/ud05/ejercicios_ud05_inicio.md
-      - Ejercicios avanzados de POO: ejercicios/ud05/ejercicios_ud05_avanzado.md
+#   - UD5 - Programación Orientada a Objetos (POO):
+#     - Ejercicios de iniciación de POO: ejercicios/ud05/ejercicios_ud05_inicio.md
+#     - Ejercicios avanzados de POO: ejercicios/ud05/ejercicios_ud05_avanzado.md
 #      - Actividad entregable. Gestión de un cine: ejercicios/ud05/ejercicio_ud05_entregable.md
-    - UD6 - POO Avanzada:
-      - Ejercicios de POO avanzada: ejercicios/ud06/ejercicios_ud6.md
-      - Ejercicios de POO. Juego de Rol: ejercicios/ud06/ejercicios_ud6_juego_rol.md
-    - UD7 - Ficheros y Excepciones:
-      - Ejercicios de Ficheros y Excepciones: ejercicios/ud07/ejercicios_ud07.md
+#   - UD6 - POO Avanzada:
+#     - Ejercicios de POO avanzada: ejercicios/ud06/ejercicios_ud6.md
+#     - Ejercicios de POO. Juego de Rol: ejercicios/ud06/ejercicios_ud6_juego_rol.md
+#   - UD7 - Ficheros y Excepciones:
+#      - Ejercicios de Ficheros y Excepciones: ejercicios/ud07/ejercicios_ud07.md
 #      - Actividad entregable. Gestión de Almacén con Persistencia: ejercicios/ud07/ejercicio_ud07_entregable.md
 #    - UD8 - Acceso a Bases de Datos:
 #      - Actividad entregable. Bloc de notas: ejercicios/ud08/ejercicio_ud08_entregable.md
