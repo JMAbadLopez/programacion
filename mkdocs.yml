@@ -33,10 +33,10 @@ nav:
       - Mini-Reto. El Mapa de Exploración: ejercicios/ud03/minireto_ud03_mapa.md
       - Actividad entregable. Gestor de Inventario de Ferreteria: ejercicios/ud03/ejercicio_ud03_ferreteria.md
       - Actividad (EXTRA). Analizador de textos: ejercicios/ud03/ejercicio_ud03_analizador_texto.md
-   - UD4 - Estructuras de datos dinámicas:
-     - Ejercicios de listas: ejercicios/ud04/ejercicios_ud4_arraylist_inicio.md
-     - Ejercicios avanzados de listas: ejercicios/ud04/ejercicios_ud4_listas_avanzado.md
-     - Ejercicios de conjuntos y mapas: ejercicios/ud04/ejercicios_ud4_set_map.md
+    - UD4 - Estructuras de datos dinámicas:
+      - Ejercicios de listas: ejercicios/ud04/ejercicios_ud4_arraylist_inicio.md
+      - Ejercicios avanzados de listas: ejercicios/ud04/ejercicios_ud4_listas_avanzado.md
+      - Ejercicios de conjuntos y mapas: ejercicios/ud04/ejercicios_ud4_set_map.md
 #      - Actividad entregable. La logística de Santa Claus: ejercicios/ud04/ejercicios_ud4_entregable.md
 #   - UD5 - Programación Orientada a Objetos (POO):
 #     - Ejercicios de iniciación de POO: ejercicios/ud05/ejercicios_ud05_inicio.md
